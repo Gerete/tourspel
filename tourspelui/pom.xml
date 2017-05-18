@@ -10,6 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>tourspel-ui</artifactId>
+    <packaging>war</packaging>
+
     <dependencies>
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -19,7 +21,40 @@
             <groupId>to.etc.domui</groupId>
             <artifactId>to.etc.domui</artifactId>
         </dependency>
+        <dependency>
+            <groupId>to.etc.domui</groupId>
+            <artifactId>to.etc.domui.hibutil</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+        </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <!--                    <overlays>
+                                            <overlay>
+                                                <groupId>to.etc.domui</groupId>
+                                                <artifactId>to.etc.domui.demo.web</artifactId>
+                                            </overlay>
+                                        </overlays>
+                    -->
+                    <webResources>
+                        <resource>
+                            <directory>src/main/webapp</directory>
+                            <filtering>true</filtering>
+                            <includes>
+                                <include>index.html</include>
+                            </includes>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

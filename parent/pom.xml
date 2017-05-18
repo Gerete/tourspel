@@ -92,6 +92,7 @@
         <commons-lang.version>2.6</commons-lang.version>
         <commons-logging.version>1.2</commons-logging.version>
         <to.etc.domui.version>1.2-SNAPSHOT</to.etc.domui.version>
+        <to.etc.domui.hibutil.version>1.2-SNAPSHOT</to.etc.domui.hibutil.version>
 
         <!-- own -->
         <!--<to.etc.logger.version>1.0</to.etc.logger.version>-->
@@ -379,6 +380,12 @@
                 <groupId>to.etc.domui</groupId>
                 <artifactId>to.etc.domui</artifactId>
                 <version>${to.etc.domui.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>to.etc.domui</groupId>
+                <artifactId>to.etc.domui.hibutil</artifactId>
+                <version>${to.etc.domui.hibutil.version}</version>
             </dependency>
 
             <dependency>
