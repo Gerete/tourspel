@@ -4,6 +4,8 @@ import nl.gerete.tourspel.db.*;
 import nl.gerete.tourspel.logic.*;
 import to.etc.domui.component.misc.*;
 import to.etc.domui.dom.html.*;
+import to.etc.domui.login.*;
+import to.etc.domui.state.*;
 import to.etc.domui.trouble.*;
 import to.etc.domui.util.*;
 
@@ -17,34 +19,34 @@ public class BasicTourPage extends UrlPage {
 	@Override
 	public void createFrame() {
 
-		//Div borderDiv = new Div();
-		//borderDiv.setCssClass("borderdiv");
-		//add(borderDiv);
-		//
-		//Div headerDiv = new Div();
-		//headerDiv.setCssClass("headerdiv");
-		//borderDiv.add(headerDiv);
-		//
-		//Img img = new Img();
-		//img.setSrc("images/logo-tour.png");
-		//headerDiv.add(img);
-		//
-		//IUser usr = UIContext.getCurrentUser();
+		Div borderDiv = new Div();
+		borderDiv.setCssClass("borderdiv");
+		add(borderDiv);
+
+		Div headerDiv = new Div();
+		headerDiv.setCssClass("headerdiv");
+		borderDiv.add(headerDiv);
+
+		Img img = new Img();
+		img.setSrc("images/logo-tour.png");
+		headerDiv.add(img);
+
+		IUser usr = UIContext.getCurrentUser();
 		//if(usr != null && usr.hasRight(ApplicationRight.ADMIN.name()))
 		//	headerDiv.add(new TaskRunningIndicator());
-		//
-		//m_contentDiv = new Div();
-		//m_contentDiv.setCssClass("contentdiv");
-		//borderDiv.add(m_contentDiv);
-		//
-		//if(UIContext.getCurrentUser() != null)
-		//	m_contentDiv.add(new TourMenuBar());
-		//
-		//m_contentDiv.add(new VerticalSpacer(40));
-		//
+
+		m_contentDiv = new Div();
+		m_contentDiv.setCssClass("contentdiv");
+		borderDiv.add(m_contentDiv);
+
+		if(UIContext.getCurrentUser() != null) {
+//			m_contentDiv.add(new TourMenuBar());
+		}
+
+		m_contentDiv.add(new VerticalSpacer(40));
+
 		//m_contentDiv.add(new ErrorMessageDiv(this));
 		//delegateTo(m_contentDiv);
-
 	}
 
 	/**

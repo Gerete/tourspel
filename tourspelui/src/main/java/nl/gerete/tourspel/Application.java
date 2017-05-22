@@ -9,16 +9,13 @@ import to.etc.domui.hibernate.config.*;
 import to.etc.domui.hibernate.config.HibernateConfigurator.*;
 import to.etc.domui.server.*;
 import to.etc.smtp.Address;
-import to.etc.smtp.*;
 import to.etc.util.*;
-import to.etc.webapp.mailer.*;
-import to.etc.webapp.pendingoperations.*;
 import to.etc.webapp.query.*;
 
 import javax.annotation.*;
+import javax.servlet.*;
 import javax.sql.*;
 import java.io.*;
-import java.net.*;
 import java.text.*;
 import java.util.*;
 
@@ -53,7 +50,7 @@ public class Application extends DomApplication {
 		addHeaderContributor(HeaderContributor.loadStylesheet("css/tourspel.css"), 100);
 
 		//-- Handle basic config.
-		String tourspelProperties = DeveloperOptions.getString("tourspel", "WEB-INF/tourspel.properties");
+		String tourspelProperties = DeveloperOptions.getString("tourspel", "tourspel.properties");
 		File configFile = getAppFile("WEB-INF/" + tourspelProperties);
 		PropertyFile.initialize(configFile);
 		initDatabase(configFile);
@@ -77,18 +74,18 @@ public class Application extends DomApplication {
 		//});
 
 		//-- Bulk mailer.
-		PollingWorkerQueue.initialize();
-		PropertyFile propertyfile = PropertyFile.getInstance();
-		String host = propertyfile.getProperty("smtp.host");
-		if(null == host)
-			host = "localhost";
-		String fromName = propertyfile.getProperty("smtp.from");
-		if(null == fromName)
-			fromName = "noreply@itris.nl";
-		m_fromAddress = new to.etc.smtp.Address(fromName, "Tourspel");
-
-		SmtpTransport st = new SmtpTransport(host);
-		BulkMailer.initialize(m_dataSource, st);
+		//PollingWorkerQueue.initialize();
+		//PropertyFile propertyfile = PropertyFile.getInstance();
+		//String host = propertyfile.getProperty("smtp.host");
+		//if(null == host)
+		//	host = "localhost";
+		//String fromName = propertyfile.getProperty("smtp.from");
+		//if(null == fromName)
+		//	fromName = "noreply@itris.nl";
+		//m_fromAddress = new to.etc.smtp.Address(fromName, "Tourspel");
+		//
+		//SmtpTransport st = new SmtpTransport(host);
+		//BulkMailer.initialize(m_dataSource, st);
 
 		//-- Start the job executor.
 		//SystemTask.getInstance().register(PointsCalculatorProvider.INSTANCE);
@@ -96,7 +93,7 @@ public class Application extends DomApplication {
 		//SystemTask.getInstance().initialize();
 	}
 
-	static public void initTest() throws Exception {
+	public void initTest() throws Exception {
 		//-- Handle basic config.
 		String tourspelProperties = DeveloperOptions.getString("tourspel", "WEB-INF/tourspel.properties");
 		File configFile = new File("WebContent/WEB-INF/" + tourspelProperties);
@@ -104,15 +101,13 @@ public class Application extends DomApplication {
 		initDatabase(configFile);
 	}
 
-	static public void initDatabase(File dbProperties) throws Exception {
+	public void initDatabase(File dbProperties) throws Exception {
 
+		File pf = getAppFile("WEB-INF/pool.xml");
+		if(!pf.exists())
+			throw new UnavailableException("Missing file WEB-INF/pool.xml containing the database to use");
 		//-- 1. Get a datasource using the to.etc.dbpool pool manager.
-		ConnectionPool p;
-		URL url = Application.class.getResource("pool.xml");
-		File f = new File(url.toURI());
-		if(!f.exists())
-			throw new IllegalStateException("Missing/inaccessible pool.xml resource");
-		p = PoolManager.getInstance().initializePool(f, "demo");
+		ConnectionPool p = PoolManager.getInstance().initializePool(pf, "tourspel");
 		m_dataSource = p.getUnpooledDataSource();
 
 		//-- 2. Test for an existing db
