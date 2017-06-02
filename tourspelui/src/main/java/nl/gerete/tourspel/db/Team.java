@@ -15,6 +15,8 @@ import java.util.*;
 public class Team extends TourspelEntity {
 	private Long m_id;
 
+	public static final String TEAM_ID = "team_id";
+
 	private String m_name;
 
 	public static final String pNAME = "name";
@@ -37,7 +39,7 @@ public class Team extends TourspelEntity {
 
 	@Override
 	@Id
-	@Column(nullable = false, name = "team_id")
+	@Column(nullable = false, name = TEAM_ID)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq")
 	public Long getId() {
 		return m_id;
