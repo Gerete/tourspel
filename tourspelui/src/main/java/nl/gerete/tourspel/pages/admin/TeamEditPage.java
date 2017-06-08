@@ -2,6 +2,8 @@ package nl.gerete.tourspel.pages.admin;
 
 import nl.gerete.tourspel.db.*;
 import to.etc.domui.annotations.*;
+import to.etc.domui.component.buttons.*;
+import to.etc.domui.component.layout.*;
 import to.etc.domui.component.tbl.*;
 import to.etc.domui.component2.form4.*;
 import to.etc.domui.state.*;
@@ -42,6 +44,12 @@ public class TeamEditPage extends BasicTourPage {
 	@Override
 	public void createContent() throws Exception {
 		addHeader();
+
+		ButtonBar bb = new ButtonBar();
+		DefaultButton saveButton = new DefaultButton("Save");
+		bb.addButton(saveButton);
+		add(bb);
+		bb.addBackButton();  // A backbutton can only be added after you added the ButtonBar to the page.
 		createTeamForm();
 		createRidersTable();
 	}
