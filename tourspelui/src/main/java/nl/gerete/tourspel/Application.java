@@ -7,6 +7,7 @@ import to.etc.domui.dom.html.*;
 import to.etc.domui.hibernate.config.*;
 import to.etc.domui.hibernate.config.HibernateConfigurator.*;
 import to.etc.domui.server.*;
+import to.etc.domui.themes.sass.*;
 import to.etc.smtp.Address;
 import to.etc.util.*;
 import to.etc.webapp.query.*;
@@ -53,6 +54,8 @@ public class Application extends DomApplication {
 		File configFile = getAppFile("WEB-INF/" + tourspelProperties);
 		PropertyFile.initialize(configFile);
 		initDatabase(configFile);
+		setThemeFactory(SassThemeFactory.INSTANCE);
+		setCurrentTheme("winter/default/default");
 
 		//setLoginAuthenticator(new TourLoginAuthenticator());
 		//
