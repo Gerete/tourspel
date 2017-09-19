@@ -58,6 +58,7 @@ public class Application extends DomApplication {
 		setCurrentTheme("winter/default/default");
 
 		//setLoginAuthenticator(new TourLoginAuthenticator());
+		//setLoginAuthenticator(new TourLoginAuthenticator());
 		//
 		//setLoginDialogFactory(new ILoginDialogFactory() {
 		//	@Override

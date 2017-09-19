@@ -2,6 +2,8 @@ package nl.gerete.tourspel.pages.admin;
 
 import nl.gerete.tourspel.db.*;
 import to.etc.domui.annotations.*;
+import to.etc.domui.component.buttons.*;
+import to.etc.domui.component.layout.*;
 import to.etc.domui.component2.form4.*;
 import to.etc.domui.state.*;
 
@@ -35,12 +37,27 @@ public class RiderEditPage extends BasicTourPage {
 	@Override
 	public void createContent() throws Exception {
 		addHeader();
+		ButtonBar bb = new ButtonBar();
+		DefaultButton saveButton = new DefaultButton("Save", clickednode -> save());
+		bb.addButton(saveButton);
+		add(bb);
+		bb.addBackButton();  // A backbutton can only be added after you added the ButtonBar to the page.
 		createRiderForm();
+	}
+
+	private void save() throws Exception {
+
+		if(bindErrors()) {
+			return;
+		}
+		getSharedContext().commit();
+
+		UIGoto.back();
 	}
 
 	private void createRiderForm() throws Exception {
 		FormBuilder fb = new FormBuilder(this);
-		fb.property(getRider(), Rider.pNUMBER).mandatory().control();
+		fb.property(getRider(), Rider.pNUMBER).control();
 		fb.property(getRider(), Rider.pFIRSTNAME).control();
 		fb.property(getRider(), Rider.pMIDDLENAME).control();
 		fb.property(getRider(), Rider.pLASTNAME).control();

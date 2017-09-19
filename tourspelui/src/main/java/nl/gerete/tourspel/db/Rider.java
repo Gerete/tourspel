@@ -1,5 +1,6 @@
 package nl.gerete.tourspel.db;
 
+import nl.gerete.tourspel.logic.*;
 import to.etc.domui.component.meta.*;
 
 import javax.persistence.*;
@@ -33,6 +34,7 @@ public class Rider extends TourspelEntity {
 	public static final String pDATEOFBIRTH = "dateOfBirth";
 
 	public static final String pTEAM = "team";
+
 	private Team m_team;
 
 	private Integer m_number;
@@ -54,7 +56,8 @@ public class Rider extends TourspelEntity {
 	};
 
 
-	public Rider() {}
+	public Rider() {
+	}
 
 	public Rider(Team team) {
 		m_team = team;
@@ -114,6 +117,7 @@ public class Rider extends TourspelEntity {
 
 	@Column(name = "date_of_birth", nullable = true)
 	@Temporal(TemporalType.DATE)
+	@MetaProperty(validator = { SportsmenAgeValidator.class }, parameterizedValidator = {@MetaValueValidator( validator = SportmenAgeValidatorParams.class, parameters = {"-45", "-15"})})
 	public Date getDateOfBirth() {
 		return m_dateOfBirth;
 	}
@@ -132,7 +136,7 @@ public class Rider extends TourspelEntity {
 		m_team = team;
 	}
 
-	@Column(name = "number", length = 3)
+	@Column(name = "number", length = 3, nullable = false)
 	@MetaSearch
 	public Integer getNumber() {
 		return m_number;
@@ -180,6 +184,5 @@ public class Rider extends TourspelEntity {
 			sb.append(getLastName());
 		}
 		return sb.toString();
-
 	}
 }

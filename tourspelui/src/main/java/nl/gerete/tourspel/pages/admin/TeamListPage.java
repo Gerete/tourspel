@@ -4,8 +4,6 @@ import nl.gerete.tourspel.db.*;
 import to.etc.domui.component.tbl.*;
 import to.etc.webapp.query.*;
 
-import javax.annotation.*;
-
 /**
  * Page to list all teams
  *
@@ -34,10 +32,11 @@ public class TeamListPage extends BasicTourPage {
 		dt.setPageSize(25);
 		add(new DataPager(dt));
 
-		rr.setRowClicked(this::clickedOne);
+		rr.setRowClicked(TeamEditPage::open);
 	}
 
-	private void clickedOne(@Nonnull final Team team) {
-		TeamEditPage.open(team);
+	@Override
+	protected void onShelve() throws Exception {
+		forceReloadData();
 	}
 }

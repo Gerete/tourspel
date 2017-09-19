@@ -44,14 +44,29 @@ public class TeamEditPage extends BasicTourPage {
 	@Override
 	public void createContent() throws Exception {
 		addHeader();
+		addButtons();
+		createTeamForm();
+		createRidersTable();
+	}
 
+	private void addButtons() {
 		ButtonBar bb = new ButtonBar();
 		DefaultButton saveButton = new DefaultButton("Save");
 		bb.addButton(saveButton);
+		bb.setClicked(clickednode -> save());
 		add(bb);
 		bb.addBackButton();  // A backbutton can only be added after you added the ButtonBar to the page.
-		createTeamForm();
-		createRidersTable();
+	}
+
+	private void save() throws Exception {
+
+		if (bindErrors()) {
+			return;
+		}
+
+		getSharedContext().commit();
+
+		UIGoto.back();
 	}
 
 	private void createRidersTable() {
@@ -82,6 +97,11 @@ public class TeamEditPage extends BasicTourPage {
 
 	private void clickedOne(@Nonnull final Rider rider) {
 		RiderEditPage.open(rider);
+	}
+
+	@Override
+	protected void onShelve() throws Exception {
+		forceReloadData();
 	}
 
 	static void open(Team team) {
