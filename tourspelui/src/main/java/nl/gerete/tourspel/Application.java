@@ -1,23 +1,40 @@
 package nl.gerete.tourspel;
 
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.pages.admin.*;
-import to.etc.dbpool.*;
-import to.etc.domui.dom.html.*;
-import to.etc.domui.hibernate.config.*;
-import to.etc.domui.hibernate.config.HibernateConfigurator.*;
-import to.etc.domui.server.*;
-import to.etc.domui.themes.sass.*;
+import nl.gerete.tourspel.db.Country;
+import nl.gerete.tourspel.db.Edition;
+import nl.gerete.tourspel.db.Etappe;
+import nl.gerete.tourspel.db.EtappeResult;
+import nl.gerete.tourspel.db.Person;
+import nl.gerete.tourspel.db.PersonRight;
+import nl.gerete.tourspel.db.PlayList;
+import nl.gerete.tourspel.db.PlayListEntry;
+import nl.gerete.tourspel.db.PlayListResult;
+import nl.gerete.tourspel.db.Region;
+import nl.gerete.tourspel.db.Rider;
+import nl.gerete.tourspel.db.StoppedRider;
+import nl.gerete.tourspel.db.Team;
+import nl.gerete.tourspel.pages.admin.TeamListPage;
+import to.etc.dbpool.ConnectionPool;
+import to.etc.dbpool.PoolManager;
+import to.etc.domui.dom.html.UrlPage;
+import to.etc.domui.hibernate.config.HibernateConfigurator;
+import to.etc.domui.hibernate.config.HibernateConfigurator.Mode;
+import to.etc.domui.server.ConfigParameters;
+import to.etc.domui.server.DomApplication;
+import to.etc.domui.themes.sass.SassThemeFactory;
 import to.etc.smtp.Address;
-import to.etc.util.*;
-import to.etc.webapp.query.*;
+import to.etc.util.DeveloperOptions;
+import to.etc.util.WrappedException;
+import to.etc.webapp.query.QContextManager;
 
-import javax.annotation.*;
-import javax.servlet.*;
-import javax.sql.*;
-import java.io.*;
-import java.text.*;
-import java.util.*;
+import javax.annotation.Nonnull;
+import javax.servlet.UnavailableException;
+import javax.sql.DataSource;
+import java.io.File;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Application extends DomApplication {
 
@@ -54,8 +71,7 @@ public class Application extends DomApplication {
 		File configFile = getAppFile("WEB-INF/" + tourspelProperties);
 		PropertyFile.initialize(configFile);
 		initDatabase(configFile);
-		setThemeFactory(SassThemeFactory.INSTANCE);
-		setCurrentTheme("winter/default/default");
+		setDefaultThemeFactory(SassThemeFactory.INSTANCE);
 
 		//setLoginAuthenticator(new TourLoginAuthenticator());
 		//setLoginAuthenticator(new TourLoginAuthenticator());
