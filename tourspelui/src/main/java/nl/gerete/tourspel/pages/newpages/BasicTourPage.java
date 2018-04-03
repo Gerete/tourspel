@@ -1,4 +1,4 @@
-package nl.gerete.tourspel.pages.admin;
+package nl.gerete.tourspel.pages.newpages;
 
 import to.etc.domui.dom.html.*;
 

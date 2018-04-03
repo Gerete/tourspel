@@ -1,0 +1,23 @@
+<h1>Resultaat van speellijst «<%= list.listName %>»</h1>
+<p>Totaal behaalde score: <%= score %>, opgebouwd als:</p>
+<table>
+	<thead>
+		<th>Lijstpositie</th>
+		<th>Renner</th>
+		<th>Gescored</th>
+		<th>Etappe-positie</th>
+	</thead>
+	<tbody>
+		<% for(var i = 0; i < 10; i++) {
+			var se = scoreList.get(i);
+		%>
+			<tr>
+				<td><%= se.guessedPosition %></td>
+				<td><%= se.rider.displayName %></td>
+				<td><%= se.score %></td>
+				<td><%= se.etappePosition == -1 ? "-" : se.etappePosition %></td>
+			</tr>
+		<% } %>
+	</tbody>
+</table>
+<p>Deze speellijst staat op de <%= rank.rank %>e plaats</p>

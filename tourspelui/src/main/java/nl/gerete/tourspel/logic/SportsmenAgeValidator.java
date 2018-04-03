@@ -17,10 +17,10 @@ public class SportsmenAgeValidator implements IValueValidator<Date>{
 
 	@Override public void validate(Date input) throws Exception {
 		if(input.before(toOld)) {
-			throw new IllegalArgumentException("Renner is te oud (50)");
+			throw new Exception("Renner is te oud (50)");
 		}
 		if(input.after(toYoung)) {
-			throw new IllegalArgumentException("Renner is te jong (10)");
+			throw new Exception("Renner is te jong (10)");
 		}
 	}
 }

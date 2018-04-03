@@ -1,0 +1,38 @@
+<p>Hoi <%= (person.firstName==null?person.lastName:person.firstName) %>, 
+
+Bedankt voor je aanmelding.
+
+Nu je geregistreerd bent als speler aan het Tourspel, kun je je rennerslijsten gaan samenstellen. Er zijn 2 soorten rennerslijsten: een klassementslijst en een poedellijst. Per lijst kan een nickname aangegeven worden, zodat anoniem kan worden meegespeeld.
+
+Per lijst kunnen maximaal 10 renners worden toegekend. De ploegen, waaruit de renners gekozen kunnen worden, zijn nog aan wijzigingen onderhevig (uitvallen, vormverlies). Daarom kan per lijst maximaal 15 renners worden aangegeven (de reservelijst) die voordat de tour is gestart, worden gebruikt als vervanging van de uitgevallen renners (dus in totaal kunnen 25 renners per lijst worden aangegeven).
+Indien een lijst uiteindelijk minder dan 10 renners bevat, zal automatisch renners worden toegevoegd door het systeem en wel alsvolgt:
+<ul>
+<li>klassementslijst: beginnend met de eerste ploeg wordt getracht de eerste renner van een ploeg toe te voegen aan de lijst, indien deze al niet op de lijst aanwezig is. Vervolgens de 2e renners beginnend bij de eerste ploeg, etc.</li>
+<li>poedellijst: hierbij wordt andersom geredeneerd. In plaats van de eerste renner wordt de laatste renner van de ploegen toegevoegd aan de lijst, indien mogelijk. </li>
+</ul>
+
+Als een renner tijdens de tour uitvalt (afstapper), verdwijnt deze van je lijst en wordt niet vervangen door een renner van de reservelijst.
+
+Hoe worden de punten gegeven:
+als je op een lijst de renner die op plek 1 geëindigd is hebt staan, levert dit 10 punten op. Heb je de renner die op plek 2 geëindigd is op je lijst staan, dan levert dit 9 punten op,........heb je de renner die op plek 10 geëindigd is op je lijst, dan levert dit 1 punt op.
+Heb je een renner ook nog op de juiste plek staan (dus uitslag etappe = plaats op de lijst), dan levert dat 5 extra (bonus) punten op.
+
+Tijdens de tour-de-france kun je op de website de etappeuitslag, de eigen lijsten met de verdiende punten / bonuspunten, het klassement, de poedel en de afstappers bekijken.
+Tevens kan 'Le meilieur' bekeken worden. Dit is een fictieve lijst welke de meeste punten behaald zou hebben tot dan toe. 
+
+De kosten bedragen 15,- euro per lijst, te voldoen op rekeningnr CU13 WCUR 0154 2634 33 tnv Tourspel en moeten voldaan zijn voordat het spel en daarmee de tour-de-france begint.
+
+Prijzen (einduitslag / etappe overwinning):
+?
+
+
+Belangrijke data:
+<lu>
+<li><%= registrationDeadline %> is de laatste dag dat er kan worden ingeschreven.</li>
+<li>De lijsten kunnen aangemaakt of gewijzigd worden tot <= changeRidersDeadline %>.</li> 
+<li>Op <%= payRegistrationFeeDeadline %> moet er betaald zijn.</li>
+<li>Op <%= startDate %> is de start van de tour-de-france (het tourspel)</li>
+<li>Uitbetaling van prijzen zal worden gedaan op <%= payPriceMoneyDeadline %></li>
+<li>De tour-de-france eindigt op <%= endDate %></li>
+</lu>
+</p>

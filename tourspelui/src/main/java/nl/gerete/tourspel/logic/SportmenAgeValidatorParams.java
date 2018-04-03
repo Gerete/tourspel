@@ -22,10 +22,10 @@ public class SportmenAgeValidatorParams implements IParameterizedValidator<Date>
 
 	@Override public void validate(Date input) throws Exception {
 		if(input.before(toOld)) {
-			throw new IllegalArgumentException("Renner is te oud (parameter)");
+			throw new Exception("Renner is te oud (parameter)");
 		}
 		if(input.after(toYoung)) {
-			throw new IllegalArgumentException("Renner is te jong (parameter)");
+			throw new Exception("Renner is te jong (parameter)");
 		}
 	}
 }

@@ -1,15 +1,18 @@
 package nl.gerete.tourspel;
 
+import nl.gerete.tourspel.adm.*;
 import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.pages.admin.*;
+import nl.gerete.tourspel.pages.adm.*;
 import to.etc.dbpool.*;
 import to.etc.domui.dom.html.*;
 import to.etc.domui.hibernate.config.*;
 import to.etc.domui.hibernate.config.HibernateConfigurator.*;
+import to.etc.domui.login.*;
 import to.etc.domui.server.*;
 import to.etc.domui.themes.sass.*;
 import to.etc.smtp.Address;
 import to.etc.util.*;
+import to.etc.webapp.pendingoperations.*;
 import to.etc.webapp.query.*;
 
 import javax.annotation.*;
@@ -41,7 +44,7 @@ public class Application extends DomApplication {
 
 	@Override
 	public Class< ? extends UrlPage> getRootPage() {
-		return TeamListPage.class;
+		return TourPortalPage.class;
 	}
 
 	@Override
@@ -54,49 +57,48 @@ public class Application extends DomApplication {
 		File configFile = getAppFile("WEB-INF/" + tourspelProperties);
 		PropertyFile.initialize(configFile);
 		initDatabase(configFile);
-		setThemeFactory(SassThemeFactory.INSTANCE);
-		setCurrentTheme("winter/default/default");
+		setDefaultThemeFactory(SassThemeFactory.INSTANCE);
 
-		//setLoginAuthenticator(new TourLoginAuthenticator());
-		//setLoginAuthenticator(new TourLoginAuthenticator());
-		//
-		//setLoginDialogFactory(new ILoginDialogFactory() {
-		//	@Override
-		//	public String getLoginRURL(final String originalTarget) {
-		//		StringBuilder sb = new StringBuilder();
-		//		//                              sb.append("login/login.jsp?target=");
-		//		sb.append(LoginPage.class.getName() + ".ui?target=");
-		//		StringTool.encodeURLEncoded(sb, originalTarget);
-		//		return sb.toString();
-		//	}
-		//
-		//	@Override
-		//	public String getAccessDeniedURL() {
-		//		return null; // Just use the built-in DomUI access denied page
-		//	}
-		//});
+		setLoginAuthenticator(new TourLoginAuthenticator());
+		setLoginAuthenticator(new TourLoginAuthenticator());
 
-		//-- Bulk mailer.
-		//PollingWorkerQueue.initialize();
-		//PropertyFile propertyfile = PropertyFile.getInstance();
-		//String host = propertyfile.getProperty("smtp.host");
-		//if(null == host)
-		//	host = "localhost";
-		//String fromName = propertyfile.getProperty("smtp.from");
-		//if(null == fromName)
-		//	fromName = "noreply@itris.nl";
-		//m_fromAddress = new to.etc.smtp.Address(fromName, "Tourspel");
-		//
-		//SmtpTransport st = new SmtpTransport(host);
-		//BulkMailer.initialize(m_dataSource, st);
+		setLoginDialogFactory(new ILoginDialogFactory() {
+			@Override
+			public String getLoginRURL(final String originalTarget) {
+				StringBuilder sb = new StringBuilder();
+				//                              sb.append("login/login.jsp?target=");
+				sb.append(LoginPage.class.getName() + ".ui?target=");
+				StringTool.encodeURLEncoded(sb, originalTarget);
+				return sb.toString();
+			}
 
-		//-- Start the job executor.
-		//SystemTask.getInstance().register(PointsCalculatorProvider.INSTANCE);
-		//SystemTask.getInstance().register(new TestTaskProvider());
-		//SystemTask.getInstance().initialize();
+			@Override
+			public String getAccessDeniedURL() {
+				return null; // Just use the built-in DomUI access denied page
+			}
+		});
+
+		// Bulk mailer.
+		PollingWorkerQueue.initialize();
+		PropertyFile propertyfile = PropertyFile.getInstance();
+		String host = propertyfile.getProperty("smtp.host");
+		if(null == host)
+			host = "localhost";
+		String fromName = propertyfile.getProperty("smtp.from");
+		if(null == fromName)
+			fromName = "noreply@itris.nl";
+		m_fromAddress = new to.etc.smtp.Address(fromName, "Tourspel");
+
+	//	SmtpTransport st = new SmtpTransport(host);
+	//	BulkMailer.initialize(m_dataSource, st);
+	//
+	//	//-- Start the job executor.
+	//	SystemTask.getInstance().register(PointsCalculatorProvider.INSTANCE);
+	//	SystemTask.getInstance().register(new TestTaskProvider());
+	//	SystemTask.getInstance().initialize();
 	}
 
-	public void initTest() throws Exception {
+	public static void initTest() throws Exception {
 		//-- Handle basic config.
 		String tourspelProperties = DeveloperOptions.getString("tourspel", "WEB-INF/tourspel.properties");
 		File configFile = new File("WebContent/WEB-INF/" + tourspelProperties);
@@ -104,7 +106,7 @@ public class Application extends DomApplication {
 		initDatabase(configFile);
 	}
 
-	public void initDatabase(File dbProperties) throws Exception {
+	public static void initDatabase(File dbProperties) throws Exception {
 
 		File pf = getAppFile("WEB-INF/pool.xml");
 		if(!pf.exists())

@@ -1,0 +1,22 @@
+<h1>Onbetaalde lijsten</h1>
+<p>Beste <%=person.firstName %>,</p>
+<br>voor de volgende lijsten is een betaling nog nodig om mee te doen aan het tourspel:</br>
+<table>
+	<thead>
+		<th>Lijstnaam</th>
+		<th>Type lijst</th>
+		<th>Van</th>
+	</thead>
+	<tbody>
+		<% for(var i = 0; i < notPaidLists.size(); i++) {
+			var se = notPaidLists.get(i);
+		%>
+			<tr>
+				<td><%= se.listName %></td>
+				<td><%= se.playListType %></td>
+				<td><%= se.person %></td>
+			</tr>
+		<% } %>
+	</tbody>
+	<br>Je hebt nog <%=daysLeft %> dagen voordat de Tour start. Wees op tijd met betalen.</br>
+</table>

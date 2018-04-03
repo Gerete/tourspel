@@ -1,5 +1,6 @@
-package nl.gerete.tourspel.pages.admin;
+package nl.gerete.tourspel.pages.newpages;
 
+import nl.gerete.tourspel.componenten.*;
 import nl.gerete.tourspel.db.*;
 import to.etc.domui.component.tbl.*;
 import to.etc.webapp.query.*;
@@ -26,6 +27,8 @@ public class TeamListPage extends BasicTourPage {
 		rr.column(Team.pNAME).ascending();
 		rr.column(Team.pTEAMCAPTAINNAME).ascending().sortdefault();
 		rr.column(Team.pCOUNTRY + "." + Country.pNAME).ascending();
+		rr.column(Team.pCOUNTRY);
+		rr.setNodeRenderer(3, new FlagRenderer());
 
 		DataTable<Team> dt = new DataTable<>(sm, rr);
 		add(dt);

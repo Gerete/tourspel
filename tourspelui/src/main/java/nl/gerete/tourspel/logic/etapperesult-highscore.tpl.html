@@ -1,0 +1,22 @@
+<h1>Top-10</h1>
+<p>De huidige stand van het spel is als volgt:</p>
+<table>
+	<thead>
+		<th>Positie</th>
+		<th>Punten</th>
+		<th>Lijstnaam</th>
+		<th>Van</th>
+	</thead>
+	<tbody>
+		<% for(var i = 0; i < top.size(); i++) {
+			var se = top.get(i);
+		%>
+			<tr>
+				<td><%= se.rank %></td>
+				<td><%= se.score %></td>
+				<td><%= se.playList.listName %></td>
+				<td><%= se.person %></td>
+			</tr>
+		<% } %>
+	</tbody>
+</table>
