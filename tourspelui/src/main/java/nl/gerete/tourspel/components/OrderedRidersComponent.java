@@ -21,19 +21,20 @@ import java.util.*;
  * @author <a href="mailto:ben.schoen@itris.nl">Ben Schoen</a>
  * Created on May 8, 2012
  */
+@DefaultNonNull
 public class OrderedRidersComponent<T extends IOrderedRiders> extends Div {
 
-	@Nullable
 	private SimpleListModel<T> m_model;
 
+	@Nullable
 	private DataTable<T> m_table;
 
 	private int m_maxRows;
 
 	@Nonnull
-	private List<IModelChangedListener<T>> m_changeListeners = Collections.EMPTY_LIST;
+	private List<IModelChangedListener<T>> m_changeListeners = new ArrayList<>();
 
-	public OrderedRidersComponent(@Nonnull SimpleListModel<T> model, int maxRows) throws Exception {
+	public OrderedRidersComponent(SimpleListModel<T> model, int maxRows) throws Exception {
 		m_model = model;
 		m_maxRows = maxRows;
 	}
@@ -59,10 +60,10 @@ public class OrderedRidersComponent<T extends IOrderedRiders> extends Div {
 
 		INodeContentRenderer<Integer> placer = new INodeContentRenderer<Integer>() {
 			@Override
-			public void renderNodeContent(NodeBase component, NodeContainer node, Integer object, Object parameters) throws Exception {
+			public void renderNodeContent(@Nonnull NodeBase component, @Nonnull NodeContainer node, @Nullable Integer object, @Nullable Object parameters) throws Exception {
 				if(null == object)
 					return;
-				int pl = object.intValue();
+				int pl = object;
 				if(pl <= 10) {
 					node.add(object.toString());
 					return;

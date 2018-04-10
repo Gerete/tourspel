@@ -121,7 +121,7 @@ public class PointsCalculator {
 			m_isprologue = true;
 			m_prologueDate = etappe.getDate();
 		} else {
-			List<Etappe> etlist = m_etappe.getEdition().getEtappeList(); // Get all etappes.
+			List<Etappe> etlist = Objects.requireNonNull(etappe.getEdition()).getEtappeList(); // Get all etappes.
 			for(Etappe et : etlist) {
 				if(et.getType() == EtappeType.Prologue) {
 					m_prologueDate = et.getDate();
@@ -159,7 +159,7 @@ public class PointsCalculator {
 	 * @throws Exception
 	 */
 	private void loadStoppedRiders(QDataContext dc) throws Exception {
-		List<StoppedRider> sl = dc.query(QCriteria.create(StoppedRider.class).eq("edition", getEdition()).le("stopDate", m_etappe.getDate()));
+		List<StoppedRider> sl = dc.query(QCriteria.create(StoppedRider.class).eq("edition", getEdition()).le("stopDate", Objects.requireNonNull(m_etappe.getDate())));
 		m_stoppedRiderMap = new HashMap<Long, StoppedRider>();
 		for(StoppedRider sr : sl) {
 			m_stoppedRiderMap.put(sr.getRider().getId(), sr); // Stopped rider by rider's PK
@@ -239,11 +239,11 @@ public class PointsCalculator {
 		calculateRunningList(pl);
 
 		//-- Walk the user's list so we can score.
-		m_scoreList = new ArrayList<Score>();
+		List<Score> scores = m_scoreList = new ArrayList<Score>();
 		m_bonusScoreList = new ArrayList<Score>();
 
 		if(m_runningList.size() < 1) {
-			m_scoreList = Collections.emptyList();
+			scores = Collections.emptyList();
 			m_bonusScoreList = Collections.emptyList();
 		}
 		for(int position = 0; position < NUM_RIDERS && position < m_runningList.size(); position++) {
@@ -262,7 +262,7 @@ public class PointsCalculator {
 				}
 				m_score += score;
 			}
-			m_scoreList.add(new Score(r, score, bonusScore, epos == null ? -1 : epos.intValue() + 1, position + 1));
+			scores.add(new Score(r, score, bonusScore, epos == null ? -1 : epos.intValue() + 1, position + 1));
 		}
 
 //		System.out.println("Resultaat:");
@@ -348,7 +348,7 @@ public class PointsCalculator {
 					Rider rider = pe.getRider();
 					if(rider == null)
 						throw new IllegalStateException("The rider should not be null here!");
-					if(rider.getId().equals(r.getId())) {
+					if(Objects.requireNonNull(rider.getId()).equals(r.getId())) {
 						exists = true;
 						break;
 					}

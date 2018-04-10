@@ -40,7 +40,7 @@ public class RiderLookupInput<T extends IOrderedRiders> extends Div {
 				if(rin.getValue() != null) {
 					Rider rider = rin.getValue();
 					rin.setValue(null);
-					m_riderAdded.cellClicked(rider);
+					m_riderAdded.cellClicked(Objects.requireNonNull(rider));
 				}
 			}
 		});
@@ -61,7 +61,7 @@ public class RiderLookupInput<T extends IOrderedRiders> extends Div {
 			public QCriteria<Rider> adjustQuery(QCriteria<Rider> c) {
 				//-- Remove all earlier added riders
 				for(T r : m_selectedRiders) {
-					c.ne("id", r.getRider().getId());
+					c.ne("id", Objects.requireNonNull(r.getRider()).getId());
 				}
 				return c;
 			}

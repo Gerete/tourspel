@@ -6,8 +6,6 @@ import to.etc.domui.component.menu.*;
 import to.etc.domui.dom.html.*;
 import to.etc.domui.state.*;
 
-import javax.annotation.*;
-
 public class ActionDaily implements IUIAction<Void> {
 
 	private final static String MENUNAME = "Dagelijks werk";
@@ -38,7 +36,6 @@ public class ActionDaily implements IUIAction<Void> {
 	}
 
 	@Override
-	@Nullable
 	public String getTitle(Void instance) throws Exception {
 		// TODO Auto-generated method stub
 		return MENUNAME;

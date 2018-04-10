@@ -43,7 +43,7 @@ public class EtappeResult extends TourspelEntity implements Comparable<EtappeRes
 
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "er_etappe_id")
-	@Nonnull
+	@Nullable
 	public Etappe getEtappe() {
 		return m_etappe;
 	}

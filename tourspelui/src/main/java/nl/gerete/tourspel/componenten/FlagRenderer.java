@@ -5,9 +5,14 @@ import nl.gerete.tourspel.db.*;
 import to.etc.domui.dom.html.*;
 import to.etc.domui.util.*;
 
+import javax.annotation.*;
+import java.util.*;
+
+@DefaultNonNull
 public class FlagRenderer implements INodeContentRenderer<Object> {
+
 	@Override
-	public void renderNodeContent(NodeBase component, NodeContainer node, Object o, Object parameters) throws Exception {
+	public void renderNodeContent(NodeBase component, NodeContainer node, @Nullable Object o, @Nullable Object parameters) throws Exception {
 		Country c = null;
 
 		if(o instanceof Rider)
@@ -15,7 +20,7 @@ public class FlagRenderer implements INodeContentRenderer<Object> {
 		else if(o instanceof Team)
 			c = ((Team) o).getCountry();
 		else if(o instanceof IOrderedRiders) {
-			c = ((IOrderedRiders) o).getRider().getCountry();
+			c = Objects.requireNonNull(((IOrderedRiders) o).getRider()).getCountry();
 		}
 		else if(o instanceof Country) {
 			c = (Country) o;

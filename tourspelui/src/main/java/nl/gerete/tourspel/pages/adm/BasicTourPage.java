@@ -64,9 +64,10 @@ public class BasicTourPage extends UrlPage {
 
 	@Nonnull
 	public Edition getEdition() {
-		if(m_edition == null)
+		Edition edition = m_edition;
+		if(edition == null)
 			throw new ValidationException(Msgs.VERBATIM, "No edition");
-		return m_edition;
+		return edition;
 	}
 
 	/**

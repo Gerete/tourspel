@@ -4,6 +4,7 @@ import nl.gerete.tourspel.adm.*;
 import nl.gerete.tourspel.db.*;
 import nl.gerete.tourspel.pages.adm.*;
 import to.etc.dbpool.*;
+import to.etc.domui.dom.header.*;
 import to.etc.domui.dom.html.*;
 import to.etc.domui.hibernate.config.*;
 import to.etc.domui.hibernate.config.HibernateConfigurator.*;
@@ -49,8 +50,8 @@ public class Application extends DomApplication {
 
 	@Override
 	protected void initialize(@Nonnull ConfigParameters pp) throws Exception {
-//		addHeaderContributor(HeaderContributor.loadStylesheet("css/style.css"), 100);
-//		addHeaderContributor(HeaderContributor.loadStylesheet("css/tourspel.css"), 100);
+		addHeaderContributor(HeaderContributor.loadStylesheet("css/style.css"), 100);
+		addHeaderContributor(HeaderContributor.loadStylesheet("css/tourspel.css"), 100);
 
 		//-- Handle basic config.
 		String tourspelProperties = DeveloperOptions.getString("tourspel", "tourspel.properties");

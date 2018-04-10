@@ -163,8 +163,8 @@ public class Etappe extends TourspelEntity implements Comparable<Etappe> {
 	@Override
 	public int compareTo(Etappe o) {
 		if(o.getEdition() != getEdition())
-			return getEdition().getYear() - o.getEdition().getYear();
-		return getDate().compareTo(o.getDate());
+			return Objects.requireNonNull(getEdition()).getYear() - Objects.requireNonNull(o.getEdition()).getYear();
+		return Objects.requireNonNull(getDate()).compareTo(Objects.requireNonNull(o.getDate()));
 	}
 
 	@Nonnull

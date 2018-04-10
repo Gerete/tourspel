@@ -7,6 +7,7 @@ import to.etc.domui.state.*;
 
 import javax.annotation.*;
 
+@DefaultNonNull
 public class ActionPortalPage implements IUIAction<Void> {
 
 	private static final String MENUNAME = "Deelnemers";
@@ -17,30 +18,27 @@ public class ActionPortalPage implements IUIAction<Void> {
 
 	@Override
 	@Nullable
-	public String getDisableReason(Void instance) throws Exception {
+	public String getDisableReason(@Nullable Void instance) throws Exception {
 		return null;
 	}
 
 	@Override
-	@Nonnull
-	public String getName(Void instance) throws Exception {
+	public String getName(@Nullable Void instance) throws Exception {
 		return MENUNAME;
 	}
 
 	@Override
-	@Nullable
-	public String getTitle(Void instance) throws Exception {
+	public String getTitle(@Nullable Void instance) throws Exception {
 		return TITLE;
 	}
 
 	@Override
-	@Nullable
-	public String getIcon(Void instance) throws Exception {
+	public String getIcon(@Nullable Void instance) throws Exception {
 		return ICON;
 	}
 
 	@Override
-	public void execute(NodeBase component, Void instance) throws Exception {
+	public void execute(NodeBase component, @Nullable Void instance) throws Exception {
 		UIGoto.moveSub(TourPortalPage.class);
 	}
 

@@ -9,6 +9,7 @@ import to.etc.webapp.mailer.*;
 import to.etc.webapp.pendingoperations.*;
 import to.etc.webapp.query.*;
 
+import javax.annotation.*;
 import java.io.*;
 import java.util.*;
 
@@ -18,6 +19,7 @@ import java.util.*;
  * @author <a href="mailto:jal@etc.to">Frits Jalvingh</a>
  * Created on Apr 26, 2012
  */
+@DefaultNonNull
 public class PointsCalculatorRun extends BaseSystemTask implements ISystemTask {
 	private Etappe m_etappe;
 
@@ -26,6 +28,7 @@ public class PointsCalculatorRun extends BaseSystemTask implements ISystemTask {
 
 	private PointsCalculator m_calculator = new PointsCalculator();
 
+	@Nullable
 	private TourMailer m_tourMailer;
 
 	PointsCalculatorRun(Etappe et) {
@@ -37,6 +40,7 @@ public class PointsCalculatorRun extends BaseSystemTask implements ISystemTask {
 		return "Etappe doorrekenen";
 	}
 
+	@Nullable
 	private Edition getEdition() {
 		return m_etappe.getEdition();
 	}
@@ -48,14 +52,13 @@ public class PointsCalculatorRun extends BaseSystemTask implements ISystemTask {
 	 *	<li>In run 1 we calculate the new total score for all playlists.</li>
 	 *	<li>In run 2 we generate all emails, detailing the scores AND showing the current ranking of all playlists.</li>
 	 * </ul>
-	 * @see nl.tourspel.logic.ISystemTask#execute(to.etc.util.Progress)
 	 */
 	@Override
 	public void execute(Progress p) throws Exception {
 		try {
-			m_etappe = dc().find(Etappe.class, m_etappe.getId()); // Reload in this session.
-			if(m_etappe.getPhase() != EtappePhase.CALCULATING) {
-				System.out.println(m_etappe + ": in phase " + m_etappe.getPhase() + ", no calculation possible");
+			Etappe etappe = m_etappe = dc().get(Etappe.class, Objects.requireNonNull(m_etappe.getId())); // Reload in this session.
+			if(Objects.requireNonNull(etappe).getPhase() != EtappePhase.CALCULATING) {
+				System.out.println(etappe + ": in phase " + etappe.getPhase() + ", no calculation possible");
 				return;
 			}
 
@@ -80,8 +83,8 @@ public class PointsCalculatorRun extends BaseSystemTask implements ISystemTask {
 			sub.complete();
 
 			//-- Everything done -> set etappe to done
-			m_etappe = dc().find(Etappe.class, m_etappe.getId());
-			m_etappe.setPhase(EtappePhase.CLOSED);
+			etappe = dc().get(Etappe.class, Objects.requireNonNull(etappe.getId()));
+			Objects.requireNonNull(etappe).setPhase(EtappePhase.CLOSED);
 			dc().commit();
 		} finally {
 			silentCloseDc();
@@ -130,7 +133,7 @@ public class PointsCalculatorRun extends BaseSystemTask implements ISystemTask {
 				}
 			}
 			if(reslist.size() > 0) {
-				emailUserScore(currentUser, reslist);
+				emailUserScore(Objects.requireNonNull(currentUser), reslist);
 				p.increment(reslist.size());
 			}
 
@@ -222,7 +225,9 @@ public class PointsCalculatorRun extends BaseSystemTask implements ISystemTask {
 				m_rankList.add(rank);
 			}
 
-			if(rank == null)
+			if(rank == null){
+				throw new Exception("Queue??");
+			}
 				//What ish problem?
 			rank.getContenders().add(pl);
 			m_rankMap.put(pl.getId(), rank);
@@ -318,8 +323,12 @@ public class PointsCalculatorRun extends BaseSystemTask implements ISystemTask {
 	 * @throws Exception
 	 */
 	private void emailUserScore(Person currentUser, List<PlayList> reslist) throws Exception {
-		m_tourMailer.start(currentUser);				// Start, and set subject later.
-		m_tourMailer.generate(getClass(), "etapperesult-welcome.tpl.html", "person", currentUser, "etappe", m_etappe, "result", m_calculator.getResultList());		// Welcome part.
+		TourMailer tourMailer = m_tourMailer;
+		if(null == tourMailer) {
+			throw new Exception("He, waarom is deze leeg?");
+		}
+		tourMailer.start(currentUser);				// Start, and set subject later.
+		tourMailer.generate(getClass(), "etapperesult-welcome.tpl.html", "person", currentUser, "etappe", m_etappe, "result", m_calculator.getResultList());		// Welcome part.
 
 		int toprank = Integer.MAX_VALUE;
 		boolean shared = false;
@@ -332,13 +341,13 @@ public class PointsCalculatorRun extends BaseSystemTask implements ISystemTask {
 			calculatePlaylist(currentUser, pl, ri);
 		}
 
-		m_tourMailer.generate(getClass(), "etapperesult-highscore.tpl.html", "person", currentUser, "etappe", m_etappe, "top", m_topList);
+		tourMailer.generate(getClass(), "etapperesult-highscore.tpl.html", "person", currentUser, "etappe", m_etappe, "top", m_topList);
 
 
 		String s = "[tourspel] Etappe-resultaat " + m_etappe.getDisplayName() + (shared ? ": gedeelde " : ": ") + toprank + "e plaats";
 		s = StringTool.removeAccents(s);
-		m_tourMailer.setSubject(s);
-		m_tourMailer.send(dc());
+		tourMailer.setSubject(s);
+		tourMailer.send(dc());
 	}
 
 	/**
@@ -348,7 +357,7 @@ public class PointsCalculatorRun extends BaseSystemTask implements ISystemTask {
 	private void calculatePlaylist(Person who, PlayList pl, RankItem ri) throws Exception {
 		m_calculator.calculateScore(dc(), pl);
 		pl.setLastMailedEtappe(m_etappe);
-		m_tourMailer.generate(getClass(), "etapperesult-playlist.tpl.html", "person", who, "etappe", m_etappe, "scoreList", m_calculator.getScoreList(), "list", pl, "score", m_calculator.getScore(),
+		Objects.requireNonNull(m_tourMailer).generate(getClass(), "etapperesult-playlist.tpl.html", "person", who, "etappe", m_etappe, "scoreList", m_calculator.getScoreList(), "list", pl, "score", m_calculator.getScore(),
 			"rank", ri);		// Welcome part.
 	}
 

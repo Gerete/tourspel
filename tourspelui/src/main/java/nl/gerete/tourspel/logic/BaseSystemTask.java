@@ -10,12 +10,13 @@ public abstract class BaseSystemTask implements ISystemTask {
 
 	@Nonnull
 	protected QDataContext dc() throws Exception {
-		if(m_dc == null) {
-			m_dc = QContextManager.createUnmanagedContext();
-			m_dc.startTransaction();
+		QDataContext dc = m_dc;
+		if(dc == null) {
+			dc = QContextManager.createUnmanagedContext();
+			dc.startTransaction();
+			m_dc = dc;
 		}
-
-		return m_dc;
+		return dc;
 	}
 
 	protected void silentCloseDc() {

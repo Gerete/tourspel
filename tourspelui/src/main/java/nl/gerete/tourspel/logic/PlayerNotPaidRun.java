@@ -41,7 +41,7 @@ public class PlayerNotPaidRun extends BaseSystemTask {
 	@Override
 	public void execute(Progress p) throws Exception {
 		try {
-			m_edition = dc().find(Edition.class, m_edition.getId()); // Reload in this session.
+			m_edition = dc().find(Edition.class, Objects.requireNonNull(m_edition.getId())); // Reload in this session.
 			if(m_edition.getPhase() != EditionPhase.OPEN) {
 				System.out.println(m_edition + ": in phase " + m_edition.getPhase() + ", no email to send.");
 				return;

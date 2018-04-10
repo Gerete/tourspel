@@ -9,6 +9,7 @@ import to.etc.domui.state.*;
 
 import javax.annotation.*;
 
+@DefaultNonNull
 public class ActionAdminTeams implements IUIAction< Void > {
 
 	private final static String MENUNAME = "Ploegen";
@@ -16,7 +17,8 @@ public class ActionAdminTeams implements IUIAction< Void > {
 	private final static String ICON = "images/fietsbel.png";
 
 	@Override
-	public String getDisableReason(Void instance) throws Exception {
+	@Nullable
+	public String getDisableReason(@Nullable Void instance) throws Exception {
 		if(!TourUser.getCurrent().hasRight(ApplicationRight.ADMIN.toString()) && !TourUser.getCurrent().hasRight(ApplicationRight.CLERK.toString()))
 			return "You do not have rights";
 
@@ -24,24 +26,22 @@ public class ActionAdminTeams implements IUIAction< Void > {
 	}
 
 	@Override
-	public String getName(Void instance) throws Exception {
+	public String getName(@Nullable Void instance) throws Exception {
 		return MENUNAME;
 	}
 
 	@Override
-	public String getIcon(Void instance) throws Exception {
+	public String getIcon(@Nullable Void instance) throws Exception {
 		return ICON;
 	}
 
 	@Override
-	public void execute(NodeBase component, Void instance) throws Exception {
+	public void execute(NodeBase component, @Nullable Void instance) throws Exception {
 		UIGoto.moveSub(TeamListPage.class);
 	}
 
 	@Override
-	@Nullable
-	public String getTitle(Void instance) throws Exception {
-		// TODO Auto-generated method stub
+	public String getTitle(@Nullable Void instance) throws Exception {
 		return MENUNAME;
 	}
 

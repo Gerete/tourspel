@@ -14,23 +14,29 @@ import to.etc.domui.state.*;
 import to.etc.domui.trouble.*;
 import to.etc.util.*;
 
+import javax.annotation.*;
+import java.util.*;
+
+@DefaultNonNull
 public class LoginPage extends UrlPage {
 	static private final String LOGO = "images/tour-de-france-logo.jpg";
 
-	final TextStr m_loginid = new TextStr();
+	private final TextStr m_loginid = new TextStr();
 
-	final HiddenText<String> m_password = new HiddenText<String>(String.class);
+	private final HiddenText<String> m_password = new HiddenText<String>(String.class);
 
-	final Checkbox m_keeplogin = new Checkbox();
+	private final Checkbox m_keeplogin = new Checkbox();
 
 	//	Div	m_failed;
-	Img m_logo = new Img();
+	private Img m_logo = new Img();
 
-	TD m_blurb;
+	@Nullable
+	private TD m_blurb;
 
-	TD m_error;
+	@Nullable
+	private TD m_error;
 
-	int m_failcount;
+	private int m_failcount;
 
 	static public final String FORCE_TOP = "\nif(parent.location.href != self.location.href) {\n" // Make sure we're not in a frame
 		//	+	"  alert('a='+parent.location.href+', b='+self.location.href);\n"
@@ -152,7 +158,7 @@ public class LoginPage extends UrlPage {
 
 	void doLogin() {
 		try {
-			if(!UILogin.login(m_loginid.getValue(), m_password.getValue())) {
+			if(!UILogin.login(Objects.requireNonNull(m_loginid.getValue()), Objects.requireNonNull(m_password.getValue()))) {
 				m_loginid.setCssClass("l-bad");
 				m_loginid.setTestID("login");
 				m_password.setCssClass("l-bad");
@@ -183,15 +189,15 @@ public class LoginPage extends UrlPage {
 	}
 
 	void setBlurb() {
-		m_blurb.setText("Welkom bij het Tourspel 2018");
-		m_blurb.setCssClass("l-blurb");
+		Objects.requireNonNull(m_blurb).setText("Welkom bij het Tourspel 2018");
+		Objects.requireNonNull(m_blurb).setCssClass("l-blurb");
 	}
 
 	static private final int MAXIMAGE = 4;
 
 	void setFailed(final String what) {
-		m_error.setText(what);
-		m_error.setCssClass("l-error");
+		Objects.requireNonNull(m_error).setText(what);
+		Objects.requireNonNull(m_error).setCssClass("l-error");
 		System.out.println("LOGIN failed: " + what);
 		m_failcount++;
 		String name;
@@ -201,7 +207,7 @@ public class LoginPage extends UrlPage {
 			name = "images/loginfailed" + m_failcount + ".png";
 		m_logo.setSrc(name);
 		if(m_failcount == 3) {
-			m_blurb.setText("Hmmm.. Not sure if you're welcome, but try again..");
+			Objects.requireNonNull(m_blurb).setText("Hmmm.. Not sure if you're welcome, but try again..");
 
 		}
 	}

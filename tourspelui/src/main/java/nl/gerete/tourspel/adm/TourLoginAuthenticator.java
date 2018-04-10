@@ -13,8 +13,7 @@ public class TourLoginAuthenticator implements ILoginAuthenticator {
 
 	@Override
 	public IUser authenticateUser(String userid, String credentials) throws Exception {
-		QDataContext dc = QContextManager.createUnmanagedContext();
-		try {
+		try(QDataContext dc = QContextManager.createUnmanagedContext()) {
 			QCriteria<Person> crits = QCriteria.create(Person.class).eq("email", userid).eq("password", credentials);
 			Person p = dc.queryOne(crits);
 			if(p == null)
@@ -22,8 +21,6 @@ public class TourLoginAuthenticator implements ILoginAuthenticator {
 			else {
 				return createUserInstance(p);
 			}
-		} finally {
-			dc.close();
 		}
 	}
 
@@ -45,8 +42,7 @@ public class TourLoginAuthenticator implements ILoginAuthenticator {
 		if(userid == null || userid.length() == 0)
 			return null;
 
-		QDataContext dc = QContextManager.createUnmanagedContext();
-		try {
+		try(QDataContext dc = QContextManager.createUnmanagedContext()) {
 			QCriteria<Person> q = QCriteria.create(Person.class).eq(Person.pEMAIL, userid);
 			Person p = dc.queryOne(q);
 			if(p == null)
@@ -60,10 +56,6 @@ public class TourLoginAuthenticator implements ILoginAuthenticator {
 			if(!s.equals(hashcode))
 				return null;
 			return createUserInstance(p);
-		} finally {
-			try {
-				dc.close();
-			} catch(Exception x) {}
 		}
 	}
 
@@ -72,8 +64,7 @@ public class TourLoginAuthenticator implements ILoginAuthenticator {
 		if(userid == null || userid.length() == 0)
 			return null;
 
-		QDataContext dc = QContextManager.createUnmanagedContext();
-		try {
+		try(QDataContext dc = QContextManager.createUnmanagedContext()) {
 			QCriteria<Person> q = QCriteria.create(Person.class).eq(Person.pEMAIL, userid);
 			Person p = dc.queryOne(q);
 			if(p == null)
@@ -84,10 +75,6 @@ public class TourLoginAuthenticator implements ILoginAuthenticator {
 			byte[] data = s.getBytes("utf-8");
 			data = FileTool.hashBuffers(new byte[][]{data});
 			return StringTool.toHex(data);
-		} finally {
-			try {
-				dc.close();
-			} catch(Exception x) {}
 		}
 	}
 

@@ -136,7 +136,7 @@ class QuittersFragment extends Div {
 		er.setEtappe(m_etappe);
 		er.setRider(value);
 
-		if(stop.getTime() > m_etappe.getDate().getTime())
+		if(stop.getTime() > Objects.requireNonNull(m_etappe.getDate()).getTime())
 			stop = m_etappe.getDate();
 
 		er.setStopDate(stop);

@@ -640,7 +640,7 @@ public class InitDatabase {
 		cal.set(Calendar.SECOND, 0);
 		cal.set(Calendar.MILLISECOND, 0);
 		m_lastEtappe = cal.getTime();
-		et.setDate(m_lastEtappe);
+		et.setDate(Objects.requireNonNull(m_lastEtappe));
 		dc().save(et);
 		return et;
 	}

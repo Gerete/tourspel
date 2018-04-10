@@ -65,7 +65,7 @@ public class PlayListEditPage extends BasicTourPage {
 	public void createContent() throws Exception {
 		TourUser usr = (TourUser) UIContext.getCurrentUser();
 		if(usr != null && getPlayList().getId() != null && !usr.hasRight(ApplicationRight.ADMIN)) {
-			if(!usr.getPerson().getId().equals(getPlayList().getPerson().getId())) {
+			if(!Objects.requireNonNull(usr.getPerson().getId()).equals(getPlayList().getPerson().getId())) {
 				throw new IllegalStateException("The page was accessed illegally (or at least without a person_id)");
 			}
 		}
@@ -125,12 +125,12 @@ public class PlayListEditPage extends BasicTourPage {
 
 			@Override
 			public void rowDeleted(@Nonnull ITableModel<PlayListEntry> model, int index, @Nonnull PlayListEntry value) throws Exception {
-				m_ridersModel.delete(value.getRider());
+				m_ridersModel.delete(Objects.requireNonNull(value.getRider()));
 			}
 
 			@Override
 			public void rowAdded(@Nonnull ITableModel<PlayListEntry> model, int index, @Nonnull PlayListEntry value) throws Exception {
-				m_ridersModel.add(value.getRider());
+				m_ridersModel.add(Objects.requireNonNull(value.getRider()));
 			}
 
 			@Override

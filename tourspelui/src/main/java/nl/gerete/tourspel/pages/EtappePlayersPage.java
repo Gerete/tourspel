@@ -35,9 +35,7 @@ public class EtappePlayersPage extends BasicTourPage {
 		if(usr == null)
 			throw new IllegalStateException("The TourUser should not be null here!");
 		//FIXME Waarom voer je hier een query uit als je al usr.getPerson() hebt?
-		Person p = getSharedContext().find(Person.class, usr.getPerson().getId());
-		if(p == null)
-			throw new IllegalStateException("The person should not be null here!");
+		Person p = getSharedContext().get(Person.class, Objects.requireNonNull(usr.getPerson().getId()));
 		List<PlayListFragment> playListGroup = new ArrayList<PlayListFragment>();
 
 		for(PlayList pl : p.getPlayListList()) {

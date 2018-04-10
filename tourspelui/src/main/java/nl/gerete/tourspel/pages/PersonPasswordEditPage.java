@@ -17,6 +17,8 @@ import to.etc.domui.util.*;
 import to.etc.webapp.nls.*;
 import to.etc.webapp.query.*;
 
+import java.util.*;
+
 public class PersonPasswordEditPage extends BasicTourPage {
 
 	public PersonPasswordEditPage() {
@@ -111,7 +113,7 @@ public class PersonPasswordEditPage extends BasicTourPage {
 
 		m_modelBindings.moveControlToModel();
 
-		Person person = ((TourUser) UIContext.getCurrentUser()).getPerson();
+		Person person = ((TourUser) Objects.requireNonNull(UIContext.getCurrentUser())).getPerson();
 
 		// Controle of het oude wachtwoord correct is.
 		if(!getOldPassword().equalsIgnoreCase(person.getPassword())) {

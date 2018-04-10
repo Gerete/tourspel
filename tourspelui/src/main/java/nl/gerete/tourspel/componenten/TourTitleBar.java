@@ -8,15 +8,19 @@ import to.etc.domui.dom.errors.*;
 import to.etc.domui.dom.html.*;
 import to.etc.domui.util.*;
 
+import javax.annotation.*;
+
 /**
  * The Tour title bar. This consists of an image in the left corner, a string describing the
  * module's functionality and a set of standard buttons.
  *
  */
+@DefaultNonNull
 public class TourTitleBar extends AppPageTitleBar {
 
 	private boolean m_breadCrumb = true;
 
+	@Nullable
 	private IErrorFence m_errorFence;
 
 	private ErrorMessageDiv m_errorThingy = new ErrorMessageDiv();
@@ -33,7 +37,7 @@ public class TourTitleBar extends AppPageTitleBar {
 		super(title, true);
 	}
 
-	public boolean isBreadCrumb() {
+	private boolean isBreadCrumb() {
 		if("true".equals(getPage().getPageParameters().getString("breadcrumb", null)))
 			return true;
 
@@ -100,7 +104,10 @@ public class TourTitleBar extends AppPageTitleBar {
 	 * @see to.etc.domui.components.basic.AppPageTitle#addDefaultButtons(to.etc.domui.dom.html.NodeContainer)
 	 */
 	@Override
-	protected void addDefaultButtons(final NodeContainer nc) {
+	protected void addDefaultButtons(@Nullable final NodeContainer nc) {
+		if (null == nc) {
+			return;
+		}
 		nc.add(new TourMenuBar());
 	}
 
@@ -117,12 +124,7 @@ public class TourTitleBar extends AppPageTitleBar {
 		pm.addItem("Start inschrijving", "img/btnSmileySmiley.gif", null);
 		pm.addItem("Start tourspel", "img/btnSmileySmiley.gif", null);
 
-		LinkButton lb = new LinkButton("Clerk", new IClicked<LinkButton>() {
-			@Override
-			public void clicked(LinkButton clickednode) throws Exception {
-				pm.show(clickednode, null);
-			}
-		});
+		LinkButton lb = new LinkButton("Clerk", (IClicked<LinkButton>) clickednode -> pm.show(clickednode, null));
 		return lb;
 	}
 
@@ -131,14 +133,8 @@ public class TourTitleBar extends AppPageTitleBar {
 		pm.addItem("Account gegevens", "img/btnSmileySmiley.gif", null);
 		pm.addItem("Uitloggen", "img/btnSmileySad.gif", null);
 
-		LinkButton lb = new LinkButton("Menu", new IClicked<LinkButton>() {
-			@Override
-			public void clicked(LinkButton clickednode) throws Exception {
-				pm.show(clickednode, null);
-			}
-		});
+		LinkButton lb = new LinkButton("Menu", (IClicked<LinkButton>) clickednode -> pm.show(clickednode, null));
 		return lb;
-
 	}
 
 
@@ -151,7 +147,7 @@ public class TourTitleBar extends AppPageTitleBar {
 	 * @see to.etc.domui.dom.html.NodeBase#onAddedToPage(to.etc.domui.dom.html.Page)
 	 */
 	@Override
-	public void onAddedToPage(Page p) {
+	public void onAddedToPage(@Nullable Page p) {
 		super.onAddedToPage(p);
 		m_errorFence = DomUtil.getMessageFence(this);
 		m_errorFence.addErrorListener(m_errorThingy);
@@ -164,9 +160,12 @@ public class TourTitleBar extends AppPageTitleBar {
 	 * @see to.etc.domui.dom.html.NodeBase#onRemoveFromPage(to.etc.domui.dom.html.Page)
 	 */
 	@Override
-	public void onRemoveFromPage(Page p) {
+	public void onRemoveFromPage(@Nullable Page p) {
 		super.onRemoveFromPage(p);
-		m_errorFence.removeErrorListener(m_errorThingy);
+		IErrorFence errorFence = m_errorFence;
+		if (null == errorFence) {
+			return;
+		}
+		errorFence.removeErrorListener(m_errorThingy);
 	}
-
 }

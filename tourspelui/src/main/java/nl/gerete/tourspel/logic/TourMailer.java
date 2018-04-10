@@ -17,6 +17,7 @@ import javax.annotation.*;
 import java.io.*;
 import java.util.*;
 
+@DefaultNonNull
 public class TourMailer {
 	@Nonnull
 	final private Map<String, JSTemplate> m_templateMap = new HashMap<String, JSTemplate>();
@@ -24,6 +25,7 @@ public class TourMailer {
 	@Nullable
 	private MailHelper m_mailer;
 
+	@Nullable
 	private Person m_who;
 
 	public void start(Person who, String subject) {
@@ -98,9 +100,11 @@ public class TourMailer {
 //	}
 
 	private MailHelper getMailer() {
-		if(m_mailer == null) {
-			m_mailer = new MailHelper() {
+		MailHelper mailHelper = m_mailer;
+		if(mailHelper == null) {
+			mailHelper = m_mailer = new MailHelper() {
 				@Override
+				@Nullable
 				public String getApplicationURL() {
 					// FIXME We must have a public URL here!!
 					return "http://www.tourspel.nl/tour";
@@ -115,7 +119,7 @@ public class TourMailer {
 					if(rr != null) {
 						if(!rr.exists())
 							throw new IllegalStateException("The application resource '" + name + "' does not exist.");
-						return rr.getInputStream();
+						return Objects.requireNonNull(rr.getInputStream());
 					}
 
 					File f = new File("WebContent/" + name);
@@ -125,9 +129,9 @@ public class TourMailer {
 					return new FileInputStream(f);
 				}
 			};
-			m_mailer.setFrom(Application.getFromAddress());
+			mailHelper.setFrom(Application.getFromAddress());
 		}
-		return m_mailer;
+		return mailHelper;
 	}
 
 	public void send(@Nonnull QDataContext dc) throws Exception {

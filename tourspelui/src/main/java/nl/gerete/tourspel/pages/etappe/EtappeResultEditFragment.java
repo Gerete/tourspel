@@ -25,18 +25,15 @@ class EtappeResultEditFragment extends Div {
 	@Nullable
 	private OrderedRidersComponent<EtappeResult> m_ridersComponent;
 
-	@Nonnull
-	private EtappeResult m_selectedResult;
-
 	private TR m_selectedRow;
 
 	private TBody m_inputBody;
 
 	@Nonnull
-	private List<IValueChanged> m_changeListeners = Collections.EMPTY_LIST;
+	private List<IValueChanged<?>> m_changeListeners = new ArrayList<>();
 
 	@Nonnull
-	private List<ITableModelListener<EtappeResult>> m_modelChangeListeners = Collections.EMPTY_LIST;
+	private List<ITableModelListener<EtappeResult>> m_modelChangeListeners = new ArrayList<>();
 
 	@Nonnull
 	private final SimpleListModel<EtappeResult> m_etappeResultModel;
@@ -50,9 +47,7 @@ class EtappeResultEditFragment extends Div {
 		m_edition = edition;
 		m_etappe = et;
 		m_etappeResultModel = model;
-		for(EtappeResult etappeResult : m_etappeResultModel.getItems(0, m_etappeResultModel.getRows())) {
-			m_resultList.add(etappeResult);
-		}
+		m_resultList.addAll(m_etappeResultModel.getItems(0, m_etappeResultModel.getRows()));
 	}
 
 	@Nullable
@@ -69,36 +64,30 @@ class EtappeResultEditFragment extends Div {
 
 		//-- Etappe-resultaat.
 		add(new BR());
-		add(new Div("Vul het resultaat in (1e 10 posities) van etappe " + m_etappe.getStage() + " " + " van " + m_etappe.getStart() + " naar " + m_etappe.getEnd() + " (" + m_etappe.getType() + ")"));
+		add(new Div("Vul het resultaat in (1e 10 posities) van etappe " + Objects.requireNonNull(m_etappe).getStage() + " " + " van " + Objects.requireNonNull(m_etappe).getStart() + " naar " + Objects.requireNonNull(m_etappe).getEnd() + " (" + Objects.requireNonNull(m_etappe).getType() + ")"));
 
 		//-- We need to fill in 10 etappe results...
-		m_ridersComponent = new OrderedRidersComponent<EtappeResult>(m_etappeResultModel, MAX_ETAPPE_RESULTS);
-		add(m_ridersComponent);
-		m_ridersComponent.setModel(m_etappeResultModel);
-		m_ridersComponent.addListener(new IModelChangedListener<EtappeResult>() {
+		OrderedRidersComponent<EtappeResult> ridersComponent = m_ridersComponent = new OrderedRidersComponent<EtappeResult>(m_etappeResultModel, MAX_ETAPPE_RESULTS);
+		add(ridersComponent);
+		ridersComponent.setModel(m_etappeResultModel);
+		ridersComponent.addListener(new IModelChangedListener<EtappeResult>() {
 
 			@Override
-			public void onValueRemoved(EtappeResult removedEntry) throws Exception {
+			public void onValueRemoved(@Nonnull EtappeResult removedEntry) throws Exception {
 				m_etappeResultModel.delete(removedEntry);
 				updateState();
 				fireRemoved(removedEntry);
 			}
 
 			@Override
-			public void onValueAdded(EtappeResult addedEntry) throws Exception {
+			public void onValueAdded(@Nonnull EtappeResult addedEntry) throws Exception {
 				updateState();
 			}
 		});
 		m_inputBody = addTable();
 
 		RiderLookupInput<EtappeResult> rin = new RiderLookupInput<EtappeResult>();
-		rin.setAdded(new ICellClicked<Rider>() {
-
-			@Override
-			public void cellClicked(Rider rowval) throws Exception {
-				addRider(rowval);
-			}
-		});
+		rin.setAdded(this::addRider);
 		rin.setSelectedRiders(m_resultList);
 		m_inputBody.addCell().add(rin);
 		updateState();
@@ -130,17 +119,13 @@ class EtappeResultEditFragment extends Div {
 	protected void handleSelection(NodeBase tr, EtappeResult rowval) {
 		if(m_selectedRow != null) {
 			m_selectedRow.removeCssClass("ui-selected");
-			m_selectedResult = null;
 			m_selectedRow = null;
 		}
 		if(rowval != null) {
 			tr.addCssClass("ui-selected");
 			m_selectedRow = (TR) tr;
-			m_selectedResult = rowval;
 		}
-
 		updateButtons();
-
 	}
 
 	private void updateButtons() {}
@@ -152,11 +137,11 @@ class EtappeResultEditFragment extends Div {
 
 		//-- Ok: add new one
 		EtappeResult er = new EtappeResult();
-		er.setEtappe(m_etappe);
+		er.setEtappe(Objects.requireNonNull(m_etappe));
 		er.setRider(value);
 		getSharedContext().save(er);
 		m_resultList.add(er);
-		m_ridersComponent.addOrderedRider(er);
+		Objects.requireNonNull(m_ridersComponent).addOrderedRider(er);
 	}
 
 	public void removeRider(Rider rider) throws Exception { //FIXME Wordt deze wel aangeroepen?
@@ -166,7 +151,7 @@ class EtappeResultEditFragment extends Div {
 		for(EtappeResult etappeResult : m_resultList) {
 			if(etappeResult.getRider().equals(rider)) {
 				m_resultList.remove(etappeResult);
-				m_ridersComponent.removeRider(etappeResult);
+				Objects.requireNonNull(m_ridersComponent).removeRider(etappeResult);
 			}
 		}
 	}
@@ -177,19 +162,19 @@ class EtappeResultEditFragment extends Div {
 		}
 	}
 
-	public void addListener(IValueChanged vc) {
+	public void addListener(IValueChanged<?> vc) {
 		if(m_changeListeners == Collections.EMPTY_LIST)
-			m_changeListeners = new ArrayList<IValueChanged>();
+			m_changeListeners = new ArrayList<IValueChanged<?>>();
 		m_changeListeners.add(vc);
 	}
 
-	public void removeListener(IValueChanged vc) {
+	public void removeListener(IValueChanged<?> vc) {
 		if(m_changeListeners.size() > 0)
 			m_changeListeners.remove(vc);
 	}
 
 	private void fireChanges() throws Exception {
-		for(IValueChanged vc : m_changeListeners)
+		for(IValueChanged<?> vc : m_changeListeners)
 			vc.onValueChanged(this);
 	}
 

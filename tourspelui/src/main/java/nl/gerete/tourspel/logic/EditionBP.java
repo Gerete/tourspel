@@ -161,7 +161,7 @@ public class EditionBP {
 	private static boolean isEditableEtappe(@Nonnull Etappe et, @Nonnull Date dt) {
 		if(et.isCompleted())
 			return false;
-		if(et.getDate().getTime() > dt.getTime()) // Etappe is later than the date specified
+		if(Objects.requireNonNull(et.getDate()).getTime() > dt.getTime()) // Etappe is later than the date specified
 			return false;
 		return true;
 	}

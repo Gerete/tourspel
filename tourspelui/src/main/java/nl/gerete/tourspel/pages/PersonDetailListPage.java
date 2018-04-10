@@ -13,17 +13,23 @@ import to.etc.webapp.query.*;
 import javax.annotation.*;
 import java.util.*;
 
+@DefaultNonNull
 public class PersonDetailListPage extends BasicEditPage<Person> {
 
+	@Nullable
 	private SimpleListModel<PlayList> m_slm;
 
-	@Nonnull
+	@Nullable
 	private Person m_person;
 
 	@Nonnull
 	@UIUrlParameter(name = "id", mandatory = true)
 	public Person getPerson() {
-		return m_person;
+		Person person = m_person;
+		if(null == person) {
+			throw new IllegalArgumentException("Persoon kan hier niet leeg zijn.");
+		}
+		return person;
 	}
 
 	public void setPerson(Person person) {
@@ -47,7 +53,7 @@ public class PersonDetailListPage extends BasicEditPage<Person> {
 		super.createContent();
 
 		if(!user.hasRight(ApplicationRight.ADMIN)) {
-			if(!user.getPerson().getId().equals(getPerson().getId())) {
+			if(!Objects.requireNonNull(user.getPerson().getId()).equals(getPerson().getId())) {
 				throw new IllegalStateException("The page was accessed illegally (or at least without a person_id)");
 			}
 		}
@@ -61,15 +67,14 @@ public class PersonDetailListPage extends BasicEditPage<Person> {
 		if(playLists.isEmpty()) {
 			add(new Div("geen lijst aanwezig"));
 		} else {
-			m_slm = new SimpleListModel<PlayList>(playLists);
+			SimpleListModel<PlayList> slm = m_slm = new SimpleListModel<>(playLists);
 			BasicRowRenderer<PlayList> brr = new BasicRowRenderer<PlayList>(PlayList.class);
 			brr.setRowClicked(new ICellClicked<PlayList>() {
-				@Override
-				public void cellClicked(PlayList rowval) throws Exception {
+				@Override public void cellClicked(@Nonnull PlayList rowval) throws Exception {
 					UIGoto.moveSub(PlayListEditPage.class, new PageParameters("id", rowval.getId()));
 				}
 			});
-			DataTable<PlayList> dt = new DataTable<PlayList>(m_slm, brr);
+			DataTable<PlayList> dt = new DataTable<>(slm, brr);
 			add(dt);
 		}
 	}
@@ -80,20 +85,14 @@ public class PersonDetailListPage extends BasicEditPage<Person> {
 		TourUser user = (TourUser) UIContext.getLoggedInUser();
 		// FIXME Waarom moet ik hier toString() vergelijken?
 		if(getPerson().toString().equals(user.getPerson().toString())) {
-			DefaultButton playListAddButton = new DefaultButton("Nieuwe lijst", new IClicked<DefaultButton>() {
-
-				@Override
-				public void clicked(DefaultButton clickednode) throws Exception {
-					UIGoto.moveSub(PlayListEditPage.class, "id", "NEW", "person_id", getPage().getPageParameters().getLongW("id"));
-				}
-			});
-			return playListAddButton;
+			return new DefaultButton("Nieuwe lijst",
+				clickednode -> UIGoto.moveSub(PlayListEditPage.class, "id", "NEW", "person_id", getPage().getPageParameters().getLongW("id")));
 		} else
 			return null;
 	}
 
 	@Override
-	protected void onShelve() throws Exception {
+	protected void onShelve() {
 		/*
 		 * Close the context so the query will be re-executed when the page is re-entered
 		 */
@@ -101,7 +100,7 @@ public class PersonDetailListPage extends BasicEditPage<Person> {
 	}
 
 	@Override
-	protected void onUnshelve() throws Exception {
+	protected void onUnshelve() {
 		forceRebuild();
 	}
 }

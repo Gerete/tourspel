@@ -7,25 +7,23 @@ import to.etc.domui.state.*;
 import javax.annotation.*;
 import java.util.*;
 
+@DefaultNonNull
 public class TourUser implements IUser {
-	@Nonnull
+
 	final private Person m_person;
 
-	@Nonnull
 	final private Set<ApplicationRight> m_rights;
 
-	public TourUser(@Nonnull Person person, @Nonnull Set<ApplicationRight> rights) {
+	public TourUser(Person person, Set<ApplicationRight> rights) {
 		m_person = person;
 		m_rights = rights;
 	}
 
-	@Nonnull
 	@Override
 	public String getDisplayName() {
 		return m_person.toString();
 	}
 
-	@Nonnull
 	@Override
 	public String getLoginID() {
 		return m_person.getEmail();
@@ -40,18 +38,16 @@ public class TourUser implements IUser {
 		return hasRight(e.toString());
 	}
 
-	@Nonnull
 	public Person getPerson() {
 		return m_person;
 	}
 
-	@Nonnull
 	static public TourUser getCurrent() {
 		return (TourUser) UIContext.getLoggedInUser();
 	}
 
 	@Override
-	public <T> boolean hasRight(String r, T dataElement) {
+	public <T> boolean hasRight(String r, @Nullable T dataElement) {
 		return false;
 	}
 

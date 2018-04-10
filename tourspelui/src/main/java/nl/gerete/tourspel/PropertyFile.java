@@ -48,12 +48,12 @@ public class PropertyFile {
 
 	@Nullable
 	public String getProperty(@Nonnull String parameter) {
-		return m_properties.getProperty(parameter);
+		return Objects.requireNonNull(m_properties).getProperty(parameter);
 	}
 
 	@Nullable
 	public String getProperty(@Nonnull String parameter, @Nullable String defaultValue) {
-		return m_properties.getProperty(parameter, defaultValue);
+		return Objects.requireNonNull(m_properties).getProperty(parameter, defaultValue);
 	}
 }
 
