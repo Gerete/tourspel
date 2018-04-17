@@ -18,12 +18,16 @@ import javax.annotation.*;
  * Created on Jun 2, 2017
  */
 @DefaultNonNull
-public class TeamEditPage extends BasicTourPage {
+public class TeamEditPage extends BasicTourPage<Team> {
 
 	private final static String ID_PARAM = "teamID";
 
 	@Nullable
 	private Team m_team;
+
+	public TeamEditPage() {
+		super(Team.class);
+	}
 
 	@UIUrlParameter(name = ID_PARAM)
 	public Team getTeam() {

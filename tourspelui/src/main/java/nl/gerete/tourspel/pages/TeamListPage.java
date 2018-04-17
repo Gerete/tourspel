@@ -11,8 +11,8 @@ public class TeamListPage extends BasicListPage<Team> {
 
 	public TeamListPage() throws Exception {
 		super(Team.class, TeamEditPage.class);
-		setSearchFields(Team.pNAME, Team.pTEAMCAPTAINNAME, Team.pCOUNTRY + "." + Country.pNAME);
-		setDisplayFields(Team.pNAME, Team.pTEAMCAPTAINNAME, Team.pCOUNTRY + "." + Country.pNAME, Team.pCOUNTRY + "." + Country.pSHORTNAME, "%2", SortableType.SORTABLE_ASC, "", new FlagRenderer());
+		setSearchFields(Team_.name(), Team_.teamCaptainName(), Team_.country().name());
+		setDisplayFields(Team_.name(), Team_.teamCaptainName(), Team_.country().name(), Team_.country().shortName(), "%2", SortableType.SORTABLE_ASC, "", new FlagRenderer<>(Team::getCountry));
 	}
 
 	@Override

@@ -2,8 +2,8 @@ package nl.gerete.tourspel.pages;
 
 import nl.gerete.tourspel.db.*;
 import nl.gerete.tourspel.pages.adm.*;
-import to.etc.domui.component.lookup.*;
 import to.etc.domui.component.ntbl.*;
+import to.etc.domui.component.searchpanel.*;
 import to.etc.domui.component.tbl.*;
 import to.etc.domui.dom.html.*;
 import to.etc.domui.state.*;
@@ -14,7 +14,7 @@ import javax.annotation.*;
 
 public class BasicListPage<T extends ILongIdentifyable> extends BasicTourPage {
 
-	private LookupForm<T> m_lookupForm;
+	private SearchPanel<T> m_lookupForm;
 
 	private DataTable<T> m_datatable;
 
@@ -22,7 +22,7 @@ public class BasicListPage<T extends ILongIdentifyable> extends BasicTourPage {
 
 	private Class< ? extends UrlPage> m_editPageClass;
 
-	private String[] m_searchFields = new String[0];
+	private QField<T,?>[] m_searchFields = new QField[0];
 
 	private Object[] m_displayFields = new Object[0];
 
@@ -37,7 +37,7 @@ public class BasicListPage<T extends ILongIdentifyable> extends BasicTourPage {
 		m_editPageClass = clzPage;
 	}
 
-	protected void setSearchFields(String... searchFields) {
+	protected void setSearchFields(QField<T,?>... searchFields) {
 		m_searchFields = searchFields;
 	}
 
@@ -49,34 +49,29 @@ public class BasicListPage<T extends ILongIdentifyable> extends BasicTourPage {
 	public void createContent() throws Exception {
 		m_content = getTourFrame();
 
-		m_lookupForm = new LookupForm<T>(m_class);
+		m_lookupForm = new SearchPanel<>(m_class);
 		m_lookupForm.setMargin("5%");
 		m_lookupForm.setCssClass("lookup");
 		if(m_searchFields.length > 0) {
-			for(String s : m_searchFields) {
-				m_lookupForm.addProperty(s);
+			for(QField<T,?> s : m_searchFields) {
+				m_lookupForm.add().property(s).control();
 			}
 		}
 
 		if(m_enableNewButton) {
-			m_lookupForm.setOnNew(new IClicked<LookupForm<T>>() {
-				@Override
-				public void clicked(LookupForm<T> clickednode) throws Exception {
-					UIGoto.moveSub(m_editPageClass, new PageParameters("id", "NEW"));
-				}
-			});
+			m_lookupForm.setOnNew(clickednode -> UIGoto.moveSub(m_editPageClass, new PageParameters("id", "NEW")));
 		}
 
 		m_content.add(m_lookupForm);
 
-		m_lookupForm.setClicked(new IClicked<LookupForm<T>>() {
+		m_lookupForm.setClicked(new IClicked<SearchPanel<T>>() {
 			@Override
-			public void clicked(LookupForm<T> b) throws Exception {
-				search(b.getEnteredCriteria());
+			public void clicked(SearchPanel<T> b) throws Exception {
+				search(b.getCriteria());
 			}
 		});
 
-		search(m_lookupForm.getEnteredCriteria());
+		search(m_lookupForm.getCriteria());
 	}
 
 	protected void adjustCriteria(QCriteria<T> crit) {}
@@ -188,7 +183,7 @@ public class BasicListPage<T extends ILongIdentifyable> extends BasicTourPage {
 		m_enableNewButton = enableNewButton;
 	}
 
-	protected LookupForm<T> getLookupForm() {
+	protected SearchPanel<T> getLookupForm() {
 		return m_lookupForm;
 	}
 

@@ -37,6 +37,11 @@
             <version>1.2-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>to.etc.domui</groupId>
+            <artifactId>property-annotations-processor</artifactId>
+            <version>1.2-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -63,7 +68,26 @@
                 </configuration>
             </plugin>
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <annotationProcessors>
+                        <annotationProcessor>db.annotationprocessing.PropertyAnnotationProcessor</annotationProcessor>
+                    </annotationProcessors>
+                    <annotationProcessorPaths>
+                        <dependency>
+                            <groupId>to.etc.domui</groupId>
+                            <artifactId>property-annotations-processor</artifactId>
+                            <version>1.2-SNAPSHOT</version>
+                        </dependency>
+                    </annotationProcessorPaths>
+                </configuration>
 
+                <dependencies>
+                </dependencies>
+            </plugin>
         </plugins>
     </build>
 

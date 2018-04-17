@@ -74,7 +74,7 @@ public class OrderedRidersComponent<T extends IOrderedRiders> extends Div {
 
 		BasicRowRenderer<IOrderedRiders> brr = new BasicRowRenderer<IOrderedRiders>(IOrderedRiders.class, // TODO Waarom kon ik deze IOrderedRiders.class niet in een Class<T> veranderen?
 			"place", "^Plaats", "%5", placer //
-			, "", new FlagRenderer() //
+			, "", new FlagRenderer<IOrderedRiders>(o -> Objects.requireNonNull(o.getRider()).getCountry()) //
 			, "rider.displayName", "^Renner", "%30", BasicRowRenderer.NOWRAP //
 			, "rider.team.name", "^Team", "%20", BasicRowRenderer.NOWRAP //
 		);

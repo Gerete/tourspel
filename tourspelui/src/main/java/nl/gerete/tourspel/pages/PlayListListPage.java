@@ -10,7 +10,7 @@ public class PlayListListPage extends BasicListPage<PlayList> {
 	public PlayListListPage() {
 		super(PlayList.class, PlayListEditPage.class);
 
-		setSearchFields(PlayList.pLISTNAME);
+		setSearchFields(PlayList_.listName());
 
 	}
 

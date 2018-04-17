@@ -15,12 +15,16 @@ import javax.annotation.*;
  * @author <a href="mailto:marc@gerete.nl">Marc Mol</a>
  * Created on Jun 2, 2017
  */
-public class RiderEditPage extends BasicTourPage {
+public class RiderEditPage extends BasicTourPage<Rider> {
 
 	private final static String ID_PARAM = "riderID";
 
 	@Nullable
 	private Rider m_rider;
+
+	public RiderEditPage() {
+		super(Rider.class);
+	}
 
 	@UIUrlParameter(name = ID_PARAM)
 	public Rider getRider() {

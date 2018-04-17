@@ -6,29 +6,25 @@ import to.etc.domui.dom.html.*;
 import to.etc.domui.util.*;
 
 import javax.annotation.*;
-import java.util.*;
+import java.util.function.*;
 
 @DefaultNonNull
-public class FlagRenderer implements INodeContentRenderer<Object> {
+public class FlagRenderer<T> implements INodeContentRenderer<T> {
+
+	private final Function<T, Country> m_converter;
+
+	public FlagRenderer(Function<T, Country> converter) {
+		m_converter = converter;
+	}
 
 	@Override
-	public void renderNodeContent(NodeBase component, NodeContainer node, @Nullable Object o, @Nullable Object parameters) throws Exception {
-		Country c = null;
-
-		if(o instanceof Rider)
-			c = ((Rider) o).getCountry();
-		else if(o instanceof Team)
-			c = ((Team) o).getCountry();
-		else if(o instanceof IOrderedRiders) {
-			c = Objects.requireNonNull(((IOrderedRiders) o).getRider()).getCountry();
+	public void renderNodeContent(@Nonnull NodeBase component, @Nonnull NodeContainer node, @Nullable T o, @Nullable Object parameters) {
+		Country c = m_converter.apply(o);
+		if(c == null) {
+			return;
 		}
-		else if(o instanceof Country) {
-			c = (Country) o;
-		}
-		if(c != null) {
-			Img i = new Img(TourUtil.getFlag(c));
-			node.add(i);
-			node.setTitle(c.getName());
-		}
+		Img i = new Img(TourUtil.getFlag(c));
+		node.add(i);
+		node.setTitle(c.getName());
 	}
 }

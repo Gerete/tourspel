@@ -10,7 +10,7 @@ public class CountryListPage extends BasicListPage<Country> {
 
 	public CountryListPage() {
 		super(Country.class, CountryEditPage.class);
-		setDisplayFields(Country.pSHORTNAME, "%2", SortableType.SORTABLE_ASC, "", new FlagRenderer(), "%1", Country.pNAME, "%30", SortableType.SORTABLE_ASC);
+		setDisplayFields(Country.pSHORTNAME, "%2", SortableType.SORTABLE_ASC, "", new FlagRenderer<Country>(country -> country), "%1", Country.pNAME, "%30", SortableType.SORTABLE_ASC);
 	}
 
 }

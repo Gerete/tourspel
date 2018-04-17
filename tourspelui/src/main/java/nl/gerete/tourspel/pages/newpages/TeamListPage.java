@@ -2,8 +2,9 @@ package nl.gerete.tourspel.pages.newpages;
 
 import nl.gerete.tourspel.componenten.*;
 import nl.gerete.tourspel.db.*;
+import to.etc.domui.component.searchpanel.*;
 import to.etc.domui.component.tbl.*;
-import to.etc.webapp.query.*;
+import to.etc.domui.state.*;
 
 /**
  * Page to list all teams
@@ -11,7 +12,11 @@ import to.etc.webapp.query.*;
  * @author <a href="mailto:marc@gerete.nl">Marc Mol</a>
  * Created on Jun 1, 2017
  */
-public class TeamListPage extends BasicTourPage {
+public class TeamListPage extends BasicTourPage<Team> {
+
+	public TeamListPage() {
+		super(Team.class);
+	}
 
 	@Override
 	public void createContent() throws Exception {
@@ -20,26 +25,21 @@ public class TeamListPage extends BasicTourPage {
 	}
 
 	private void createTeamsTable() {
-		QCriteria<Team> q = QCriteria.create(Team.class);
 
-		SimpleSearchModel<Team> sm = new SimpleSearchModel<>(this, q);
-		RowRenderer<Team> rr = new RowRenderer<>(Team.class);
-		rr.column(Team.pNAME).ascending();
-		rr.column(Team.pTEAMCAPTAINNAME).ascending().sortdefault();
-		rr.column(Team.pCOUNTRY + "." + Country.pNAME).ascending();
-		rr.column(Team.pCOUNTRY);
-		rr.setNodeRenderer(3, new FlagRenderer());
-
-		DataTable<Team> dt = new DataTable<>(sm, rr);
-		add(dt);
-		dt.setPageSize(25);
-		add(new DataPager(dt));
-
-		rr.setRowClicked(TeamEditPage::open);
+		SearchPanel<Team> lf = new SearchPanel<>(Team.class);
+		add(lf);
+		lf.setClicked(a -> search(lf.getCriteria()));
 	}
 
 	@Override
-	protected void onShelve() throws Exception {
-		forceReloadData();
+	protected RowRenderer<Team> createRowRenderer() {
+		RowRenderer<Team> rr = new RowRenderer<>(Team.class);
+		rr.column(Team_.name()).ascending();
+		rr.column(Team_.teamCaptainName()).ascending().sortdefault();
+		rr.column(Team_.country().name()).ascending();
+		rr.column(Team_.country()).renderer(new FlagRenderer<>(Country -> Country));
+		rr.setRowClicked(row -> UIGoto.moveSub(TeamEditPage.class, new PageParameters("teamID", row.getId())));
+		return rr;
 	}
+
 }

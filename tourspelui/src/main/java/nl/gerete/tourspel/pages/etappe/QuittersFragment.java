@@ -56,7 +56,7 @@ class QuittersFragment extends Div {
 
 		m_stoppedModel = new SimpleListModel<StoppedRider>(getStoppedList());
 		BasicRowRenderer<StoppedRider> brr = new BasicRowRenderer<StoppedRider>(StoppedRider.class, //
-			"rider", new FlagRenderer(), "%1", "^" //
+			"rider", new FlagRenderer<>(Rider::getCountry), "%1", "^" //
 			, "stopDate", "^Gestopt op", "%5", BasicRowRenderer.NOWRAP //
 			, "rider", "^Renner", "%30", BasicRowRenderer.NOWRAP //
 			, "rider.team.name", "^Team", "%20", BasicRowRenderer.NOWRAP //

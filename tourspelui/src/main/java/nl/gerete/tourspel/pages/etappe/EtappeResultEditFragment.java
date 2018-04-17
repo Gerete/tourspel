@@ -164,7 +164,7 @@ class EtappeResultEditFragment extends Div {
 
 	public void addListener(IValueChanged<?> vc) {
 		if(m_changeListeners == Collections.EMPTY_LIST)
-			m_changeListeners = new ArrayList<IValueChanged<?>>();
+			m_changeListeners = new ArrayList<>();
 		m_changeListeners.add(vc);
 	}
 
@@ -175,12 +175,12 @@ class EtappeResultEditFragment extends Div {
 
 	private void fireChanges() throws Exception {
 		for(IValueChanged<?> vc : m_changeListeners)
-			vc.onValueChanged(this);
+			((IValueChanged<EtappeResultEditFragment>)vc).onValueChanged(this);
 	}
 
-	public void addListener(ITableModelListener<EtappeResult> mcl) {
+	void addListener(ITableModelListener<EtappeResult> mcl) {
 		if(m_modelChangeListeners == Collections.EMPTY_LIST) {
-			m_modelChangeListeners = new ArrayList<ITableModelListener<EtappeResult>>();
+			m_modelChangeListeners = new ArrayList<>();
 		}
 		m_modelChangeListeners.add(mcl);
 	}

@@ -2,8 +2,9 @@ package nl.gerete.tourspel.pages;
 
 import nl.gerete.tourspel.db.*;
 import to.etc.domui.annotations.*;
-import to.etc.domui.component.lookup.*;
 import to.etc.domui.component.meta.*;
+import to.etc.domui.component.searchpanel.*;
+import to.etc.domui.component2.combo.*;
 import to.etc.domui.dom.html.*;
 import to.etc.webapp.query.*;
 
@@ -24,29 +25,35 @@ public class PersonListPage extends BasicListPage<Person> {
 	}
 
 	private void createPaidField() {
-		LookupForm<Person> lf = getLookupForm();
+		SearchPanel<Person> lf = getLookupForm();
 
 		final Checkbox cb = new Checkbox();
 
-		AbstractLookupControlImpl lookupControlThingy = new AbstractLookupControlImpl(cb) {
-			@Override
-			public AppendCriteriaResult appendCriteria(QCriteria< ? > crit) throws Exception {
-				boolean userEntry = false;
+		//AbstractLookupControlImpl lookupControlThingy = new AbstractLookupControlImpl(cb) {
+		//	@Override
+		//	public AppendCriteriaResult appendCriteria(QCriteria< ? > crit) throws Exception {
+		//		boolean userEntry = false;
+		//
+		//		if(cb.getValue().booleanValue()) {
+		//			crit.exists(PlayList.class, Person.pPLAYLISTLIST).ne(PlayList_.paid(), cb.getValue());
+		//			userEntry = true;
+		//		}
+		//		if(userEntry) {
+		//			return AppendCriteriaResult.VALID;
+		//		}
+		//		return AppendCriteriaResult.EMPTY;
+		//	}
+		//};
 
-				if(cb.getValue().booleanValue()) {
-					crit.exists(PlayList.class, Person.pPLAYLISTLIST).ne(PlayList.pPAID, cb.getValue());
-					userEntry = true;
-				}
-				if(userEntry) {
-					return AppendCriteriaResult.VALID;
-				}
-				return AppendCriteriaResult.EMPTY;
-			}
-		};
+		QCriteria<Person> q = QCriteria.create(Person.class);
+		q.exists(PlayList.class, Person.pPLAYLISTLIST).ne(PlayList_.paid(), cb.getValue());
+		ComboLookup2<Person> customerC = new ComboLookup2<>(q);
+		customerC.setContentRenderer((node, value) -> node.add(value.getFirstName() + " " + value.getLastName()));
 
-		lf.addProperty(Person.pLASTNAME);
-		lf.addProperty(Person.pFIRSTNAME);
-		lf.addProperty(Person.pEMAIL);
-		lf.addManualPropertyLabel(Person.pPLAYLISTLIST, lookupControlThingy);
+
+		lf.add().property(Person_.lastName()).control();
+		lf.add().property(Person_.firstName()).control();
+		lf.add().property(Person_.email()).control();
+		lf.add().property(Person.pPLAYLISTLIST).control(customerC);
 	}
 }
