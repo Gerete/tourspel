@@ -55,18 +55,17 @@ public class RiderEditPage extends BasicTourPage<Rider> {
 			return;
 		}
 		getSharedContext().commit();
-
 		UIGoto.back();
 	}
 
 	private void createRiderForm() throws Exception {
 		FormBuilder fb = new FormBuilder(this);
-		fb.property(getRider(), Rider.pNUMBER).control();
-		fb.property(getRider(), Rider.pFIRSTNAME).control();
-		fb.property(getRider(), Rider.pMIDDLENAME).control();
-		fb.property(getRider(), Rider.pLASTNAME).control();
-		fb.property(getRider(), Rider.pDATEOFBIRTH).control();
-		fb.property(getRider(), Rider.pCOUNTRY).control();
+		fb.property(getRider(), Rider_.number()).control();
+		fb.property(getRider(), Rider_.firstName()).control();
+		fb.property(getRider(), Rider_.middleName()).control();
+		fb.property(getRider(), Rider_.lastName()).control();
+		fb.property(getRider(), Rider_.dateOfBirth()).control();
+		fb.property(getRider(), Rider_.country()).control();
 	}
 
 	static void open(Rider rider) {

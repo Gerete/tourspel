@@ -17,8 +17,8 @@ import java.util.*;
 public class EditionBP {
 	@Nonnull
 	static public Edition createEdition(@Nonnull QDataContext dc, int year) throws Exception {
-		if(year < 2014 || year > 2300)
-			throw new IllegalArgumentException(year + ": year must be between 2014 and 2300");
+		if(year < 2018 || year > 2300)
+			throw new IllegalArgumentException(year + ": year must be between 2018 and 2300");
 		Edition cur = findCurrentEdition(dc);
 		if(null != cur)
 			throw new IllegalStateException("Another edition (" + cur.getYear() + ") is still in phase " + cur.getPhase());

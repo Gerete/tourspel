@@ -1,5 +1,6 @@
 package nl.gerete.tourspel.pages.newpages;
 
+import nl.gerete.tourspel.componenten.*;
 import nl.gerete.tourspel.db.*;
 import to.etc.domui.annotations.*;
 import to.etc.domui.component.buttons.*;
@@ -69,19 +70,19 @@ public class TeamEditPage extends BasicTourPage<Team> {
 		}
 
 		getSharedContext().commit();
-
 		UIGoto.back();
 	}
 
 	private void createRidersTable() {
 		QCriteria<Rider> q = QCriteria.create(Rider.class);
-		q.eq(Rider.pTEAM, getTeam());
+		q.eq(Rider_.team(), getTeam());
 
 		SimpleSearchModel<Rider> sm = new SimpleSearchModel<>(this, q);
 		RowRenderer<Rider> rr = new RowRenderer<>(Rider.class);
-		rr.column(Rider.pNUMBER).ascending().sortdefault();
-		rr.column(Rider.pLASTNAME).ascending();
-		rr.column(Rider.pDATEOFBIRTH).ascending();
+		rr.column(Rider_.number()).ascending().sortdefault();
+		rr.column(Rider_.lastName()).ascending();
+		rr.column(Rider_.dateOfBirth()).ascending();
+		rr.column(Team_.country()).renderer(new FlagRenderer<>(Country -> Country));
 
 		DataTable<Rider> dt = new DataTable<>(sm, rr);
 		add(dt);
@@ -93,10 +94,10 @@ public class TeamEditPage extends BasicTourPage<Team> {
 
 	private void createTeamForm() throws Exception {
 		FormBuilder fb = new FormBuilder(this);
-		fb.property(getTeam(), Team.pNAME).mandatory().control();
-		fb.property(getTeam(), Team.pTEAMCAPTAINNAME).control();
-		fb.property(getTeam(), Team.pEDITION).control();
-		fb.property(getTeam(), Team.pCOUNTRY).control();
+		fb.property(getTeam(), Team_.name()).mandatory().control();
+		fb.property(getTeam(), Team_.teamCaptainName()).control();
+		fb.property(getTeam(), Team_.edition()).control();
+		fb.property(getTeam(), Team_.country()).control();
 	}
 
 	private void clickedOne(@Nonnull final Rider rider) {
@@ -105,15 +106,10 @@ public class TeamEditPage extends BasicTourPage<Team> {
 
 	@Override
 	protected void onShelve() throws Exception {
-		forceReloadData();
+		resetAllSharedContexts();
 	}
 
 	static void open(Team team) {
-
-		/**
-		 * See remark at the setter of the team. It took me some time to find out
-		 * I declared the setTeam private instead of public.
-		 */
 		UIGoto.moveSub(TeamEditPage.class, ID_PARAM, team.getId());
 	}
 }

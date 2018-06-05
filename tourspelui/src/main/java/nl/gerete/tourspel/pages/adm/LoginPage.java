@@ -44,7 +44,7 @@ public class LoginPage extends UrlPage {
 
 	@Override
 	public void createContent() throws Exception {
-		setTitle("Welkom bij het tourspel 2018.");
+		setTitle("Welkom bij het tourspel 2019.");
 		setCssClass("l-body");
 		add(new VerticalSpacer(40));
 		getPage().addHeaderContributor(HeaderContributor.loadStylesheet("css/login.css"), 1000);
@@ -105,10 +105,8 @@ public class LoginPage extends UrlPage {
 			du = PropertyFile.getInstance().getProperty("loginpw");
 			if(null != du)
 				m_password.setValue(du);
-//			m_loginid.setValue("jal@etc.to");
-//			m_password.setValue("frits");
-			m_loginid.setValue("benshoe@gmail.com");
-			m_password.setValue("ben");
+			m_loginid.setValue("marc@gerete.nl");
+			m_password.setValue("marc");
 		}
 
 		td = b.addRowAndCell();
@@ -189,7 +187,7 @@ public class LoginPage extends UrlPage {
 	}
 
 	void setBlurb() {
-		Objects.requireNonNull(m_blurb).setText("Welkom bij het Tourspel 2018");
+		Objects.requireNonNull(m_blurb).setText("Welkom bij het Tourspel 2019");
 		Objects.requireNonNull(m_blurb).setCssClass("l-blurb");
 	}
 

@@ -59,6 +59,7 @@ public class Edition extends TourspelEntity {
 
 	@Column(name = "ed_year", precision = 4, nullable = false)
 	@MetaSearch(searchType = SearchPropertyType.BOTH)
+	@MetaProperty(numericPresentation = NumericPresentation.NUMBER_SCALED)
 	public int getYear() {
 		return m_year;
 	}

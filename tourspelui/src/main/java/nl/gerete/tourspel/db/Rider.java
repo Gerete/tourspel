@@ -6,7 +6,7 @@ import to.etc.domui.component.meta.*;
 import javax.persistence.*;
 import java.util.*;
 
-@Entity
+@to.etc.annotations.GenerateProperties @Entity
 @Table(name = "rider")
 @SequenceGenerator(name = "sq", sequenceName = "rider_id_seq")
 @MetaObject(defaultColumns = {@MetaDisplayProperty(name = "firstName", join = " "), @MetaDisplayProperty(name = "lastName")})

@@ -35,7 +35,7 @@ public class Application extends DomApplication {
 
 	static synchronized public to.etc.smtp.Address getFromAddress() {
 		if(m_fromAddress == null)
-			m_fromAddress = new to.etc.smtp.Address("jal@etc.to", "test-tourspel");
+			m_fromAddress = new to.etc.smtp.Address("marc@gerete.nl", "test-tourspel");
 		return m_fromAddress;
 	}
 

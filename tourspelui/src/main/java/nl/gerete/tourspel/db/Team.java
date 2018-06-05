@@ -5,7 +5,7 @@ import to.etc.domui.component.meta.*;
 import javax.persistence.*;
 import java.util.*;
 
-@MetaObject(defaultColumns = {@MetaDisplayProperty(name = "name", defaultSortable = SortableType.SORTABLE_ASC, displayLength = 75),
+@to.etc.annotations.GenerateProperties @MetaObject(defaultColumns = {@MetaDisplayProperty(name = "name", defaultSortable = SortableType.SORTABLE_ASC, displayLength = 75),
 	@MetaDisplayProperty(name = "teamCaptainName", defaultSortable = SortableType.SORTABLE_ASC, displayLength = 75),
 	@MetaDisplayProperty(name = "country.shortName", defaultSortable = SortableType.SORTABLE_ASC, displayLength = 5),
 	@MetaDisplayProperty(name = "country.name", defaultSortable = SortableType.SORTABLE_ASC, displayLength = 40)})

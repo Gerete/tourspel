@@ -8,6 +8,11 @@ import to.etc.domui.util.*;
 import javax.annotation.*;
 import java.util.function.*;
 
+/**
+ * FlagRenderer voor de vlaggen. Middels het gebruik van een functie wordt de Country meegegeven.
+ *
+ * @param <T>
+ */
 @DefaultNonNull
 public class FlagRenderer<T> implements INodeContentRenderer<T> {
 

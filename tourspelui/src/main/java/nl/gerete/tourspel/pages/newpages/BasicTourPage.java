@@ -26,7 +26,6 @@ abstract class BasicTourPage<T> extends UrlPage {
 		if(criteria == null) {					// Nothing entered or error
 			return;
 		}
-
 		search(criteria);
 	}
 
@@ -48,8 +47,7 @@ abstract class BasicTourPage<T> extends UrlPage {
 	}
 
 	protected RowRenderer<T> createRowRenderer() {
-		RowRenderer<T> rr = new RowRenderer<>(m_clazz);
-		return rr;
+		return new RowRenderer<>(m_clazz);
 	}
 
 	void addHeader() {

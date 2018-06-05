@@ -149,7 +149,7 @@ public class PersonEditPage extends BasicEditPage<Person> {
 		String payPriceMoneyDeadline = dt.format(getEdition().getPayPriceMoneyDeadline());
 		String endDate = dt.format(getEdition().getEndDate());
 
-		tourMailer.start(getObject(), "Welkom bij het Tourspel 2013");
+		tourMailer.start(getObject(), "Welkom bij het Tourspel 2019");
 		tourMailer.generate(getClass(), "register-welcome.tpl.html", "person", getObject(), "startDate", startDate, "registrationDeadline", registrationDeadline, "changeRidersDeadline",
 			changeRidersDeadline, "payRegistrationFeeDeadline", payRegistrationFeeDeadline, "payPriceMoneyDeadline", payPriceMoneyDeadline, "endDate", endDate);
 		tourMailer.send(getSharedContext());
