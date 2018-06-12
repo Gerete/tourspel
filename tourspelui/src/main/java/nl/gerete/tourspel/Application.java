@@ -54,8 +54,12 @@ public class Application extends DomApplication {
 		addHeaderContributor(HeaderContributor.loadStylesheet("css/tourspel.css"), 100);
 
 		//-- Handle basic config.
-		String tourspelProperties = DeveloperOptions.getString("tourspel", "tourspel.properties");
+		//String tourspelProperties = DeveloperOptions.getString("tourspel", "tourspel.properties");
+		String tourspelProperties = "pool.xml";
 		File configFile = getAppFile("WEB-INF/" + tourspelProperties);
+		if(!configFile.exists())
+			throw new UnavailableException("Missing file WEB-INF/pool.xml containing the database to use");
+
 		PropertyFile.initialize(configFile);
 		initDatabase(configFile);
 		setDefaultThemeFactory(SassThemeFactory.INSTANCE);
@@ -107,11 +111,7 @@ public class Application extends DomApplication {
 		initDatabase(configFile);
 	}
 
-	public static void initDatabase(File dbProperties) throws Exception {
-
-		File pf = getAppFile("WEB-INF/pool.xml");
-		if(!pf.exists())
-			throw new UnavailableException("Missing file WEB-INF/pool.xml containing the database to use");
+	public static void initDatabase(File pf) throws Exception {
 		//-- 1. Get a datasource using the to.etc.dbpool pool manager.
 		ConnectionPool p = PoolManager.getInstance().initializePool(pf, "tourspel");
 		m_dataSource = p.getUnpooledDataSource();
