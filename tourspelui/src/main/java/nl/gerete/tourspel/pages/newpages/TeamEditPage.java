@@ -2,9 +2,6 @@ package nl.gerete.tourspel.pages.newpages;
 
 import nl.gerete.tourspel.componenten.*;
 import nl.gerete.tourspel.db.*;
-import to.etc.domui.annotations.*;
-import to.etc.domui.component.buttons.*;
-import to.etc.domui.component.layout.*;
 import to.etc.domui.component.tbl.*;
 import to.etc.domui.component2.form4.*;
 import to.etc.domui.state.*;
@@ -19,63 +16,20 @@ import javax.annotation.*;
  * Created on Jun 2, 2017
  */
 @DefaultNonNull
-public class TeamEditPage extends BasicTourPage<Team> {
+public class TeamEditPage extends BasicEditPage<Team> {
 
-	private final static String ID_PARAM = "teamID";
-
-	@Nullable
-	private Team m_team;
-
-	public TeamEditPage() {
-		super(Team.class);
-	}
-
-	@UIUrlParameter(name = ID_PARAM)
-	public Team getTeam() {
-		Team team = m_team;
-		if(null == team)
-			throw new IllegalStateException("Missing team");
-		return team;
-	}
-
-	/**
-	 * If this method isn't declared public, you don't get to see the detail page. It's empty.
-	 * It would be nice if some kind of error is shown
-	 */
-	public void setTeam(Team team) {
-		m_team = team;
-	}
+	public TeamEditPage() {}
 
 	@Override
 	public void createContent() throws Exception {
-		addHeader();
-		addButtons();
+		super.createContent();
 		createTeamForm();
 		createRidersTable();
 	}
 
-	private void addButtons() {
-		ButtonBar bb = new ButtonBar();
-		DefaultButton saveButton = new DefaultButton("Save");
-		bb.addButton(saveButton);
-		bb.setClicked(clickednode -> save());
-		add(bb);
-		bb.addBackButton();  // A backbutton can only be added after you added the ButtonBar to the page.
-	}
-
-	private void save() throws Exception {
-
-		if (bindErrors()) {
-			return;
-		}
-
-		getSharedContext().commit();
-		UIGoto.back();
-	}
-
 	private void createRidersTable() {
 		QCriteria<Rider> q = QCriteria.create(Rider.class);
-		q.eq(Rider_.team(), getTeam());
+		q.eq(Rider_.team(), getEntity());
 
 		SimpleSearchModel<Rider> sm = new SimpleSearchModel<>(this, q);
 		RowRenderer<Rider> rr = new RowRenderer<>(Rider.class);
@@ -94,19 +48,14 @@ public class TeamEditPage extends BasicTourPage<Team> {
 
 	private void createTeamForm() throws Exception {
 		FormBuilder fb = new FormBuilder(this);
-		fb.property(getTeam(), Team_.name()).mandatory().control();
-		fb.property(getTeam(), Team_.teamCaptainName()).control();
-		fb.property(getTeam(), Team_.edition()).control();
-		fb.property(getTeam(), Team_.country()).control();
+		fb.property(getEntity(), Team_.name()).mandatory().control();
+		fb.property(getEntity(), Team_.teamCaptainName()).control();
+		fb.property(getEntity(), Team_.edition()).control();
+		fb.property(getEntity(), Team_.country()).control();
 	}
 
 	private void clickedOne(@Nonnull final Rider rider) {
 		RiderEditPage.open(rider);
-	}
-
-	@Override
-	protected void onShelve() throws Exception {
-		resetAllSharedContexts();
 	}
 
 	static void open(Team team) {

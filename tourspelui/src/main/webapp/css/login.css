@@ -1,0 +1,32 @@
+.l-body {
+	background: white !important;
+	font-family: Verdana, Arial, Bistream Vera Sans, sans-serif;
+	font-size: 10pt;
+	padding: 0px;
+	margin: 0px;
+}
+.l-root {
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #aaaaaa;
+	height: 410px;
+}
+.l-blurb {
+	font-family: Verdana, Arial, Bistream Vera Sans, sans-serif;
+	font-size: 20px;
+	font-style: italic;
+	color: #555555;
+	padding-bottom: 20px;
+}
+.l-error {
+	font-family: Verdana, Arial, Bistream Vera Sans, sans-serif;
+	font-style: italic;
+	font-size: 12pt;
+	color: red;
+	padding-bottom: 20px;
+}
+.l-logo {
+	width: 400px;
+	height: 400px;
+}

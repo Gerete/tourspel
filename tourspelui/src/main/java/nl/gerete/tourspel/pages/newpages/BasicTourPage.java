@@ -1,9 +1,13 @@
 package nl.gerete.tourspel.pages.newpages;
 
-import to.etc.domui.component.searchpanel.*;
-import to.etc.domui.component.tbl.*;
+import nl.gerete.tourspel.componenten.*;
+import nl.gerete.tourspel.components.*;
+import nl.gerete.tourspel.db.*;
+import to.etc.domui.component.layout.*;
+import to.etc.domui.component.misc.*;
 import to.etc.domui.dom.html.*;
-import to.etc.webapp.query.*;
+import to.etc.domui.login.*;
+import to.etc.domui.state.*;
 
 /**
  * Basic page for all administrative pages of the tour game
@@ -11,46 +15,14 @@ import to.etc.webapp.query.*;
  * @author <a href="mailto:marc@gerete.nl">Marc Mol</a>
  * Created on Jun 2, 2017
  */
-abstract class BasicTourPage<T> extends UrlPage {
+public class BasicTourPage extends UrlPage {
 
-	final private Class<T> m_clazz;
+	private Div m_contentDiv;
 
-	private DataTable<T> m_table;
+	public BasicTourPage() {}
 
-	public BasicTourPage(Class<T> clazz) {
-		m_clazz = clazz;
-	}
-
-	protected void search(SearchPanel<T> lf) throws Exception {
-		QCriteria<T> criteria = lf.getCriteria();
-		if(criteria == null) {					// Nothing entered or error
-			return;
-		}
-		search(criteria);
-	}
-
-	protected void search(QCriteria<T> criteria) {
-		if(null == criteria)
-			return;
-		SimpleSearchModel<T> model = new SimpleSearchModel<T>(this, criteria);
-
-		DataTable<T> table = m_table;
-		if(null == table) {
-			RowRenderer<T> rr = createRowRenderer();
-			table = m_table = new DataTable<>(model, rr);
-			add(table);
-			add(new DataPager(table));
-			table.setPageSize(10);
-		} else {
-			table.setModel(model);
-		}
-	}
-
-	protected RowRenderer<T> createRowRenderer() {
-		return new RowRenderer<>(m_clazz);
-	}
-
-	void addHeader() {
+	@Override
+	public void createContent() throws Exception {
 
 		Div borderDiv = new Div();
 		borderDiv.setCssClass("borderdiv");
@@ -64,5 +36,18 @@ abstract class BasicTourPage<T> extends UrlPage {
 		img.setSrc("images/logo-tour.png");
 		headerDiv.add(img);
 
+		IUser usr = UIContext.getCurrentUser();
+		if(usr != null && usr.hasRight(ApplicationRight.ADMIN.name()))
+			headerDiv.add(new TaskRunningIndicator());
+
+		m_contentDiv = new Div();
+		m_contentDiv.setCssClass("contentdiv");
+		borderDiv.add(m_contentDiv);
+
+		m_contentDiv.add(new TourTitleBar());
+		m_contentDiv.add(new VerticalSpacer(40));
+		m_contentDiv.add(new ErrorMessageDiv(this));
+
+		delegateTo(m_contentDiv);
 	}
 }

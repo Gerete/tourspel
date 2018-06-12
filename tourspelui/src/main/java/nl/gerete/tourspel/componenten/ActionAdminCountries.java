@@ -2,7 +2,7 @@ package nl.gerete.tourspel.componenten;
 
 import nl.gerete.tourspel.adm.*;
 import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.pages.*;
+import nl.gerete.tourspel.pages.newpages.*;
 import to.etc.domui.component.menu.*;
 import to.etc.domui.dom.html.*;
 import to.etc.domui.state.*;

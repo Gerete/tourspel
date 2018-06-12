@@ -50,7 +50,7 @@ public class Team extends TourspelEntity {
 	}
 
 	@Column(name = "name", length = 40)
-	@MetaSearch
+	@MetaSearch(order = 1)
 	public String getName() {
 		return m_name;
 	}
@@ -60,7 +60,7 @@ public class Team extends TourspelEntity {
 	}
 
 	@Column(name = "team_captain_name", length = 40)
-	@MetaSearch
+	@MetaSearch(order = 2)
 	public String getTeamCaptainName() {
 		return m_teamCaptainName;
 	}

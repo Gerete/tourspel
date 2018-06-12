@@ -1,0 +1,136 @@
+html {
+	height: 100%;
+}
+body {
+	background:yellow;
+	height: 100%;
+	overflow: hidden;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.borderdiv {
+	background:yellow;
+	width:90%;
+	padding:5%;
+	padding-top:1%;
+	height:85%; 
+}
+.headerdiv {
+	background:yellow;
+	width:90%;
+	height:10%; 
+}
+.contentdiv {
+	border:2px solid #a1a1a1;
+	background:grey;
+	padding: 10px;
+    width: 100%;
+    min-height: 100%;
+	border-radius:25px;
+	-moz-border-radius:25px; /* Firefox 3.6 and earlier */	
+}
+.testtest {
+	border: 3px solid;
+}
+/*** Popup menu ***/
+.ui-pmnu {
+	margin-top: 20px;
+	margin-left: 10px;
+	display: none;
+	width: 120px;
+	background-color: yellow;
+	border: 1px dotted black;
+	-moz-border-radius: 5px;
+}
+.ui-pmnu-disabled {
+	color: #999;
+	color: grey;
+}
+.ui-pmnu-enabled {
+	color: black;
+	cursor: pointer;
+}
+
+.ui-pmnu-ttl {
+	padding: 4px;
+	font-style: italic;
+	background-color: #222;
+	color: #eeffee;
+}
+.ui-pmnu-action {
+	padding: 4px;
+	padding-left: 20px;
+	background-repeat: no-repeat;
+	background-position: 2px 4px;
+}
+.ui-pmnu-action:hover {
+	background-color: #ff9436;
+}
+
+/*** Selection in a data table (AdminDailyPage) ***/
+.ui-selected {
+	background-color: cyan !important;
+}
+
+.portalFragment th {
+    text-align: left;
+}
+
+.portalFragment tr {
+	vertical-align: text-top;
+	width: auto;
+	
+}
+
+/*** TaskRunningIndicator ***/
+.ts-trin {
+	width: 400px;
+	height: 30px;
+}
+
+
+.portalFragment {
+	background:yellow;
+	border-style:solid;
+	border-color:yellow;
+    border-width:10px;
+	border-radius:10px;
+}
+
+.v-top {
+	vertical-align: top;
+}
+
+.portal-side {
+	width: 20%	
+}
+
+.portal-left{
+	font-size: 150%;
+	display: inline;		
+}
+
+.portal-right{
+	font-size: 150%;
+	display: inline;
+	float: right;		
+}
+
+.portalFragment label {
+	font-size: 200%;
+}
+
+/*** Rider Fragment***/
+.rider {
+	width: 85%;
+	margin-left: 5%;
+}
+
+.selected {
+	background-color: white;
+}
