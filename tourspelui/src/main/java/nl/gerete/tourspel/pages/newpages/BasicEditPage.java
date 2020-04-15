@@ -1,17 +1,17 @@
 package nl.gerete.tourspel.pages.newpages;
 
-import to.etc.domui.annotations.*;
-import to.etc.domui.component.buttons.*;
-import to.etc.domui.component.layout.*;
-import to.etc.domui.state.*;
-
-import javax.annotation.*;
+import org.eclipse.jdt.annotation.NonNullByDefault;
+import org.eclipse.jdt.annotation.Nullable;
+import to.etc.domui.annotations.UIUrlParameter;
+import to.etc.domui.component.buttons.DefaultButton;
+import to.etc.domui.component.layout.ButtonBar;
+import to.etc.domui.state.UIGoto;
 
 /**
  * @author <a href="mailto:jal@etc.to">Frits Jalvingh</a>
  * Created on 12-6-18.
  */
-@DefaultNonNull
+@NonNullByDefault
 public class BasicEditPage<T> extends BasicTourPage {
 
 	final static String ID_PARAM = "ID";

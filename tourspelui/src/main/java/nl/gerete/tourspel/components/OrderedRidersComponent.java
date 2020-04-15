@@ -31,7 +31,7 @@ public class OrderedRidersComponent<T extends IOrderedRiders> extends Div {
 
 	private int m_maxRows;
 
-	@Nonnull
+	@NonNull
 	private List<IModelChangedListener<T>> m_changeListeners = new ArrayList<>();
 
 	public OrderedRidersComponent(SimpleListModel<T> model, int maxRows) throws Exception {
@@ -39,7 +39,7 @@ public class OrderedRidersComponent<T extends IOrderedRiders> extends Div {
 		m_maxRows = maxRows;
 	}
 
-	@Nonnull
+	@NonNull
 	public SimpleListModel<T> getModel() {
 		SimpleListModel<T> model = m_model;
 		if(null == model)
@@ -47,7 +47,7 @@ public class OrderedRidersComponent<T extends IOrderedRiders> extends Div {
 		return model;
 	}
 
-	public void setModel(@Nonnull SimpleListModel<T> model) {
+	public void setModel(@NonNull SimpleListModel<T> model) {
 		if(m_model == model)
 			return;
 		m_model = model;
@@ -60,7 +60,7 @@ public class OrderedRidersComponent<T extends IOrderedRiders> extends Div {
 
 		INodeContentRenderer<Integer> placer = new INodeContentRenderer<Integer>() {
 			@Override
-			public void renderNodeContent(@Nonnull NodeBase component, @Nonnull NodeContainer node, @Nullable Integer object, @Nullable Object parameters) throws Exception {
+			public void renderNodeContent(@NonNull NodeBase component, @NonNull NodeContainer node, @Nullable Integer object, @Nullable Object parameters) throws Exception {
 				if(null == object)
 					return;
 				int pl = object;
@@ -123,7 +123,7 @@ public class OrderedRidersComponent<T extends IOrderedRiders> extends Div {
 		reorder();
 	}
 
-	@Nonnull
+	@NonNull
 	private List<T> getResultList() throws Exception {
 		List<T> items = new ArrayList<T>();
 		for(int i = m_model.getRows(); --i >= 0;) {

@@ -1,11 +1,20 @@
 package nl.gerete.tourspel.pages;
 
-import nl.gerete.tourspel.db.*;
-import to.etc.domui.dom.html.*;
-import to.etc.webapp.query.*;
+import nl.gerete.tourspel.db.PlayList;
+import nl.gerete.tourspel.db.PlayListType;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.Nullable;
+import to.etc.domui.dom.html.Div;
+import to.etc.domui.dom.html.Label;
+import to.etc.domui.dom.html.TBody;
+import to.etc.domui.dom.html.TD;
+import to.etc.domui.dom.html.TDAlignType;
+import to.etc.domui.dom.html.TR;
+import to.etc.webapp.query.QCriteria;
+import to.etc.webapp.query.QOrder;
+import to.etc.webapp.query.QSortOrderDirection;
 
-import javax.annotation.*;
-import java.util.*;
+import java.util.List;
 
 public class PlayListResultFragment extends Div {
 
@@ -17,7 +26,7 @@ public class PlayListResultFragment extends Div {
 		return m_playListType;
 	}
 
-	public PlayListResultFragment(@Nonnull PlayListType playListType, int nrOfListToShow) {
+	public PlayListResultFragment(@NonNull PlayListType playListType, int nrOfListToShow) {
 		m_playListType = playListType;
 		m_nrOfListToShow = nrOfListToShow;
 		// css hier op geven.
@@ -74,7 +83,7 @@ public class PlayListResultFragment extends Div {
 	 * @param last
 	 * @param position
 	 */
-	private void displayPlayList(@Nonnull TBody tBody, @Nonnull PlayList current, @Nullable PlayList last, int position) {
+	private void displayPlayList(@NonNull TBody tBody, @NonNull PlayList current, @Nullable PlayList last, int position) {
 
 		TR tr = tBody.addRow();
 		TD td = tr.addCell();

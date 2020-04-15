@@ -1,9 +1,20 @@
 package nl.gerete.tourspel.db;
 
-import to.etc.domui.component.meta.*;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.Nullable;
+import to.etc.domui.component.meta.MetaDisplayProperty;
+import to.etc.domui.component.meta.SortableType;
 
-import javax.annotation.*;
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "playlistentry")
@@ -29,12 +40,12 @@ public class PlayListEntry extends TourspelEntity implements IOrderedRiders, Com
 
 	public PlayListEntry() {}
 
-	public PlayListEntry(@Nonnull PlayList playList, @Nonnull Rider rider) {
+	public PlayListEntry(@NonNull PlayList playList, @NonNull Rider rider) {
 		m_playList = playList;
 		m_rider = rider;
 	}
 
-	public PlayListEntry(@Nonnull PlayList playList, @Nonnull Rider rider, int place) {
+	public PlayListEntry(@NonNull PlayList playList, @NonNull Rider rider, int place) {
 		super();
 		m_playList = playList;
 		m_rider = rider;
@@ -60,7 +71,7 @@ public class PlayListEntry extends TourspelEntity implements IOrderedRiders, Com
 		return m_playList;
 	}
 
-	public void setPlayList(@Nonnull PlayList playList) {
+	public void setPlayList(@NonNull PlayList playList) {
 		m_playList = playList;
 	}
 
@@ -73,7 +84,7 @@ public class PlayListEntry extends TourspelEntity implements IOrderedRiders, Com
 	}
 
 	@Override
-	public void setRider(@Nonnull Rider rider) {
+	public void setRider(@NonNull Rider rider) {
 		m_rider = rider;
 	}
 

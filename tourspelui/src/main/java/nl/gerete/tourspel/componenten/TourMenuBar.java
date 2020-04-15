@@ -92,7 +92,7 @@ public class TourMenuBar extends Div {
 
 		LinkButton adminMenu = new LinkButton("Admin", new IClicked<LinkButton>() {
 			@Override
-			public void clicked(@Nonnull LinkButton clickednode) throws Exception {
+			public void clicked(@NonNull LinkButton clickednode) throws Exception {
 				toggleAdminMenu(null, clickednode);
 			}
 		});

@@ -1,16 +1,18 @@
 package nl.gerete.tourspel.pages.adm;
 
-import nl.gerete.tourspel.adm.*;
-import nl.gerete.tourspel.db.*;
-import to.etc.domui.component.menu.*;
-import to.etc.domui.dom.html.*;
-import to.etc.domui.state.*;
+import nl.gerete.tourspel.adm.TourUser;
+import nl.gerete.tourspel.db.ApplicationRight;
+import to.etc.domui.component.menu.IUIAction;
+import to.etc.domui.component.misc.IIconRef;
+import to.etc.domui.component.misc.Icon;
+import to.etc.domui.dom.html.NodeBase;
+import to.etc.domui.state.UIGoto;
 
 public class ActionEdition implements IUIAction<Void> {
 
 	private final static String MENUNAME = "Editiebeheer";
 
-	private final static String ICON = "images/action-edition.gif";
+	private final static IIconRef ICON = Icon.of("images/action-edition.gif");
 
 	@Override
 	public String getDisableReason(Void instance) throws Exception {
@@ -26,7 +28,7 @@ public class ActionEdition implements IUIAction<Void> {
 	}
 
 	@Override
-	public String getIcon(Void instance) throws Exception {
+	public IIconRef getIcon(Void instance) throws Exception {
 		return ICON;
 	}
 

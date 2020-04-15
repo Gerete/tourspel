@@ -1,18 +1,23 @@
 package nl.gerete.tourspel.pages.adm;
 
-import nl.gerete.tourspel.componenten.*;
-import nl.gerete.tourspel.components.*;
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.logic.*;
-import to.etc.domui.component.layout.*;
-import to.etc.domui.component.misc.*;
-import to.etc.domui.dom.html.*;
-import to.etc.domui.login.*;
-import to.etc.domui.state.*;
-import to.etc.domui.trouble.*;
-import to.etc.domui.util.*;
-
-import javax.annotation.*;
+import nl.gerete.tourspel.componenten.TourMenuBar;
+import nl.gerete.tourspel.components.TaskRunningIndicator;
+import nl.gerete.tourspel.db.ApplicationRight;
+import nl.gerete.tourspel.db.Edition;
+import nl.gerete.tourspel.db.EditionPhase;
+import nl.gerete.tourspel.logic.EditionBP;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.Nullable;
+import to.etc.domui.component.layout.ErrorMessageDiv;
+import to.etc.domui.component.misc.InfoPanel;
+import to.etc.domui.component.misc.VerticalSpacer;
+import to.etc.domui.dom.html.Div;
+import to.etc.domui.dom.html.Img;
+import to.etc.domui.dom.html.UrlPage;
+import to.etc.domui.login.IUser;
+import to.etc.domui.state.UIContext;
+import to.etc.domui.trouble.ValidationException;
+import to.etc.domui.util.Msgs;
 
 public class BasicTourPage extends UrlPage {
 	private Div m_contentDiv;
@@ -62,7 +67,7 @@ public class BasicTourPage extends UrlPage {
 		return m_contentDiv;
 	}
 
-	@Nonnull
+	@NonNull
 	public Edition getEdition() {
 		Edition edition = m_edition;
 		if(edition == null)

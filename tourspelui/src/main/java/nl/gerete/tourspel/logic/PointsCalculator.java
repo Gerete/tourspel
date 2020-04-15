@@ -229,7 +229,7 @@ public class PointsCalculator {
 	 * @throws Exception
 	 *
 	 */
-	public void calculateScore(@Nonnull QDataContext dc, @Nonnull PlayList pl) throws Exception {
+	public void calculateScore(@NonNull QDataContext dc, @NonNull PlayList pl) throws Exception {
 		if(m_etappe == null)
 			throw new IllegalStateException("Call init first");
 		m_replacementMap = new HashMap<Rider, Rider>();

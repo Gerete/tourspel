@@ -1,19 +1,26 @@
 package nl.gerete.tourspel.pages.adm;
 
-import nl.gerete.tourspel.components.*;
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.logic.*;
-import nl.gerete.tourspel.pages.*;
-import to.etc.domui.component.buttons.*;
-import to.etc.domui.component.layout.*;
-import to.etc.domui.component.misc.*;
-import to.etc.domui.dom.html.*;
-import to.etc.domui.state.*;
-import to.etc.util.*;
-import to.etc.webapp.query.*;
+import nl.gerete.tourspel.components.EditionInfoFragment;
+import nl.gerete.tourspel.db.EditionPhase;
+import nl.gerete.tourspel.db.PlayList;
+import nl.gerete.tourspel.logic.EditionBP;
+import nl.gerete.tourspel.logic.ISystemTask;
+import nl.gerete.tourspel.logic.ISystemTaskProvider;
+import nl.gerete.tourspel.logic.PlayerNotPaidProvider;
+import nl.gerete.tourspel.pages.EtappeListPage;
+import org.eclipse.jdt.annotation.NonNull;
+import to.etc.domui.component.buttons.DefaultButton;
+import to.etc.domui.component.layout.ButtonBar;
+import to.etc.domui.component.misc.DisplayValue;
+import to.etc.domui.component.misc.InfoPanel;
+import to.etc.domui.component.misc.MsgBox;
+import to.etc.domui.component.misc.VerticalSpacer;
+import to.etc.domui.dom.html.IClicked;
+import to.etc.domui.state.UIGoto;
+import to.etc.util.Progress;
+import to.etc.webapp.query.QCriteria;
 
-import javax.annotation.*;
-import java.util.*;
+import java.util.List;
 
 /**
  * This handles the phase transitions et al for the current edition.
@@ -76,7 +83,7 @@ public class AdminEditionPage extends BasicTourPage {
 
 	}
 
-	private void showEditionButtons(@Nonnull ButtonBar bb, @Nonnull EditionPhase phase) throws Exception {
+	private void showEditionButtons(@NonNull ButtonBar bb, @NonNull EditionPhase phase) throws Exception {
 		switch(phase){
 			default:
 				break;

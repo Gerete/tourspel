@@ -1,19 +1,31 @@
 package nl.gerete.tourspel.pages;
 
-import nl.gerete.tourspel.adm.*;
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.pages.playlist.*;
-import to.etc.domui.annotations.*;
-import to.etc.domui.component.buttons.*;
-import to.etc.domui.component.tbl.*;
-import to.etc.domui.dom.html.*;
-import to.etc.domui.state.*;
-import to.etc.webapp.query.*;
+import nl.gerete.tourspel.adm.TourUser;
+import nl.gerete.tourspel.db.ApplicationRight;
+import nl.gerete.tourspel.db.Person;
+import nl.gerete.tourspel.db.PlayList;
+import nl.gerete.tourspel.pages.playlist.PlayListEditPage;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.NonNullByDefault;
+import org.eclipse.jdt.annotation.Nullable;
+import to.etc.domui.annotations.UIUrlParameter;
+import to.etc.domui.component.buttons.DefaultButton;
+import to.etc.domui.component.tbl.BasicRowRenderer;
+import to.etc.domui.component.tbl.DataTable;
+import to.etc.domui.component.tbl.ICellClicked;
+import to.etc.domui.component.tbl.SimpleListModel;
+import to.etc.domui.dom.html.Div;
+import to.etc.domui.state.PageParameters;
+import to.etc.domui.state.UIContext;
+import to.etc.domui.state.UIGoto;
+import to.etc.webapp.query.QContextManager;
+import to.etc.webapp.query.QCriteria;
 
-import javax.annotation.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
-@DefaultNonNull
+@NonNullByDefault
 public class PersonDetailListPage extends BasicEditPage<Person> {
 
 	@Nullable
@@ -22,7 +34,7 @@ public class PersonDetailListPage extends BasicEditPage<Person> {
 	@Nullable
 	private Person m_person;
 
-	@Nonnull
+	@NonNull
 	@UIUrlParameter(name = "id", mandatory = true)
 	public Person getPerson() {
 		Person person = m_person;
@@ -70,7 +82,7 @@ public class PersonDetailListPage extends BasicEditPage<Person> {
 			SimpleListModel<PlayList> slm = m_slm = new SimpleListModel<>(playLists);
 			BasicRowRenderer<PlayList> brr = new BasicRowRenderer<PlayList>(PlayList.class);
 			brr.setRowClicked(new ICellClicked<PlayList>() {
-				@Override public void cellClicked(@Nonnull PlayList rowval) throws Exception {
+				@Override public void cellClicked(@NonNull PlayList rowval) throws Exception {
 					UIGoto.moveSub(PlayListEditPage.class, new PageParameters("id", rowval.getId()));
 				}
 			});

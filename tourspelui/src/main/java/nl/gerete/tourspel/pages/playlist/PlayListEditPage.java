@@ -1,27 +1,47 @@
 package nl.gerete.tourspel.pages.playlist;
 
-import nl.gerete.tourspel.adm.*;
-import nl.gerete.tourspel.components.*;
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.logic.*;
-import nl.gerete.tourspel.pages.adm.*;
-import to.etc.domui.annotations.*;
-import to.etc.domui.component.buttons.*;
-import to.etc.domui.component.controlfactory.*;
-import to.etc.domui.component.form.*;
-import to.etc.domui.component.layout.*;
-import to.etc.domui.component.misc.*;
-import to.etc.domui.component.tbl.*;
-import to.etc.domui.dom.css.*;
-import to.etc.domui.dom.errors.*;
-import to.etc.domui.dom.html.*;
-import to.etc.domui.login.*;
-import to.etc.domui.state.*;
-import to.etc.webapp.nls.*;
-import to.etc.webapp.query.*;
+import nl.gerete.tourspel.adm.TourUser;
+import nl.gerete.tourspel.components.OrderedRidersComponent;
+import nl.gerete.tourspel.components.RiderLookupInput;
+import nl.gerete.tourspel.db.ApplicationRight;
+import nl.gerete.tourspel.db.IOrderedRiders;
+import nl.gerete.tourspel.db.Person;
+import nl.gerete.tourspel.db.PlayList;
+import nl.gerete.tourspel.db.PlayListEntry;
+import nl.gerete.tourspel.db.Rider;
+import nl.gerete.tourspel.logic.EditionBP;
+import nl.gerete.tourspel.pages.adm.BasicTourPage;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.Nullable;
+import to.etc.domui.annotations.UIUrlParameter;
+import to.etc.domui.component.buttons.DefaultButton;
+import to.etc.domui.component.controlfactory.ModelBindings;
+import to.etc.domui.component.form.TabularFormBuilder;
+import to.etc.domui.component.layout.ButtonBar;
+import to.etc.domui.component.layout.CaptionedHeader;
+import to.etc.domui.component.misc.MsgBox;
+import to.etc.domui.component.misc.VerticalSpacer;
+import to.etc.domui.component.tbl.ICellClicked;
+import to.etc.domui.component.tbl.ITableModel;
+import to.etc.domui.component.tbl.ITableModelListener;
+import to.etc.domui.component.tbl.SimpleListModel;
+import to.etc.domui.dom.css.VerticalAlignType;
+import to.etc.domui.dom.errors.UIMessage;
+import to.etc.domui.dom.html.IClicked;
+import to.etc.domui.dom.html.NodeContainer;
+import to.etc.domui.dom.html.TBody;
+import to.etc.domui.dom.html.TD;
+import to.etc.domui.login.IUser;
+import to.etc.domui.state.UIContext;
+import to.etc.domui.state.UIGoto;
+import to.etc.webapp.nls.BundleRef;
+import to.etc.webapp.query.QDataContext;
 
-import javax.annotation.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Objects;
 
 public class PlayListEditPage extends BasicTourPage {
 
@@ -49,7 +69,7 @@ public class PlayListEditPage extends BasicTourPage {
 	 */
 
 	@UIUrlParameter(name = "id", mandatory = true)
-	@Nonnull
+	@NonNull
 	public PlayList getPlayList() {
 		PlayList pl = m_playList;
 		if(pl == null)
@@ -102,15 +122,15 @@ public class PlayListEditPage extends BasicTourPage {
 
 		m_ridersModel.addChangeListener(new ITableModelListener<Rider>() {
 			@Override
-			public void rowModified(@Nonnull ITableModel<Rider> model, int index, @Nonnull Rider value) throws Exception {}
+			public void rowModified(@NonNull ITableModel<Rider> model, int index, @NonNull Rider value) throws Exception {}
 
 			@Override
-			public void rowDeleted(@Nonnull ITableModel<Rider> model, int index, @Nonnull Rider value) throws Exception {
+			public void rowDeleted(@NonNull ITableModel<Rider> model, int index, @NonNull Rider value) throws Exception {
 				deletePlaylistEntry(value);
 			}
 
 			@Override
-			public void rowAdded(@Nonnull ITableModel<Rider> model, int index, @Nonnull Rider value) throws Exception {
+			public void rowAdded(@NonNull ITableModel<Rider> model, int index, @NonNull Rider value) throws Exception {
 				addPlaylistEntry(value);
 			}
 
@@ -121,15 +141,15 @@ public class PlayListEditPage extends BasicTourPage {
 		m_playListModel.addChangeListener(new ITableModelListener<PlayListEntry>() {
 
 			@Override
-			public void rowModified(@Nonnull ITableModel<PlayListEntry> model, int index, @Nonnull PlayListEntry value) throws Exception {}
+			public void rowModified(@NonNull ITableModel<PlayListEntry> model, int index, @NonNull PlayListEntry value) throws Exception {}
 
 			@Override
-			public void rowDeleted(@Nonnull ITableModel<PlayListEntry> model, int index, @Nonnull PlayListEntry value) throws Exception {
+			public void rowDeleted(@NonNull ITableModel<PlayListEntry> model, int index, @NonNull PlayListEntry value) throws Exception {
 				m_ridersModel.delete(Objects.requireNonNull(value.getRider()));
 			}
 
 			@Override
-			public void rowAdded(@Nonnull ITableModel<PlayListEntry> model, int index, @Nonnull PlayListEntry value) throws Exception {
+			public void rowAdded(@NonNull ITableModel<PlayListEntry> model, int index, @NonNull PlayListEntry value) throws Exception {
 				m_ridersModel.add(Objects.requireNonNull(value.getRider()));
 			}
 
@@ -139,7 +159,7 @@ public class PlayListEditPage extends BasicTourPage {
 
 	}
 
-	private void addPlaylistEntry(@Nonnull Rider value) throws Exception {
+	private void addPlaylistEntry(@NonNull Rider value) throws Exception {
 		if(findRiderInPlayList(value) != null) {
 			return;
 		}
@@ -149,7 +169,7 @@ public class PlayListEditPage extends BasicTourPage {
 		m_ridersComponent.addOrderedRider(pe);
 	}
 
-	private void deletePlaylistEntry(@Nonnull Rider value) throws Exception {
+	private void deletePlaylistEntry(@NonNull Rider value) throws Exception {
 		PlayListEntry pe = findRiderInPlayList(value);
 		if(null != pe)
 			m_ridersComponent.removeRider(pe);
@@ -173,7 +193,7 @@ public class PlayListEditPage extends BasicTourPage {
 //		m_ridersComponent.addListener(new IModelChangedListener<PlayListEntry>() {
 //
 //			@Override
-//			public void onValueRemoved(@Nonnull PlayListEntry removedEntry) throws Exception {
+//			public void onValueRemoved(@NonNull PlayListEntry removedEntry) throws Exception {
 //				Rider rider = removedEntry.getRider();
 //				if(rider == null)
 //					throw new IllegalStateException("Dat kan helemaal niet!?");
@@ -181,7 +201,7 @@ public class PlayListEditPage extends BasicTourPage {
 //			}
 //
 //			@Override
-//			public void onValueAdded(@Nonnull PlayListEntry addedEntry) {
+//			public void onValueAdded(@NonNull PlayListEntry addedEntry) {
 //				Rider rider = addedEntry.getRider();
 //				if(rider == null)
 //					throw new IllegalStateException("Dat kan helemaal niet!?");
@@ -204,7 +224,7 @@ public class PlayListEditPage extends BasicTourPage {
 		right.add(lookupRider);
 	}
 
-	private void createTeamTree(@Nonnull NodeContainer left, @Nonnull final List<PlayListEntry> plel) throws Exception {
+	private void createTeamTree(@NonNull NodeContainer left, @NonNull final List<PlayListEntry> plel) throws Exception {
 		List<Rider> riderList = new ArrayList<Rider>();
 		for(PlayListEntry pe : plel) {
 			riderList.add(pe.getRider());
@@ -224,7 +244,7 @@ public class PlayListEditPage extends BasicTourPage {
 		add(tfb.finish());
 	}
 
-	private void createButtonBar(@Nonnull final QDataContext dc, @Nonnull final List<PlayListEntry> plel) {
+	private void createButtonBar(@NonNull final QDataContext dc, @NonNull final List<PlayListEntry> plel) {
 		final ButtonBar bb = new ButtonBar();
 		add(bb);
 		bb.addButton($("save"), new IClicked<DefaultButton>() {
@@ -275,7 +295,7 @@ public class PlayListEditPage extends BasicTourPage {
 	}
 
 	@Nullable
-	private PlayListEntry findRiderInPlayList(@Nonnull Rider r) throws Exception {
+	private PlayListEntry findRiderInPlayList(@NonNull Rider r) throws Exception {
 		for(int i = m_playListModel.getRows(); --i >= 0;) {
 			PlayListEntry ple = m_playListModel.getItem(i);
 			if(r.equals(ple.getRider()))

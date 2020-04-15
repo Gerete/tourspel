@@ -1,9 +1,9 @@
 package nl.gerete.tourspel.pages;
 
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.logic.*;
-
-import javax.annotation.*;
+import nl.gerete.tourspel.db.Edition;
+import nl.gerete.tourspel.db.Etappe;
+import nl.gerete.tourspel.logic.EditionBP;
+import org.eclipse.jdt.annotation.Nullable;
 
 public class EtappeListPage extends BasicListPage<Etappe> {
 

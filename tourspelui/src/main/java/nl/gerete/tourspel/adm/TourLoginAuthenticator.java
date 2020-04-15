@@ -1,13 +1,20 @@
 package nl.gerete.tourspel.adm;
 
-import nl.gerete.tourspel.*;
-import nl.gerete.tourspel.db.*;
-import to.etc.domui.login.*;
-import to.etc.util.*;
-import to.etc.webapp.query.*;
+import nl.gerete.tourspel.Application;
+import nl.gerete.tourspel.db.ApplicationRight;
+import nl.gerete.tourspel.db.Person;
+import nl.gerete.tourspel.db.PersonRight;
+import org.eclipse.jdt.annotation.NonNull;
+import to.etc.domui.login.ILoginAuthenticator;
+import to.etc.domui.login.IUser;
+import to.etc.util.FileTool;
+import to.etc.util.StringTool;
+import to.etc.webapp.query.QContextManager;
+import to.etc.webapp.query.QCriteria;
+import to.etc.webapp.query.QDataContext;
 
-import javax.annotation.*;
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 public class TourLoginAuthenticator implements ILoginAuthenticator {
 
@@ -24,7 +31,7 @@ public class TourLoginAuthenticator implements ILoginAuthenticator {
 		}
 	}
 
-	private IUser createUserInstance(@Nonnull Person p) {
+	private IUser createUserInstance(@NonNull Person p) {
 		Set<ApplicationRight> set = new HashSet<ApplicationRight>();
 		long now = Application.getNow().getTime();
 		for(PersonRight pr : p.getRightList()) {

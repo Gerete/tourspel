@@ -1,20 +1,37 @@
 package nl.gerete.tourspel.pages.etappe;
 
-import nl.gerete.tourspel.components.*;
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.logic.*;
-import nl.gerete.tourspel.pages.adm.*;
-import nl.gerete.tourspel.pages.playlist.*;
-import to.etc.domui.component.buttons.*;
-import to.etc.domui.component.layout.*;
-import to.etc.domui.component.misc.*;
-import to.etc.domui.component.tbl.*;
-import to.etc.domui.dom.css.*;
-import to.etc.domui.dom.errors.*;
-import to.etc.domui.dom.html.*;
+import nl.gerete.tourspel.components.EditionInfoFragment;
+import nl.gerete.tourspel.db.EditionPhase;
+import nl.gerete.tourspel.db.Etappe;
+import nl.gerete.tourspel.db.EtappePhase;
+import nl.gerete.tourspel.db.EtappeResult;
+import nl.gerete.tourspel.db.Rider;
+import nl.gerete.tourspel.db.StoppedRider;
+import nl.gerete.tourspel.logic.EditionBP;
+import nl.gerete.tourspel.pages.adm.BasicTourPage;
+import nl.gerete.tourspel.pages.playlist.RiderByTeamComponent;
+import org.eclipse.jdt.annotation.NonNull;
+import to.etc.domui.component.buttons.DefaultButton;
+import to.etc.domui.component.layout.ButtonBar;
+import to.etc.domui.component.layout.TabPanel;
+import to.etc.domui.component.misc.MessageFlare;
+import to.etc.domui.component.misc.MsgBox;
+import to.etc.domui.component.tbl.ITableModel;
+import to.etc.domui.component.tbl.ITableModelListener;
+import to.etc.domui.component.tbl.SimpleListModel;
+import to.etc.domui.dom.css.DisplayType;
+import to.etc.domui.dom.css.VerticalAlignType;
+import to.etc.domui.dom.errors.MsgType;
+import to.etc.domui.dom.html.IClicked;
+import to.etc.domui.dom.html.IValueChanged;
+import to.etc.domui.dom.html.NodeBase;
+import to.etc.domui.dom.html.TBody;
+import to.etc.domui.dom.html.TD;
 
-import javax.annotation.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Set;
 
 /**
  * This handles the "daily" maintenance of an open edition.
@@ -106,7 +123,7 @@ public class AdminDailyPage extends BasicTourPage {
 	 * @param tp
 	 * @throws Exception
 	 */
-	private void createEtappeResultFragment(@Nonnull TabPanel tp) throws Exception {
+	private void createEtappeResultFragment(@NonNull TabPanel tp) throws Exception {
 		m_etappeResultModel = new SimpleListModel<EtappeResult>(m_etappeResults);
 		m_etappeResultModel.addChangeListener(new ITableModelListener<EtappeResult>() {
 
@@ -173,7 +190,7 @@ public class AdminDailyPage extends BasicTourPage {
 	}
 
 	@Nullable
-	private EtappeResult findEtappeResultByRider(@Nonnull Rider rider) throws Exception {
+	private EtappeResult findEtappeResultByRider(@NonNull Rider rider) throws Exception {
 		for(int i = m_etappeResultModel.getRows(); --i >= 0;) {
 			EtappeResult er = m_etappeResultModel.getItem(i);
 			if(rider.equals(er.getRider()))

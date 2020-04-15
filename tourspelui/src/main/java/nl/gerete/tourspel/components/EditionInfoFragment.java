@@ -10,14 +10,14 @@ import to.etc.domui.dom.html.*;
 import javax.annotation.*;
 
 public class EditionInfoFragment extends Div {
-	@Nonnull
+	@NonNull
 	private Edition m_edition;
 
-	public EditionInfoFragment(@Nonnull Edition edition) {
+	public EditionInfoFragment(@NonNull Edition edition) {
 		m_edition = edition;
 	}
 
-	@Nonnull
+	@NonNull
 	public Edition getEdition() {
 		return m_edition;
 	}

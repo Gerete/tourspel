@@ -16,7 +16,7 @@ public class SystemTask {
 
 	private Progress m_progress;
 
-	@Nonnull
+	@NonNull
 	private List<ISystemTaskProvider> m_providerList = Collections.EMPTY_LIST;
 
 	private int m_lastProviderIndex;

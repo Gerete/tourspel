@@ -1,16 +1,16 @@
 package nl.gerete.tourspel.pages.newpages;
 
-import nl.gerete.tourspel.db.*;
-import to.etc.domui.component2.form4.*;
-import to.etc.domui.state.*;
-
-import javax.annotation.*;
+import nl.gerete.tourspel.db.Country;
+import nl.gerete.tourspel.db.Country_;
+import org.eclipse.jdt.annotation.NonNullByDefault;
+import to.etc.domui.component2.form4.FormBuilder;
+import to.etc.domui.state.UIGoto;
 
 /**
  * @author <a href="mailto:jal@etc.to">Frits Jalvingh</a>
  * Created on 12-6-18.
  */
-@DefaultNonNull
+@NonNullByDefault
 public class CountryEditPage extends BasicEditPage<Country>{
 
 	public CountryEditPage() {}

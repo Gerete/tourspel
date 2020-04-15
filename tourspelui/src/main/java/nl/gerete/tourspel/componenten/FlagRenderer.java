@@ -23,7 +23,7 @@ public class FlagRenderer<T> implements INodeContentRenderer<T> {
 	}
 
 	@Override
-	public void renderNodeContent(@Nonnull NodeBase component, @Nonnull NodeContainer node, @Nullable T o, @Nullable Object parameters) {
+	public void renderNodeContent(@NonNull NodeBase component, @NonNull NodeContainer node, @Nullable T o, @Nullable Object parameters) {
 		Country c = m_converter.apply(o);
 		if(c == null) {
 			return;

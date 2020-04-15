@@ -47,7 +47,7 @@ public class StoppedRidersFragment extends Div {
 		}
 	}
 
-	private void addRiderToList(@Nonnull TBody tBody, @Nonnull StoppedRider stoppedRider) {
+	private void addRiderToList(@NonNull TBody tBody, @NonNull StoppedRider stoppedRider) {
 
 		Rider rider = stoppedRider.getRider();
 

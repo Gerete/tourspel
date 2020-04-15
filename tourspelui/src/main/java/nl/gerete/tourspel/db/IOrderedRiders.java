@@ -1,6 +1,7 @@
 package nl.gerete.tourspel.db;
 
-import javax.annotation.*;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.Nullable;
 
 public interface IOrderedRiders {
 	int getPlace();
@@ -10,6 +11,6 @@ public interface IOrderedRiders {
 	@Nullable
 	Rider getRider();
 
-	void setRider(@Nonnull Rider r);
+	void setRider(@NonNull Rider r);
 
 }

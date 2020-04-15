@@ -23,7 +23,7 @@ public class EtappeResultFragment extends Div {
 		return m_etappe;
 	}
 
-	private void setEtappe(@Nonnull Etappe etappe) {
+	private void setEtappe(@NonNull Etappe etappe) {
 		m_etappe = etappe;
 		forceRebuild();
 	}

@@ -1,13 +1,19 @@
 package nl.gerete.tourspel.pages.newpages;
 
-import nl.gerete.tourspel.componenten.*;
-import nl.gerete.tourspel.db.*;
-import to.etc.domui.component.tbl.*;
-import to.etc.domui.component2.form4.*;
-import to.etc.domui.state.*;
-import to.etc.webapp.query.*;
-
-import javax.annotation.*;
+import nl.gerete.tourspel.componenten.FlagRenderer;
+import nl.gerete.tourspel.db.Rider;
+import nl.gerete.tourspel.db.Rider_;
+import nl.gerete.tourspel.db.Team;
+import nl.gerete.tourspel.db.Team_;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.NonNullByDefault;
+import to.etc.domui.component.tbl.DataPager;
+import to.etc.domui.component.tbl.DataTable;
+import to.etc.domui.component.tbl.RowRenderer;
+import to.etc.domui.component.tbl.SimpleSearchModel;
+import to.etc.domui.component2.form4.FormBuilder;
+import to.etc.domui.state.UIGoto;
+import to.etc.webapp.query.QCriteria;
 
 /**
  * Edit page for manipulating a team
@@ -15,7 +21,7 @@ import javax.annotation.*;
  * @author <a href="mailto:marc@gerete.nl">Marc Mol</a>
  * Created on Jun 2, 2017
  */
-@DefaultNonNull
+@NonNullByDefault
 public class TeamEditPage extends BasicEditPage<Team> {
 
 	public TeamEditPage() {}
@@ -54,7 +60,7 @@ public class TeamEditPage extends BasicEditPage<Team> {
 		fb.property(getEntity(), Team_.country()).control();
 	}
 
-	private void clickedOne(@Nonnull final Rider rider) {
+	private void clickedOne(@NonNull final Rider rider) {
 		RiderEditPage.open(rider);
 	}
 

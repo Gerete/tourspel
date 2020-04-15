@@ -1,11 +1,35 @@
 package nl.gerete.tourspel.db;
 
-import to.etc.domui.component.meta.*;
-import to.etc.domui.converter.*;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.Nullable;
+import to.etc.domui.component.meta.MetaDisplayProperty;
+import to.etc.domui.component.meta.MetaObject;
+import to.etc.domui.component.meta.MetaSearch;
+import to.etc.domui.component.meta.SearchPropertyType;
+import to.etc.domui.component.meta.SortableType;
+import to.etc.domui.converter.ConverterRegistry;
+import to.etc.domui.converter.DateConverter;
 
-import javax.annotation.*;
-import javax.persistence.*;
-import java.util.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "etappes")
@@ -69,7 +93,7 @@ public class Etappe extends TourspelEntity implements Comparable<Etappe> {
 		return m_id;
 	}
 
-	public void setId(@Nonnull Long id) {
+	public void setId(@NonNull Long id) {
 		m_id = id;
 	}
 
@@ -80,11 +104,11 @@ public class Etappe extends TourspelEntity implements Comparable<Etappe> {
 		return m_stage;
 	}
 
-	public void setStage(@Nonnull String stage) {
+	public void setStage(@NonNull String stage) {
 		m_stage = stage;
 	}
 
-	@Nonnull
+	@NonNull
 	@Column(name = "et_type", length = 32, nullable = false)
 	@Enumerated(EnumType.STRING)
 	@MetaSearch(searchType = SearchPropertyType.BOTH)
@@ -92,7 +116,7 @@ public class Etappe extends TourspelEntity implements Comparable<Etappe> {
 		return m_type;
 	}
 
-	public void setType(@Nonnull EtappeType type) {
+	public void setType(@NonNull EtappeType type) {
 		m_type = type;
 	}
 
@@ -104,7 +128,7 @@ public class Etappe extends TourspelEntity implements Comparable<Etappe> {
 		return m_date;
 	}
 
-	public void setDate(@Nonnull Date date) {
+	public void setDate(@NonNull Date date) {
 		m_date = date;
 	}
 
@@ -115,7 +139,7 @@ public class Etappe extends TourspelEntity implements Comparable<Etappe> {
 		return m_start;
 	}
 
-	public void setStart(@Nonnull String start) {
+	public void setStart(@NonNull String start) {
 		m_start = start;
 	}
 
@@ -126,7 +150,7 @@ public class Etappe extends TourspelEntity implements Comparable<Etappe> {
 		return m_end;
 	}
 
-	public void setEnd(@Nonnull String end) {
+	public void setEnd(@NonNull String end) {
 		m_end = end;
 	}
 
@@ -156,7 +180,7 @@ public class Etappe extends TourspelEntity implements Comparable<Etappe> {
 		return m_edition;
 	}
 
-	public void setEdition(@Nonnull Edition edition) {
+	public void setEdition(@NonNull Edition edition) {
 		m_edition = edition;
 	}
 
@@ -167,24 +191,24 @@ public class Etappe extends TourspelEntity implements Comparable<Etappe> {
 		return Objects.requireNonNull(getDate()).compareTo(Objects.requireNonNull(o.getDate()));
 	}
 
-	@Nonnull
+	@NonNull
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "etappe")
 	public List<EtappeResult> getResultList() {
 		return m_resultList;
 	}
 
-	public void setResultList(@Nonnull List<EtappeResult> resultList) {
+	public void setResultList(@NonNull List<EtappeResult> resultList) {
 		m_resultList = resultList;
 	}
 
 	@Column(length = 20, nullable = false)
 	@Enumerated(EnumType.STRING)
-	@Nonnull
+	@NonNull
 	public EtappePhase getPhase() {
 		return m_phase;
 	}
 
-	public void setPhase(@Nonnull EtappePhase phase) {
+	public void setPhase(@NonNull EtappePhase phase) {
 		m_phase = phase;
 	}
 

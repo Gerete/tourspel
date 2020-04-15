@@ -1,12 +1,15 @@
 package nl.gerete.tourspel.pages.playlist;
 
-import nl.gerete.tourspel.db.*;
-import to.etc.domui.component.tbl.*;
-import to.etc.domui.dom.html.*;
-import to.etc.webapp.query.*;
+import nl.gerete.tourspel.db.Rider;
+import nl.gerete.tourspel.db.Team;
+import org.eclipse.jdt.annotation.NonNull;
+import to.etc.domui.component.tbl.SimpleListModel;
+import to.etc.domui.dom.html.Div;
+import to.etc.webapp.query.QCriteria;
 
-import javax.annotation.*;
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * This component shows all teams. By opening a team you see all riders that can then be "selected" to be included in
@@ -16,13 +19,13 @@ import java.util.*;
  * Created on Feb 3, 2014
  */
 public class RiderByTeamComponent extends Div {
-	@Nonnull
+	@NonNull
 	private Map<Team, TeamListFragment> m_teamListFragmentMap = new HashMap<Team, TeamListFragment>();
 
-	@Nonnull
+	@NonNull
 	private SimpleListModel<Rider> m_model;
 
-	public RiderByTeamComponent(@Nonnull SimpleListModel<Rider> ridersModel) {
+	public RiderByTeamComponent(@NonNull SimpleListModel<Rider> ridersModel) {
 		m_model = ridersModel;
 	}
 
@@ -33,7 +36,7 @@ public class RiderByTeamComponent extends Div {
 		createTeamListFragments(teams);
 	}
 
-	private void createTeamListFragments(@Nonnull List<Team> teams) {
+	private void createTeamListFragments(@NonNull List<Team> teams) {
 		for(Team team : teams) {
 			TeamListFragment teamListFragment = new TeamListFragment(team, m_model);
 			m_teamListFragmentMap.put(team, teamListFragment);

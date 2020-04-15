@@ -28,7 +28,7 @@ public class PlayerNotPaidRun extends BaseSystemTask {
 
 	private Edition m_edition;
 
-	PlayerNotPaidRun(@Nonnull Edition edition) {
+	PlayerNotPaidRun(@NonNull Edition edition) {
 		m_edition = edition;
 	}
 

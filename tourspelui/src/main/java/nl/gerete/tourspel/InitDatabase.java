@@ -1,13 +1,38 @@
 package nl.gerete.tourspel;
 
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.logic.*;
-import to.etc.domui.hibernate.config.*;
-import to.etc.util.*;
-import to.etc.webapp.query.*;
+import nl.gerete.tourspel.db.ApplicationRight;
+import nl.gerete.tourspel.db.Country;
+import nl.gerete.tourspel.db.Edition;
+import nl.gerete.tourspel.db.EditionPhase;
+import nl.gerete.tourspel.db.Etappe;
+import nl.gerete.tourspel.db.EtappePhase;
+import nl.gerete.tourspel.db.EtappeResult;
+import nl.gerete.tourspel.db.EtappeType;
+import nl.gerete.tourspel.db.Person;
+import nl.gerete.tourspel.db.PersonRight;
+import nl.gerete.tourspel.db.PlayList;
+import nl.gerete.tourspel.db.PlayListEntry;
+import nl.gerete.tourspel.db.PlayListType;
+import nl.gerete.tourspel.db.Rider;
+import nl.gerete.tourspel.db.Rider_;
+import nl.gerete.tourspel.db.Team;
+import nl.gerete.tourspel.logic.EditionBP;
+import nl.gerete.tourspel.logic.PointsCalculator;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.Nullable;
+import to.etc.domui.hibernate.config.HibernateConfigurator;
+import to.etc.util.DateUtil;
+import to.etc.webapp.query.QCriteria;
+import to.etc.webapp.query.QDataContext;
 
-import javax.annotation.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Objects;
+import java.util.Random;
+import java.util.Set;
 
 /**
  * Initialiseren van de database voor het tourspel met de teams en de wielrenners.
@@ -582,8 +607,8 @@ public class InitDatabase {
 		return t;
 	}
 
-	@Nonnull
-	private PersonRight createRight(@Nonnull Person p, @Nonnull ApplicationRight right, Date start, Date end) throws Exception {
+	@NonNull
+	private PersonRight createRight(@NonNull Person p, @NonNull ApplicationRight right, Date start, Date end) throws Exception {
 		PersonRight pr = dc().queryOne(QCriteria.create(PersonRight.class).eq("person", p).eq("right", right));
 		if(null != pr)
 			return pr;
@@ -597,11 +622,11 @@ public class InitDatabase {
 		return pr;
 	}
 
-	private PersonRight addRight(@Nonnull ApplicationRight right, Date from, Date to) throws Exception {
+	private PersonRight addRight(@NonNull ApplicationRight right, Date from, Date to) throws Exception {
 		return createRight(m_lastPerson, right, from, to);
 	}
 
-	private PersonRight addRight(@Nonnull ApplicationRight right) throws Exception {
+	private PersonRight addRight(@NonNull ApplicationRight right) throws Exception {
 		return createRight(m_lastPerson, right, DateUtil.dateFor(2010, 0, 1), null);
 	}
 
@@ -610,7 +635,7 @@ public class InitDatabase {
 
 	private Edition m_ed;
 
-	@Nonnull
+	@NonNull
 	private Etappe createEtappe(String stage, EtappeType ty, Date dt, String start, String end, double dist, String url, Edition ed) throws Exception {
 		Etappe et = dc().queryOne(QCriteria.create(Etappe.class).eq("edition", ed).eq("stage", stage));
 		if(null != et)
@@ -643,7 +668,7 @@ public class InitDatabase {
 		return et;
 	}
 
-	@Nonnull
+	@NonNull
 	private PlayList createPlayList(Person person, String listName, PlayListType playListType, int listNumber, boolean paid) throws Exception {
 		PlayList pl = dc().queryOne(QCriteria.create(PlayList.class).eq(PlayList.pPERSON, person).eq(PlayList.pLISTNAME, listName).eq("edition", m_ed));
 		if(null != pl)

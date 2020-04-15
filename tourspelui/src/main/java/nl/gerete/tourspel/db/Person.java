@@ -1,10 +1,24 @@
 package nl.gerete.tourspel.db;
 
-import to.etc.domui.component.meta.*;
+import org.eclipse.jdt.annotation.NonNull;
+import to.etc.domui.component.meta.MetaDisplayProperty;
+import to.etc.domui.component.meta.MetaObject;
+import to.etc.domui.component.meta.MetaSearch;
+import to.etc.domui.component.meta.SearchPropertyType;
+import to.etc.domui.component.meta.SortableType;
 
-import javax.annotation.*;
-import javax.persistence.*;
-import java.util.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @MetaObject(defaultColumns = {@MetaDisplayProperty(name = "lastName", defaultSortable = SortableType.SORTABLE_ASC, displayLength = 20),
@@ -113,7 +127,7 @@ public class Person extends TourspelEntity {
 	}
 
 	@OneToMany(mappedBy = "person", fetch = FetchType.LAZY)
-	@Nonnull
+	@NonNull
 	public List<PlayList> getPlayListList() throws Exception {
 		return m_playListList;
 	}
@@ -142,17 +156,17 @@ public class Person extends TourspelEntity {
 		return Boolean.TRUE;
 	}
 
-	@Nonnull
+	@NonNull
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "person")
 	public List<PersonRight> getRightList() {
 		return m_rightList;
 	}
 
-	public void setRightList(@Nonnull List<PersonRight> rightList) {
+	public void setRightList(@NonNull List<PersonRight> rightList) {
 		m_rightList = rightList;
 	}
 
-	@Nonnull
+	@NonNull
 	@Override
 	public String toString() {
 		return getFirstName() + " " + getLastName();

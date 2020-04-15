@@ -1,13 +1,30 @@
 package nl.gerete.tourspel.db;
 
-import org.hibernate.annotations.*;
-import to.etc.domui.component.meta.*;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.Nullable;
+import org.hibernate.annotations.Type;
+import to.etc.domui.component.meta.MetaDisplayProperty;
+import to.etc.domui.component.meta.MetaObject;
+import to.etc.domui.component.meta.MetaSearch;
+import to.etc.domui.component.meta.SearchPropertyType;
+import to.etc.domui.component.meta.SortableType;
 
-import javax.annotation.*;
-import javax.persistence.*;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import java.util.*;
+import javax.persistence.Transient;
+import java.util.ArrayList;
+import java.util.List;
 
 @MetaObject(defaultColumns = {@MetaDisplayProperty(name = "listName", defaultSortable = SortableType.SORTABLE_ASC, displayLength = 75),
 	@MetaDisplayProperty(name = "paid", defaultSortable = SortableType.SORTABLE_ASC, displayLength = 10),
@@ -36,7 +53,7 @@ public class PlayList extends TourspelEntity {
 
 	private Edition m_edition;
 
-	@Nonnull
+	@NonNull
 	private List<PlayListResult> m_resultList = new ArrayList<>();
 
 	private Etappe m_lastScoredEtappe;
@@ -116,7 +133,7 @@ public class PlayList extends TourspelEntity {
 		return m_edition;
 	}
 
-	public void setEdition(@Nonnull Edition edition) {
+	public void setEdition(@NonNull Edition edition) {
 		m_edition = edition;
 	}
 
@@ -147,19 +164,19 @@ public class PlayList extends TourspelEntity {
 		m_currentPoints = currentPoints;
 	}
 
-	@Nonnull
+	@NonNull
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "playList")
 	public List<PlayListResult> getResultList() {
 		return m_resultList;
 	}
 
-	public void setResultList(@Nonnull List<PlayListResult> resultList) {
+	public void setResultList(@NonNull List<PlayListResult> resultList) {
 		m_resultList = resultList;
 	}
 
 	@Nullable
 	@Transient
-	public PlayListEntry findRiderInPlayList(@Nonnull Rider r) {
+	public PlayListEntry findRiderInPlayList(@NonNull Rider r) {
 		for(PlayListEntry ple : getPlayListEntries()) {
 			if(r.equals(ple.getRider()))
 				return ple;

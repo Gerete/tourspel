@@ -8,7 +8,7 @@ public abstract class BaseSystemTask implements ISystemTask {
 	@Nullable
 	private QDataContext m_dc;
 
-	@Nonnull
+	@NonNull
 	protected QDataContext dc() throws Exception {
 		QDataContext dc = m_dc;
 		if(dc == null) {

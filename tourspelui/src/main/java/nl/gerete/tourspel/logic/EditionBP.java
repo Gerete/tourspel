@@ -15,8 +15,8 @@ import java.util.*;
  * Created on Apr 3, 2012
  */
 public class EditionBP {
-	@Nonnull
-	static public Edition createEdition(@Nonnull QDataContext dc, int year) throws Exception {
+	@NonNull
+	static public Edition createEdition(@NonNull QDataContext dc, int year) throws Exception {
 		if(year < 2018 || year > 2300)
 			throw new IllegalArgumentException(year + ": year must be between 2018 and 2300");
 		Edition cur = findCurrentEdition(dc);
@@ -41,8 +41,8 @@ public class EditionBP {
 	 * @return
 	 * @throws Exception
 	 */
-	@Nonnull
-	static public Edition getCurrentEdition(@Nonnull QDataContext dc) throws Exception {
+	@NonNull
+	static public Edition getCurrentEdition(@NonNull QDataContext dc) throws Exception {
 		int year = Calendar.getInstance().get(Calendar.YEAR);
 		Edition edition = dc.queryOne(QCriteria.create(Edition.class).ne("phase", EditionPhase.HISTORIC).eq(Edition.pYEAR, Integer.valueOf(year)));
 		if(null == edition) {
@@ -56,7 +56,7 @@ public class EditionBP {
 		return edition;
 	}
 
-	static private Edition findCurrentEdition(@Nonnull QDataContext dc) throws Exception {
+	static private Edition findCurrentEdition(@NonNull QDataContext dc) throws Exception {
 		return dc.queryOne(QCriteria.create(Edition.class).ne("phase", EditionPhase.HISTORIC));
 	}
 
@@ -64,7 +64,7 @@ public class EditionBP {
 	 * @return the number of days to the start of the Edition
 	 * @throws Exception
 	 */
-	static public int getDaysToStartEdition(@Nonnull QDataContext dc) throws Exception {
+	static public int getDaysToStartEdition(@NonNull QDataContext dc) throws Exception {
 		return DateUtil.deltaInDays(Application.getNow(), getCurrentEdition(dc).getStartDate());
 	}
 
@@ -76,7 +76,7 @@ public class EditionBP {
 	 * @param edition
 	 * @throws Exception
 	 */
-	public static void open(@Nonnull QDataContext dc, @Nonnull Edition edition) throws Exception {
+	public static void open(@NonNull QDataContext dc, @NonNull Edition edition) throws Exception {
 		if(edition.getPhase() != EditionPhase.FUTURE)
 			throw new RuntimeException("De editie is in de fase " + edition.getPhase());
 
@@ -112,15 +112,15 @@ public class EditionBP {
 	 * @param ed
 	 * @return
 	 */
-	@Nonnull
+	@NonNull
 	public static List<Etappe> getEtappeList(Edition ed) {
 		List<Etappe> res = new ArrayList<Etappe>(ed.getEtappeList());
 		Collections.sort(res);
 		return res;
 	}
 
-	@Nonnull
-	private static List<Etappe> getEditableEtappes(@Nonnull Edition ed, @Nonnull Date dt) {
+	@NonNull
+	private static List<Etappe> getEditableEtappes(@NonNull Edition ed, @NonNull Date dt) {
 		if(ed.getPhase() != EditionPhase.RUNNING)
 			throw new IllegalStateException("Edition is not running but " + ed.getPhase());
 		List<Etappe> el = getEtappeList(ed);
@@ -146,7 +146,7 @@ public class EditionBP {
 	 * @return
 	 */
 	@Nullable
-	public static Etappe getNextEtappe(@Nonnull Edition ed, @Nonnull Date dt) {
+	public static Etappe getNextEtappe(@NonNull Edition ed, @NonNull Date dt) {
 		if(ed.getPhase() != EditionPhase.RUNNING)
 			return null;
 		List<Etappe> el = getEtappeList(ed);
@@ -158,7 +158,7 @@ public class EditionBP {
 		return null;
 	}
 
-	private static boolean isEditableEtappe(@Nonnull Etappe et, @Nonnull Date dt) {
+	private static boolean isEditableEtappe(@NonNull Etappe et, @NonNull Date dt) {
 		if(et.isCompleted())
 			return false;
 		if(Objects.requireNonNull(et.getDate()).getTime() > dt.getTime()) // Etappe is later than the date specified

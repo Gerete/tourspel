@@ -19,7 +19,7 @@ import java.util.*;
 
 @DefaultNonNull
 public class TourMailer {
-	@Nonnull
+	@NonNull
 	final private Map<String, JSTemplate> m_templateMap = new HashMap<String, JSTemplate>();
 
 	@Nullable
@@ -40,7 +40,7 @@ public class TourMailer {
 		getMailer().start(a, null);
 	}
 
-	private String subj(@Nonnull String s) {
+	private String subj(@NonNull String s) {
 		String header = "[tourspel] ";
 		if(DeveloperOptions.isDeveloperWorkstation()) {
 			if(s.startsWith(header)) {
@@ -56,7 +56,7 @@ public class TourMailer {
 		getMailer().setSubject(subj(s));
 	}
 
-	@Nonnull
+	@NonNull
 	private JSTemplate getTemplate(Class< ? > clz, String tplname) throws Exception {
 		JSTemplate tpl = m_templateMap.get(tplname);
 		if(null == tpl) {
@@ -134,13 +134,13 @@ public class TourMailer {
 		return mailHelper;
 	}
 
-	public void send(@Nonnull QDataContext dc) throws Exception {
+	public void send(@NonNull QDataContext dc) throws Exception {
 		appendTourTrailer(getMailer());
 		getMailer().send(dc);
 		m_mailer = null;
 	}
 
-	public void send(@Nonnull SmtpTransport tr) throws Exception {
+	public void send(@NonNull SmtpTransport tr) throws Exception {
 		appendTourTrailer(getMailer());
 		getMailer().send(tr);
 		m_mailer = null;

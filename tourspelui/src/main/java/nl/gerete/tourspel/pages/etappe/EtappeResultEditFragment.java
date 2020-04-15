@@ -13,13 +13,13 @@ import java.util.*;
 class EtappeResultEditFragment extends Div {
 	private static final int MAX_ETAPPE_RESULTS = 10;
 
-	@Nonnull
+	@NonNull
 	final private Edition m_edition;
 
 	@Nullable
 	final private Etappe m_etappe;
 
-	@Nonnull
+	@NonNull
 	private List<EtappeResult> m_resultList = new ArrayList<EtappeResult>();
 
 	@Nullable
@@ -29,21 +29,21 @@ class EtappeResultEditFragment extends Div {
 
 	private TBody m_inputBody;
 
-	@Nonnull
+	@NonNull
 	private List<IValueChanged<?>> m_changeListeners = new ArrayList<>();
 
-	@Nonnull
+	@NonNull
 	private List<ITableModelListener<EtappeResult>> m_modelChangeListeners = new ArrayList<>();
 
-	@Nonnull
+	@NonNull
 	private final SimpleListModel<EtappeResult> m_etappeResultModel;
 
-	@Nonnull
+	@NonNull
 	public Edition getEdition() {
 		return m_edition;
 	}
 
-	public EtappeResultEditFragment(@Nonnull Edition edition, @Nullable Etappe et, @Nonnull SimpleListModel<EtappeResult> model) throws Exception {
+	public EtappeResultEditFragment(@NonNull Edition edition, @Nullable Etappe et, @NonNull SimpleListModel<EtappeResult> model) throws Exception {
 		m_edition = edition;
 		m_etappe = et;
 		m_etappeResultModel = model;
@@ -73,14 +73,14 @@ class EtappeResultEditFragment extends Div {
 		ridersComponent.addListener(new IModelChangedListener<EtappeResult>() {
 
 			@Override
-			public void onValueRemoved(@Nonnull EtappeResult removedEntry) throws Exception {
+			public void onValueRemoved(@NonNull EtappeResult removedEntry) throws Exception {
 				m_etappeResultModel.delete(removedEntry);
 				updateState();
 				fireRemoved(removedEntry);
 			}
 
 			@Override
-			public void onValueAdded(@Nonnull EtappeResult addedEntry) throws Exception {
+			public void onValueAdded(@NonNull EtappeResult addedEntry) throws Exception {
 				updateState();
 			}
 		});
@@ -156,7 +156,7 @@ class EtappeResultEditFragment extends Div {
 		}
 	}
 
-	public void save(@Nonnull List<EtappeResult> etappeResults) throws Exception {
+	public void save(@NonNull List<EtappeResult> etappeResults) throws Exception {
 		for(IOrderedRiders er : etappeResults) {
 			getSharedContext().save(er);
 		}

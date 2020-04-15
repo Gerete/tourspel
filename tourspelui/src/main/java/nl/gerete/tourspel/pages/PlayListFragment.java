@@ -1,21 +1,30 @@
 package nl.gerete.tourspel.pages;
 
-import nl.gerete.tourspel.db.*;
-import to.etc.domui.dom.css.*;
-import to.etc.domui.dom.html.*;
+import nl.gerete.tourspel.db.PlayList;
+import nl.gerete.tourspel.db.PlayListEntry;
+import nl.gerete.tourspel.db.Rider;
+import org.eclipse.jdt.annotation.NonNull;
+import to.etc.domui.dom.css.DisplayType;
+import to.etc.domui.dom.html.Div;
+import to.etc.domui.dom.html.IClicked;
+import to.etc.domui.dom.html.Label;
+import to.etc.domui.dom.html.TBody;
+import to.etc.domui.dom.html.TD;
+import to.etc.domui.dom.html.Table;
 
-import javax.annotation.*;
-import java.util.*;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class PlayListFragment extends Div {
 
-	@Nonnull
+	@NonNull
 	private PlayList m_playList;
 
 	private Table m_playListTable = new Table();
 	private List<PlayListFragment> m_playListGroup;
 
-	public PlayListFragment(@Nonnull PlayList pl, @Nonnull List<PlayListFragment> playListGroup) {
+	public PlayListFragment(@NonNull PlayList pl, @NonNull List<PlayListFragment> playListGroup) {
 		setCssClass("portalFragment");
 		m_playList = pl;
 		m_playListGroup = playListGroup;
@@ -97,12 +106,12 @@ public class PlayListFragment extends Div {
 		}
 	}
 
-	@Nonnull
+	@NonNull
 	protected Table getPlayListTable() {
 		return m_playListTable;
 	}
 
-	private void addScoreListPoints(@Nonnull TBody tb, int scorePoints) {
+	private void addScoreListPoints(@NonNull TBody tb, int scorePoints) {
 		TD td;
 		td = tb.addCell();
 		Label label = new Label(scorePoints + "");

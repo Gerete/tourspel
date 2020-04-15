@@ -14,7 +14,7 @@ import java.util.*;
  * Created on May 22, 2012
  */
 final public class PointsCalculatorProvider implements ISystemTaskProvider {
-	@Nonnull
+	@NonNull
 	static public final PointsCalculatorProvider INSTANCE = new PointsCalculatorProvider();
 
 	private PointsCalculatorProvider() {}

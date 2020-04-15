@@ -1,24 +1,29 @@
 package nl.gerete.tourspel.pages;
 
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.logic.*;
-import nl.gerete.tourspel.logic.PointsCalculator.*;
-import to.etc.webapp.query.*;
+import nl.gerete.tourspel.db.Etappe;
+import nl.gerete.tourspel.db.PlayList;
+import nl.gerete.tourspel.db.Rider;
+import nl.gerete.tourspel.logic.EditionBP;
+import nl.gerete.tourspel.logic.PointsCalculator;
+import nl.gerete.tourspel.logic.PointsCalculator.Score;
+import org.eclipse.jdt.annotation.NonNull;
+import to.etc.webapp.query.QDataContext;
 
-import javax.annotation.*;
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class PlayerPointsCalculator {
 
-	@Nonnull
+	@NonNull
 	private QDataContext m_dc;
 
-	@Nonnull
+	@NonNull
 	private PlayList m_playList;
 
 	private Map<Rider, Score> m_scoreList = new HashMap<Rider, Score>();
 
-	public PlayerPointsCalculator(@Nonnull QDataContext dc, @Nonnull PlayList playList) {
+	public PlayerPointsCalculator(@NonNull QDataContext dc, @NonNull PlayList playList) {
 		m_dc = dc;
 		m_playList = playList;
 	}

@@ -1,10 +1,32 @@
 package nl.gerete.tourspel.db;
 
-import to.etc.domui.component.meta.*;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.Nullable;
+import to.etc.domui.component.meta.MetaDisplayProperty;
+import to.etc.domui.component.meta.MetaObject;
+import to.etc.domui.component.meta.MetaProperty;
+import to.etc.domui.component.meta.MetaSearch;
+import to.etc.domui.component.meta.NumericPresentation;
+import to.etc.domui.component.meta.SearchPropertyType;
+import to.etc.domui.component.meta.SortableType;
 
-import javax.annotation.*;
-import javax.persistence.*;
-import java.util.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /**
  * One "Edition" of the tour, meaning the tour for a given year.
@@ -22,7 +44,7 @@ public class Edition extends TourspelEntity {
 	public static final String pYEAR = "year";
 	private int m_year;
 
-	@Nonnull
+	@NonNull
 	private EditionPhase m_phase = EditionPhase.FUTURE;
 
 	private List<Etappe> m_etappeList = new ArrayList<>();
@@ -68,14 +90,14 @@ public class Edition extends TourspelEntity {
 		m_year = year;
 	}
 
-	@Nonnull
+	@NonNull
 	@Column(name = "ed_phase", length = 20, nullable = false)
 	@Enumerated(EnumType.STRING)
 	public EditionPhase getPhase() {
 		return m_phase;
 	}
 
-	public void setPhase(@Nonnull EditionPhase phase) {
+	public void setPhase(@NonNull EditionPhase phase) {
 		m_phase = phase;
 	}
 
@@ -96,7 +118,7 @@ public class Edition extends TourspelEntity {
 	}
 
 	@Transient
-	public void setStartDate(@Nonnull Date start) {
+	public void setStartDate(@NonNull Date start) {
 		m_startDate = start;
 	}
 
@@ -107,7 +129,7 @@ public class Edition extends TourspelEntity {
 		return m_endDate;
 	}
 
-	public void setEndDate(@Nonnull Date endDate) {
+	public void setEndDate(@NonNull Date endDate) {
 		m_endDate = endDate;
 	}
 
@@ -118,7 +140,7 @@ public class Edition extends TourspelEntity {
 		return m_registrationDeadline;
 	}
 
-	public void setRegistrationDeadline(@Nonnull Date registrationDeadline) {
+	public void setRegistrationDeadline(@NonNull Date registrationDeadline) {
 		m_registrationDeadline = registrationDeadline;
 	}
 
@@ -129,7 +151,7 @@ public class Edition extends TourspelEntity {
 		return m_changeRidersDeadline;
 	}
 
-	public void setChangeRidersDeadline(@Nonnull Date changeRidersDeadline) {
+	public void setChangeRidersDeadline(@NonNull Date changeRidersDeadline) {
 		m_changeRidersDeadline = changeRidersDeadline;
 	}
 
@@ -140,7 +162,7 @@ public class Edition extends TourspelEntity {
 		return m_payRegistrationFeeDeadline;
 	}
 
-	public void setPayRegistrationFeeDeadline(@Nonnull Date payRegistrationFeeDeadline) {
+	public void setPayRegistrationFeeDeadline(@NonNull Date payRegistrationFeeDeadline) {
 		m_payRegistrationFeeDeadline = payRegistrationFeeDeadline;
 	}
 
@@ -151,7 +173,7 @@ public class Edition extends TourspelEntity {
 		return m_payPriceMoneyDeadline;
 	}
 
-	public void setPayPriceMoneyDeadline(@Nonnull Date payPriceMoneyDeadline) {
+	public void setPayPriceMoneyDeadline(@NonNull Date payPriceMoneyDeadline) {
 		m_payPriceMoneyDeadline = payPriceMoneyDeadline;
 	}
 }

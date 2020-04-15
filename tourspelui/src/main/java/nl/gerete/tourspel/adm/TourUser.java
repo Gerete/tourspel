@@ -1,14 +1,15 @@
 package nl.gerete.tourspel.adm;
 
 import nl.gerete.tourspel.db.*;
+import org.eclipse.jdt.annotation.NonNullByDefault;
+import org.eclipse.jdt.annotation.Nullable;
 import to.etc.domui.login.*;
 import to.etc.domui.state.*;
 
-import javax.annotation.*;
 import java.util.*;
 
-@DefaultNonNull
-public class TourUser implements IUser {
+@NonNullByDefault
+public class TourUser implements IUser2 {
 
 	final private Person m_person;
 

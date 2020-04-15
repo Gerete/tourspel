@@ -1,10 +1,12 @@
 package nl.gerete.tourspel;
 
-import to.etc.util.*;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.Nullable;
+import to.etc.util.FileTool;
 
-import javax.annotation.*;
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.util.Objects;
+import java.util.Properties;
 
 /**
  * Access the property file found in the .developers.properties file.
@@ -21,11 +23,11 @@ public class PropertyFile {
 
 	private boolean m_initialized;
 
-	static public void initialize(@Nonnull File configFile) throws Exception {
+	static public void initialize(@NonNull File configFile) throws Exception {
 		m_propertyFile.init(configFile);
 	}
 
-	@Nonnull
+	@NonNull
 	static public PropertyFile getInstance() {
 		m_propertyFile.checkInit();
 		return m_propertyFile;
@@ -41,18 +43,18 @@ public class PropertyFile {
 	 *
 	 * @throws Exception
 	 */
-	private synchronized void init(@Nonnull File configFile) throws Exception {
+	private synchronized void init(@NonNull File configFile) throws Exception {
 		m_properties = FileTool.loadProperties(configFile);
 		m_initialized = true;
 	}
 
 	@Nullable
-	public String getProperty(@Nonnull String parameter) {
+	public String getProperty(@NonNull String parameter) {
 		return Objects.requireNonNull(m_properties).getProperty(parameter);
 	}
 
 	@Nullable
-	public String getProperty(@Nonnull String parameter, @Nullable String defaultValue) {
+	public String getProperty(@NonNull String parameter, @Nullable String defaultValue) {
 		return Objects.requireNonNull(m_properties).getProperty(parameter, defaultValue);
 	}
 }

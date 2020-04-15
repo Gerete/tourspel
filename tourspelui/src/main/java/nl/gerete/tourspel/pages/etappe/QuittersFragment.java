@@ -112,7 +112,7 @@ class QuittersFragment extends Div {
 		rin.setQueryManipulator(createManipulator(m_stoppedList));
 	}
 
-	private IQueryManipulator<Rider> createManipulator(@Nonnull final List<StoppedRider> resultList) {
+	private IQueryManipulator<Rider> createManipulator(@NonNull final List<StoppedRider> resultList) {
 		return new IQueryManipulator<Rider>() {
 
 			@Override

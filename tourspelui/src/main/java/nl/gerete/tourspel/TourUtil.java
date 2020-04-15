@@ -1,14 +1,13 @@
 package nl.gerete.tourspel;
 
-import nl.gerete.tourspel.db.*;
-
-import javax.annotation.*;
+import nl.gerete.tourspel.db.Country;
+import org.eclipse.jdt.annotation.NonNull;
 
 final public class TourUtil {
 	private TourUtil() {}
 
-	@Nonnull
-	static public String getFlag(@Nonnull Country c) {
+	@NonNull
+	static public String getFlag(@NonNull Country c) {
 		return "images/flags/" + c.getShortName() + ".png";
 	}
 

@@ -1,24 +1,31 @@
 package nl.gerete.tourspel.pages.playlist;
 
-import nl.gerete.tourspel.db.*;
-import to.etc.domui.component.tbl.*;
-import to.etc.domui.dom.css.*;
-import to.etc.domui.dom.html.*;
+import nl.gerete.tourspel.db.Rider;
+import nl.gerete.tourspel.db.Team;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.Nullable;
+import to.etc.domui.component.tbl.ITableModel;
+import to.etc.domui.component.tbl.ITableModelListener;
+import to.etc.domui.component.tbl.SimpleListModel;
+import to.etc.domui.dom.css.DisplayType;
+import to.etc.domui.dom.html.Div;
+import to.etc.domui.dom.html.IClicked;
+import to.etc.domui.dom.html.Img;
 
-import javax.annotation.*;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TeamListFragment extends Div {
-	@Nonnull
+	@NonNull
 	final private Team m_team;
 
-	@Nonnull
+	@NonNull
 	private Div m_riders = new Div();
 
-	@Nonnull
+	@NonNull
 	private Map<Rider, Div> m_riderDivMap = new HashMap<Rider, Div>();
 
-	@Nonnull
+	@NonNull
 	final private SimpleListModel<Rider> m_model;
 
 	private Div m_teamDiv;
@@ -27,16 +34,16 @@ public class TeamListFragment extends Div {
 
 	private Img m_collapseImg = new Img("images/arrow-down.png");
 
-	public TeamListFragment(@Nonnull Team team, @Nonnull SimpleListModel<Rider> selectedRiders) {
+	public TeamListFragment(@NonNull Team team, @NonNull SimpleListModel<Rider> selectedRiders) {
 		m_team = team;
 		m_model = selectedRiders;
 		m_model.addChangeListener(new ITableModelListener<Rider>() {
 			@Override
-			public void rowModified(@Nonnull ITableModel<Rider> model, int index, @Nullable Rider value) throws Exception {
+			public void rowModified(@NonNull ITableModel<Rider> model, int index, @Nullable Rider value) throws Exception {
 			}
 
 			@Override
-			public void rowDeleted(@Nonnull ITableModel<Rider> model, int index, @Nullable Rider value) throws Exception {
+			public void rowDeleted(@NonNull ITableModel<Rider> model, int index, @Nullable Rider value) throws Exception {
 				Div rider = m_riderDivMap.get(value);
 				if(rider != null) {
 					rider.removeCssClass("selected");
@@ -44,7 +51,7 @@ public class TeamListFragment extends Div {
 			}
 
 			@Override
-			public void rowAdded(@Nonnull ITableModel<Rider> model, int index, @Nullable Rider value) throws Exception {
+			public void rowAdded(@NonNull ITableModel<Rider> model, int index, @Nullable Rider value) throws Exception {
 				Div rider = m_riderDivMap.get(value);
 				if(rider != null) {
 					rider.addCssClass("selected");
@@ -94,7 +101,7 @@ public class TeamListFragment extends Div {
 		}
 	}
 
-	private void toggleSelection(@Nonnull Rider rider) throws Exception {
+	private void toggleSelection(@NonNull Rider rider) throws Exception {
 		boolean wasthere = isInModel(rider);
 		if(wasthere)
 			m_model.delete(rider);
@@ -102,7 +109,7 @@ public class TeamListFragment extends Div {
 			m_model.add(rider);
 	}
 
-	private boolean isInModel(@Nonnull Rider r) throws Exception {
+	private boolean isInModel(@NonNull Rider r) throws Exception {
 		for(int i = m_model.getRows(); --i >= 0;) {
 			if(r.equals(m_model.getItem(i)))
 				return true;

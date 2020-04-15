@@ -1,7 +1,18 @@
 package nl.gerete.tourspel.db;
 
-import javax.annotation.*;
-import javax.persistence.*;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.Nullable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 /**
  * A single result of an etappe.
@@ -48,7 +59,7 @@ public class EtappeResult extends TourspelEntity implements Comparable<EtappeRes
 		return m_etappe;
 	}
 
-	public void setEtappe(@Nonnull Etappe etappe) {
+	public void setEtappe(@NonNull Etappe etappe) {
 		m_etappe = etappe;
 	}
 
@@ -66,13 +77,13 @@ public class EtappeResult extends TourspelEntity implements Comparable<EtappeRes
 	@Override
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "er_rider_id")
-	@Nonnull
+	@NonNull
 	public Rider getRider() {
 		return m_rider;
 	}
 
 	@Override
-	public void setRider(@Nonnull Rider rider) {
+	public void setRider(@NonNull Rider rider) {
 		m_rider = rider;
 	}
 
