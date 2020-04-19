@@ -1,12 +1,14 @@
 package nl.gerete.tourspel.logic;
 
-import nl.gerete.tourspel.*;
-import nl.gerete.tourspel.db.*;
+import java.util.*;
+
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.util.*;
 import to.etc.webapp.query.*;
 
-import javax.annotation.*;
-import java.util.*;
+import nl.gerete.tourspel.*;
+import nl.gerete.tourspel.db.*;
 
 /**
  * Edition-related logic.

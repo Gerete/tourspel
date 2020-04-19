@@ -1,25 +1,22 @@
 package nl.gerete.tourspel.pages;
 
-import nl.gerete.tourspel.pages.adm.BasicTourPage;
-import org.eclipse.jdt.annotation.NonNull;
-import to.etc.domui.component.buttons.DefaultButton;
-import to.etc.domui.component.controlfactory.ModelBindings;
-import to.etc.domui.component.form.TabularFormBuilder;
-import to.etc.domui.component.layout.ButtonBar;
-import to.etc.domui.component.meta.ClassMetaModel;
-import to.etc.domui.component.meta.MetaManager;
-import to.etc.domui.component.meta.PropertyMetaModel;
-import to.etc.domui.component.misc.MessageFlare;
-import to.etc.domui.dom.errors.MsgType;
-import to.etc.domui.dom.errors.UIMessage;
-import to.etc.domui.dom.html.Div;
-import to.etc.domui.dom.html.IClicked;
-import to.etc.domui.state.UIGoto;
-import to.etc.webapp.nls.BundleRef;
-import to.etc.webapp.query.QDataContext;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.Collection;
+import org.eclipse.jdt.annotation.*;
+
+import to.etc.domui.component.buttons.*;
+import to.etc.domui.component.controlfactory.*;
+import to.etc.domui.component.form.*;
+import to.etc.domui.component.layout.*;
+import to.etc.domui.component.meta.*;
+import to.etc.domui.component.misc.*;
+import to.etc.domui.dom.errors.*;
+import to.etc.domui.dom.html.*;
+import to.etc.domui.state.*;
+import to.etc.webapp.nls.*;
+import to.etc.webapp.query.*;
+
+import nl.gerete.tourspel.pages.adm.*;
 
 public class BasicEditPage<T> extends BasicTourPage {
 	private Class<T> m_class;
@@ -96,7 +93,7 @@ public class BasicEditPage<T> extends BasicTourPage {
 		ButtonBar buttonBar = new ButtonBar();
 		add(buttonBar);
 
-		buttonBar.addConfirmedButton("Delete", "", "Are you sure you want to delete this record?", new IClicked<DefaultButton>() {
+		buttonBar.addConfirmedButton("Delete", "Are you sure you want to delete this record?", new IClicked<DefaultButton>() {
 
 			@Override
 			public void clicked(DefaultButton clickednode) throws Exception {

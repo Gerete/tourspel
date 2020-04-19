@@ -1,21 +1,22 @@
 package nl.gerete.tourspel.componenten;
 
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.domui.component.buttons.*;
 import to.etc.domui.component.layout.*;
 import to.etc.domui.component.layout.title.*;
 import to.etc.domui.component.menu.*;
+import to.etc.domui.component.misc.*;
 import to.etc.domui.dom.errors.*;
 import to.etc.domui.dom.html.*;
 import to.etc.domui.util.*;
-
-import javax.annotation.*;
 
 /**
  * The Tour title bar. This consists of an image in the left corner, a string describing the
  * module's functionality and a set of standard buttons.
  *
  */
-@DefaultNonNull
+@NonNullByDefault
 public class TourTitleBar extends AppPageTitleBar {
 
 	private boolean m_breadCrumb = true;
@@ -114,15 +115,15 @@ public class TourTitleBar extends AppPageTitleBar {
 	private LinkButton adminsMenu() {
 		final PopupMenu pm = new PopupMenu();
 		//			if(role.equals(ApplicationRoleEnum.CLERK)) {
-		pm.addItem("Etappe uitslag", "img/btnSmileySmiley.gif", null);
+		pm.addItem("Etappe uitslag", Icon.of("img/btnSmileySmiley.gif"), null);
 		//			if(role.equals(ApplicationRoleEnum.ADMIN)) {
-		pm.addItem("------------", "img/btnSmileySmiley.gif", null);
-		pm.addItem("Ploegen", "img/btnSmileySad.gif", null);
-		pm.addItem("Renners", "img/btnSmileySad.gif", null);
-		pm.addItem("Valideren inschrijflijsten", "img/btnSmileySad.gif", null);
-		pm.addItem("Etcetera, etcetera ...", "img/btnSmileySad.gif", null);
-		pm.addItem("Start inschrijving", "img/btnSmileySmiley.gif", null);
-		pm.addItem("Start tourspel", "img/btnSmileySmiley.gif", null);
+		pm.addItem("------------", Icon.of("img/btnSmileySmiley.gif"), null);
+		pm.addItem("Ploegen", Icon.of("img/btnSmileySad.gif"), null);
+		pm.addItem("Renners", Icon.of("img/btnSmileySad.gif"), null);
+		pm.addItem("Valideren inschrijflijsten", Icon.of("img/btnSmileySad.gif"), null);
+		pm.addItem("Etcetera, etcetera ...", Icon.of("img/btnSmileySad.gif"), null);
+		pm.addItem("Start inschrijving", Icon.of("img/btnSmileySmiley.gif"), null);
+		pm.addItem("Start tourspel", Icon.of("img/btnSmileySmiley.gif"), null);
 
 		LinkButton lb = new LinkButton("Clerk", (IClicked<LinkButton>) clickednode -> pm.show(clickednode, null));
 		return lb;
@@ -130,8 +131,8 @@ public class TourTitleBar extends AppPageTitleBar {
 
 	private LinkButton playersMenu() {
 		final PopupMenu pm = new PopupMenu();
-		pm.addItem("Account gegevens", "img/btnSmileySmiley.gif", null);
-		pm.addItem("Uitloggen", "img/btnSmileySad.gif", null);
+		pm.addItem("Account gegevens", Icon.of("img/btnSmileySmiley.gif"), null);
+		pm.addItem("Uitloggen", Icon.of("img/btnSmileySad.gif"), null);
 
 		LinkButton lb = new LinkButton("Menu", (IClicked<LinkButton>) clickednode -> pm.show(clickednode, null));
 		return lb;

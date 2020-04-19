@@ -1,9 +1,7 @@
 package nl.gerete.tourspel.pages;
 
-import nl.gerete.tourspel.*;
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.logic.*;
-import nl.gerete.tourspel.pages.adm.*;
+import java.text.*;
+
 import to.etc.domui.annotations.*;
 import to.etc.domui.component.buttons.*;
 import to.etc.domui.component.controlfactory.*;
@@ -19,7 +17,10 @@ import to.etc.domui.util.*;
 import to.etc.util.*;
 import to.etc.webapp.query.*;
 
-import java.text.*;
+import nl.gerete.tourspel.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.logic.*;
+import nl.gerete.tourspel.pages.adm.*;
 
 public class PersonEditPage extends BasicEditPage<Person> {
 	public PersonEditPage() {
@@ -73,7 +74,7 @@ public class PersonEditPage extends BasicEditPage<Person> {
 			public void validate(String input) throws Exception {
 				if(input != null) {
 					if(input.length() < PASSWORD_MIN_LENGTH) {
-						throw new ValidationException(Msgs.UI_VALIDATION_FAILED);
+						throw new ValidationException(Msgs.uiValidationFailed);
 					}
 				}
 			}
@@ -90,7 +91,7 @@ public class PersonEditPage extends BasicEditPage<Person> {
 			@Override
 			public void validate(String input) throws Exception {
 				if(!StringTool.isValidEmail(input)) {
-					throw new ValidationException(Msgs.NOT_VALID, input);
+					throw new ValidationException(Msgs.notValid, input);
 				}
 			}
 		});

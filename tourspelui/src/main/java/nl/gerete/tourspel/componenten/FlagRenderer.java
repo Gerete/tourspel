@@ -1,19 +1,21 @@
 package nl.gerete.tourspel.componenten;
 
-import nl.gerete.tourspel.*;
-import nl.gerete.tourspel.db.*;
+import java.util.function.*;
+
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.domui.dom.html.*;
 import to.etc.domui.util.*;
 
-import javax.annotation.*;
-import java.util.function.*;
+import nl.gerete.tourspel.*;
+import nl.gerete.tourspel.db.*;
 
 /**
  * FlagRenderer voor de vlaggen. Middels het gebruik van een functie wordt de Country meegegeven.
  *
  * @param <T>
  */
-@DefaultNonNull
+@NonNullByDefault
 public class FlagRenderer<T> implements INodeContentRenderer<T> {
 
 	private final Function<T, Country> m_converter;

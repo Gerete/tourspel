@@ -1,9 +1,10 @@
 package nl.gerete.tourspel.logic;
 
-import to.etc.util.*;
-
-import javax.annotation.*;
 import java.util.*;
+
+import org.eclipse.jdt.annotation.*;
+
+import to.etc.util.*;
 
 public class SystemTask {
 	static private final int WAITTIME = 5 * 60 * 1000;

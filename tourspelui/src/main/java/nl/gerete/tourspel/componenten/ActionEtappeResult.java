@@ -1,13 +1,15 @@
 package nl.gerete.tourspel.componenten;
 
-import nl.gerete.tourspel.pages.*;
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.domui.component.menu.*;
+import to.etc.domui.component.misc.*;
 import to.etc.domui.dom.html.*;
 import to.etc.domui.state.*;
 
-import javax.annotation.*;
+import nl.gerete.tourspel.pages.*;
 
-@DefaultNonNull
+@NonNullByDefault
 public class ActionEtappeResult implements IUIAction<Void> {
 
 	private static final String MENUNAME = "Etapperesultaten";
@@ -34,8 +36,8 @@ public class ActionEtappeResult implements IUIAction<Void> {
 	}
 
 	@Override
-	public String getIcon(@Nullable Void instance) throws Exception {
-		return ICON;
+	public IIconRef getIcon(@Nullable Void instance) throws Exception {
+		return Icon.of(ICON);
 	}
 
 	@Override

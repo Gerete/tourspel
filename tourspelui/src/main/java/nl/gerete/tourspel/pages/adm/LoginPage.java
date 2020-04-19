@@ -1,11 +1,9 @@
 package nl.gerete.tourspel.pages.adm;
 
-import nl.gerete.tourspel.*;
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.logic.*;
-import nl.gerete.tourspel.pages.*;
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+import java.util.*;
+
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.domui.component.buttons.*;
 import to.etc.domui.component.input.*;
 import to.etc.domui.component.misc.*;
@@ -16,8 +14,10 @@ import to.etc.domui.state.*;
 import to.etc.domui.trouble.*;
 import to.etc.util.*;
 
-import javax.annotation.*;
-import java.util.*;
+import nl.gerete.tourspel.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.logic.*;
+import nl.gerete.tourspel.pages.*;
 
 @NonNullByDefault
 public class LoginPage extends UrlPage {
@@ -135,7 +135,7 @@ public class LoginPage extends UrlPage {
 		}));
 		td = b.addRowAndCell();
 		td.add(new VerticalSpacer(20));
-		td.add(new LinkButton("Wachtwoord vergeten", "images/fietsbel.png", new IClicked<LinkButton>() {
+		td.add(new LinkButton("Wachtwoord vergeten", Icon.of("images/fietsbel.png"), new IClicked<LinkButton>() {
 			@Override
 			public void clicked(final LinkButton xb) throws Exception {
 				doForgottenPassword();
@@ -166,7 +166,7 @@ public class LoginPage extends UrlPage {
 			} else {
 				if(m_keeplogin.isChecked()) {
 					//-- Create a LOGIN cookie
-					UILogin.createLoginCookie(System.currentTimeMillis() + 30l * 1000 * 24 * 60 * 60);
+//					UILogin.createLoginCookie(System.currentTimeMillis() + 30l * 1000 * 24 * 60 * 60);
 				}
 
 				setBlurb();

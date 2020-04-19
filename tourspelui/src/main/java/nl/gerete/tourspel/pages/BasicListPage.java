@@ -1,7 +1,7 @@
 package nl.gerete.tourspel.pages;
 
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.pages.adm.*;
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.domui.component.ntbl.*;
 import to.etc.domui.component.searchpanel.*;
 import to.etc.domui.component.tbl.*;
@@ -10,7 +10,8 @@ import to.etc.domui.state.*;
 import to.etc.webapp.qsql.*;
 import to.etc.webapp.query.*;
 
-import javax.annotation.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.pages.adm.*;
 
 public class BasicListPage<T extends ILongIdentifyable> extends BasicTourPage {
 

@@ -1,14 +1,16 @@
 package nl.gerete.tourspel.componenten;
 
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.pages.*;
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.domui.component.menu.*;
+import to.etc.domui.component.misc.*;
 import to.etc.domui.dom.html.*;
 import to.etc.domui.state.*;
 
-import javax.annotation.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.pages.*;
 
-@DefaultNonNull
+@NonNullByDefault
 public class ActionEditPerson implements IUIAction<Person> {
 
 	private final static String MENUNAME = "Wijzig gegevens";
@@ -28,9 +30,9 @@ public class ActionEditPerson implements IUIAction<Person> {
 	}
 
 	@Override
-	public String getIcon(@Nullable Person instance) throws Exception {
+	public IIconRef getIcon(@Nullable Person instance) throws Exception {
 		// TODO Auto-generated method stub
-		return ICON;
+		return Icon.of(ICON);
 	}
 
 	@Override

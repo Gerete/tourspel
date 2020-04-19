@@ -1,8 +1,7 @@
 package nl.gerete.tourspel.pages;
 
-import nl.gerete.tourspel.adm.*;
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.pages.adm.*;
+import java.util.*;
+
 import to.etc.domui.component.buttons.*;
 import to.etc.domui.component.controlfactory.*;
 import to.etc.domui.component.form.*;
@@ -17,7 +16,9 @@ import to.etc.domui.util.*;
 import to.etc.webapp.nls.*;
 import to.etc.webapp.query.*;
 
-import java.util.*;
+import nl.gerete.tourspel.adm.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.pages.adm.*;
 
 public class PersonPasswordEditPage extends BasicTourPage {
 
@@ -88,7 +89,7 @@ public class PersonPasswordEditPage extends BasicTourPage {
 			public void validate(String input) throws Exception {
 				if(input != null) {
 					if(input.length() < PersonEditPage.PASSWORD_MIN_LENGTH) {
-						throw new ValidationException(Msgs.UI_VALIDATION_FAILED);
+						throw new ValidationException(Msgs.uiValidationFailed);
 					}
 				}
 			}

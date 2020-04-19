@@ -1,45 +1,28 @@
 package nl.gerete.tourspel;
 
-import nl.gerete.tourspel.adm.TourLoginAuthenticator;
-import nl.gerete.tourspel.db.Country;
-import nl.gerete.tourspel.db.Edition;
-import nl.gerete.tourspel.db.Etappe;
-import nl.gerete.tourspel.db.EtappeResult;
-import nl.gerete.tourspel.db.Person;
-import nl.gerete.tourspel.db.PersonRight;
-import nl.gerete.tourspel.db.PlayList;
-import nl.gerete.tourspel.db.PlayListEntry;
-import nl.gerete.tourspel.db.PlayListResult;
-import nl.gerete.tourspel.db.Region;
-import nl.gerete.tourspel.db.Rider;
-import nl.gerete.tourspel.db.StoppedRider;
-import nl.gerete.tourspel.db.Team;
-import nl.gerete.tourspel.pages.adm.LoginPage;
-import nl.gerete.tourspel.pages.adm.TourPortalPage;
-import org.eclipse.jdt.annotation.NonNull;
-import to.etc.dbpool.ConnectionPool;
-import to.etc.dbpool.PoolManager;
-import to.etc.domui.dom.header.HeaderContributor;
-import to.etc.domui.dom.html.UrlPage;
-import to.etc.domui.hibernate.config.HibernateConfigurator;
-import to.etc.domui.hibernate.config.HibernateConfigurator.Mode;
-import to.etc.domui.login.ILoginDialogFactory;
-import to.etc.domui.server.ConfigParameters;
-import to.etc.domui.server.DomApplication;
-import to.etc.domui.themes.sass.SassThemeFactory;
-import to.etc.smtp.Address;
-import to.etc.util.DeveloperOptions;
-import to.etc.util.StringTool;
-import to.etc.util.WrappedException;
-import to.etc.webapp.pendingoperations.PollingWorkerQueue;
-import to.etc.webapp.query.QContextManager;
+import java.io.*;
+import java.text.*;
+import java.util.*;
 
-import javax.sql.DataSource;
-import java.io.File;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
+import javax.sql.*;
+
+import org.eclipse.jdt.annotation.*;
+
+import to.etc.dbpool.*;
+import to.etc.domui.dom.header.*;
+import to.etc.domui.dom.html.*;
+import to.etc.domui.hibernate.config.*;
+import to.etc.domui.hibernate.config.HibernateConfigurator.*;
+import to.etc.domui.login.*;
+import to.etc.domui.server.*;
+import to.etc.domui.themes.sass.*;
+import to.etc.util.*;
+import to.etc.webapp.pendingoperations.*;
+import to.etc.webapp.query.*;
+
+import nl.gerete.tourspel.adm.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.pages.adm.*;
 
 public class Application extends DomApplication {
 
@@ -72,8 +55,8 @@ public class Application extends DomApplication {
 		addHeaderContributor(HeaderContributor.loadStylesheet("css/tourspel.css"), 100);
 
 		//-- Handle basic config.
-		//String tourspelProperties = DeveloperOptions.getString("tourspel", "tourspel.properties");
-		String tourspelProperties = "pool.xml";
+		String tourspelProperties = DeveloperOptions.getString("tourspel", "tourspel.properties");
+		//String tourspelProperties = "pool.xml";
 		File configFile = getAppFile("WEB-INF/" + tourspelProperties);
 		if(!configFile.exists())
 			throw new RuntimeException("Missing file WEB-INF/pool.xml containing the database to use");
@@ -136,7 +119,7 @@ public class Application extends DomApplication {
 
 		//-- 2. Test for an existing db
 		PropertyFile propertyfile = PropertyFile.getInstance();
-		String m = propertyfile.getProperty("createdb");
+		String m = propertyfile.getProperty("tourspel.createdb");
 		if(null == m)
 			m = "false";
 

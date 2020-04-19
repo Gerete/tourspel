@@ -1,6 +1,6 @@
 package nl.gerete.tourspel.components;
 
-import javax.annotation.*;
+import org.eclipse.jdt.annotation.*;
 
 public interface IModelChangedListener<T> {
 	void onValueAdded(@NonNull T addedEntry) throws Exception;

@@ -1,13 +1,16 @@
 package nl.gerete.tourspel.pages.etappe;
 
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.logic.*;
+import java.util.*;
+
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.domui.component.buttons.*;
+import to.etc.domui.component.misc.*;
 import to.etc.domui.dom.html.*;
 import to.etc.webapp.query.*;
 
-import javax.annotation.*;
-import java.util.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.logic.*;
 
 public class EtappeResultFragment extends Div {
 
@@ -56,7 +59,7 @@ public class EtappeResultFragment extends Div {
 	}
 
 	private void addNavigation() {
-		Button btnPrev = new SmallImgButton("images/go-left.png", new IClicked<SmallImgButton>() {
+		Button btnPrev = new SmallImgButton(Icon.of("images/go-left.png"), new IClicked<SmallImgButton>() {
 
 			@Override
 			public void clicked(SmallImgButton clickednode) throws Exception {
@@ -65,7 +68,7 @@ public class EtappeResultFragment extends Div {
 		});
 		add(btnPrev);
 
-		Button btnNext = new SmallImgButton("images/go-right.png", new IClicked<SmallImgButton>() {
+		Button btnNext = new SmallImgButton(Icon.of("images/go-right.png"), new IClicked<SmallImgButton>() {
 
 			@Override
 			public void clicked(SmallImgButton clickednode) throws Exception {

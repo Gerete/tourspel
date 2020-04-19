@@ -1,15 +1,17 @@
 package nl.gerete.tourspel.componenten;
 
-import nl.gerete.tourspel.adm.*;
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.pages.newpages.*;
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.domui.component.menu.*;
+import to.etc.domui.component.misc.*;
 import to.etc.domui.dom.html.*;
 import to.etc.domui.state.*;
 
-import javax.annotation.*;
+import nl.gerete.tourspel.adm.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.pages.newpages.*;
 
-@DefaultNonNull
+@NonNullByDefault
 public class ActionAdminCountries implements IUIAction< Void > {
 
 	private final static String MENUNAME = "Landen";
@@ -31,8 +33,8 @@ public class ActionAdminCountries implements IUIAction< Void > {
 	}
 
 	@Override
-	public String getIcon(@Nullable Void instance) throws Exception {
-		return ICON;
+	public IIconRef getIcon(@Nullable Void instance) throws Exception {
+		return Icon.of(ICON);
 	}
 
 	@Override

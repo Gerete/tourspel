@@ -1,12 +1,14 @@
 package nl.gerete.tourspel.pages;
 
-import nl.gerete.tourspel.db.*;
+import java.text.*;
+import java.util.*;
+
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.domui.dom.html.*;
 import to.etc.webapp.query.*;
 
-import javax.annotation.*;
-import java.text.*;
-import java.util.*;
+import nl.gerete.tourspel.db.*;
 
 /**
  * Fragment which is used to show the most recent riders that quit.

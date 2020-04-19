@@ -1,37 +1,22 @@
 package nl.gerete.tourspel.pages.etappe;
 
-import nl.gerete.tourspel.components.EditionInfoFragment;
-import nl.gerete.tourspel.db.EditionPhase;
-import nl.gerete.tourspel.db.Etappe;
-import nl.gerete.tourspel.db.EtappePhase;
-import nl.gerete.tourspel.db.EtappeResult;
-import nl.gerete.tourspel.db.Rider;
-import nl.gerete.tourspel.db.StoppedRider;
-import nl.gerete.tourspel.logic.EditionBP;
-import nl.gerete.tourspel.pages.adm.BasicTourPage;
-import nl.gerete.tourspel.pages.playlist.RiderByTeamComponent;
-import org.eclipse.jdt.annotation.NonNull;
-import to.etc.domui.component.buttons.DefaultButton;
-import to.etc.domui.component.layout.ButtonBar;
-import to.etc.domui.component.layout.TabPanel;
-import to.etc.domui.component.misc.MessageFlare;
-import to.etc.domui.component.misc.MsgBox;
-import to.etc.domui.component.tbl.ITableModel;
-import to.etc.domui.component.tbl.ITableModelListener;
-import to.etc.domui.component.tbl.SimpleListModel;
-import to.etc.domui.dom.css.DisplayType;
-import to.etc.domui.dom.css.VerticalAlignType;
-import to.etc.domui.dom.errors.MsgType;
-import to.etc.domui.dom.html.IClicked;
-import to.etc.domui.dom.html.IValueChanged;
-import to.etc.domui.dom.html.NodeBase;
-import to.etc.domui.dom.html.TBody;
-import to.etc.domui.dom.html.TD;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
+import org.eclipse.jdt.annotation.*;
+
+import to.etc.domui.component.buttons.*;
+import to.etc.domui.component.layout.*;
+import to.etc.domui.component.misc.*;
+import to.etc.domui.component.tbl.*;
+import to.etc.domui.dom.css.*;
+import to.etc.domui.dom.errors.*;
+import to.etc.domui.dom.html.*;
+
+import nl.gerete.tourspel.components.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.logic.*;
+import nl.gerete.tourspel.pages.adm.*;
+import nl.gerete.tourspel.pages.playlist.*;
 
 /**
  * This handles the "daily" maintenance of an open edition.
@@ -104,6 +89,8 @@ public class AdminDailyPage extends BasicTourPage {
 			@Override
 			public void rowModified(ITableModel<EtappeResult> model, int index, EtappeResult value) throws Exception {}
 
+			@Override public void rowsSorted(ITableModel<EtappeResult> model) throws Exception {}
+
 			@Override
 			public void rowDeleted(ITableModel<EtappeResult> model, int index, EtappeResult value) throws Exception {
 				m_ridersModel.delete(value.getRider());
@@ -130,6 +117,9 @@ public class AdminDailyPage extends BasicTourPage {
 			@Override
 			public void rowModified(ITableModel<EtappeResult> model, int index, EtappeResult value) throws Exception {
 			}
+
+			@Override
+			public void rowsSorted(ITableModel<EtappeResult> model) throws Exception {}
 
 			@Override
 			public void rowDeleted(ITableModel<EtappeResult> model, int index, EtappeResult value) throws Exception {
@@ -165,6 +155,9 @@ public class AdminDailyPage extends BasicTourPage {
 			@Override
 			public void rowModified(ITableModel<Rider> model, int index, Rider value) throws Exception {
 			}
+
+			@Override
+			public void rowsSorted(ITableModel<Rider> model) throws Exception {}
 
 			@Override
 			public void rowDeleted(ITableModel<Rider> model, int index, Rider value) throws Exception {
@@ -225,7 +218,7 @@ public class AdminDailyPage extends BasicTourPage {
 		add(bb);
 		bb.addBackButton();
 
-		DefaultButton okb = new DefaultButton("!Save", "THEME/btnSave.png", new IClicked<DefaultButton>() {
+		DefaultButton okb = new DefaultButton("!Save", Icon.of("THEME/btnSave.png"), new IClicked<DefaultButton>() {
 			@Override
 			public void clicked(DefaultButton clickednode) throws Exception {
 				save();

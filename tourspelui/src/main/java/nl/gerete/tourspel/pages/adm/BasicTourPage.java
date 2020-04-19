@@ -1,23 +1,19 @@
 package nl.gerete.tourspel.pages.adm;
 
-import nl.gerete.tourspel.componenten.TourMenuBar;
-import nl.gerete.tourspel.components.TaskRunningIndicator;
-import nl.gerete.tourspel.db.ApplicationRight;
-import nl.gerete.tourspel.db.Edition;
-import nl.gerete.tourspel.db.EditionPhase;
-import nl.gerete.tourspel.logic.EditionBP;
-import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.jdt.annotation.Nullable;
-import to.etc.domui.component.layout.ErrorMessageDiv;
-import to.etc.domui.component.misc.InfoPanel;
-import to.etc.domui.component.misc.VerticalSpacer;
-import to.etc.domui.dom.html.Div;
-import to.etc.domui.dom.html.Img;
-import to.etc.domui.dom.html.UrlPage;
-import to.etc.domui.login.IUser;
-import to.etc.domui.state.UIContext;
-import to.etc.domui.trouble.ValidationException;
-import to.etc.domui.util.Msgs;
+import org.eclipse.jdt.annotation.*;
+
+import to.etc.domui.component.layout.*;
+import to.etc.domui.component.misc.*;
+import to.etc.domui.dom.html.*;
+import to.etc.domui.state.*;
+import to.etc.domui.trouble.*;
+import to.etc.domui.util.*;
+
+import nl.gerete.tourspel.adm.*;
+import nl.gerete.tourspel.componenten.*;
+import nl.gerete.tourspel.components.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.logic.*;
 
 public class BasicTourPage extends UrlPage {
 	private Div m_contentDiv;
@@ -40,8 +36,7 @@ public class BasicTourPage extends UrlPage {
 		img.setSrc("images/logo-tour.png");
 		headerDiv.add(img);
 
-		IUser usr = UIContext.getCurrentUser();
-		if(usr != null && usr.hasRight(ApplicationRight.ADMIN.name()))
+		if(TourUser.getCurrent().hasRight(ApplicationRight.ADMIN.name()))
 			headerDiv.add(new TaskRunningIndicator());
 
 		m_contentDiv = new Div();

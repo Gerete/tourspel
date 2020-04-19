@@ -1,6 +1,6 @@
 package nl.gerete.tourspel.logic;
 
-import javax.annotation.*;
+import org.eclipse.jdt.annotation.*;
 
 /**
  * Provides tasks to execute.

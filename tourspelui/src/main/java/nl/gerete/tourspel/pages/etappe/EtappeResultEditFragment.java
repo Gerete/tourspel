@@ -1,14 +1,16 @@
 package nl.gerete.tourspel.pages.etappe;
 
-import nl.gerete.tourspel.components.*;
-import nl.gerete.tourspel.db.*;
+import java.util.*;
+
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.domui.component.misc.*;
 import to.etc.domui.component.tbl.*;
 import to.etc.domui.dom.css.*;
 import to.etc.domui.dom.html.*;
 
-import javax.annotation.*;
-import java.util.*;
+import nl.gerete.tourspel.components.*;
+import nl.gerete.tourspel.db.*;
 
 class EtappeResultEditFragment extends Div {
 	private static final int MAX_ETAPPE_RESULTS = 10;

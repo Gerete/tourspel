@@ -1,8 +1,10 @@
 package nl.gerete.tourspel.components;
 
 
-import nl.gerete.tourspel.componenten.*;
-import nl.gerete.tourspel.db.*;
+import java.util.*;
+
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.domui.component.buttons.*;
 import to.etc.domui.component.misc.*;
 import to.etc.domui.component.ntbl.*;
@@ -10,8 +12,8 @@ import to.etc.domui.component.tbl.*;
 import to.etc.domui.dom.html.*;
 import to.etc.domui.util.*;
 
-import javax.annotation.*;
-import java.util.*;
+import nl.gerete.tourspel.componenten.*;
+import nl.gerete.tourspel.db.*;
 
 /**
  * Component waarmee renners weergegeven worden met de mogelijkheid om deze
@@ -21,7 +23,7 @@ import java.util.*;
  * @author <a href="mailto:ben.schoen@itris.nl">Ben Schoen</a>
  * Created on May 8, 2012
  */
-@DefaultNonNull
+@NonNullByDefault
 public class OrderedRidersComponent<T extends IOrderedRiders> extends Div {
 
 	private SimpleListModel<T> m_model;
@@ -82,7 +84,7 @@ public class OrderedRidersComponent<T extends IOrderedRiders> extends Div {
 		brr.setRowButtonFactory((IRowButtonFactory<IOrderedRiders>) new IRowButtonFactory<T>() {
 			@Override
 			public void addButtonsFor(RowButtonContainer c, final T data) throws Exception {
-				c.addLinkButton("Verwijder", "THEME/btnDelete.png", new IClicked<LinkButton>() {
+				c.addLinkButton("Verwijder", Icon.of("THEME/btnDelete.png"), new IClicked<LinkButton>() {
 					@Override
 					public void clicked(LinkButton clickednode) throws Exception {
 						m_model.delete(data);
@@ -90,14 +92,14 @@ public class OrderedRidersComponent<T extends IOrderedRiders> extends Div {
 					}
 				});
 
-				c.addLinkButton("Omhoog", "images/btnUp.png", new IClicked<LinkButton>() {
+				c.addLinkButton("Omhoog", Icon.of("images/btnUp.png"), new IClicked<LinkButton>() {
 					@Override
 					public void clicked(LinkButton clickednode) throws Exception {
 						move(data, -1);
 					}
 				});
 
-				c.addLinkButton("Omlaag", "images/btnDown.png", new IClicked<LinkButton>() {
+				c.addLinkButton("Omlaag", Icon.of("images/btnDown.png"), new IClicked<LinkButton>() {
 					@Override
 					public void clicked(LinkButton clickednode) throws Exception {
 						move(data, 1);

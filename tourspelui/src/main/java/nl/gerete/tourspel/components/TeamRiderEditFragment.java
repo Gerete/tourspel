@@ -1,14 +1,15 @@
 package nl.gerete.tourspel.components;
 
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.pages.*;
+import java.util.*;
+
 import to.etc.domui.component.buttons.*;
 import to.etc.domui.component.layout.*;
 import to.etc.domui.component.misc.*;
 import to.etc.domui.dom.html.*;
 import to.etc.webapp.query.*;
 
-import java.util.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.pages.*;
 
 /**
  *
@@ -81,7 +82,7 @@ public class TeamRiderEditFragment extends Div implements ISavableFragment {
 
 	private void createAddButton() {
 		if(isEditable()) {
-			DefaultButton addButton = m_buttonBar.addButton("Toevoegen", "THEME/btnNew.png", new IClicked<DefaultButton>() {
+			DefaultButton addButton = m_buttonBar.addButton("Toevoegen", Icon.of("THEME/btnNew.png"), new IClicked<DefaultButton>() {
 				@Override
 				public void clicked(DefaultButton b) throws Exception {
 					addRiderToTable();

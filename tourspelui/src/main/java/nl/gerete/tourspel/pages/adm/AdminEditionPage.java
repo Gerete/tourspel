@@ -1,26 +1,21 @@
 package nl.gerete.tourspel.pages.adm;
 
-import nl.gerete.tourspel.components.EditionInfoFragment;
-import nl.gerete.tourspel.db.EditionPhase;
-import nl.gerete.tourspel.db.PlayList;
-import nl.gerete.tourspel.logic.EditionBP;
-import nl.gerete.tourspel.logic.ISystemTask;
-import nl.gerete.tourspel.logic.ISystemTaskProvider;
-import nl.gerete.tourspel.logic.PlayerNotPaidProvider;
-import nl.gerete.tourspel.pages.EtappeListPage;
-import org.eclipse.jdt.annotation.NonNull;
-import to.etc.domui.component.buttons.DefaultButton;
-import to.etc.domui.component.layout.ButtonBar;
-import to.etc.domui.component.misc.DisplayValue;
-import to.etc.domui.component.misc.InfoPanel;
-import to.etc.domui.component.misc.MsgBox;
-import to.etc.domui.component.misc.VerticalSpacer;
-import to.etc.domui.dom.html.IClicked;
-import to.etc.domui.state.UIGoto;
-import to.etc.util.Progress;
-import to.etc.webapp.query.QCriteria;
+import java.util.*;
 
-import java.util.List;
+import org.eclipse.jdt.annotation.*;
+
+import to.etc.domui.component.buttons.*;
+import to.etc.domui.component.layout.*;
+import to.etc.domui.component.misc.*;
+import to.etc.domui.dom.html.*;
+import to.etc.domui.state.*;
+import to.etc.util.*;
+import to.etc.webapp.query.*;
+
+import nl.gerete.tourspel.components.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.logic.*;
+import nl.gerete.tourspel.pages.*;
 
 /**
  * This handles the phase transitions et al for the current edition.
@@ -90,7 +85,7 @@ public class AdminEditionPage extends BasicTourPage {
 			case FUTURE:
 				break;
 			case OPEN:
-				bb.addConfirmedButton("Mail niet-betaalde spelers", "images/mail.png", "Wil je mail versturen naar alle spelers die onbetaalde lijsten hebben ingevuld.",
+				bb.addConfirmedButton("Mail niet-betaalde spelers", Icon.of("images/mail.png"), "Wil je mail versturen naar alle spelers die onbetaalde lijsten hebben ingevuld.",
 					new IClicked<DefaultButton>() {
 
 					@Override

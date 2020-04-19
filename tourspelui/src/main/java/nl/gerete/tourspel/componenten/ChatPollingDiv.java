@@ -1,12 +1,13 @@
 package nl.gerete.tourspel.componenten;
 
+import java.util.*;
+
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.domui.component.delayed.*;
 import to.etc.domui.component.htmleditor.*;
 
-import javax.annotation.*;
-import java.util.*;
-
-@DefaultNonNull
+@NonNullByDefault
 public class ChatPollingDiv extends PollingDiv {
 
 	@Nullable

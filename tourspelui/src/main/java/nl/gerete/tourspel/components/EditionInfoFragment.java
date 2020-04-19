@@ -1,13 +1,14 @@
 package nl.gerete.tourspel.components;
 
-import nl.gerete.tourspel.*;
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.logic.*;
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.domui.component.form.*;
 import to.etc.domui.component.misc.*;
 import to.etc.domui.dom.html.*;
 
-import javax.annotation.*;
+import nl.gerete.tourspel.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.logic.*;
 
 public class EditionInfoFragment extends Div {
 	@NonNull

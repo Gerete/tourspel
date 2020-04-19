@@ -1,8 +1,8 @@
 package nl.gerete.tourspel.componenten;
 
-import javax.annotation.*;
+import org.eclipse.jdt.annotation.*;
 
-@DefaultNonNull
+@NonNullByDefault
 public final class ChatManager {
 
 	@Nullable

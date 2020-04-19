@@ -1,10 +1,12 @@
 package nl.gerete.tourspel.pages.etappe;
 
-import nl.gerete.tourspel.adm.*;
-import nl.gerete.tourspel.db.*;
 import to.etc.domui.component.menu.*;
+import to.etc.domui.component.misc.*;
 import to.etc.domui.dom.html.*;
 import to.etc.domui.state.*;
+
+import nl.gerete.tourspel.adm.*;
+import nl.gerete.tourspel.db.*;
 
 public class ActionDaily implements IUIAction<Void> {
 
@@ -26,8 +28,8 @@ public class ActionDaily implements IUIAction<Void> {
 	}
 
 	@Override
-	public String getIcon(Void instance) throws Exception {
-		return ICON;
+	public IIconRef getIcon(Void instance) throws Exception {
+		return Icon.of(ICON);
 	}
 
 	@Override

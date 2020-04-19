@@ -1,47 +1,28 @@
 package nl.gerete.tourspel.pages.playlist;
 
-import nl.gerete.tourspel.adm.TourUser;
-import nl.gerete.tourspel.components.OrderedRidersComponent;
-import nl.gerete.tourspel.components.RiderLookupInput;
-import nl.gerete.tourspel.db.ApplicationRight;
-import nl.gerete.tourspel.db.IOrderedRiders;
-import nl.gerete.tourspel.db.Person;
-import nl.gerete.tourspel.db.PlayList;
-import nl.gerete.tourspel.db.PlayListEntry;
-import nl.gerete.tourspel.db.Rider;
-import nl.gerete.tourspel.logic.EditionBP;
-import nl.gerete.tourspel.pages.adm.BasicTourPage;
-import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.jdt.annotation.Nullable;
-import to.etc.domui.annotations.UIUrlParameter;
-import to.etc.domui.component.buttons.DefaultButton;
-import to.etc.domui.component.controlfactory.ModelBindings;
-import to.etc.domui.component.form.TabularFormBuilder;
-import to.etc.domui.component.layout.ButtonBar;
-import to.etc.domui.component.layout.CaptionedHeader;
-import to.etc.domui.component.misc.MsgBox;
-import to.etc.domui.component.misc.VerticalSpacer;
-import to.etc.domui.component.tbl.ICellClicked;
-import to.etc.domui.component.tbl.ITableModel;
-import to.etc.domui.component.tbl.ITableModelListener;
-import to.etc.domui.component.tbl.SimpleListModel;
-import to.etc.domui.dom.css.VerticalAlignType;
-import to.etc.domui.dom.errors.UIMessage;
-import to.etc.domui.dom.html.IClicked;
-import to.etc.domui.dom.html.NodeContainer;
-import to.etc.domui.dom.html.TBody;
-import to.etc.domui.dom.html.TD;
-import to.etc.domui.login.IUser;
-import to.etc.domui.state.UIContext;
-import to.etc.domui.state.UIGoto;
-import to.etc.webapp.nls.BundleRef;
-import to.etc.webapp.query.QDataContext;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Objects;
+import org.eclipse.jdt.annotation.*;
+
+import to.etc.domui.annotations.*;
+import to.etc.domui.component.buttons.*;
+import to.etc.domui.component.controlfactory.*;
+import to.etc.domui.component.form.*;
+import to.etc.domui.component.layout.*;
+import to.etc.domui.component.misc.*;
+import to.etc.domui.component.tbl.*;
+import to.etc.domui.dom.css.*;
+import to.etc.domui.dom.errors.*;
+import to.etc.domui.dom.html.*;
+import to.etc.domui.state.*;
+import to.etc.webapp.nls.*;
+import to.etc.webapp.query.*;
+
+import nl.gerete.tourspel.adm.*;
+import nl.gerete.tourspel.components.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.logic.*;
+import nl.gerete.tourspel.pages.adm.*;
 
 public class PlayListEditPage extends BasicTourPage {
 
@@ -124,6 +105,8 @@ public class PlayListEditPage extends BasicTourPage {
 			@Override
 			public void rowModified(@NonNull ITableModel<Rider> model, int index, @NonNull Rider value) throws Exception {}
 
+			@Override public void rowsSorted(ITableModel<Rider> model) throws Exception {}
+
 			@Override
 			public void rowDeleted(@NonNull ITableModel<Rider> model, int index, @NonNull Rider value) throws Exception {
 				deletePlaylistEntry(value);
@@ -142,6 +125,8 @@ public class PlayListEditPage extends BasicTourPage {
 
 			@Override
 			public void rowModified(@NonNull ITableModel<PlayListEntry> model, int index, @NonNull PlayListEntry value) throws Exception {}
+
+			@Override public void rowsSorted(ITableModel<PlayListEntry> model) throws Exception {}
 
 			@Override
 			public void rowDeleted(@NonNull ITableModel<PlayListEntry> model, int index, @NonNull PlayListEntry value) throws Exception {
@@ -264,7 +249,7 @@ public class PlayListEditPage extends BasicTourPage {
 			}
 		});
 		bb.addBackButton();
-		bb.addButton($("button.delete"), "THEME/btnDelete.png", new IClicked<DefaultButton>() {
+		bb.addButton($("button.delete"), Icon.of("THEME/btnDelete.png"), new IClicked<DefaultButton>() {
 
 			@Override
 			public void clicked(DefaultButton clickednode) throws Exception {
@@ -287,8 +272,7 @@ public class PlayListEditPage extends BasicTourPage {
 	 * @return
 	 */
 	private boolean isAdminUser() {
-		IUser usr = UIContext.getCurrentUser();
-		if(usr != null && usr.hasRight(ApplicationRight.ADMIN.name())) {
+		if(TourUser.getCurrent().hasRight(ApplicationRight.ADMIN.name())) {
 			return true;
 		}
 		return false;

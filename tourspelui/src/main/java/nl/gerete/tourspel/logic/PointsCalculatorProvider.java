@@ -1,10 +1,12 @@
 package nl.gerete.tourspel.logic;
 
-import nl.gerete.tourspel.db.*;
+import java.util.*;
+
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.webapp.query.*;
 
-import javax.annotation.*;
-import java.util.*;
+import nl.gerete.tourspel.db.*;
 
 /**
  * Called every 5 minutes, this checks to see if an etappe is "CALCULATING"; if so it will return

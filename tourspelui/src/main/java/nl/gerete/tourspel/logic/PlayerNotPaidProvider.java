@@ -1,9 +1,9 @@
 package nl.gerete.tourspel.logic;
 
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.util.*;
 import to.etc.webapp.query.*;
-
-import javax.annotation.*;
 
 /**
  *

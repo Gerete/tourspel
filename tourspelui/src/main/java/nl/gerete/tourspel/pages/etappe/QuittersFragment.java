@@ -1,18 +1,21 @@
 package nl.gerete.tourspel.pages.etappe;
 
-import nl.gerete.tourspel.*;
-import nl.gerete.tourspel.componenten.*;
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.logic.*;
+import java.util.*;
+
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.domui.component.buttons.*;
 import to.etc.domui.component.input.*;
+import to.etc.domui.component.misc.*;
 import to.etc.domui.component.ntbl.*;
 import to.etc.domui.component.tbl.*;
 import to.etc.domui.dom.html.*;
 import to.etc.webapp.query.*;
 
-import javax.annotation.*;
-import java.util.*;
+import nl.gerete.tourspel.*;
+import nl.gerete.tourspel.componenten.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.logic.*;
 
 /**
  * Edit the quitter's list for the current edition/etappe.
@@ -69,7 +72,7 @@ class QuittersFragment extends Div {
 				if(m_etappe != data.getEtappe())					// Only riders newly added this etappe can be removed.
 					return;
 
-				c.addLinkButton("Verwijder", "THEME/btnDelete.png", new IClicked<LinkButton>() {
+				c.addLinkButton("Verwijder", Icon.of("THEME/btnDelete.png"), new IClicked<LinkButton>() {
 					@Override
 					public void clicked(LinkButton clickednode) throws Exception {
 						m_stoppedModel.delete(data);
@@ -98,7 +101,7 @@ class QuittersFragment extends Div {
 		td.add(m_stopDateInput);
 		td.setCellWidth("200");
 
-		LinkButton lb = new LinkButton("Toevoegen", "THEME/btnNew.png", new IClicked<LinkButton>() {
+		LinkButton lb = new LinkButton("Toevoegen", Icon.of("THEME/btnNew.png"), new IClicked<LinkButton>() {
 			@Override
 			public void clicked(LinkButton clickednode) throws Exception {
 				Rider rider = rin.getValue();

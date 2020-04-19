@@ -1,10 +1,9 @@
 package nl.gerete.tourspel.componenten;
 
-import nl.gerete.tourspel.adm.*;
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.logic.*;
-import nl.gerete.tourspel.pages.adm.*;
-import nl.gerete.tourspel.pages.etappe.*;
+import java.util.*;
+
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.domui.component.buttons.*;
 import to.etc.domui.component.menu.*;
 import to.etc.domui.component.misc.*;
@@ -12,10 +11,13 @@ import to.etc.domui.dom.html.*;
 import to.etc.domui.login.*;
 import to.etc.domui.state.*;
 
-import javax.annotation.*;
-import java.util.*;
+import nl.gerete.tourspel.adm.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.logic.*;
+import nl.gerete.tourspel.pages.adm.*;
+import nl.gerete.tourspel.pages.etappe.*;
 
-@DefaultNonNull
+@NonNullByDefault
 public class TourMenuBar extends Div {
 
 	@Nullable
@@ -55,7 +57,7 @@ public class TourMenuBar extends Div {
 
 	private void addLogOut() {
 
-		LinkButton logOut = new LinkButton("Uitloggen", "images/fietsbel.png", (IClicked<LinkButton>) clickednode -> {
+		LinkButton logOut = new LinkButton("Uitloggen", Icon.of("images/fietsbel.png"), (IClicked<LinkButton>) clickednode -> {
 			UILogin.logout();
 			//-- !!! I must return to application root!!
 			UIGoto.redirect(UIContext.getRequestContext().getRelativePath(""));

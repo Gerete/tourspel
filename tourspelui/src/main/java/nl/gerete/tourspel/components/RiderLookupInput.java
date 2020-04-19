@@ -1,13 +1,15 @@
 package nl.gerete.tourspel.components;
 
-import nl.gerete.tourspel.db.*;
+import java.util.*;
+
 import to.etc.domui.component.buttons.*;
 import to.etc.domui.component.input.*;
+import to.etc.domui.component.misc.*;
 import to.etc.domui.component.tbl.*;
 import to.etc.domui.dom.html.*;
 import to.etc.webapp.query.*;
 
-import java.util.*;
+import nl.gerete.tourspel.db.*;
 
 
 /**
@@ -34,7 +36,7 @@ public class RiderLookupInput<T extends IOrderedRiders> extends Div {
 		TD td = container.addCell();
 		td.add(rin);
 		td.setCellWidth("200");
-		LinkButton lb = new LinkButton("Toevoegen", "THEME/btnNew.png", new IClicked<LinkButton>() {
+		LinkButton lb = new LinkButton("Toevoegen", Icon.of("THEME/btnNew.png"), new IClicked<LinkButton>() {
 			@Override
 			public void clicked(LinkButton clickednode) throws Exception {
 				if(rin.getValue() != null) {

@@ -1,16 +1,18 @@
 package nl.gerete.tourspel.logic;
 
-import nl.gerete.tourspel.*;
-import nl.gerete.tourspel.db.*;
+import java.io.*;
+import java.util.*;
+
+import org.eclipse.jdt.annotation.*;
+
 import to.etc.smtp.*;
 import to.etc.util.*;
 import to.etc.webapp.mailer.*;
 import to.etc.webapp.pendingoperations.*;
 import to.etc.webapp.query.*;
 
-import javax.annotation.*;
-import java.io.*;
-import java.util.*;
+import nl.gerete.tourspel.*;
+import nl.gerete.tourspel.db.*;
 
 /**
  *

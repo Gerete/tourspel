@@ -1,13 +1,13 @@
 package nl.gerete.tourspel.pages.newpages;
 
-import nl.gerete.tourspel.componenten.*;
-import nl.gerete.tourspel.components.*;
-import nl.gerete.tourspel.db.*;
 import to.etc.domui.component.layout.*;
 import to.etc.domui.component.misc.*;
 import to.etc.domui.dom.html.*;
-import to.etc.domui.login.*;
-import to.etc.domui.state.*;
+
+import nl.gerete.tourspel.adm.*;
+import nl.gerete.tourspel.componenten.*;
+import nl.gerete.tourspel.components.*;
+import nl.gerete.tourspel.db.*;
 
 /**
  * Basic page for all administrative pages of the tour game
@@ -36,8 +36,7 @@ public class BasicTourPage extends UrlPage {
 		img.setSrc("images/logo-tour.png");
 		headerDiv.add(img);
 
-		IUser usr = UIContext.getCurrentUser();
-		if(usr != null && usr.hasRight(ApplicationRight.ADMIN.name()))
+		if(TourUser.getCurrent().hasRight(ApplicationRight.ADMIN.name()))
 			headerDiv.add(new TaskRunningIndicator());
 
 		m_contentDiv = new Div();

@@ -1,8 +1,8 @@
 package nl.gerete.tourspel.logic;
 
-import to.etc.webapp.query.*;
+import org.eclipse.jdt.annotation.*;
 
-import javax.annotation.*;
+import to.etc.webapp.query.*;
 
 public abstract class BaseSystemTask implements ISystemTask {
 	@Nullable

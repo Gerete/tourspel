@@ -1,19 +1,14 @@
 package nl.gerete.tourspel.pages.playlist;
 
-import nl.gerete.tourspel.db.Rider;
-import nl.gerete.tourspel.db.Team;
-import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.jdt.annotation.Nullable;
-import to.etc.domui.component.tbl.ITableModel;
-import to.etc.domui.component.tbl.ITableModelListener;
-import to.etc.domui.component.tbl.SimpleListModel;
-import to.etc.domui.dom.css.DisplayType;
-import to.etc.domui.dom.html.Div;
-import to.etc.domui.dom.html.IClicked;
-import to.etc.domui.dom.html.Img;
+import java.util.*;
 
-import java.util.HashMap;
-import java.util.Map;
+import org.eclipse.jdt.annotation.*;
+
+import to.etc.domui.component.tbl.*;
+import to.etc.domui.dom.css.*;
+import to.etc.domui.dom.html.*;
+
+import nl.gerete.tourspel.db.*;
 
 public class TeamListFragment extends Div {
 	@NonNull
@@ -41,6 +36,9 @@ public class TeamListFragment extends Div {
 			@Override
 			public void rowModified(@NonNull ITableModel<Rider> model, int index, @Nullable Rider value) throws Exception {
 			}
+
+			@Override
+			public void rowsSorted(ITableModel<Rider> model) throws Exception {}
 
 			@Override
 			public void rowDeleted(@NonNull ITableModel<Rider> model, int index, @Nullable Rider value) throws Exception {
