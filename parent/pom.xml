@@ -31,12 +31,12 @@
         <!-- JDK properties -->
         <source.jdk.version>11</source.jdk.version>
         <target.jdk.version>11</target.jdk.version>
-        <ecj.version>3.16.0</ecj.version>
+        <ecj.version>3.17.0</ecj.version>
         <kotlin.version>1.1.1</kotlin.version>
 
         <!-- Plugin versions -->
         <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
-        <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
         <maven-war-plugin.version>3.0.0</maven-war-plugin.version>
         <maven-install-plugin.version>2.5.2</maven-install-plugin.version>
@@ -608,7 +608,31 @@
                         </dependency>
                     </dependencies>
                 </plugin>
-
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                    <configuration>
+                        <compilerId>eclipse</compilerId>
+                        <source>11</source>
+                        <target>11</target>
+                        <release>11</release>
+                        <showWarnings>true</showWarnings>
+                        <showDeprecation>true</showDeprecation>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.codehaus.plexus</groupId>
+                            <artifactId>plexus-compiler-eclipse</artifactId>
+                            <version>2.8.5</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.jdt</groupId>
+                            <artifactId>ecj</artifactId>
+                            <version>3.17.0</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
