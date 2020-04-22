@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <!--
@@ -130,7 +131,11 @@
                 <artifactId>jetty-servlets</artifactId>
                 <version>${jetty.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>to.etc.domui</groupId>
+                <artifactId>fontawesome4</artifactId>
+                <version>1.2-SNAPSHOT</version>
+            </dependency>
             <dependency>
                 <groupId>cglib</groupId>
                 <artifactId>cglib</artifactId>
@@ -412,52 +417,52 @@
         </developer>
     </developers>
 
-<!--    <reporting>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-javadoc-plugin</artifactId>-->
-<!--                <version>${maven-javadoc-plugin.version}</version>-->
-<!--                <reportSets>-->
-<!--                    <reportSet>-->
-<!--                        <id>javadoc</id>-->
-<!--                        <reports>-->
-<!--                            <report>javadoc</report>-->
-<!--                        </reports>-->
-<!--                        <configuration>-->
-<!--                            <additionalparam>-Xdoclint:none</additionalparam>-->
-<!--                            <stylesheetfile>javadoc/stylesheet.css</stylesheetfile>-->
-<!--                        </configuration>-->
-<!--                    </reportSet>-->
-<!--                </reportSets>-->
-<!--            </plugin>-->
+    <!--    <reporting>-->
+    <!--        <plugins>-->
+    <!--            <plugin>-->
+    <!--                <groupId>org.apache.maven.plugins</groupId>-->
+    <!--                <artifactId>maven-javadoc-plugin</artifactId>-->
+    <!--                <version>${maven-javadoc-plugin.version}</version>-->
+    <!--                <reportSets>-->
+    <!--                    <reportSet>-->
+    <!--                        <id>javadoc</id>-->
+    <!--                        <reports>-->
+    <!--                            <report>javadoc</report>-->
+    <!--                        </reports>-->
+    <!--                        <configuration>-->
+    <!--                            <additionalparam>-Xdoclint:none</additionalparam>-->
+    <!--                            <stylesheetfile>javadoc/stylesheet.css</stylesheetfile>-->
+    <!--                        </configuration>-->
+    <!--                    </reportSet>-->
+    <!--                </reportSets>-->
+    <!--            </plugin>-->
 
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-compiler-plugin</artifactId>-->
-<!--                <version>3.1</version>-->
-<!--                <configuration>-->
-<!--                    <source>11</source>-->
-<!--                    <target>11</target>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-pmd-plugin</artifactId>-->
-<!--                <version>${maven-pmd-plugin.version}</version>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>org.codehaus.mojo</groupId>-->
-<!--                <artifactId>findbugs-maven-plugin</artifactId>-->
-<!--                <version>${findbugs-maven-plugin.version}</version>-->
-<!--                <configuration>-->
-<!--                    <effort>Max</effort>-->
-<!--                    <threshold>Low</threshold>-->
-<!--                    <xmlOutput>true</xmlOutput>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </reporting>-->
+    <!--            <plugin>-->
+    <!--                <groupId>org.apache.maven.plugins</groupId>-->
+    <!--                <artifactId>maven-compiler-plugin</artifactId>-->
+    <!--                <version>3.1</version>-->
+    <!--                <configuration>-->
+    <!--                    <source>11</source>-->
+    <!--                    <target>11</target>-->
+    <!--                </configuration>-->
+    <!--            </plugin>-->
+    <!--            <plugin>-->
+    <!--                <groupId>org.apache.maven.plugins</groupId>-->
+    <!--                <artifactId>maven-pmd-plugin</artifactId>-->
+    <!--                <version>${maven-pmd-plugin.version}</version>-->
+    <!--            </plugin>-->
+    <!--            <plugin>-->
+    <!--                <groupId>org.codehaus.mojo</groupId>-->
+    <!--                <artifactId>findbugs-maven-plugin</artifactId>-->
+    <!--                <version>${findbugs-maven-plugin.version}</version>-->
+    <!--                <configuration>-->
+    <!--                    <effort>Max</effort>-->
+    <!--                    <threshold>Low</threshold>-->
+    <!--                    <xmlOutput>true</xmlOutput>-->
+    <!--                </configuration>-->
+    <!--            </plugin>-->
+    <!--        </plugins>-->
+    <!--    </reporting>-->
 
     <!-- Create a special profile to sign jars for release. -->
     <build>
@@ -482,8 +487,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.19.1</version>
                 <configuration>
-<!-- The complete and utter idiots that wrote Surefire cause a failure if this class cannot be found. -->
-<!--                    <excludedGroups>to.etc.puzzler.GroupUsesDatabase</excludedGroups> -->
+                    <!-- The complete and utter idiots that wrote Surefire cause a failure if this class cannot be found. -->
+                    <!--                    <excludedGroups>to.etc.puzzler.GroupUsesDatabase</excludedGroups> -->
                     <excludes>
                         <exclude>**/*Db*.java</exclude>
                     </excludes>

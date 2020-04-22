@@ -1,16 +1,13 @@
 package nl.gerete.tourspel;
 
-import java.io.*;
-import java.text.*;
-import java.util.*;
-
-import javax.sql.*;
-
+import nl.gerete.tourspel.adm.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.pages.adm.*;
 import org.eclipse.jdt.annotation.*;
-
 import to.etc.dbpool.*;
 import to.etc.domui.dom.header.*;
 import to.etc.domui.dom.html.*;
+import to.etc.domui.fontawesome.*;
 import to.etc.domui.hibernate.config.*;
 import to.etc.domui.hibernate.config.HibernateConfigurator.*;
 import to.etc.domui.login.*;
@@ -20,9 +17,10 @@ import to.etc.util.*;
 import to.etc.webapp.pendingoperations.*;
 import to.etc.webapp.query.*;
 
-import nl.gerete.tourspel.adm.*;
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.pages.adm.*;
+import javax.sql.*;
+import java.io.*;
+import java.text.*;
+import java.util.*;
 
 public class Application extends DomApplication {
 
@@ -51,6 +49,7 @@ public class Application extends DomApplication {
 
 	@Override
 	protected void initialize(@NonNull ConfigParameters pp) throws Exception {
+		new FontAwesome4Initializer().onStartInitialization(this);
 		addHeaderContributor(HeaderContributor.loadStylesheet("css/style.css"), 100);
 		addHeaderContributor(HeaderContributor.loadStylesheet("css/tourspel.css"), 100);
 
