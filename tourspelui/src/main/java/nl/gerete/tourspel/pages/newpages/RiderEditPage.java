@@ -1,6 +1,8 @@
 package nl.gerete.tourspel.pages.newpages;
 
 import nl.gerete.tourspel.db.*;
+import org.eclipse.jdt.annotation.*;
+import to.etc.domui.annotations.*;
 import to.etc.domui.component2.form4.*;
 import to.etc.domui.state.*;
 
@@ -13,6 +15,18 @@ import to.etc.domui.state.*;
 public class RiderEditPage extends BasicEditPage<Rider> {
 
 	public RiderEditPage() {}
+
+	@UIUrlParameter(name = ID_PARAM)
+	public Rider getEntity() {
+		Rider entity = m_entity;
+		if(null == entity)
+			throw new IllegalStateException("Missing entity");
+		return entity;
+	}
+
+	public void setEntity(@Nullable Rider entity) {
+		m_entity = entity;
+	}
 
 	@Override
 	public void createContent() throws Exception {

@@ -1,7 +1,9 @@
 package nl.gerete.tourspel.pages;
 
-import java.text.*;
-
+import nl.gerete.tourspel.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.logic.*;
+import nl.gerete.tourspel.pages.adm.*;
 import to.etc.domui.annotations.*;
 import to.etc.domui.component.buttons.*;
 import to.etc.domui.component.controlfactory.*;
@@ -17,10 +19,7 @@ import to.etc.domui.util.*;
 import to.etc.util.*;
 import to.etc.webapp.query.*;
 
-import nl.gerete.tourspel.*;
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.logic.*;
-import nl.gerete.tourspel.pages.adm.*;
+import java.text.*;
 
 public class PersonEditPage extends BasicEditPage<Person> {
 	public PersonEditPage() {
@@ -150,7 +149,7 @@ public class PersonEditPage extends BasicEditPage<Person> {
 		String payPriceMoneyDeadline = dt.format(getEdition().getPayPriceMoneyDeadline());
 		String endDate = dt.format(getEdition().getEndDate());
 
-		tourMailer.start(getObject(), "Welkom bij het Tourspel 2019");
+		tourMailer.start(getObject(), "Welkom bij het Tourspel 2021");
 		tourMailer.generate(getClass(), "register-welcome.tpl.html", "person", getObject(), "startDate", startDate, "registrationDeadline", registrationDeadline, "changeRidersDeadline",
 			changeRidersDeadline, "payRegistrationFeeDeadline", payRegistrationFeeDeadline, "payPriceMoneyDeadline", payPriceMoneyDeadline, "endDate", endDate);
 		tourMailer.send(getSharedContext());

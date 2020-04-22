@@ -2,7 +2,8 @@ package nl.gerete.tourspel.pages.newpages;
 
 import nl.gerete.tourspel.db.Country;
 import nl.gerete.tourspel.db.Country_;
-import org.eclipse.jdt.annotation.NonNullByDefault;
+import org.eclipse.jdt.annotation.*;
+import to.etc.domui.annotations.*;
 import to.etc.domui.component2.form4.FormBuilder;
 import to.etc.domui.state.UIGoto;
 
@@ -14,6 +15,18 @@ import to.etc.domui.state.UIGoto;
 public class CountryEditPage extends BasicEditPage<Country>{
 
 	public CountryEditPage() {}
+
+	@UIUrlParameter(name = ID_PARAM)
+	public Country getEntity() {
+		Country entity = m_entity;
+		if(null == entity)
+			throw new IllegalStateException("Missing entity");
+		return entity;
+	}
+
+	public void setEntity(@Nullable Country entity) {
+		m_entity = entity;
+	}
 
 	@Override
 	public void createContent() throws Exception {

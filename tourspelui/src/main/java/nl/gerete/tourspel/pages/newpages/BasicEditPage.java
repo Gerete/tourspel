@@ -1,11 +1,9 @@
 package nl.gerete.tourspel.pages.newpages;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
-import to.etc.domui.annotations.UIUrlParameter;
-import to.etc.domui.component.buttons.DefaultButton;
-import to.etc.domui.component.layout.ButtonBar;
-import to.etc.domui.state.UIGoto;
+import org.eclipse.jdt.annotation.*;
+import to.etc.domui.component.buttons.*;
+import to.etc.domui.component.layout.*;
+import to.etc.domui.state.*;
 
 /**
  * @author <a href="mailto:jal@etc.to">Frits Jalvingh</a>
@@ -17,21 +15,9 @@ public class BasicEditPage<T> extends BasicTourPage {
 	final static String ID_PARAM = "ID";
 
 	@Nullable
-	private T m_entity;
+	protected T m_entity;
 
 	public BasicEditPage() {}
-
-	@UIUrlParameter(name = ID_PARAM)
-	public T getEntity() {
-		T entity = m_entity;
-		if(null == entity)
-			throw new IllegalStateException("Missing entity");
-		return entity;
-	}
-
-	public void setEntity(@Nullable T entity) {
-		m_entity = entity;
-	}
 
 	@Override
 	public void createContent() throws Exception {

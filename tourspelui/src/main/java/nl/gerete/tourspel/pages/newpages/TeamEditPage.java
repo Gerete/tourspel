@@ -5,8 +5,8 @@ import nl.gerete.tourspel.db.Rider;
 import nl.gerete.tourspel.db.Rider_;
 import nl.gerete.tourspel.db.Team;
 import nl.gerete.tourspel.db.Team_;
-import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.jdt.annotation.NonNullByDefault;
+import org.eclipse.jdt.annotation.*;
+import to.etc.domui.annotations.*;
 import to.etc.domui.component.tbl.DataPager;
 import to.etc.domui.component.tbl.DataTable;
 import to.etc.domui.component.tbl.RowRenderer;
@@ -25,6 +25,18 @@ import to.etc.webapp.query.QCriteria;
 public class TeamEditPage extends BasicEditPage<Team> {
 
 	public TeamEditPage() {}
+
+	@UIUrlParameter(name = ID_PARAM)
+	public Team getEntity() {
+		Team entity = m_entity;
+		if(null == entity)
+			throw new IllegalStateException("Missing entity");
+		return entity;
+	}
+
+	public void setEntity(@Nullable Team entity) {
+		m_entity = entity;
+	}
 
 	@Override
 	public void createContent() throws Exception {

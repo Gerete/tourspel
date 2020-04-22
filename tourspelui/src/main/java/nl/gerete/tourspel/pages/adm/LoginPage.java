@@ -1,9 +1,10 @@
 package nl.gerete.tourspel.pages.adm;
 
-import java.util.*;
-
+import nl.gerete.tourspel.*;
+import nl.gerete.tourspel.db.*;
+import nl.gerete.tourspel.logic.*;
+import nl.gerete.tourspel.pages.*;
 import org.eclipse.jdt.annotation.*;
-
 import to.etc.domui.component.buttons.*;
 import to.etc.domui.component.input.*;
 import to.etc.domui.component.misc.*;
@@ -14,10 +15,7 @@ import to.etc.domui.state.*;
 import to.etc.domui.trouble.*;
 import to.etc.util.*;
 
-import nl.gerete.tourspel.*;
-import nl.gerete.tourspel.db.*;
-import nl.gerete.tourspel.logic.*;
-import nl.gerete.tourspel.pages.*;
+import java.util.*;
 
 @NonNullByDefault
 public class LoginPage extends UrlPage {
@@ -46,7 +44,7 @@ public class LoginPage extends UrlPage {
 
 	@Override
 	public void createContent() throws Exception {
-		setTitle("Welkom bij het tourspel 2019.");
+		setTitle("Welkom bij het tourspel 2021.");
 		setCssClass("l-body");
 		add(new VerticalSpacer(40));
 		getPage().addHeaderContributor(HeaderContributor.loadStylesheet("css/login.css"), 1000);
@@ -189,7 +187,7 @@ public class LoginPage extends UrlPage {
 	}
 
 	void setBlurb() {
-		Objects.requireNonNull(m_blurb).setText("Welkom bij het Tourspel 2019");
+		Objects.requireNonNull(m_blurb).setText("Welkom bij het Tourspel 2021");
 		Objects.requireNonNull(m_blurb).setCssClass("l-blurb");
 	}
 
