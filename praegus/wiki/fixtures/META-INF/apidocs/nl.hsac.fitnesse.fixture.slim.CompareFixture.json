@@ -1,0 +1,281 @@
+{
+  "constructors": [
+    {
+      "readableName": "compare fixture",
+      "usage": "| compare fixture |",
+      "name": "CompareFixture",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.CompareFixture",
+  "publicMethods": [
+    {
+      "readableName": "difference between and",
+      "usage": "| difference between | [first] | and | [second] | ",
+      "contexthelp": "difference between \u0026lt;first\u0026gt; and \u0026lt;second\u0026gt;",
+      "name": "differenceBetweenAnd",
+      "docString": "Determines difference between two strings.",
+      "annotations": [],
+      "returnDescription": "HTML of difference between the two.",
+      "parameters": [
+        {
+          "name": "first",
+          "description": "first string to compare.",
+          "type": "String"
+        },
+        {
+          "name": "second",
+          "description": "second string to compare.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "difference between explicit whitespace and",
+      "usage": "| difference between explicit whitespace | [first] | and | [second] | ",
+      "contexthelp": "difference between explicit whitespace \u0026lt;first\u0026gt; and \u0026lt;second\u0026gt;",
+      "name": "differenceBetweenExplicitWhitespaceAnd",
+      "docString": "Determines difference between two strings, visualizing various forms of whitespace.",
+      "annotations": [],
+      "returnDescription": "HTML of difference between the two.",
+      "parameters": [
+        {
+          "name": "first",
+          "description": "first string to compare.",
+          "type": "String"
+        },
+        {
+          "name": "second",
+          "description": "second string to compare.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "count differences between and",
+      "usage": "| count differences between | [first] | and | [second] | ",
+      "contexthelp": "count differences between \u0026lt;first\u0026gt; and \u0026lt;second\u0026gt;",
+      "name": "countDifferencesBetweenAnd",
+      "docString": "Determines number of differences (substrings that are not equal) between two strings.",
+      "annotations": [],
+      "returnDescription": "number of different substrings.",
+      "parameters": [
+        {
+          "name": "first",
+          "description": "first string to compare.",
+          "type": "String"
+        },
+        {
+          "name": "second",
+          "description": "second string to compare.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "difference between ignore whitespace and",
+      "usage": "| difference between ignore whitespace | [first] | and | [second] | ",
+      "contexthelp": "difference between ignore whitespace \u0026lt;first\u0026gt; and \u0026lt;second\u0026gt;",
+      "name": "differenceBetweenIgnoreWhitespaceAnd",
+      "docString": "Determines difference between two strings, ignoring whitespace changes.",
+      "annotations": [],
+      "returnDescription": "HTML of difference between the two.",
+      "parameters": [
+        {
+          "name": "first",
+          "description": "first string to compare.",
+          "type": "String"
+        },
+        {
+          "name": "second",
+          "description": "second string to compare.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "count differences between ignore whitespace and",
+      "usage": "| count differences between ignore whitespace | [first] | and | [second] | ",
+      "contexthelp": "count differences between ignore whitespace \u0026lt;first\u0026gt; and \u0026lt;second\u0026gt;",
+      "name": "countDifferencesBetweenIgnoreWhitespaceAnd",
+      "docString": "Determines number of differences (substrings that are not equal) between two strings,\n ignoring differences in whitespace.",
+      "annotations": [],
+      "returnDescription": "number of different substrings.",
+      "parameters": [
+        {
+          "name": "first",
+          "description": "first string to compare.",
+          "type": "String"
+        },
+        {
+          "name": "second",
+          "description": "second string to compare.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "set global value to",
+      "usage": "| set global value | [symbolName] | to | [value] | ",
+      "contexthelp": "set global value \u0026lt;symbolName\u0026gt; to \u0026lt;value\u0026gt;",
+      "name": "setGlobalValueTo",
+      "docString": "Stores a (global) value so it can be accessed by other fixtures/pages.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name to store value under.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to store.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "global value",
+      "usage": "| global value | [symbolName] | ",
+      "contexthelp": "global value \u0026lt;symbolName\u0026gt;",
+      "name": "globalValue",
+      "docString": "Retrieves a (global) value, which was previously stored using #setGlobalValueTo().",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name value was stored under.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "wait seconds",
+      "usage": "| wait seconds | [i] | ",
+      "contexthelp": "wait seconds \u0026lt;i\u0026gt;",
+      "name": "waitSeconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait milliseconds",
+      "usage": "| wait milliseconds | [i] | ",
+      "contexthelp": "wait milliseconds \u0026lt;i\u0026gt;",
+      "name": "waitMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set repeat interval to milliseconds",
+      "usage": "| set repeat interval to milliseconds | [milliseconds] | ",
+      "contexthelp": "set repeat interval to milliseconds \u0026lt;milliseconds\u0026gt;",
+      "name": "setRepeatIntervalToMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "milliseconds",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat interval",
+      "usage": "| repeat interval |",
+      "contexthelp": "repeat interval",
+      "name": "repeatInterval",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times | [maxCount] | ",
+      "contexthelp": "repeat at most times \u0026lt;maxCount\u0026gt;",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "maxCount",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times |",
+      "contexthelp": "repeat at most times",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "repeat count",
+      "usage": "| repeat count |",
+      "contexthelp": "repeat count",
+      "name": "repeatCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "time spent repeating",
+      "usage": "| time spent repeating |",
+      "contexthelp": "time spent repeating",
+      "name": "timeSpentRepeating",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    }
+  ],
+  "typeName": "CompareFixture",
+  "name": "CompareFixture",
+  "annotations": []
+}

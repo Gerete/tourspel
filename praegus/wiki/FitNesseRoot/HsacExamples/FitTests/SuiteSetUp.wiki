@@ -1,0 +1,3 @@
+|Import                      |
+|nl.hsac.fitnesse.fixture.fit|
+|nl.hsac.fitnesse.sample     |

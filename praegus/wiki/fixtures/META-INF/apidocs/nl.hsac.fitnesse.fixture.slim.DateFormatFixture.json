@@ -1,0 +1,376 @@
+{
+  "constructors": [
+    {
+      "readableName": "date format fixture",
+      "usage": "| date format fixture |",
+      "name": "DateFormatFixture",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    },
+    {
+      "readableName": "date format fixture",
+      "usage": "| date format fixture | [dateformat] |",
+      "name": "DateFormatFixture",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "dateformat",
+          "type": "String"
+        }
+      ],
+      "exceptions": []
+    },
+    {
+      "readableName": "date format fixture",
+      "usage": "| date format fixture | [dateformat] | [timezone] |",
+      "name": "DateFormatFixture",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "dateformat",
+          "type": "String"
+        },
+        {
+          "name": "timezone",
+          "type": "String"
+        }
+      ],
+      "exceptions": []
+    },
+    {
+      "readableName": "date format fixture",
+      "usage": "| date format fixture | [dateformat] | [timezone] | [locale] |",
+      "name": "DateFormatFixture",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "dateformat",
+          "type": "String"
+        },
+        {
+          "name": "timezone",
+          "type": "String"
+        },
+        {
+          "name": "locale",
+          "type": "String"
+        }
+      ],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.DateFormatFixture",
+  "publicMethods": [
+    {
+      "readableName": "set date format",
+      "usage": "| set date format | [df] | ",
+      "contexthelp": "set date format \u0026lt;df\u0026gt;",
+      "name": "setDateFormat",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "df",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set timezone",
+      "usage": "| set timezone | [newTimezone] | ",
+      "contexthelp": "set timezone \u0026lt;newTimezone\u0026gt;",
+      "name": "setTimezone",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "newTimezone",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set locale",
+      "usage": "| set locale | [locale] | ",
+      "contexthelp": "set locale \u0026lt;locale\u0026gt;",
+      "name": "setLocale",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "locale",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "timestamp has milliseconds",
+      "usage": "| timestamp has milliseconds | [hasMillis] | ",
+      "contexthelp": "timestamp has milliseconds \u0026lt;hasMillis\u0026gt;",
+      "name": "timestampHasMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "hasMillis",
+          "type": "boolean"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "format timestamp",
+      "usage": "| format timestamp | [timestamp] | ",
+      "contexthelp": "format timestamp \u0026lt;timestamp\u0026gt;",
+      "name": "formatTimestamp",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "timestamp",
+          "type": "long"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "format timestamp as",
+      "usage": "| format timestamp | [timestamp] | as | [dateFormat] | ",
+      "contexthelp": "format timestamp \u0026lt;timestamp\u0026gt; as \u0026lt;dateFormat\u0026gt;",
+      "name": "formatTimestampAs",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "timestamp",
+          "type": "long"
+        },
+        {
+          "name": "dateFormat",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "format date as",
+      "usage": "| format date | [date] | as | [newFormat] | ",
+      "contexthelp": "format date \u0026lt;date\u0026gt; as \u0026lt;newFormat\u0026gt;",
+      "name": "formatDateAs",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "date",
+          "type": "String"
+        },
+        {
+          "name": "newFormat",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "timestamp for date",
+      "usage": "| timestamp for date | [date] | ",
+      "contexthelp": "timestamp for date \u0026lt;date\u0026gt;",
+      "name": "timestampForDate",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "date",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "timestamp for date as",
+      "usage": "| timestamp for date | [date] | as | [dateFormat] | ",
+      "contexthelp": "timestamp for date \u0026lt;date\u0026gt; as \u0026lt;dateFormat\u0026gt;",
+      "name": "timestampForDateAs",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "date",
+          "type": "String"
+        },
+        {
+          "name": "dateFormat",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "set global value to",
+      "usage": "| set global value | [symbolName] | to | [value] | ",
+      "contexthelp": "set global value \u0026lt;symbolName\u0026gt; to \u0026lt;value\u0026gt;",
+      "name": "setGlobalValueTo",
+      "docString": "Stores a (global) value so it can be accessed by other fixtures/pages.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name to store value under.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to store.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "global value",
+      "usage": "| global value | [symbolName] | ",
+      "contexthelp": "global value \u0026lt;symbolName\u0026gt;",
+      "name": "globalValue",
+      "docString": "Retrieves a (global) value, which was previously stored using #setGlobalValueTo().",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name value was stored under.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "wait seconds",
+      "usage": "| wait seconds | [i] | ",
+      "contexthelp": "wait seconds \u0026lt;i\u0026gt;",
+      "name": "waitSeconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait milliseconds",
+      "usage": "| wait milliseconds | [i] | ",
+      "contexthelp": "wait milliseconds \u0026lt;i\u0026gt;",
+      "name": "waitMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set repeat interval to milliseconds",
+      "usage": "| set repeat interval to milliseconds | [milliseconds] | ",
+      "contexthelp": "set repeat interval to milliseconds \u0026lt;milliseconds\u0026gt;",
+      "name": "setRepeatIntervalToMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "milliseconds",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat interval",
+      "usage": "| repeat interval |",
+      "contexthelp": "repeat interval",
+      "name": "repeatInterval",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times | [maxCount] | ",
+      "contexthelp": "repeat at most times \u0026lt;maxCount\u0026gt;",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "maxCount",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times |",
+      "contexthelp": "repeat at most times",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "repeat count",
+      "usage": "| repeat count |",
+      "contexthelp": "repeat count",
+      "name": "repeatCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "time spent repeating",
+      "usage": "| time spent repeating |",
+      "contexthelp": "time spent repeating",
+      "name": "timeSpentRepeating",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    }
+  ],
+  "typeName": "DateFormatFixture",
+  "name": "DateFormatFixture",
+  "annotations": []
+}

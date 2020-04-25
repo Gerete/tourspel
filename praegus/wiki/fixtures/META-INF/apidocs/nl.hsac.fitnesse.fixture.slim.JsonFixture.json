@@ -1,0 +1,343 @@
+{
+  "constructors": [
+    {
+      "readableName": "json fixture",
+      "usage": "| json fixture |",
+      "name": "JsonFixture",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.JsonFixture",
+  "publicMethods": [
+    {
+      "readableName": "load file",
+      "usage": "| load file | [filename] | ",
+      "contexthelp": "load file \u0026lt;filename\u0026gt;",
+      "name": "loadFile",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "true",
+      "parameters": [
+        {
+          "name": "filename",
+          "description": "JSON file to be loaded.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "load",
+      "usage": "| load | [json] | ",
+      "contexthelp": "load \u0026lt;json\u0026gt;",
+      "name": "load",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "true",
+      "parameters": [
+        {
+          "name": "json",
+          "description": "JSON content to be loaded.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "object",
+      "usage": "| object |",
+      "contexthelp": "object",
+      "name": "object",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "formatted loaded JSON content.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "json path",
+      "usage": "| json path | [path] | ",
+      "contexthelp": "json path \u0026lt;path\u0026gt;",
+      "name": "jsonPath",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "path",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "create file from base 64 content of",
+      "usage": "| create file from base 64 content | [baseName] | of | [jsonPath] | ",
+      "contexthelp": "create file from base 64 content \u0026lt;baseName\u0026gt; of \u0026lt;jsonPath\u0026gt;",
+      "name": "createFileFromBase64ContentOf",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "link to created file.",
+      "parameters": [
+        {
+          "name": "baseName",
+          "description": "base of filename to generate (a number might be added to the name to make it unique).",
+          "type": "String"
+        },
+        {
+          "name": "jsonPath",
+          "description": "expression to evaluate.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "element of json path",
+      "usage": "| element of json | [index] | path | [path] | ",
+      "contexthelp": "element of json \u0026lt;index\u0026gt; path \u0026lt;path\u0026gt;",
+      "name": "elementOfJsonPath",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "path",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "json path count",
+      "usage": "| json path count | [path] | ",
+      "contexthelp": "json path count \u0026lt;path\u0026gt;",
+      "name": "jsonPathCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "path",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "list json path matches",
+      "usage": "| list json path matches | [path] | ",
+      "contexthelp": "list json path matches \u0026lt;path\u0026gt;",
+      "name": "listJsonPathMatches",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "path",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "set json path to",
+      "usage": "| set json path | [path] | to | [value] | ",
+      "contexthelp": "set json path \u0026lt;path\u0026gt; to \u0026lt;value\u0026gt;",
+      "name": "setJsonPathTo",
+      "docString": "Update a value in a the content by supplied jsonPath",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "path",
+          "description": "the jsonPath to locate the key whose value needs changing",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "the new value to set",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "json path exists",
+      "usage": "| json path exists | [path] | ",
+      "contexthelp": "json path exists \u0026lt;path\u0026gt;",
+      "name": "jsonPathExists",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "path",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set global value to",
+      "usage": "| set global value | [symbolName] | to | [value] | ",
+      "contexthelp": "set global value \u0026lt;symbolName\u0026gt; to \u0026lt;value\u0026gt;",
+      "name": "setGlobalValueTo",
+      "docString": "Stores a (global) value so it can be accessed by other fixtures/pages.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name to store value under.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to store.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "global value",
+      "usage": "| global value | [symbolName] | ",
+      "contexthelp": "global value \u0026lt;symbolName\u0026gt;",
+      "name": "globalValue",
+      "docString": "Retrieves a (global) value, which was previously stored using #setGlobalValueTo().",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name value was stored under.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "wait seconds",
+      "usage": "| wait seconds | [i] | ",
+      "contexthelp": "wait seconds \u0026lt;i\u0026gt;",
+      "name": "waitSeconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait milliseconds",
+      "usage": "| wait milliseconds | [i] | ",
+      "contexthelp": "wait milliseconds \u0026lt;i\u0026gt;",
+      "name": "waitMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set repeat interval to milliseconds",
+      "usage": "| set repeat interval to milliseconds | [milliseconds] | ",
+      "contexthelp": "set repeat interval to milliseconds \u0026lt;milliseconds\u0026gt;",
+      "name": "setRepeatIntervalToMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "milliseconds",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat interval",
+      "usage": "| repeat interval |",
+      "contexthelp": "repeat interval",
+      "name": "repeatInterval",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times | [maxCount] | ",
+      "contexthelp": "repeat at most times \u0026lt;maxCount\u0026gt;",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "maxCount",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times |",
+      "contexthelp": "repeat at most times",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "repeat count",
+      "usage": "| repeat count |",
+      "contexthelp": "repeat count",
+      "name": "repeatCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "time spent repeating",
+      "usage": "| time spent repeating |",
+      "contexthelp": "time spent repeating",
+      "name": "timeSpentRepeating",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    }
+  ],
+  "typeName": "JsonFixture",
+  "name": "JsonFixture",
+  "annotations": []
+}

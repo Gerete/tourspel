@@ -1,0 +1,109 @@
+{
+  "constructors": [
+    {
+      "readableName": "functional completion",
+      "usage": "| functional completion |",
+      "name": "FunctionalCompletion",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    },
+    {
+      "readableName": "functional completion",
+      "usage": "| functional completion | [isFinishedSupplier] |",
+      "name": "FunctionalCompletion",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "isFinishedSupplier",
+          "type": "Supplier"
+        }
+      ],
+      "exceptions": []
+    },
+    {
+      "readableName": "functional completion",
+      "usage": "| functional completion | [isFinishedSupplier] | [repeater] |",
+      "name": "FunctionalCompletion",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "isFinishedSupplier",
+          "type": "Supplier"
+        },
+        {
+          "name": "repeater",
+          "type": "Runnable"
+        }
+      ],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.SlimFixture.FunctionalCompletion",
+  "publicMethods": [
+    {
+      "readableName": "is finished",
+      "usage": "| is finished |",
+      "contexthelp": "is finished",
+      "name": "isFinished",
+      "docString": "",
+      "annotations": [
+        "Override"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "repeat",
+      "usage": "| repeat |",
+      "contexthelp": "repeat",
+      "name": "repeat",
+      "docString": "",
+      "annotations": [
+        "Override"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set is finished supplier",
+      "usage": "| set is finished supplier | [isFinishedSupplier] | ",
+      "contexthelp": "set is finished supplier \u0026lt;isFinishedSupplier\u0026gt;",
+      "name": "setIsFinishedSupplier",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "isFinishedSupplier",
+          "type": "Supplier"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set repeater",
+      "usage": "| set repeater | [repeater] | ",
+      "contexthelp": "set repeater \u0026lt;repeater\u0026gt;",
+      "name": "setRepeater",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "repeater",
+          "type": "Runnable"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    }
+  ],
+  "typeName": "SlimFixture.FunctionalCompletion",
+  "name": "SlimFixture.FunctionalCompletion",
+  "annotations": []
+}

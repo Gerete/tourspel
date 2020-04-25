@@ -1,0 +1,396 @@
+{
+  "constructors": [
+    {
+      "readableName": "http client setup",
+      "usage": "| http client setup |",
+      "name": "HttpClientSetup",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    },
+    {
+      "readableName": "http client setup",
+      "usage": "| http client setup | [clientFactory] |",
+      "name": "HttpClientSetup",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "clientFactory",
+          "type": "HttpClientFactory"
+        }
+      ],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.HttpClientSetup",
+  "publicMethods": [
+    {
+      "readableName": "configure http test",
+      "usage": "| configure http test |",
+      "contexthelp": "configure http test",
+      "name": "configureHttpTest",
+      "docString": "Configure future http test usage to use the current settings.",
+      "annotations": [],
+      "returnDescription": "true",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "create client",
+      "usage": "| create client |",
+      "contexthelp": "create client",
+      "name": "createClient",
+      "docString": "Creates a client using the current settings.",
+      "annotations": [],
+      "returnDescription": "apache http client.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "HttpClient"
+    },
+    {
+      "readableName": "configure http test with",
+      "usage": "| configure http test with | [client] | ",
+      "contexthelp": "configure http test with \u0026lt;client\u0026gt;",
+      "name": "configureHttpTestWith",
+      "docString": "Configure future http test usage to use the client supplied.",
+      "annotations": [],
+      "returnDescription": "true",
+      "parameters": [
+        {
+          "name": "client",
+          "description": "client to use.",
+          "type": "HttpClient"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "enable content compression",
+      "usage": "| enable content compression |",
+      "contexthelp": "enable content compression",
+      "name": "enableContentCompression",
+      "docString": "Enables content compression support (i.e. gzip) for all subsequent requests until the end of the test run.",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "disable ssl verification",
+      "usage": "| disable ssl verification |",
+      "contexthelp": "disable ssl verification",
+      "name": "disableSSLVerification",
+      "docString": "Disables SSL certificate verification for all subsequent requests until the end of the test run.\n Use at your own risk! This makes https potentially as unsafe as http!",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "enable ssl verification",
+      "usage": "| enable ssl verification |",
+      "contexthelp": "enable ssl verification",
+      "name": "enableSSLVerification",
+      "docString": "Enables SSL certificate verification for all subsequent requests until the end of the test run.",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set proxy",
+      "usage": "| set proxy | [proxyUrl] | ",
+      "contexthelp": "set proxy \u0026lt;proxyUrl\u0026gt;",
+      "name": "setProxy",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "proxyUrl",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set proxy username and password",
+      "usage": "| set proxy username and | [username] | password | [password] | ",
+      "contexthelp": "set proxy username and \u0026lt;username\u0026gt; password \u0026lt;password\u0026gt;",
+      "name": "setProxyUsernameAndPassword",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "username",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set trust store with password",
+      "usage": "| set trust store with | [trustStore] | password | [password] | ",
+      "contexthelp": "set trust store with \u0026lt;trustStore\u0026gt; password \u0026lt;password\u0026gt;",
+      "name": "setTrustStoreWithPassword",
+      "docString": "Use SSL trust store (i.e. .jks).",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "trustStore",
+          "description": ".jks file to use",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "description": "password to open .jks",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set client certificate from with password key password",
+      "usage": "| set client certificate from with password | [keyStore] | key | [keyStorePassword] | password | [keyPassword] | ",
+      "contexthelp": "set client certificate from with password \u0026lt;keyStore\u0026gt; key \u0026lt;keyStorePassword\u0026gt; password \u0026lt;keyPassword\u0026gt;",
+      "name": "setClientCertificateFromWithPasswordKeyPassword",
+      "docString": "Send client certificate.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "keyStore",
+          "description": ".jks file to use",
+          "type": "String"
+        },
+        {
+          "name": "keyStorePassword",
+          "description": "password to open .jks",
+          "type": "String"
+        },
+        {
+          "name": "keyPassword",
+          "description": "password for client certificate in .jks",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set client certificate from with password key password and alias",
+      "usage": "| set client certificate from with password key | [keyStore] | password | [keyStorePassword] | and | [keyPassword] | alias | [alias] | ",
+      "contexthelp": "set client certificate from with password key \u0026lt;keyStore\u0026gt; password \u0026lt;keyStorePassword\u0026gt; and \u0026lt;keyPassword\u0026gt; alias \u0026lt;alias\u0026gt;",
+      "name": "setClientCertificateFromWithPasswordKeyPasswordAndAlias",
+      "docString": "Send client certificate.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "keyStore",
+          "description": ".jks file to use",
+          "type": "String"
+        },
+        {
+          "name": "keyStorePassword",
+          "description": "password to open .jks",
+          "type": "String"
+        },
+        {
+          "name": "keyPassword",
+          "description": "password for client certificate in .jks",
+          "type": "String"
+        },
+        {
+          "name": "alias",
+          "description": "alias to choose client certificate",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get original client",
+      "usage": "| get original client |",
+      "contexthelp": "get original client",
+      "name": "getOriginalClient",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "the http client at the moment this http client setup instance was created,\n          so it may be stored in a Slim symbol to be restored later.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "HttpClient"
+    },
+    {
+      "readableName": "get client factory",
+      "usage": "| get client factory |",
+      "contexthelp": "get client factory",
+      "name": "getClientFactory",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "factory to actually create Apache HttpClient instances",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "HttpClientFactory"
+    },
+    {
+      "readableName": "set global value to",
+      "usage": "| set global value | [symbolName] | to | [value] | ",
+      "contexthelp": "set global value \u0026lt;symbolName\u0026gt; to \u0026lt;value\u0026gt;",
+      "name": "setGlobalValueTo",
+      "docString": "Stores a (global) value so it can be accessed by other fixtures/pages.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name to store value under.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to store.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "global value",
+      "usage": "| global value | [symbolName] | ",
+      "contexthelp": "global value \u0026lt;symbolName\u0026gt;",
+      "name": "globalValue",
+      "docString": "Retrieves a (global) value, which was previously stored using #setGlobalValueTo().",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name value was stored under.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "wait seconds",
+      "usage": "| wait seconds | [i] | ",
+      "contexthelp": "wait seconds \u0026lt;i\u0026gt;",
+      "name": "waitSeconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait milliseconds",
+      "usage": "| wait milliseconds | [i] | ",
+      "contexthelp": "wait milliseconds \u0026lt;i\u0026gt;",
+      "name": "waitMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set repeat interval to milliseconds",
+      "usage": "| set repeat interval to milliseconds | [milliseconds] | ",
+      "contexthelp": "set repeat interval to milliseconds \u0026lt;milliseconds\u0026gt;",
+      "name": "setRepeatIntervalToMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "milliseconds",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat interval",
+      "usage": "| repeat interval |",
+      "contexthelp": "repeat interval",
+      "name": "repeatInterval",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times | [maxCount] | ",
+      "contexthelp": "repeat at most times \u0026lt;maxCount\u0026gt;",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "maxCount",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times |",
+      "contexthelp": "repeat at most times",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "repeat count",
+      "usage": "| repeat count |",
+      "contexthelp": "repeat count",
+      "name": "repeatCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "time spent repeating",
+      "usage": "| time spent repeating |",
+      "contexthelp": "time spent repeating",
+      "name": "timeSpentRepeating",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    }
+  ],
+  "typeName": "HttpClientSetup",
+  "name": "HttpClientSetup",
+  "annotations": []
+}

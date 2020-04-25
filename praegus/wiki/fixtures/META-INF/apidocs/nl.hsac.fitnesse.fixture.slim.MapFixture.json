@@ -1,0 +1,865 @@
+{
+  "constructors": [
+    {
+      "readableName": "map fixture",
+      "usage": "| map fixture |",
+      "name": "MapFixture",
+      "docString": "Creates new, having an empty current values collection.",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    },
+    {
+      "readableName": "map fixture",
+      "usage": "| map fixture | [map] |",
+      "name": "MapFixture",
+      "docString": "Creates new, using the elements of the supplied map as current values.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "map",
+          "description": "map to obtain current elements from.",
+          "type": "Map"
+        }
+      ],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.MapFixture",
+  "publicMethods": [
+    {
+      "readableName": "get",
+      "usage": "| get | [headerName] | ",
+      "contexthelp": "get \u0026lt;headerName\u0026gt;",
+      "name": "get",
+      "docString": "Retrieves value for output column.",
+      "annotations": [],
+      "returnDescription": "new map containing current values.",
+      "parameters": [
+        {
+          "name": "headerName",
+          "description": "header of output column (without trailing \u0027?\u0027).",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Map"
+    },
+    {
+      "readableName": "copy map",
+      "usage": "| copy map |",
+      "contexthelp": "copy map",
+      "name": "copyMap",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "a copy of the current map.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Map"
+    },
+    {
+      "readableName": "set int value for in",
+      "usage": "| set int value | [value] | for | [name] | in | [map] | ",
+      "contexthelp": "set int value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt; in \u0026lt;map\u0026gt;",
+      "name": "setIntValueForIn",
+      "docString": "Stores integer value in map.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "int"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        },
+        {
+          "name": "map",
+          "description": "map to store value in.",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set double value for in",
+      "usage": "| set double value | [value] | for | [name] | in | [map] | ",
+      "contexthelp": "set double value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt; in \u0026lt;map\u0026gt;",
+      "name": "setDoubleValueForIn",
+      "docString": "Stores double value in map.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "double"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        },
+        {
+          "name": "map",
+          "description": "map to store value in.",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set boolean value for in",
+      "usage": "| set boolean value | [value] | for | [name] | in | [map] | ",
+      "contexthelp": "set boolean value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt; in \u0026lt;map\u0026gt;",
+      "name": "setBooleanValueForIn",
+      "docString": "Stores boolean value in map.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "boolean"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        },
+        {
+          "name": "map",
+          "description": "map to store value in.",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set value for in",
+      "usage": "| set value | [value] | for | [name] | in | [map] | ",
+      "contexthelp": "set value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt; in \u0026lt;map\u0026gt;",
+      "name": "setValueForIn",
+      "docString": "Stores value in map.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "Object"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        },
+        {
+          "name": "map",
+          "description": "map to store value in.",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "add value to in",
+      "usage": "| add value | [value] | to | [name] | in | [map] | ",
+      "contexthelp": "add value \u0026lt;value\u0026gt; to \u0026lt;name\u0026gt; in \u0026lt;map\u0026gt;",
+      "name": "addValueToIn",
+      "docString": "Adds value to a list map.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "Object"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        },
+        {
+          "name": "map",
+          "description": "map to store value in.",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "copy values from to",
+      "usage": "| copy values from | [otherMap] | to | [map] | ",
+      "contexthelp": "copy values from \u0026lt;otherMap\u0026gt; to \u0026lt;map\u0026gt;",
+      "name": "copyValuesFromTo",
+      "docString": "Adds all values in the supplied map to the current values.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "otherMap",
+          "description": "to obtain values from.",
+          "type": "Map"
+        },
+        {
+          "name": "map",
+          "description": "map to store value in.",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set values for in",
+      "usage": "| set values | [values] | for | [name] | in | [map] | ",
+      "contexthelp": "set values \u0026lt;values\u0026gt; for \u0026lt;name\u0026gt; in \u0026lt;map\u0026gt;",
+      "name": "setValuesForIn",
+      "docString": "Stores list of values in map.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "values",
+          "description": "comma separated list of values.",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "description": "name to use this list for.",
+          "type": "String"
+        },
+        {
+          "name": "map",
+          "description": "map to store values in.",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "value in",
+      "usage": "| value | [name] | in | [map] | ",
+      "contexthelp": "value \u0026lt;name\u0026gt; in \u0026lt;map\u0026gt;",
+      "name": "valueIn",
+      "docString": "Gets value from map.",
+      "annotations": [],
+      "returnDescription": "value found, if it could be found, null otherwise.",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "name of (possibly nested) property to get value from.",
+          "type": "String"
+        },
+        {
+          "name": "map",
+          "description": "map to get value from.",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "size",
+      "usage": "| size |",
+      "contexthelp": "size",
+      "name": "size",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "number of elements in map.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "size of",
+      "usage": "| size of | [val] | ",
+      "contexthelp": "size of \u0026lt;val\u0026gt;",
+      "name": "sizeOf",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "number of elements in map or list.",
+      "parameters": [
+        {
+          "name": "val",
+          "description": "map or expression to count elements in.",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "size of in",
+      "usage": "| size of | [expr] | in | [map] | ",
+      "contexthelp": "size of \u0026lt;expr\u0026gt; in \u0026lt;map\u0026gt;",
+      "name": "sizeOfIn",
+      "docString": "Determines size of either (Map or Collection) value in the map.",
+      "annotations": [],
+      "returnDescription": "size of value.",
+      "parameters": [
+        {
+          "name": "expr",
+          "description": "expression indicating which (possibly nested) value in the map to determine size of.",
+          "type": "String"
+        },
+        {
+          "name": "map",
+          "description": "map to find value in.",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "all keys",
+      "usage": "| all keys |",
+      "contexthelp": "all keys",
+      "name": "allKeys",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "all values in the map.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "all values",
+      "usage": "| all values |",
+      "contexthelp": "all values",
+      "name": "allValues",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "all values in the map.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "content equals",
+      "usage": "| content equals | [other] | ",
+      "contexthelp": "content equals \u0026lt;other\u0026gt;",
+      "name": "contentEquals",
+      "docString": "Determines whether current map matches other.",
+      "annotations": [],
+      "returnDescription": "true if both maps are equal.",
+      "parameters": [
+        {
+          "name": "other",
+          "description": "other map to check.",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "content of equals",
+      "usage": "| content of | [one] | equals | [two] | ",
+      "contexthelp": "content of \u0026lt;one\u0026gt; equals \u0026lt;two\u0026gt;",
+      "name": "contentOfEquals",
+      "docString": "Determines whether map one\u0027s content matches two.",
+      "annotations": [],
+      "returnDescription": "true if both maps are equal.",
+      "parameters": [
+        {
+          "name": "one",
+          "description": "map the check content of.",
+          "type": "Map"
+        },
+        {
+          "name": "two",
+          "description": "other map to check.",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set int value for",
+      "usage": "| set int value | [value] | for | [name] | ",
+      "contexthelp": "set int value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setIntValueFor",
+      "docString": "Stores integer value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "int"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set double value for",
+      "usage": "| set double value | [value] | for | [name] | ",
+      "contexthelp": "set double value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setDoubleValueFor",
+      "docString": "Stores double value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "double"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set boolean value for",
+      "usage": "| set boolean value | [value] | for | [name] | ",
+      "contexthelp": "set boolean value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setBooleanValueFor",
+      "docString": "Stores boolean value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "boolean"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set value for",
+      "usage": "| set value | [value] | for | [name] | ",
+      "contexthelp": "set value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setValueFor",
+      "docString": "Stores value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be stored.",
+          "type": "Object"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "add value to",
+      "usage": "| add value | [value] | to | [name] | ",
+      "contexthelp": "add value \u0026lt;value\u0026gt; to \u0026lt;name\u0026gt;",
+      "name": "addValueTo",
+      "docString": "Adds value to (end of) a list.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be stored.",
+          "type": "Object"
+        },
+        {
+          "name": "name",
+          "description": "name of list to extend.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "copy values from",
+      "usage": "| copy values from | [map] | ",
+      "contexthelp": "copy values from \u0026lt;map\u0026gt;",
+      "name": "copyValuesFrom",
+      "docString": "Adds all values in the supplied map to the current values.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "map",
+          "description": "to obtain values from.",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set values for",
+      "usage": "| set values | [values] | for | [name] | ",
+      "contexthelp": "set values \u0026lt;values\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setValuesFor",
+      "docString": "Stores list of values in map.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "values",
+          "description": "comma separated list of values.",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "description": "name to use this list for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set content of as value for",
+      "usage": "| set content of as value | [file] | for | [key] | ",
+      "contexthelp": "set content of as value \u0026lt;file\u0026gt; for \u0026lt;key\u0026gt;",
+      "name": "setContentOfAsValueFor",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "file",
+          "description": "file\u0027s whose content should be set as byte[]",
+          "type": "String"
+        },
+        {
+          "name": "key",
+          "description": "key whose value should be set.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set base 64 encoded content of as value for",
+      "usage": "| set base 64 encoded content of as value | [file] | for | [key] | ",
+      "contexthelp": "set base 64 encoded content of as value \u0026lt;file\u0026gt; for \u0026lt;key\u0026gt;",
+      "name": "setBase64EncodedContentOfAsValueFor",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "file",
+          "description": "file\u0027s whose content should be base64 encoded",
+          "type": "String"
+        },
+        {
+          "name": "key",
+          "description": "key whose value should be set.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "clear value",
+      "usage": "| clear value | [name] | ",
+      "contexthelp": "clear value \u0026lt;name\u0026gt;",
+      "name": "clearValue",
+      "docString": "Clears a values previously set.",
+      "annotations": [],
+      "returnDescription": "true if value was present.",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "value to remove.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "clear values",
+      "usage": "| clear values |",
+      "contexthelp": "clear values",
+      "name": "clearValues",
+      "docString": "Clears all values previously set.",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "value",
+      "usage": "| value | [name] | ",
+      "contexthelp": "value \u0026lt;name\u0026gt;",
+      "name": "value",
+      "docString": "Retrieves value of element at a specified key.",
+      "annotations": [],
+      "returnDescription": "value stored.",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "key to get value of (nested values may be retrieved by separating the keys with \u0027.\u0027).",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "reset",
+      "usage": "| reset |",
+      "contexthelp": "reset",
+      "name": "reset",
+      "docString": "Called before next row is executed. (Clears all current values.)",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set",
+      "usage": "| set | key, value,  |",
+      "contexthelp": "set  key, value,",
+      "name": "set",
+      "docString": "Sets a value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "key",
+          "description": "(possibly nested) key to set value for.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to be stored.",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "expand periods in names to nested maps",
+      "usage": "| expand periods in names to nested maps | [expand] | ",
+      "contexthelp": "expand periods in names to nested maps \u0026lt;expand\u0026gt;",
+      "name": "expandPeriodsInNamesToNestedMaps",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "expand",
+          "type": "boolean"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "expands periods in names to nested maps",
+      "usage": "| expands periods in names to nested maps |",
+      "contexthelp": "expands periods in names to nested maps",
+      "name": "expandsPeriodsInNamesToNestedMaps",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "get map helper",
+      "usage": "| get map helper |",
+      "contexthelp": "get map helper",
+      "name": "getMapHelper",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "helper to assist getting/setting (nested) values in a map.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "MapHelper"
+    },
+    {
+      "readableName": "set map helper",
+      "usage": "| set map helper | [mapHelper] | ",
+      "contexthelp": "set map helper \u0026lt;mapHelper\u0026gt;",
+      "name": "setMapHelper",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "mapHelper",
+          "description": "helper to assist getting/setting (nested) values in a map.",
+          "type": "MapHelper"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set global value to",
+      "usage": "| set global value | [symbolName] | to | [value] | ",
+      "contexthelp": "set global value \u0026lt;symbolName\u0026gt; to \u0026lt;value\u0026gt;",
+      "name": "setGlobalValueTo",
+      "docString": "Stores a (global) value so it can be accessed by other fixtures/pages.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name to store value under.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to store.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "global value",
+      "usage": "| global value | [symbolName] | ",
+      "contexthelp": "global value \u0026lt;symbolName\u0026gt;",
+      "name": "globalValue",
+      "docString": "Retrieves a (global) value, which was previously stored using #setGlobalValueTo().",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name value was stored under.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "wait seconds",
+      "usage": "| wait seconds | [i] | ",
+      "contexthelp": "wait seconds \u0026lt;i\u0026gt;",
+      "name": "waitSeconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait milliseconds",
+      "usage": "| wait milliseconds | [i] | ",
+      "contexthelp": "wait milliseconds \u0026lt;i\u0026gt;",
+      "name": "waitMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set repeat interval to milliseconds",
+      "usage": "| set repeat interval to milliseconds | [milliseconds] | ",
+      "contexthelp": "set repeat interval to milliseconds \u0026lt;milliseconds\u0026gt;",
+      "name": "setRepeatIntervalToMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "milliseconds",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat interval",
+      "usage": "| repeat interval |",
+      "contexthelp": "repeat interval",
+      "name": "repeatInterval",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times | [maxCount] | ",
+      "contexthelp": "repeat at most times \u0026lt;maxCount\u0026gt;",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "maxCount",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times |",
+      "contexthelp": "repeat at most times",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "repeat count",
+      "usage": "| repeat count |",
+      "contexthelp": "repeat count",
+      "name": "repeatCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "time spent repeating",
+      "usage": "| time spent repeating |",
+      "contexthelp": "time spent repeating",
+      "name": "timeSpentRepeating",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    }
+  ],
+  "typeName": "MapFixture",
+  "name": "MapFixture",
+  "annotations": []
+}

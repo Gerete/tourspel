@@ -1,0 +1,1136 @@
+{
+  "constructors": [
+    {
+      "readableName": "properties file fixture",
+      "usage": "| properties file fixture |",
+      "name": "PropertiesFileFixture",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.PropertiesFileFixture",
+  "publicMethods": [
+    {
+      "readableName": "load values from",
+      "usage": "| load values from | [filename] | ",
+      "contexthelp": "load values from \u0026lt;filename\u0026gt;",
+      "name": "loadValuesFrom",
+      "docString": "Adds the properties loaded from the specified file to current values.",
+      "annotations": [
+        "Override"
+      ],
+      "returnDescription": "true when file is loaded",
+      "parameters": [
+        {
+          "name": "filename",
+          "description": ".properties file to load",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "load values from",
+      "usage": "| load values from | [filename] | ",
+      "contexthelp": "load values from \u0026lt;filename\u0026gt;",
+      "name": "loadValuesFrom",
+      "docString": "Adds content from the specified file to current values.",
+      "annotations": [],
+      "returnDescription": "true when file is loaded",
+      "parameters": [
+        {
+          "name": "filename",
+          "description": "file to load",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "create containing values",
+      "usage": "| create containing values | [filename] | ",
+      "contexthelp": "create containing values \u0026lt;filename\u0026gt;",
+      "name": "createContainingValues",
+      "docString": "Creates new file, containing current values.",
+      "annotations": [],
+      "returnDescription": "file created.",
+      "parameters": [
+        {
+          "name": "filename",
+          "description": "name of file to create.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "create containing",
+      "usage": "| create | [filename] | containing | [data] | ",
+      "contexthelp": "create \u0026lt;filename\u0026gt; containing \u0026lt;data\u0026gt;",
+      "name": "createContaining",
+      "docString": "",
+      "annotations": [
+        "Override"
+      ],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        },
+        {
+          "name": "data",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "values",
+      "usage": "| values |",
+      "contexthelp": "values",
+      "name": "values",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "copy of current values.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Map"
+    },
+    {
+      "readableName": "number of values",
+      "usage": "| number of values |",
+      "contexthelp": "number of values",
+      "name": "numberOfValues",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "number of values.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "create containing base 64 value",
+      "usage": "| create containing base 64 | [basename] | value | [key] | ",
+      "contexthelp": "create containing base 64 \u0026lt;basename\u0026gt; value \u0026lt;key\u0026gt;",
+      "name": "createContainingBase64Value",
+      "docString": "Saves content of a key\u0027s value as file in the files section.",
+      "annotations": [],
+      "returnDescription": "file created.",
+      "parameters": [
+        {
+          "name": "basename",
+          "description": "filename to use.",
+          "type": "String"
+        },
+        {
+          "name": "key",
+          "description": "key to get value from.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "set directory",
+      "usage": "| set directory | [aDirectory] | ",
+      "contexthelp": "set directory \u0026lt;aDirectory\u0026gt;",
+      "name": "setDirectory",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aDirectory",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get directory",
+      "usage": "| get directory |",
+      "contexthelp": "get directory",
+      "name": "getDirectory",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "create file from base 64",
+      "usage": "| create file from base | [baseName] | 64 | [base64Content] | ",
+      "contexthelp": "create file from base \u0026lt;baseName\u0026gt; 64 \u0026lt;base64Content\u0026gt;",
+      "name": "createFileFromBase64",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "baseName",
+          "type": "String"
+        },
+        {
+          "name": "base64Content",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "create containing value",
+      "usage": "| create containing | [filename] | value | [key] | ",
+      "contexthelp": "create containing \u0026lt;filename\u0026gt; value \u0026lt;key\u0026gt;",
+      "name": "createContainingValue",
+      "docString": "Creates new file, containing value \u0027key\u0027.",
+      "annotations": [],
+      "returnDescription": "file created.",
+      "parameters": [
+        {
+          "name": "filename",
+          "description": "name of file to create.",
+          "type": "String"
+        },
+        {
+          "name": "key",
+          "description": "key whose value should be used to generate the file.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "create containing",
+      "usage": "| create | [filename] | containing | [data] | ",
+      "contexthelp": "create \u0026lt;filename\u0026gt; containing \u0026lt;data\u0026gt;",
+      "name": "createContaining",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        },
+        {
+          "name": "data",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "create containing",
+      "usage": "| create | [filename] | containing | [content] | ",
+      "contexthelp": "create \u0026lt;filename\u0026gt; containing \u0026lt;content\u0026gt;",
+      "name": "createContaining",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        },
+        {
+          "name": "content",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "text in",
+      "usage": "| text in | [filename] | ",
+      "contexthelp": "text in \u0026lt;filename\u0026gt;",
+      "name": "textIn",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "take first line from",
+      "usage": "| take first line from | [filename] | ",
+      "contexthelp": "take first line from \u0026lt;filename\u0026gt;",
+      "name": "takeFirstLineFrom",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "exceptions": [
+        "IOException"
+      ],
+      "returnType": "String"
+    },
+    {
+      "readableName": "convert line endings of to windows",
+      "usage": "| convert line endings of to windows | [filename] | ",
+      "contexthelp": "convert line endings of to windows \u0026lt;filename\u0026gt;",
+      "name": "convertLineEndingsOfToWindows",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "exceptions": [
+        "IOException"
+      ],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "convert line endings of to unix",
+      "usage": "| convert line endings of to unix | [filename] | ",
+      "contexthelp": "convert line endings of to unix \u0026lt;filename\u0026gt;",
+      "name": "convertLineEndingsOfToUnix",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "exceptions": [
+        "IOException"
+      ],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "content of",
+      "usage": "| content of | [filename] | ",
+      "contexthelp": "content of \u0026lt;filename\u0026gt;",
+      "name": "contentOf",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "exceptions": [
+        "IOException"
+      ],
+      "returnType": "String"
+    },
+    {
+      "readableName": "create using",
+      "usage": "| create | [filename] | using | [templateName] | ",
+      "contexthelp": "create \u0026lt;filename\u0026gt; using \u0026lt;templateName\u0026gt;",
+      "name": "createUsing",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        },
+        {
+          "name": "templateName",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "copy to",
+      "usage": "| copy | [sourceName] | to | [targetName] | ",
+      "contexthelp": "copy \u0026lt;sourceName\u0026gt; to \u0026lt;targetName\u0026gt;",
+      "name": "copyTo",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "sourceName",
+          "type": "String"
+        },
+        {
+          "name": "targetName",
+          "type": "String"
+        }
+      ],
+      "exceptions": [
+        "IOException"
+      ],
+      "returnType": "String"
+    },
+    {
+      "readableName": "size of",
+      "usage": "| size of | [filename] | ",
+      "contexthelp": "size of \u0026lt;filename\u0026gt;",
+      "name": "sizeOf",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "exists",
+      "usage": "| exists | [filename] | ",
+      "contexthelp": "exists \u0026lt;filename\u0026gt;",
+      "name": "exists",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "delete",
+      "usage": "| delete | [filename] | ",
+      "contexthelp": "delete \u0026lt;filename\u0026gt;",
+      "name": "delete",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "delete if exists",
+      "usage": "| delete if exists | [filename] | ",
+      "contexthelp": "delete if exists \u0026lt;filename\u0026gt;",
+      "name": "deleteIfExists",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "filename of",
+      "usage": "| filename of | [filename] | ",
+      "contexthelp": "filename of \u0026lt;filename\u0026gt;",
+      "name": "filenameOf",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "base name of",
+      "usage": "| base name of | [filename] | ",
+      "contexthelp": "base name of \u0026lt;filename\u0026gt;",
+      "name": "baseNameOf",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "extension of",
+      "usage": "| extension of | [filename] | ",
+      "contexthelp": "extension of \u0026lt;filename\u0026gt;",
+      "name": "extensionOf",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "poll until exists",
+      "usage": "| poll until exists | [filename] | ",
+      "contexthelp": "poll until exists \u0026lt;filename\u0026gt;",
+      "name": "pollUntilExists",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "poll until does not exist",
+      "usage": "| poll until does not exist | [filename] | ",
+      "contexthelp": "poll until does not exist \u0026lt;filename\u0026gt;",
+      "name": "pollUntilDoesNotExist",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "poll until size of exceeds",
+      "usage": "| poll until size of | [filename] | exceeds | [expectedSize] | ",
+      "contexthelp": "poll until size of \u0026lt;filename\u0026gt; exceeds \u0026lt;expectedSize\u0026gt;",
+      "name": "pollUntilSizeOfExceeds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "String"
+        },
+        {
+          "name": "expectedSize",
+          "type": "long"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "append to",
+      "usage": "| append | [extraContent] | to | [filename] | ",
+      "contexthelp": "append \u0026lt;extraContent\u0026gt; to \u0026lt;filename\u0026gt;",
+      "name": "appendTo",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "extraContent",
+          "type": "String"
+        },
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "append to on new line",
+      "usage": "| append to on new | [extraContent] | line | [filename] | ",
+      "contexthelp": "append to on new \u0026lt;extraContent\u0026gt; line \u0026lt;filename\u0026gt;",
+      "name": "appendToOnNewLine",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "extraContent",
+          "type": "String"
+        },
+        {
+          "name": "filename",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "zip as",
+      "usage": "| zip | [inputfile] | as | [zipname] | ",
+      "contexthelp": "zip \u0026lt;inputfile\u0026gt; as \u0026lt;zipname\u0026gt;",
+      "name": "zipAs",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "inputfile",
+          "type": "String"
+        },
+        {
+          "name": "zipname",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "unzip as",
+      "usage": "| unzip | [zipname] | as | [targetDir] | ",
+      "contexthelp": "unzip \u0026lt;zipname\u0026gt; as \u0026lt;targetDir\u0026gt;",
+      "name": "unzipAs",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "zipname",
+          "type": "String"
+        },
+        {
+          "name": "targetDir",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "number of files in zip",
+      "usage": "| number of files in zip | [zipname] | ",
+      "contexthelp": "number of files in zip \u0026lt;zipname\u0026gt;",
+      "name": "numberOfFilesInZip",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "zipname",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "names of files in zip",
+      "usage": "| names of files in zip | [zipname] | ",
+      "contexthelp": "names of files in zip \u0026lt;zipname\u0026gt;",
+      "name": "namesOfFilesInZip",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "zipname",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "set int value for",
+      "usage": "| set int value | [value] | for | [name] | ",
+      "contexthelp": "set int value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setIntValueFor",
+      "docString": "Stores integer value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "int"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set double value for",
+      "usage": "| set double value | [value] | for | [name] | ",
+      "contexthelp": "set double value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setDoubleValueFor",
+      "docString": "Stores double value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "double"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set boolean value for",
+      "usage": "| set boolean value | [value] | for | [name] | ",
+      "contexthelp": "set boolean value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setBooleanValueFor",
+      "docString": "Stores boolean value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "boolean"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set value for",
+      "usage": "| set value | [value] | for | [name] | ",
+      "contexthelp": "set value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setValueFor",
+      "docString": "Stores value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be stored.",
+          "type": "Object"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "add value to",
+      "usage": "| add value | [value] | to | [name] | ",
+      "contexthelp": "add value \u0026lt;value\u0026gt; to \u0026lt;name\u0026gt;",
+      "name": "addValueTo",
+      "docString": "Adds value to (end of) a list.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be stored.",
+          "type": "Object"
+        },
+        {
+          "name": "name",
+          "description": "name of list to extend.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "copy values from",
+      "usage": "| copy values from | [map] | ",
+      "contexthelp": "copy values from \u0026lt;map\u0026gt;",
+      "name": "copyValuesFrom",
+      "docString": "Adds all values in the supplied map to the current values.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "map",
+          "description": "to obtain values from.",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set values for",
+      "usage": "| set values | [values] | for | [name] | ",
+      "contexthelp": "set values \u0026lt;values\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setValuesFor",
+      "docString": "Stores list of values in map.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "values",
+          "description": "comma separated list of values.",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "description": "name to use this list for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set content of as value for",
+      "usage": "| set content of as value | [file] | for | [key] | ",
+      "contexthelp": "set content of as value \u0026lt;file\u0026gt; for \u0026lt;key\u0026gt;",
+      "name": "setContentOfAsValueFor",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "file",
+          "description": "file\u0027s whose content should be set as byte[]",
+          "type": "String"
+        },
+        {
+          "name": "key",
+          "description": "key whose value should be set.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set base 64 encoded content of as value for",
+      "usage": "| set base 64 encoded content of as value | [file] | for | [key] | ",
+      "contexthelp": "set base 64 encoded content of as value \u0026lt;file\u0026gt; for \u0026lt;key\u0026gt;",
+      "name": "setBase64EncodedContentOfAsValueFor",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "file",
+          "description": "file\u0027s whose content should be base64 encoded",
+          "type": "String"
+        },
+        {
+          "name": "key",
+          "description": "key whose value should be set.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "clear value",
+      "usage": "| clear value | [name] | ",
+      "contexthelp": "clear value \u0026lt;name\u0026gt;",
+      "name": "clearValue",
+      "docString": "Clears a values previously set.",
+      "annotations": [],
+      "returnDescription": "true if value was present.",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "value to remove.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "clear values",
+      "usage": "| clear values |",
+      "contexthelp": "clear values",
+      "name": "clearValues",
+      "docString": "Clears all values previously set.",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "value",
+      "usage": "| value | [name] | ",
+      "contexthelp": "value \u0026lt;name\u0026gt;",
+      "name": "value",
+      "docString": "Retrieves value of element at a specified key.",
+      "annotations": [],
+      "returnDescription": "value stored.",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "key to get value of (nested values may be retrieved by separating the keys with \u0027.\u0027).",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "reset",
+      "usage": "| reset |",
+      "contexthelp": "reset",
+      "name": "reset",
+      "docString": "Called before next row is executed. (Clears all current values.)",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set",
+      "usage": "| set | key, value,  |",
+      "contexthelp": "set  key, value,",
+      "name": "set",
+      "docString": "Sets a value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "key",
+          "description": "(possibly nested) key to set value for.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to be stored.",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "expand periods in names to nested maps",
+      "usage": "| expand periods in names to nested maps | [expand] | ",
+      "contexthelp": "expand periods in names to nested maps \u0026lt;expand\u0026gt;",
+      "name": "expandPeriodsInNamesToNestedMaps",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "expand",
+          "type": "boolean"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "expands periods in names to nested maps",
+      "usage": "| expands periods in names to nested maps |",
+      "contexthelp": "expands periods in names to nested maps",
+      "name": "expandsPeriodsInNamesToNestedMaps",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "get map helper",
+      "usage": "| get map helper |",
+      "contexthelp": "get map helper",
+      "name": "getMapHelper",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "helper to assist getting/setting (nested) values in a map.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "MapHelper"
+    },
+    {
+      "readableName": "set map helper",
+      "usage": "| set map helper | [mapHelper] | ",
+      "contexthelp": "set map helper \u0026lt;mapHelper\u0026gt;",
+      "name": "setMapHelper",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "mapHelper",
+          "description": "helper to assist getting/setting (nested) values in a map.",
+          "type": "MapHelper"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set global value to",
+      "usage": "| set global value | [symbolName] | to | [value] | ",
+      "contexthelp": "set global value \u0026lt;symbolName\u0026gt; to \u0026lt;value\u0026gt;",
+      "name": "setGlobalValueTo",
+      "docString": "Stores a (global) value so it can be accessed by other fixtures/pages.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name to store value under.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to store.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "global value",
+      "usage": "| global value | [symbolName] | ",
+      "contexthelp": "global value \u0026lt;symbolName\u0026gt;",
+      "name": "globalValue",
+      "docString": "Retrieves a (global) value, which was previously stored using #setGlobalValueTo().",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name value was stored under.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "wait seconds",
+      "usage": "| wait seconds | [i] | ",
+      "contexthelp": "wait seconds \u0026lt;i\u0026gt;",
+      "name": "waitSeconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait milliseconds",
+      "usage": "| wait milliseconds | [i] | ",
+      "contexthelp": "wait milliseconds \u0026lt;i\u0026gt;",
+      "name": "waitMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set repeat interval to milliseconds",
+      "usage": "| set repeat interval to milliseconds | [milliseconds] | ",
+      "contexthelp": "set repeat interval to milliseconds \u0026lt;milliseconds\u0026gt;",
+      "name": "setRepeatIntervalToMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "milliseconds",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat interval",
+      "usage": "| repeat interval |",
+      "contexthelp": "repeat interval",
+      "name": "repeatInterval",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times | [maxCount] | ",
+      "contexthelp": "repeat at most times \u0026lt;maxCount\u0026gt;",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "maxCount",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times |",
+      "contexthelp": "repeat at most times",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "repeat count",
+      "usage": "| repeat count |",
+      "contexthelp": "repeat count",
+      "name": "repeatCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "time spent repeating",
+      "usage": "| time spent repeating |",
+      "contexthelp": "time spent repeating",
+      "name": "timeSpentRepeating",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    }
+  ],
+  "typeName": "PropertiesFileFixture",
+  "name": "PropertiesFileFixture",
+  "annotations": []
+}

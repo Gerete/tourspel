@@ -1,0 +1,871 @@
+{
+  "constructors": [
+    {
+      "readableName": "lal response",
+      "usage": "| lal response |",
+      "name": "LalResponse",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.leanapps.LalResponse",
+  "publicMethods": [
+    {
+      "readableName": "valid response",
+      "usage": "| valid response |",
+      "contexthelp": "valid response",
+      "name": "validResponse",
+      "docString": "",
+      "annotations": [
+        "Override"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get status",
+      "usage": "| get status |",
+      "contexthelp": "get status",
+      "name": "getStatus",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "response status by LeanApps",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "get error",
+      "usage": "| get error |",
+      "contexthelp": "get error",
+      "name": "getError",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "get xsi type value",
+      "usage": "| get xsi type value | [type] | ",
+      "contexthelp": "get xsi type value \u0026lt;type\u0026gt;",
+      "name": "getXsiTypeValue",
+      "docString": "Gets the value xsi:type attribute will have for provided type.",
+      "annotations": [
+        "Override"
+      ],
+      "returnDescription": "type name including namespace prefix as present in response.",
+      "parameters": [
+        {
+          "name": "type",
+          "description": "sub type wanted.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "payment frequency",
+      "usage": "| payment frequency |",
+      "contexthelp": "payment frequency",
+      "name": "paymentFrequency",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "get lal response",
+      "usage": "| get lal response |",
+      "contexthelp": "get lal response",
+      "name": "getLalResponse",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "LalResponse"
+    },
+    {
+      "readableName": "premium amount",
+      "usage": "| premium amount |",
+      "contexthelp": "premium amount",
+      "name": "premiumAmount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Double"
+    },
+    {
+      "readableName": "insured amount",
+      "usage": "| insured amount |",
+      "contexthelp": "insured amount",
+      "name": "insuredAmount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Double"
+    },
+    {
+      "readableName": "death coverage select",
+      "usage": "| death coverage select |",
+      "contexthelp": "death coverage select",
+      "name": "deathCoverageSelect",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "get death coverage subselect",
+      "usage": "| get death coverage subselect |",
+      "contexthelp": "get death coverage subselect",
+      "name": "getDeathCoverageSubselect",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "premium end date",
+      "usage": "| premium end date |",
+      "contexthelp": "premium end date",
+      "name": "premiumEndDate",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "intermediary",
+      "usage": "| intermediary |",
+      "contexthelp": "intermediary",
+      "name": "intermediary",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "production company",
+      "usage": "| production company |",
+      "contexthelp": "production company",
+      "name": "productionCompany",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "collection method",
+      "usage": "| collection method |",
+      "contexthelp": "collection method",
+      "name": "collectionMethod",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "birth date",
+      "usage": "| birth date | [partyNr] | ",
+      "contexthelp": "birth date \u0026lt;partyNr\u0026gt;",
+      "name": "birthDate",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "contains policy",
+      "usage": "| contains policy | [policyNr] | ",
+      "contexthelp": "contains policy \u0026lt;policyNr\u0026gt;",
+      "name": "containsPolicy",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "policyNr",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "contains policies",
+      "usage": "| contains policies | [policyNrList] | ",
+      "contexthelp": "contains policies \u0026lt;policyNrList\u0026gt;",
+      "name": "containsPolicies",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "policyNrList",
+          "type": "List"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "XPathCheckResult"
+    },
+    {
+      "readableName": "premium premium oid",
+      "usage": "| premium premium oid |",
+      "contexthelp": "premium premium oid",
+      "name": "premiumPremiumOid",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Double"
+    },
+    {
+      "readableName": "sum financial booking for single payment",
+      "usage": "| sum financial booking for single payment |",
+      "contexthelp": "sum financial booking for single payment",
+      "name": "sumFinancialBookingForSinglePayment",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Double"
+    },
+    {
+      "readableName": "sum financial booking",
+      "usage": "| sum financial booking |",
+      "contexthelp": "sum financial booking",
+      "name": "sumFinancialBooking",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Double"
+    },
+    {
+      "readableName": "sum financial booking death",
+      "usage": "| sum financial booking death |",
+      "contexthelp": "sum financial booking death",
+      "name": "sumFinancialBookingDeath",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Double"
+    },
+    {
+      "readableName": "single payment",
+      "usage": "| single payment |",
+      "contexthelp": "single payment",
+      "name": "singlePayment",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Double"
+    },
+    {
+      "readableName": "financial booking",
+      "usage": "| financial booking |",
+      "contexthelp": "financial booking",
+      "name": "financialBooking",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Double"
+    },
+    {
+      "readableName": "number insurance terminated death",
+      "usage": "| number insurance terminated death |",
+      "contexthelp": "number insurance terminated death",
+      "name": "numberInsuranceTerminatedDeath",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Double"
+    },
+    {
+      "readableName": "number insurance in force",
+      "usage": "| number insurance in force |",
+      "contexthelp": "number insurance in force",
+      "name": "numberInsuranceInForce",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Double"
+    },
+    {
+      "readableName": "insurance state",
+      "usage": "| insurance state |",
+      "contexthelp": "insurance state",
+      "name": "insuranceState",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "get insured",
+      "usage": "| get insured |",
+      "contexthelp": "get insured",
+      "name": "getInsured",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "get policy holder",
+      "usage": "| get policy holder |",
+      "contexthelp": "get policy holder",
+      "name": "getPolicyHolder",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "valid response",
+      "usage": "| valid response |",
+      "contexthelp": "valid response",
+      "name": "validResponse",
+      "docString": "",
+      "annotations": [
+        "Override"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get x path",
+      "usage": "| get x | [xPathExpr] | path | [params] | ",
+      "contexthelp": "get x \u0026lt;xPathExpr\u0026gt; path \u0026lt;params\u0026gt;",
+      "name": "getXPath",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "result of xpath expression.",
+      "parameters": [
+        {
+          "name": "xPathExpr",
+          "description": "expression to apply to response.",
+          "type": "String"
+        },
+        {
+          "name": "params",
+          "description": "values to put inside expression before evaluation",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "get raw x path",
+      "usage": "| get raw x | [xPathExpr] | path | [params] | ",
+      "contexthelp": "get raw x \u0026lt;xPathExpr\u0026gt; path \u0026lt;params\u0026gt;",
+      "name": "getRawXPath",
+      "docString": "Gets XPath value without checking whether response is valid.",
+      "annotations": [],
+      "returnDescription": "result of xpath expression.",
+      "parameters": [
+        {
+          "name": "xPathExpr",
+          "description": "expression to apply to response.",
+          "type": "String"
+        },
+        {
+          "name": "params",
+          "description": "values to put inside expression before evaluation",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "get x path double",
+      "usage": "| get x path | [xPathExpr] | double | [params] | ",
+      "contexthelp": "get x path \u0026lt;xPathExpr\u0026gt; double \u0026lt;params\u0026gt;",
+      "name": "getXPathDouble",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "result of xpath expression.",
+      "parameters": [
+        {
+          "name": "xPathExpr",
+          "description": "expression to apply to response.",
+          "type": "String"
+        },
+        {
+          "name": "params",
+          "description": "values to put inside expression before evaluation",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Double"
+    },
+    {
+      "readableName": "get x path int",
+      "usage": "| get x path | [xPathExpr] | int | [params] | ",
+      "contexthelp": "get x path \u0026lt;xPathExpr\u0026gt; int \u0026lt;params\u0026gt;",
+      "name": "getXPathInt",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "result of xpath expression.",
+      "parameters": [
+        {
+          "name": "xPathExpr",
+          "description": "expression to apply to response.",
+          "type": "String"
+        },
+        {
+          "name": "params",
+          "description": "values to put inside expression before evaluation",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Integer"
+    },
+    {
+      "readableName": "get x path amount",
+      "usage": "| get x path | [xPathExpr] | amount | [params] | ",
+      "contexthelp": "get x path \u0026lt;xPathExpr\u0026gt; amount \u0026lt;params\u0026gt;",
+      "name": "getXPathAmount",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "result of xpath expression.",
+      "parameters": [
+        {
+          "name": "xPathExpr",
+          "description": "expression to apply to response.",
+          "type": "String"
+        },
+        {
+          "name": "params",
+          "description": "values to put inside expression before evaluation",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Double"
+    },
+    {
+      "readableName": "get x path date",
+      "usage": "| get x path | [xPathExpr] | date | [params] | ",
+      "contexthelp": "get x path \u0026lt;xPathExpr\u0026gt; date \u0026lt;params\u0026gt;",
+      "name": "getXPathDate",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "result of xpath expression, without timezone part.",
+      "parameters": [
+        {
+          "name": "xPathExpr",
+          "description": "expression to apply to response.",
+          "type": "String"
+        },
+        {
+          "name": "params",
+          "description": "values to put inside expression before evaluation",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "check x paths",
+      "usage": "| check x | [values] | paths | [expressionsToCheck] | ",
+      "contexthelp": "check x \u0026lt;values\u0026gt; paths \u0026lt;expressionsToCheck\u0026gt;",
+      "name": "checkXPaths",
+      "docString": "Checks whether input values are present at correct locations in the response.",
+      "annotations": [],
+      "returnDescription": "OK if all xpath expressions evaluated to the correct value. A description\n        of the mismatches otherwise.",
+      "parameters": [
+        {
+          "name": "values",
+          "description": "keyName -\u003e value, input parameters supplied to get request.",
+          "type": "Map"
+        },
+        {
+          "name": "expressionsToCheck",
+          "description": "xpath -\u003e keyName, each xpath in this map is expected\n        to evaluate to the value present in values for that key (i.e. values[keyName])",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "XPathCheckResult"
+    },
+    {
+      "readableName": "get xsi type value",
+      "usage": "| get xsi type value | [type] | ",
+      "contexthelp": "get xsi type value \u0026lt;type\u0026gt;",
+      "name": "getXsiTypeValue",
+      "docString": "Gets the value xsi:type attribute will have for provided type.",
+      "annotations": [],
+      "returnDescription": "type name including namespace prefix as present in response.",
+      "parameters": [
+        {
+          "name": "type",
+          "description": "sub type wanted.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "get all x path",
+      "usage": "| get all x | [xPathExpr] | path | [params] | ",
+      "contexthelp": "get all x \u0026lt;xPathExpr\u0026gt; path \u0026lt;params\u0026gt;",
+      "name": "getAllXPath",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "all results of xpath expression.",
+      "parameters": [
+        {
+          "name": "xPathExpr",
+          "description": "expression to apply to response.",
+          "type": "String"
+        },
+        {
+          "name": "params",
+          "description": "values to put inside expression before evaluation",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "List"
+    },
+    {
+      "readableName": "set namespace context",
+      "usage": "| set namespace context | [aNamespaceContext] | ",
+      "contexthelp": "set namespace context \u0026lt;aNamespaceContext\u0026gt;",
+      "name": "setNamespaceContext",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aNamespaceContext",
+          "description": "the namespaceContext to set",
+          "type": "NamespaceContext"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set x path helper",
+      "usage": "| set x path helper | [xPathHelper] | ",
+      "contexthelp": "set x path helper \u0026lt;xPathHelper\u0026gt;",
+      "name": "setXPathHelper",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "xPathHelper",
+          "type": "XPathHelper"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get x path helper",
+      "usage": "| get x path helper |",
+      "contexthelp": "get x path helper",
+      "name": "getXPathHelper",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "XPathHelper"
+    },
+    {
+      "readableName": "valid response",
+      "usage": "| valid response |",
+      "contexthelp": "valid response",
+      "name": "validResponse",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get request",
+      "usage": "| get request |",
+      "contexthelp": "get request",
+      "name": "getRequest",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "the request",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "set request",
+      "usage": "| set request | [aRequest] | ",
+      "contexthelp": "set request \u0026lt;aRequest\u0026gt;",
+      "name": "setRequest",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aRequest",
+          "description": "the request to set",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get response",
+      "usage": "| get response |",
+      "contexthelp": "get response",
+      "name": "getResponse",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "the response",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "set response",
+      "usage": "| set response | [aResponse] | ",
+      "contexthelp": "set response \u0026lt;aResponse\u0026gt;",
+      "name": "setResponse",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aResponse",
+          "description": "the response to set",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get status code",
+      "usage": "| get status code |",
+      "contexthelp": "get status code",
+      "name": "getStatusCode",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "the statusCode",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "set status code",
+      "usage": "| set status code | [aStatusCode] | ",
+      "contexthelp": "set status code \u0026lt;aStatusCode\u0026gt;",
+      "name": "setStatusCode",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aStatusCode",
+          "description": "the statusCode to set",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get response headers",
+      "usage": "| get response headers |",
+      "contexthelp": "get response headers",
+      "name": "getResponseHeaders",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "headers in response.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Map"
+    },
+    {
+      "readableName": "get cookie store",
+      "usage": "| get cookie store |",
+      "contexthelp": "get cookie store",
+      "name": "getCookieStore",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "cookie store for this request/response",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "CookieStore"
+    },
+    {
+      "readableName": "get cookie named",
+      "usage": "| get cookie named | [cookieName] | ",
+      "contexthelp": "get cookie named \u0026lt;cookieName\u0026gt;",
+      "name": "getCookieNamed",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "cookie found, if any, null otherwise.",
+      "parameters": [
+        {
+          "name": "cookieName",
+          "description": "name of cookie to be found in cookie store",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Cookie"
+    },
+    {
+      "readableName": "set cookie store",
+      "usage": "| set cookie store | [cookieStore] | ",
+      "contexthelp": "set cookie store \u0026lt;cookieStore\u0026gt;",
+      "name": "setCookieStore",
+      "docString": "Sets cookie store to use for this request response",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "cookieStore",
+          "description": "cookie store for this request/response",
+          "type": "CookieStore"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get response time",
+      "usage": "| get response time |",
+      "contexthelp": "get response time",
+      "name": "getResponseTime",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "response time in ms for call.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "set response time",
+      "usage": "| set response time | [responseTime] | ",
+      "contexthelp": "set response time \u0026lt;responseTime\u0026gt;",
+      "name": "setResponseTime",
+      "docString": "Sets response time for obtaining this response.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "responseTime",
+          "description": "response time in ms for call.",
+          "type": "long"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get method",
+      "usage": "| get method |",
+      "contexthelp": "get method",
+      "name": "getMethod",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "set method",
+      "usage": "| set method | [method] | ",
+      "contexthelp": "set method \u0026lt;method\u0026gt;",
+      "name": "setMethod",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "method",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "clone values",
+      "usage": "| clone values | [resp] | ",
+      "contexthelp": "clone values \u0026lt;resp\u0026gt;",
+      "name": "cloneValues",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "resp",
+          "type": "HttpResponse"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "parse",
+      "usage": "| parse | [value] | ",
+      "contexthelp": "parse \u0026lt;value\u0026gt;",
+      "name": "parse",
+      "docString": "Returns response toString() was called on previously.",
+      "annotations": [],
+      "returnDescription": "response if one is known, null otherwise.",
+      "parameters": [
+        {
+          "name": "value",
+          "description": "toString() of response being searched.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "HttpResponse"
+    },
+    {
+      "readableName": "clear instances",
+      "usage": "| clear instances |",
+      "contexthelp": "clear instances",
+      "name": "clearInstances",
+      "docString": "Clears set of known responses (that can be returned by parse()).",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    }
+  ],
+  "typeName": "LalResponse",
+  "name": "LalResponse",
+  "annotations": []
+}

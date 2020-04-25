@@ -1,0 +1,467 @@
+{
+  "constructors": [
+    {
+      "readableName": "string fixture",
+      "usage": "| string fixture |",
+      "name": "StringFixture",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.StringFixture",
+  "publicMethods": [
+    {
+      "readableName": "value of",
+      "usage": "| value of | [value] | ",
+      "contexthelp": "value of \u0026lt;value\u0026gt;",
+      "name": "valueOf",
+      "docString": "Returns value.",
+      "annotations": [],
+      "returnDescription": "value",
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to return",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "length of",
+      "usage": "| length of | [value] | ",
+      "contexthelp": "length of \u0026lt;value\u0026gt;",
+      "name": "lengthOf",
+      "docString": "Determines length of string.",
+      "annotations": [],
+      "returnDescription": "length of value",
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to determine length of",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "value differs from",
+      "usage": "| value differs | [value1] | from | [value2] | ",
+      "contexthelp": "value differs \u0026lt;value1\u0026gt; from \u0026lt;value2\u0026gt;",
+      "name": "valueDiffersFrom",
+      "docString": "\u003cp\u003eCompares two Strings, returning \u003ccode\u003efalse\u003c/code\u003e if they are equal.\u003c/p\u003e\n\n \u003cp\u003e\u003ccode\u003enull\u003c/code\u003es are handled without exceptions. Two \u003ccode\u003enull\u003c/code\u003e\n references are considered to be equal. The comparison is case sensitive.\u003c/p\u003e",
+      "annotations": [],
+      "returnDescription": "\u003ccode\u003efalse\u003c/code\u003e if the Strings are equal, or both \u003ccode\u003enull\u003c/code\u003e",
+      "parameters": [
+        {
+          "name": "value1",
+          "description": "the first String, may be null",
+          "type": "String"
+        },
+        {
+          "name": "value2",
+          "description": "the second String, may be null",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "value equals",
+      "usage": "| value | [value1] | equals | [value2] | ",
+      "contexthelp": "value \u0026lt;value1\u0026gt; equals \u0026lt;value2\u0026gt;",
+      "name": "valueEquals",
+      "docString": "\u003cp\u003eCompares two Strings, returning \u003ccode\u003etrue\u003c/code\u003e if they are equal.\u003c/p\u003e\n\n \u003cp\u003e\u003ccode\u003enull\u003c/code\u003es are handled without exceptions. Two \u003ccode\u003enull\u003c/code\u003e\n references are considered to be equal. The comparison is case sensitive.\u003c/p\u003e",
+      "annotations": [],
+      "returnDescription": "\u003ccode\u003etrue\u003c/code\u003e if the Strings are equal, or both \u003ccode\u003enull\u003c/code\u003e",
+      "parameters": [
+        {
+          "name": "value1",
+          "description": "the first String, may be null",
+          "type": "String"
+        },
+        {
+          "name": "value2",
+          "description": "the second String, may be null",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "text contains",
+      "usage": "| text | [value] | contains | [expectedSubstring] | ",
+      "contexthelp": "text \u0026lt;value\u0026gt; contains \u0026lt;expectedSubstring\u0026gt;",
+      "name": "textContains",
+      "docString": "Checks whether values contains a specific sub string.",
+      "annotations": [],
+      "returnDescription": "true if value contained the expected substring.",
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to find substring in.",
+          "type": "String"
+        },
+        {
+          "name": "expectedSubstring",
+          "description": "text that is expected to occur in value.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "convert to upper case",
+      "usage": "| convert to upper case | [value] | ",
+      "contexthelp": "convert to upper case \u0026lt;value\u0026gt;",
+      "name": "convertToUpperCase",
+      "docString": "Converts the value to upper case.",
+      "annotations": [],
+      "returnDescription": "value in capital letters.",
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to put in upper case.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "convert to lower case",
+      "usage": "| convert to lower case | [value] | ",
+      "contexthelp": "convert to lower case \u0026lt;value\u0026gt;",
+      "name": "convertToLowerCase",
+      "docString": "Converts the value to lower case.",
+      "annotations": [],
+      "returnDescription": "value with all capital letters replaced by normal letters.",
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to put in lower case.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "convert to int",
+      "usage": "| convert to int | [value] | ",
+      "contexthelp": "convert to int \u0026lt;value\u0026gt;",
+      "name": "convertToInt",
+      "docString": "Determines integer value of String (so relative checks can be done).",
+      "annotations": [],
+      "returnDescription": "integer value.",
+      "parameters": [
+        {
+          "name": "value",
+          "description": "string to convert to integer.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Integer"
+    },
+    {
+      "readableName": "convert to double",
+      "usage": "| convert to double | [value] | ",
+      "contexthelp": "convert to double \u0026lt;value\u0026gt;",
+      "name": "convertToDouble",
+      "docString": "Determines double value of String (so relative checks can be done).",
+      "annotations": [],
+      "returnDescription": "double value.",
+      "parameters": [
+        {
+          "name": "value",
+          "description": "string to convert to double.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Double"
+    },
+    {
+      "readableName": "remove whitespace",
+      "usage": "| remove whitespace | [value] | ",
+      "contexthelp": "remove whitespace \u0026lt;value\u0026gt;",
+      "name": "removeWhitespace",
+      "docString": "Removes all (sequences of) whitespace.",
+      "annotations": [],
+      "returnDescription": "value without whitespace.",
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to clean up.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "normalize whitespace",
+      "usage": "| normalize whitespace | [value] | ",
+      "contexthelp": "normalize whitespace \u0026lt;value\u0026gt;",
+      "name": "normalizeWhitespace",
+      "docString": "Trims value and replaces all (sequences of) whitespace to a single space.",
+      "annotations": [],
+      "returnDescription": "trimmed value with all whitespace converted to single space.",
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to clean up.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "replace all in with",
+      "usage": "| replace all | [regEx] | in | [value] | with | [replace] | ",
+      "contexthelp": "replace all \u0026lt;regEx\u0026gt; in \u0026lt;value\u0026gt; with \u0026lt;replace\u0026gt;",
+      "name": "replaceAllInWith",
+      "docString": "Replaces all occurrences of the regular expression in the value with the replacement value.",
+      "annotations": [],
+      "returnDescription": "result.",
+      "parameters": [
+        {
+          "name": "regEx",
+          "description": "regular expression to match.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to replace in.",
+          "type": "String"
+        },
+        {
+          "name": "replace",
+          "description": "replacement pattern.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "extract int from using group",
+      "usage": "| extract int from | [value] | using | [regEx] | group | [groupIndex] | ",
+      "contexthelp": "extract int from \u0026lt;value\u0026gt; using \u0026lt;regEx\u0026gt; group \u0026lt;groupIndex\u0026gt;",
+      "name": "extractIntFromUsingGroup",
+      "docString": "Extracts a whole number for a string using a regular expression.",
+      "annotations": [],
+      "returnDescription": "extracted number.",
+      "parameters": [
+        {
+          "name": "value",
+          "description": "input string.",
+          "type": "String"
+        },
+        {
+          "name": "regEx",
+          "description": "regular expression to match against value.",
+          "type": "String"
+        },
+        {
+          "name": "groupIndex",
+          "description": "index of group in regular expression containing the number.",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Integer"
+    },
+    {
+      "readableName": "convert line endings to windows",
+      "usage": "| convert line endings to windows | [input] | ",
+      "contexthelp": "convert line endings to windows \u0026lt;input\u0026gt;",
+      "name": "convertLineEndingsToWindows",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "input",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "convert line endings to unix",
+      "usage": "| convert line endings to unix | [input] | ",
+      "contexthelp": "convert line endings to unix \u0026lt;input\u0026gt;",
+      "name": "convertLineEndingsToUnix",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "input",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "set global value to",
+      "usage": "| set global value | [symbolName] | to | [value] | ",
+      "contexthelp": "set global value \u0026lt;symbolName\u0026gt; to \u0026lt;value\u0026gt;",
+      "name": "setGlobalValueTo",
+      "docString": "Stores a (global) value so it can be accessed by other fixtures/pages.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name to store value under.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to store.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "global value",
+      "usage": "| global value | [symbolName] | ",
+      "contexthelp": "global value \u0026lt;symbolName\u0026gt;",
+      "name": "globalValue",
+      "docString": "Retrieves a (global) value, which was previously stored using #setGlobalValueTo().",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name value was stored under.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "wait seconds",
+      "usage": "| wait seconds | [i] | ",
+      "contexthelp": "wait seconds \u0026lt;i\u0026gt;",
+      "name": "waitSeconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait milliseconds",
+      "usage": "| wait milliseconds | [i] | ",
+      "contexthelp": "wait milliseconds \u0026lt;i\u0026gt;",
+      "name": "waitMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set repeat interval to milliseconds",
+      "usage": "| set repeat interval to milliseconds | [milliseconds] | ",
+      "contexthelp": "set repeat interval to milliseconds \u0026lt;milliseconds\u0026gt;",
+      "name": "setRepeatIntervalToMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "milliseconds",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat interval",
+      "usage": "| repeat interval |",
+      "contexthelp": "repeat interval",
+      "name": "repeatInterval",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times | [maxCount] | ",
+      "contexthelp": "repeat at most times \u0026lt;maxCount\u0026gt;",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "maxCount",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times |",
+      "contexthelp": "repeat at most times",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "repeat count",
+      "usage": "| repeat count |",
+      "contexthelp": "repeat count",
+      "name": "repeatCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "time spent repeating",
+      "usage": "| time spent repeating |",
+      "contexthelp": "time spent repeating",
+      "name": "timeSpentRepeating",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    }
+  ],
+  "typeName": "StringFixture",
+  "name": "StringFixture",
+  "annotations": []
+}

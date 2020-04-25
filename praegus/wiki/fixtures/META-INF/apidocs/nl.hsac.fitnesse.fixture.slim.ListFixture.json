@@ -1,0 +1,549 @@
+{
+  "constructors": [
+    {
+      "readableName": "list fixture",
+      "usage": "| list fixture |",
+      "name": "ListFixture",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.ListFixture",
+  "publicMethods": [
+    {
+      "readableName": "display lists numbered",
+      "usage": "| display lists numbered |",
+      "contexthelp": "display lists numbered",
+      "name": "displayListsNumbered",
+      "docString": "Configures Slim to show lists as HTML numbered list (instead of comma separated between square brackets\n (i.e. \u0027[\u0027 and \u0027]\u0027).",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "display lists standard",
+      "usage": "| display lists standard |",
+      "contexthelp": "display lists standard",
+      "name": "displayListsStandard",
+      "docString": "Configures Slim to use standard coverters, i.e. go back to comma separated.",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "add",
+      "usage": "| add | [value] | ",
+      "contexthelp": "add \u0026lt;value\u0026gt;",
+      "name": "add",
+      "docString": "Adds new element to end of list.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to add.",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set value at",
+      "usage": "| set value | [value] | at | [index] | ",
+      "contexthelp": "set value \u0026lt;value\u0026gt; at \u0026lt;index\u0026gt;",
+      "name": "setValueAt",
+      "docString": "Sets value of element at index (0-based). If the current list has less elements it is extended to\n have exactly index elements.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to store.",
+          "type": "Object"
+        },
+        {
+          "name": "index",
+          "description": "0-based index to add element.",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "value at",
+      "usage": "| value at | [index] | ",
+      "contexthelp": "value at \u0026lt;index\u0026gt;",
+      "name": "valueAt",
+      "docString": "Retrieves element at index (0-based).",
+      "annotations": [],
+      "returnDescription": "element at specified index.",
+      "parameters": [
+        {
+          "name": "index",
+          "description": "0-based index of element to retrieve value of.",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "index of",
+      "usage": "| index of | [element] | ",
+      "contexthelp": "index of \u0026lt;element\u0026gt;",
+      "name": "indexOf",
+      "docString": "Returns index of element.",
+      "annotations": [],
+      "returnDescription": "index (0 based).",
+      "parameters": [
+        {
+          "name": "element",
+          "description": "element to get index of.",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "element is present",
+      "usage": "| element is present | [element] | ",
+      "contexthelp": "element is present \u0026lt;element\u0026gt;",
+      "name": "elementIsPresent",
+      "docString": "Checks whether element is present in list.",
+      "annotations": [],
+      "returnDescription": "true if element is present.",
+      "parameters": [
+        {
+          "name": "element",
+          "description": "element that should be present.",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "copy list",
+      "usage": "| copy list |",
+      "contexthelp": "copy list",
+      "name": "copyList",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "new list containing current values.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "copy values from",
+      "usage": "| copy values from | [source] | ",
+      "contexthelp": "copy values from \u0026lt;source\u0026gt;",
+      "name": "copyValuesFrom",
+      "docString": "Adds values to current list.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "source",
+          "description": "list whose values are to be copied.",
+          "type": "Collection"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "size",
+      "usage": "| size |",
+      "contexthelp": "size",
+      "name": "size",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "number of elements in list.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "add to",
+      "usage": "| add | [value] | to | [aList] | ",
+      "contexthelp": "add \u0026lt;value\u0026gt; to \u0026lt;aList\u0026gt;",
+      "name": "addTo",
+      "docString": "Adds new element to end of list.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to add.",
+          "type": "Object"
+        },
+        {
+          "name": "aList",
+          "description": "list to add to.",
+          "type": "List"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set value at in",
+      "usage": "| set value | [value] | at | [index] | in | [aList] | ",
+      "contexthelp": "set value \u0026lt;value\u0026gt; at \u0026lt;index\u0026gt; in \u0026lt;aList\u0026gt;",
+      "name": "setValueAtIn",
+      "docString": "Sets value of element at index (0-based). If the current list has less elements it is extended to\n have exactly index elements.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to store.",
+          "type": "Object"
+        },
+        {
+          "name": "index",
+          "description": "0-based index to add element.",
+          "type": "int"
+        },
+        {
+          "name": "aList",
+          "description": "list to set element in.",
+          "type": "List"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "value at in",
+      "usage": "| value at | [index] | in | [aList] | ",
+      "contexthelp": "value at \u0026lt;index\u0026gt; in \u0026lt;aList\u0026gt;",
+      "name": "valueAtIn",
+      "docString": "Retrieves element at index (0-based).",
+      "annotations": [],
+      "returnDescription": "element at specified index.",
+      "parameters": [
+        {
+          "name": "index",
+          "description": "0-based index of element to retrieve value of.",
+          "type": "int"
+        },
+        {
+          "name": "aList",
+          "description": "list to get element value from.",
+          "type": "List"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "index of in",
+      "usage": "| index of | [element] | in | [aList] | ",
+      "contexthelp": "index of \u0026lt;element\u0026gt; in \u0026lt;aList\u0026gt;",
+      "name": "indexOfIn",
+      "docString": "Returns index of element.",
+      "annotations": [],
+      "returnDescription": "index (0 based).",
+      "parameters": [
+        {
+          "name": "element",
+          "description": "element to get index of.",
+          "type": "Object"
+        },
+        {
+          "name": "aList",
+          "description": "list to get element value from.",
+          "type": "List"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "element is present in",
+      "usage": "| element is present | [element] | in | [aList] | ",
+      "contexthelp": "element is present \u0026lt;element\u0026gt; in \u0026lt;aList\u0026gt;",
+      "name": "elementIsPresentIn",
+      "docString": "Checks whether element is present in list.",
+      "annotations": [],
+      "returnDescription": "true if element is present.",
+      "parameters": [
+        {
+          "name": "element",
+          "description": "element that should be present.",
+          "type": "Object"
+        },
+        {
+          "name": "aList",
+          "description": "list to get element value from.",
+          "type": "List"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "copy values from to",
+      "usage": "| copy values from | [source] | to | [target] | ",
+      "contexthelp": "copy values from \u0026lt;source\u0026gt; to \u0026lt;target\u0026gt;",
+      "name": "copyValuesFromTo",
+      "docString": "Adds values to list.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "source",
+          "description": "list whose values are to be copied.",
+          "type": "Collection"
+        },
+        {
+          "name": "target",
+          "description": "list to get element value from.",
+          "type": "List"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "copy list",
+      "usage": "| copy list | [aList] | ",
+      "contexthelp": "copy list \u0026lt;aList\u0026gt;",
+      "name": "copyList",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "new list containing list\u0027s values.",
+      "parameters": [
+        {
+          "name": "aList",
+          "description": "list to copy.",
+          "type": "List"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "size of",
+      "usage": "| size of | [aList] | ",
+      "contexthelp": "size of \u0026lt;aList\u0026gt;",
+      "name": "sizeOf",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "number of elements in list.",
+      "parameters": [
+        {
+          "name": "aList",
+          "description": "list to get size of.",
+          "type": "List"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "reset",
+      "usage": "| reset |",
+      "contexthelp": "reset",
+      "name": "reset",
+      "docString": "Called before next row is executed. (Clears all current values.)",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set",
+      "usage": "| set | index, value,  |",
+      "contexthelp": "set  index, value,",
+      "name": "set",
+      "docString": "Sets a value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "index",
+          "description": "index (0-based) to set value for.",
+          "type": "int"
+        },
+        {
+          "name": "value",
+          "description": "value to be stored.",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get",
+      "usage": "| get | [headerName] | ",
+      "contexthelp": "get \u0026lt;headerName\u0026gt;",
+      "name": "get",
+      "docString": "Retrieves value for output column.",
+      "annotations": [],
+      "returnDescription": "new list containing current values.",
+      "parameters": [
+        {
+          "name": "headerName",
+          "description": "header of output column (without trailing \u0027?\u0027).",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "set global value to",
+      "usage": "| set global value | [symbolName] | to | [value] | ",
+      "contexthelp": "set global value \u0026lt;symbolName\u0026gt; to \u0026lt;value\u0026gt;",
+      "name": "setGlobalValueTo",
+      "docString": "Stores a (global) value so it can be accessed by other fixtures/pages.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name to store value under.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to store.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "global value",
+      "usage": "| global value | [symbolName] | ",
+      "contexthelp": "global value \u0026lt;symbolName\u0026gt;",
+      "name": "globalValue",
+      "docString": "Retrieves a (global) value, which was previously stored using #setGlobalValueTo().",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name value was stored under.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "wait seconds",
+      "usage": "| wait seconds | [i] | ",
+      "contexthelp": "wait seconds \u0026lt;i\u0026gt;",
+      "name": "waitSeconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait milliseconds",
+      "usage": "| wait milliseconds | [i] | ",
+      "contexthelp": "wait milliseconds \u0026lt;i\u0026gt;",
+      "name": "waitMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set repeat interval to milliseconds",
+      "usage": "| set repeat interval to milliseconds | [milliseconds] | ",
+      "contexthelp": "set repeat interval to milliseconds \u0026lt;milliseconds\u0026gt;",
+      "name": "setRepeatIntervalToMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "milliseconds",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat interval",
+      "usage": "| repeat interval |",
+      "contexthelp": "repeat interval",
+      "name": "repeatInterval",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times | [maxCount] | ",
+      "contexthelp": "repeat at most times \u0026lt;maxCount\u0026gt;",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "maxCount",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times |",
+      "contexthelp": "repeat at most times",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "repeat count",
+      "usage": "| repeat count |",
+      "contexthelp": "repeat count",
+      "name": "repeatCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "time spent repeating",
+      "usage": "| time spent repeating |",
+      "contexthelp": "time spent repeating",
+      "name": "timeSpentRepeating",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    }
+  ],
+  "typeName": "ListFixture",
+  "name": "ListFixture",
+  "annotations": []
+}

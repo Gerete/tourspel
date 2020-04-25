@@ -1,0 +1,910 @@
+{
+  "constructors": [
+    {
+      "readableName": "compare values fixture",
+      "usage": "| compare values fixture |",
+      "name": "CompareValuesFixture",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.fit.CompareValuesFixture",
+  "publicMethods": [
+    {
+      "readableName": "is match",
+      "usage": "| is match |",
+      "contexthelp": "is match",
+      "name": "isMatch",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "left is bigger than right",
+      "usage": "| left is bigger than right |",
+      "contexthelp": "left is bigger than right",
+      "name": "leftIsBiggerThanRight",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "value 1",
+      "usage": "| value 1 |",
+      "contexthelp": "value 1",
+      "name": "value1",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "value 2",
+      "usage": "| value 2 |",
+      "contexthelp": "value 2",
+      "name": "value2",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "as delimiter sep list",
+      "usage": "| as delimiter sep list |",
+      "contexthelp": "as delimiter sep list",
+      "name": "asDelimiterSepList",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "as array",
+      "usage": "| as array |",
+      "contexthelp": "as array",
+      "name": "asArray",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "reset",
+      "usage": "| reset |",
+      "contexthelp": "reset",
+      "name": "reset",
+      "docString": "",
+      "annotations": [
+        "Override"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "translate from table",
+      "usage": "| translate from table | [translationTableWithHeader] | ",
+      "contexthelp": "translate from table \u0026lt;translationTableWithHeader\u0026gt;",
+      "name": "translateFromTable",
+      "docString": "Adds new key/value pairs to currentRowValues based on table supplied. If value in first column is present,\n and there is no value for key of second column, the value in second column is added, and vice versa.\n The first row describes the key for each column\u0027s values.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "translationTableWithHeader",
+          "description": "table describing equivalent key/value pairs.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "translate from table",
+      "usage": "| translate from | [rowValues] | table | [translationTableWithHeader] | ",
+      "contexthelp": "translate from \u0026lt;rowValues\u0026gt; table \u0026lt;translationTableWithHeader\u0026gt;",
+      "name": "translateFromTable",
+      "docString": "Adds new key/value pairs to rowValues based on table supplied. If value in first column is present,\n and there is no value for key of second column, the value in second column is added, and vice versa.\n The first row describes the key for each column\u0027s values.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "rowValues",
+          "description": "row to add values to.",
+          "type": "Map"
+        },
+        {
+          "name": "translationTableWithHeader",
+          "description": "table describing equivalent key/value pairs.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "accept alternative input values from table",
+      "usage": "| accept alternative input values from table | [leftAcceptedForRight] | ",
+      "contexthelp": "accept alternative input values from table \u0026lt;leftAcceptedForRight\u0026gt;",
+      "name": "acceptAlternativeInputValuesFromTable",
+      "docString": "Replaces values found in the currentRowValues based on the supplied table.\n Cell 0,1 defines the key to work with.\n Other rows define a replacement value: if value in first column is found\n it is replaced with the one from the second.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "leftAcceptedForRight",
+          "description": "table describing replacements.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "accept alternative input values from table",
+      "usage": "| accept alternative input values from | [rowValues] | table | [leftAcceptedForRight] | ",
+      "contexthelp": "accept alternative input values from \u0026lt;rowValues\u0026gt; table \u0026lt;leftAcceptedForRight\u0026gt;",
+      "name": "acceptAlternativeInputValuesFromTable",
+      "docString": "Replaces values found in the rowValues based on the supplied table.\n Cell 0,1 defines the key to work with.\n Other rows define a replacement value: if value in first column is found\n it is replaced with the one from the second.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "rowValues",
+          "description": "values to replace in.",
+          "type": "Map"
+        },
+        {
+          "name": "leftAcceptedForRight",
+          "description": "table describing replacements.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get",
+      "usage": "| get | [columnName] | ",
+      "contexthelp": "get \u0026lt;columnName\u0026gt;",
+      "name": "get",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "value for specified column.",
+      "parameters": [
+        {
+          "name": "columnName",
+          "description": "column to get current row\u0027s value of",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "get nested",
+      "usage": "| get nested | [columnName] | ",
+      "contexthelp": "get nested \u0026lt;columnName\u0026gt;",
+      "name": "getNested",
+      "docString": "",
+      "annotations": [
+        "SuppressWarnings"
+      ],
+      "returnDescription": "value for specified column.",
+      "parameters": [
+        {
+          "name": "columnName",
+          "description": "column to get current row\u0027s value of",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Map"
+    },
+    {
+      "readableName": "get array seperator",
+      "usage": "| get array seperator |",
+      "contexthelp": "get array seperator",
+      "name": "getArraySeperator",
+      "docString": "Fetch the array separator, which has a default value if not configured.",
+      "annotations": [],
+      "returnDescription": "the array seperator",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "get current row values",
+      "usage": "| get current row values |",
+      "contexthelp": "get current row values",
+      "name": "getCurrentRowValues",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "the currentRowValues",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Map"
+    },
+    {
+      "readableName": "execute",
+      "usage": "| execute |",
+      "contexthelp": "execute",
+      "name": "execute",
+      "docString": "",
+      "annotations": [
+        "Override"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "time stamp",
+      "usage": "| time stamp |",
+      "contexthelp": "time stamp",
+      "name": "timeStamp",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "current time, can be useful to trace a row\u0027s execution to log files of the system under test.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "wrong",
+      "usage": "| wrong | cell, actual,  |",
+      "contexthelp": "wrong  cell, actual,",
+      "name": "wrong",
+      "docString": "",
+      "annotations": [
+        "Override"
+      ],
+      "parameters": [
+        {
+          "name": "cell",
+          "type": "Parse"
+        },
+        {
+          "name": "actual",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "do rows",
+      "usage": "| do rows | [arg0] | ",
+      "contexthelp": "do rows \u0026lt;arg0\u0026gt;",
+      "name": "doRows",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Parse"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "do row",
+      "usage": "| do row | [arg0] | ",
+      "contexthelp": "do row \u0026lt;arg0\u0026gt;",
+      "name": "doRow",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Parse"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "do cell",
+      "usage": "| do | [arg0] | cell | [arg1] | ",
+      "contexthelp": "do \u0026lt;arg0\u0026gt; cell \u0026lt;arg1\u0026gt;",
+      "name": "doCell",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Parse"
+        },
+        {
+          "name": "arg1",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "check",
+      "usage": "| check | arg0, arg1,  |",
+      "contexthelp": "check  arg0, arg1,",
+      "name": "check",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Parse"
+        },
+        {
+          "name": "arg1",
+          "type": "TypeAdapter"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "reset",
+      "usage": "| reset |",
+      "contexthelp": "reset",
+      "name": "reset",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [
+        "Exception"
+      ],
+      "returnType": "void"
+    },
+    {
+      "readableName": "execute",
+      "usage": "| execute |",
+      "contexthelp": "execute",
+      "name": "execute",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [
+        "Exception"
+      ],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set forced abort",
+      "usage": "| set forced abort | [arg0] | ",
+      "contexthelp": "set forced abort \u0026lt;arg0\u0026gt;",
+      "name": "setForcedAbort",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "boolean"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "do tables",
+      "usage": "| do tables | [arg0] | ",
+      "contexthelp": "do tables \u0026lt;arg0\u0026gt;",
+      "name": "doTables",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Parse"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "clear symbols",
+      "usage": "| clear symbols |",
+      "contexthelp": "clear symbols",
+      "name": "ClearSymbols",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "load fixture",
+      "usage": "| load fixture | [arg0] | ",
+      "contexthelp": "load fixture \u0026lt;arg0\u0026gt;",
+      "name": "loadFixture",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "String"
+        }
+      ],
+      "exceptions": [
+        "Throwable"
+      ],
+      "returnType": "Fixture"
+    },
+    {
+      "readableName": "get args for table",
+      "usage": "| get args for table | [arg0] | ",
+      "contexthelp": "get args for table \u0026lt;arg0\u0026gt;",
+      "name": "getArgsForTable",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Parse"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "do table",
+      "usage": "| do table | [arg0] | ",
+      "contexthelp": "do table \u0026lt;arg0\u0026gt;",
+      "name": "doTable",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Parse"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "do rows",
+      "usage": "| do rows | [arg0] | ",
+      "contexthelp": "do rows \u0026lt;arg0\u0026gt;",
+      "name": "doRows",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Parse"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "do row",
+      "usage": "| do row | [arg0] | ",
+      "contexthelp": "do row \u0026lt;arg0\u0026gt;",
+      "name": "doRow",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Parse"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "do cells",
+      "usage": "| do cells | [arg0] | ",
+      "contexthelp": "do cells \u0026lt;arg0\u0026gt;",
+      "name": "doCells",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Parse"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "do cell",
+      "usage": "| do | [arg0] | cell | [arg1] | ",
+      "contexthelp": "do \u0026lt;arg0\u0026gt; cell \u0026lt;arg1\u0026gt;",
+      "name": "doCell",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Parse"
+        },
+        {
+          "name": "arg1",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "right",
+      "usage": "| right | [arg0] | ",
+      "contexthelp": "right \u0026lt;arg0\u0026gt;",
+      "name": "right",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Parse"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "wrong",
+      "usage": "| wrong | [arg0] | ",
+      "contexthelp": "wrong \u0026lt;arg0\u0026gt;",
+      "name": "wrong",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Parse"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "wrong",
+      "usage": "| wrong | arg0, arg1,  |",
+      "contexthelp": "wrong  arg0, arg1,",
+      "name": "wrong",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Parse"
+        },
+        {
+          "name": "arg1",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "ignore",
+      "usage": "| ignore | [arg0] | ",
+      "contexthelp": "ignore \u0026lt;arg0\u0026gt;",
+      "name": "ignore",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Parse"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "exception",
+      "usage": "| exception | arg0, arg1,  |",
+      "contexthelp": "exception  arg0, arg1,",
+      "name": "exception",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Parse"
+        },
+        {
+          "name": "arg1",
+          "type": "Throwable"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "is friendly exception",
+      "usage": "| is friendly exception | [arg0] | ",
+      "contexthelp": "is friendly exception \u0026lt;arg0\u0026gt;",
+      "name": "isFriendlyException",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Throwable"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "counts",
+      "usage": "| counts |",
+      "contexthelp": "counts",
+      "name": "counts",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "label",
+      "usage": "| label | [arg0] | ",
+      "contexthelp": "label \u0026lt;arg0\u0026gt;",
+      "name": "label",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "gray",
+      "usage": "| gray | [arg0] | ",
+      "contexthelp": "gray \u0026lt;arg0\u0026gt;",
+      "name": "gray",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "escape",
+      "usage": "| escape | [arg0] | ",
+      "contexthelp": "escape \u0026lt;arg0\u0026gt;",
+      "name": "escape",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "escape",
+      "usage": "| escape | arg0, arg1, arg2,  |",
+      "contexthelp": "escape  arg0, arg1, arg2,",
+      "name": "escape",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "String"
+        },
+        {
+          "name": "arg1",
+          "type": "char"
+        },
+        {
+          "name": "arg2",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "camel",
+      "usage": "| camel | [arg0] | ",
+      "contexthelp": "camel \u0026lt;arg0\u0026gt;",
+      "name": "camel",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "parse",
+      "usage": "| parse | arg0, arg1,  |",
+      "contexthelp": "parse  arg0, arg1,",
+      "name": "parse",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "String"
+        },
+        {
+          "name": "arg1",
+          "type": "Class"
+        }
+      ],
+      "exceptions": [
+        "Exception"
+      ],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "check",
+      "usage": "| check | arg0, arg1,  |",
+      "contexthelp": "check  arg0, arg1,",
+      "name": "check",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Parse"
+        },
+        {
+          "name": "arg1",
+          "type": "TypeAdapter"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "handle blank cell",
+      "usage": "| handle blank | [arg0] | cell | [arg1] | ",
+      "contexthelp": "handle blank \u0026lt;arg0\u0026gt; cell \u0026lt;arg1\u0026gt;",
+      "name": "handleBlankCell",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Parse"
+        },
+        {
+          "name": "arg1",
+          "type": "TypeAdapter"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get args",
+      "usage": "| get args |",
+      "contexthelp": "get args",
+      "name": "getArgs",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "set symbol",
+      "usage": "| set | [arg0] | symbol | [arg1] | ",
+      "contexthelp": "set \u0026lt;arg0\u0026gt; symbol \u0026lt;arg1\u0026gt;",
+      "name": "setSymbol",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "String"
+        },
+        {
+          "name": "arg1",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get symbol",
+      "usage": "| get symbol | [arg0] | ",
+      "contexthelp": "get symbol \u0026lt;arg0\u0026gt;",
+      "name": "getSymbol",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "has symbol",
+      "usage": "| has symbol | [arg0] | ",
+      "contexthelp": "has symbol \u0026lt;arg0\u0026gt;",
+      "name": "hasSymbol",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "has parse method",
+      "usage": "| has parse method | [arg0] | ",
+      "contexthelp": "has parse method \u0026lt;arg0\u0026gt;",
+      "name": "hasParseMethod",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Class"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "call parse method",
+      "usage": "| call parse | [arg0] | method | [arg1] | ",
+      "contexthelp": "call parse \u0026lt;arg0\u0026gt; method \u0026lt;arg1\u0026gt;",
+      "name": "callParseMethod",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Class"
+        },
+        {
+          "name": "arg1",
+          "type": "String"
+        }
+      ],
+      "exceptions": [
+        "Exception"
+      ],
+      "returnType": "Object"
+    }
+  ],
+  "typeName": "CompareValuesFixture",
+  "name": "CompareValuesFixture",
+  "annotations": []
+}

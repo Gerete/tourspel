@@ -1,0 +1,6 @@
+Get JSON for locale ${code}, and check that key's value are indeed correctly translated.
+
+|script  |json http test      |
+|get from|$url/${code}        |
+|check   |json path|dog|${dog}|
+|check   |json path|cat|${cat}|

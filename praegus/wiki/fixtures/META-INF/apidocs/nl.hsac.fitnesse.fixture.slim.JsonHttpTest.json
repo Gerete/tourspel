@@ -1,0 +1,1706 @@
+{
+  "constructors": [
+    {
+      "readableName": "json http test",
+      "usage": "| json http test |",
+      "name": "JsonHttpTest",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.JsonHttpTest",
+  "publicMethods": [
+    {
+      "readableName": "post values as json to",
+      "usage": "| post values as json to | [serviceUrl] | ",
+      "contexthelp": "post values as json to \u0026lt;serviceUrl\u0026gt;",
+      "name": "postValuesAsJsonTo",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "serviceUrl",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "put values as json to",
+      "usage": "| put values as json to | [serviceUrl] | ",
+      "contexthelp": "put values as json to \u0026lt;serviceUrl\u0026gt;",
+      "name": "putValuesAsJsonTo",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "serviceUrl",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "delete with values as json",
+      "usage": "| delete with values as json | [serviceUrl] | ",
+      "contexthelp": "delete with values as json \u0026lt;serviceUrl\u0026gt;",
+      "name": "deleteWithValuesAsJson",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "serviceUrl",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "json path",
+      "usage": "| json path | [path] | ",
+      "contexthelp": "json path \u0026lt;path\u0026gt;",
+      "name": "jsonPath",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "path",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "create file from base 64 content of",
+      "usage": "| create file from base 64 content | [baseName] | of | [jsonPath] | ",
+      "contexthelp": "create file from base 64 content \u0026lt;baseName\u0026gt; of \u0026lt;jsonPath\u0026gt;",
+      "name": "createFileFromBase64ContentOf",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "link to created file.",
+      "parameters": [
+        {
+          "name": "baseName",
+          "description": "base of filename to generate (a number might be added to the name to make it unique).",
+          "type": "String"
+        },
+        {
+          "name": "jsonPath",
+          "description": "expression to evaluate.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "element of json path",
+      "usage": "| element of json | [index] | path | [path] | ",
+      "contexthelp": "element of json \u0026lt;index\u0026gt; path \u0026lt;path\u0026gt;",
+      "name": "elementOfJsonPath",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "index",
+          "type": "int"
+        },
+        {
+          "name": "path",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "json path count",
+      "usage": "| json path count | [path] | ",
+      "contexthelp": "json path count \u0026lt;path\u0026gt;",
+      "name": "jsonPathCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "path",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "list json path matches",
+      "usage": "| list json path matches | [path] | ",
+      "contexthelp": "list json path matches \u0026lt;path\u0026gt;",
+      "name": "listJsonPathMatches",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "path",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "all json path matches",
+      "usage": "| all json path matches | [expr] | ",
+      "contexthelp": "all json path matches \u0026lt;expr\u0026gt;",
+      "name": "allJsonPathMatches",
+      "docString": "Gets a HTML list with all matches to the supplied JsonPath.",
+      "annotations": [],
+      "returnDescription": "list containing all results of expression evaluation against last response received, null if there were no matches.",
+      "parameters": [
+        {
+          "name": "expr",
+          "description": "expression to evaluate.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "set json path to",
+      "usage": "| set json path | [path] | to | [value] | ",
+      "contexthelp": "set json path \u0026lt;path\u0026gt; to \u0026lt;value\u0026gt;",
+      "name": "setJsonPathTo",
+      "docString": "Update a value in a the response by supplied jsonPath",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "path",
+          "description": "the jsonPath to locate the key whose value needs changing",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "the new value to set",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat until json path is",
+      "usage": "| repeat until json path | [jsonPath] | is | [expectedValue] | ",
+      "contexthelp": "repeat until json path \u0026lt;jsonPath\u0026gt; is \u0026lt;expectedValue\u0026gt;",
+      "name": "repeatUntilJsonPathIs",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "jsonPath",
+          "type": "String"
+        },
+        {
+          "name": "expectedValue",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "json path exists",
+      "usage": "| json path exists | [path] | ",
+      "contexthelp": "json path exists \u0026lt;path\u0026gt;",
+      "name": "jsonPathExists",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "path",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set throw exception on http request failure",
+      "usage": "| set throw exception on http request failure | [throwException] | ",
+      "contexthelp": "set throw exception on http request failure \u0026lt;throwException\u0026gt;",
+      "name": "setThrowExceptionOnHttpRequestFailure",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "throwException",
+          "type": "boolean"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get throw exception on http request failure",
+      "usage": "| get throw exception on http request failure |",
+      "contexthelp": "get throw exception on http request failure",
+      "name": "getThrowExceptionOnHttpRequestFailure",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "template",
+      "usage": "| template | [aTemplate] | ",
+      "contexthelp": "template \u0026lt;aTemplate\u0026gt;",
+      "name": "template",
+      "docString": "Sets template to use.",
+      "annotations": [],
+      "returnDescription": "true if template could be found.",
+      "parameters": [
+        {
+          "name": "aTemplate",
+          "description": "name of template file (relative to \u0027templates\u0027 directory on classpath)",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "enable compression",
+      "usage": "| enable compression |",
+      "contexthelp": "enable compression",
+      "name": "enableCompression",
+      "docString": "Enables content compression support in the current environment (i.e. for the entire test run)\r\n\u003cb\u003eDeprecated:\u003c/b\u003e use {@link HttpClientSetup} to configure http client",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "disable compression",
+      "usage": "| disable compression |",
+      "contexthelp": "disable compression",
+      "name": "disableCompression",
+      "docString": "Disables content compression support in the current environment (i.e. for the entire test run)\r\n\u003cb\u003eDeprecated:\u003c/b\u003e use {@link HttpClientSetup} to configure http client",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "disable ssl verification",
+      "usage": "| disable ssl verification |",
+      "contexthelp": "disable ssl verification",
+      "name": "disableSSLVerification",
+      "docString": "Disables SSL certificate verification in the current environment (i.e. for the entire test run)\r\n\u003cb\u003eDeprecated:\u003c/b\u003e use {@link HttpClientSetup} to configure http client",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "enable ssl verification",
+      "usage": "| enable ssl verification |",
+      "contexthelp": "enable ssl verification",
+      "name": "enableSSLVerification",
+      "docString": "Enables SSL certificate verification in the current environment (i.e. for the entire test run)\r\n\u003cb\u003eDeprecated:\u003c/b\u003e use {@link HttpClientSetup} to configure http client",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set value for header",
+      "usage": "| set value for | [value] | header | [name] | ",
+      "contexthelp": "set value for \u0026lt;value\u0026gt; header \u0026lt;name\u0026gt;",
+      "name": "setValueForHeader",
+      "docString": "Stores value to be passed as headers.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "Object"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "clear header value",
+      "usage": "| clear header value | [name] | ",
+      "contexthelp": "clear header value \u0026lt;name\u0026gt;",
+      "name": "clearHeaderValue",
+      "docString": "Clears a header value previously set.",
+      "annotations": [],
+      "returnDescription": "true if value was present.",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "value to remove.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "clear header values",
+      "usage": "| clear header values |",
+      "contexthelp": "clear header values",
+      "name": "clearHeaderValues",
+      "docString": "Clears all header values previously set.",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "copy header values from",
+      "usage": "| copy header values from | [map] | ",
+      "contexthelp": "copy header values from \u0026lt;map\u0026gt;",
+      "name": "copyHeaderValuesFrom",
+      "docString": "Adds all values in the supplied map to the current header values.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "map",
+          "description": "to obtain values from.",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "reset",
+      "usage": "| reset |",
+      "contexthelp": "reset",
+      "name": "reset",
+      "docString": "Called before next row is executed. (Clears all current and header values.)",
+      "annotations": [
+        "Override"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set",
+      "usage": "| set | key, value,  |",
+      "contexthelp": "set  key, value,",
+      "name": "set",
+      "docString": "Sets a value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "key",
+          "description": "(possibly nested) key to set value for.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to be stored.",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "post template to",
+      "usage": "| post template to | [serviceUrl] | ",
+      "contexthelp": "post template to \u0026lt;serviceUrl\u0026gt;",
+      "name": "postTemplateTo",
+      "docString": "Sends HTTP POST template with current values to service endpoint.",
+      "annotations": [],
+      "returnDescription": "true if call could be made and response did not indicate error.",
+      "parameters": [
+        {
+          "name": "serviceUrl",
+          "description": "service endpoint to send request to.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "post template to",
+      "usage": "| post template | [serviceUrl] | to | [aContentType] | ",
+      "contexthelp": "post template \u0026lt;serviceUrl\u0026gt; to \u0026lt;aContentType\u0026gt;",
+      "name": "postTemplateTo",
+      "docString": "Sends HTTP POST template with current values to service endpoint.",
+      "annotations": [],
+      "returnDescription": "true if call could be made and response did not indicate error.",
+      "parameters": [
+        {
+          "name": "serviceUrl",
+          "description": "service endpoint to send request to.",
+          "type": "String"
+        },
+        {
+          "name": "aContentType",
+          "description": "content type to use for post.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "post to",
+      "usage": "| post | [body] | to | [serviceUrl] | ",
+      "contexthelp": "post \u0026lt;body\u0026gt; to \u0026lt;serviceUrl\u0026gt;",
+      "name": "postTo",
+      "docString": "Sends HTTP POST body to service endpoint.",
+      "annotations": [],
+      "returnDescription": "true if call could be made and response did not indicate error.",
+      "parameters": [
+        {
+          "name": "body",
+          "description": "content to post",
+          "type": "String"
+        },
+        {
+          "name": "serviceUrl",
+          "description": "service endpoint to send body to.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "delete with",
+      "usage": "| delete | [serviceUrl] | with | [body] | ",
+      "contexthelp": "delete \u0026lt;serviceUrl\u0026gt; with \u0026lt;body\u0026gt;",
+      "name": "deleteWith",
+      "docString": "Sends HTTP DELETE body to service endpoint.",
+      "annotations": [],
+      "returnDescription": "true if call could be made and response did not indicate error.",
+      "parameters": [
+        {
+          "name": "serviceUrl",
+          "description": "service endpoint to send body to.",
+          "type": "String"
+        },
+        {
+          "name": "body",
+          "description": "content to delete",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "post file to",
+      "usage": "| post file | [fileName] | to | [serviceUrl] | ",
+      "contexthelp": "post file \u0026lt;fileName\u0026gt; to \u0026lt;serviceUrl\u0026gt;",
+      "name": "postFileTo",
+      "docString": "Sends a file by HTTP POST body to service endpoint.",
+      "annotations": [],
+      "returnDescription": "true if call could be made and response did not indicate error.",
+      "parameters": [
+        {
+          "name": "fileName",
+          "description": "fileName to post",
+          "type": "String"
+        },
+        {
+          "name": "serviceUrl",
+          "description": "service endpoint to send body to.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "post values to",
+      "usage": "| post values to | [serviceUrl] | ",
+      "contexthelp": "post values to \u0026lt;serviceUrl\u0026gt;",
+      "name": "postValuesTo",
+      "docString": "Sends all values (url encoded) using post.",
+      "annotations": [],
+      "returnDescription": "true if call could be made and response did not indicate error.",
+      "parameters": [
+        {
+          "name": "serviceUrl",
+          "description": "service endpoint to send values to.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "put template to",
+      "usage": "| put template to | [serviceUrl] | ",
+      "contexthelp": "put template to \u0026lt;serviceUrl\u0026gt;",
+      "name": "putTemplateTo",
+      "docString": "Sends HTTP PUT template with current values to service endpoint.",
+      "annotations": [],
+      "returnDescription": "true if call could be made and response did not indicate error.",
+      "parameters": [
+        {
+          "name": "serviceUrl",
+          "description": "service endpoint to send request to.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "delete with template",
+      "usage": "| delete with template | [serviceUrl] | ",
+      "contexthelp": "delete with template \u0026lt;serviceUrl\u0026gt;",
+      "name": "deleteWithTemplate",
+      "docString": "Sends HTTP DELETE template with current values to service endpoint.",
+      "annotations": [],
+      "returnDescription": "true if call could be made and response did not indicate error.",
+      "parameters": [
+        {
+          "name": "serviceUrl",
+          "description": "service endpoint to send request to.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "patch with template",
+      "usage": "| patch with template | [serviceUrl] | ",
+      "contexthelp": "patch with template \u0026lt;serviceUrl\u0026gt;",
+      "name": "patchWithTemplate",
+      "docString": "Sends HTTP PATCH template with current values to service endpoint.",
+      "annotations": [],
+      "returnDescription": "true if call could be made and response did not indicate error.",
+      "parameters": [
+        {
+          "name": "serviceUrl",
+          "description": "service endpoint to send request to.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "send template to",
+      "usage": "| send | [serviceUrl] | template | [aContentType] | to | [method] | ",
+      "contexthelp": "send \u0026lt;serviceUrl\u0026gt; template \u0026lt;aContentType\u0026gt; to \u0026lt;method\u0026gt;",
+      "name": "sendTemplateTo",
+      "docString": "Sends HTTP method call template with current values to service endpoint.",
+      "annotations": [],
+      "returnDescription": "true if call could be made and response did not indicate error.",
+      "parameters": [
+        {
+          "name": "serviceUrl",
+          "description": "service endpoint to send request to.",
+          "type": "String"
+        },
+        {
+          "name": "aContentType",
+          "description": "content type to use for post.",
+          "type": "String"
+        },
+        {
+          "name": "method",
+          "description": "HTTP method to use",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "put to",
+      "usage": "| put | [body] | to | [serviceUrl] | ",
+      "contexthelp": "put \u0026lt;body\u0026gt; to \u0026lt;serviceUrl\u0026gt;",
+      "name": "putTo",
+      "docString": "Sends HTTP PUT body to service endpoint.",
+      "annotations": [],
+      "returnDescription": "true if call could be made and response did not indicate error.",
+      "parameters": [
+        {
+          "name": "body",
+          "description": "content to put",
+          "type": "String"
+        },
+        {
+          "name": "serviceUrl",
+          "description": "service endpoint to send body to.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "patch with",
+      "usage": "| patch | [serviceUrl] | with | [body] | ",
+      "contexthelp": "patch \u0026lt;serviceUrl\u0026gt; with \u0026lt;body\u0026gt;",
+      "name": "patchWith",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "serviceUrl",
+          "type": "String"
+        },
+        {
+          "name": "body",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "put values to",
+      "usage": "| put values to | [serviceUrl] | ",
+      "contexthelp": "put values to \u0026lt;serviceUrl\u0026gt;",
+      "name": "putValuesTo",
+      "docString": "Sends all values (url encoded) using put.",
+      "annotations": [],
+      "returnDescription": "true if call could be made and response did not indicate error.",
+      "parameters": [
+        {
+          "name": "serviceUrl",
+          "description": "service endpoint to send values to.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "put file to",
+      "usage": "| put file | [fileName] | to | [serviceUrl] | ",
+      "contexthelp": "put file \u0026lt;fileName\u0026gt; to \u0026lt;serviceUrl\u0026gt;",
+      "name": "putFileTo",
+      "docString": "Sends a file by HTTP PUT body to service endpoint.",
+      "annotations": [],
+      "returnDescription": "true if call could be made and response did not indicate error.",
+      "parameters": [
+        {
+          "name": "fileName",
+          "description": "fileName to post",
+          "type": "String"
+        },
+        {
+          "name": "serviceUrl",
+          "description": "service endpoint to send body to.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "get from",
+      "usage": "| get from | [serviceUrl] | ",
+      "contexthelp": "get from \u0026lt;serviceUrl\u0026gt;",
+      "name": "getFrom",
+      "docString": "Sends HTTP GET to service endpoint to retrieve content.",
+      "annotations": [],
+      "returnDescription": "true if call could be made and response did not indicate error.",
+      "parameters": [
+        {
+          "name": "serviceUrl",
+          "description": "service endpoint to get content from.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "get from no redirect",
+      "usage": "| get from no redirect | [serviceUrl] | ",
+      "contexthelp": "get from no redirect \u0026lt;serviceUrl\u0026gt;",
+      "name": "getFromNoRedirect",
+      "docString": "Sends HTTP GET to service endpoint to retrieve content, not following a redirect if sent.",
+      "annotations": [],
+      "returnDescription": "true if call could be made and response did not indicate error.",
+      "parameters": [
+        {
+          "name": "serviceUrl",
+          "description": "service endpoint to get content from.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "get file from",
+      "usage": "| get file from | [serviceUrl] | ",
+      "contexthelp": "get file from \u0026lt;serviceUrl\u0026gt;",
+      "name": "getFileFrom",
+      "docString": "Downloads binary content from specified url.",
+      "annotations": [],
+      "returnDescription": "link to downloaded file",
+      "parameters": [
+        {
+          "name": "serviceUrl",
+          "description": "url to download from",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "head from",
+      "usage": "| head from | [serviceUrl] | ",
+      "contexthelp": "head from \u0026lt;serviceUrl\u0026gt;",
+      "name": "headFrom",
+      "docString": "Sends HTTP HEAD to service endpoint.",
+      "annotations": [],
+      "returnDescription": "true if call could be made and response did not indicate error.",
+      "parameters": [
+        {
+          "name": "serviceUrl",
+          "description": "service endpoint to delete.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "delete",
+      "usage": "| delete | [serviceUrl] | ",
+      "contexthelp": "delete \u0026lt;serviceUrl\u0026gt;",
+      "name": "delete",
+      "docString": "Sends HTTP DELETE to service endpoint.",
+      "annotations": [],
+      "returnDescription": "true if call could be made and response did not indicate error.",
+      "parameters": [
+        {
+          "name": "serviceUrl",
+          "description": "service endpoint to delete.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "response is valid",
+      "usage": "| response is valid |",
+      "contexthelp": "response is valid",
+      "name": "responseIsValid",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "true if response does not indicate an error.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "request",
+      "usage": "| request |",
+      "contexthelp": "request",
+      "name": "request",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "request sent last time.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "response",
+      "usage": "| response |",
+      "contexthelp": "response",
+      "name": "response",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "response received last time postTo(), delete() or getFrom() was called.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "html response",
+      "usage": "| html response |",
+      "contexthelp": "html response",
+      "name": "htmlResponse",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "HTML response received last time postTo() or get() was called.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "response time",
+      "usage": "| response time |",
+      "contexthelp": "response time",
+      "name": "responseTime",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "response time in ms for call to service.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "response status",
+      "usage": "| response status |",
+      "contexthelp": "response status",
+      "name": "responseStatus",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "http status received in response to last request.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "response headers",
+      "usage": "| response headers |",
+      "contexthelp": "response headers",
+      "name": "responseHeaders",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "headers received with response to last request.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Map"
+    },
+    {
+      "readableName": "response header",
+      "usage": "| response header | [headerName] | ",
+      "contexthelp": "response header \u0026lt;headerName\u0026gt;",
+      "name": "responseHeader",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "value of header in last response (may be a list if the saame header name was sent multiple times\n (e.g. Set-Cookie).",
+      "parameters": [
+        {
+          "name": "headerName",
+          "description": "name of response header.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "set store cookies",
+      "usage": "| set store cookies | [storeCookies] | ",
+      "contexthelp": "set store cookies \u0026lt;storeCookies\u0026gt;",
+      "name": "setStoreCookies",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "storeCookies",
+          "type": "boolean"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "copy browser cookies",
+      "usage": "| copy browser cookies |",
+      "contexthelp": "copy browser cookies",
+      "name": "copyBrowserCookies",
+      "docString": "Adds all current Selenium cookies to this fixture\u0027s cookie store.\n This will also ensure this class will store cookies (otherwise copying the cookies has no purpose).",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "cookie values",
+      "usage": "| cookie values |",
+      "contexthelp": "cookie values",
+      "name": "cookieValues",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "name-\u003evalue of cookies in the cookie store.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Map"
+    },
+    {
+      "readableName": "cookie value",
+      "usage": "| cookie value | [cookieName] | ",
+      "contexthelp": "cookie value \u0026lt;cookieName\u0026gt;",
+      "name": "cookieValue",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "value of cookie in the cookie store.",
+      "parameters": [
+        {
+          "name": "cookieName",
+          "description": "name of cookie.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "cookie domain",
+      "usage": "| cookie domain | [cookieName] | ",
+      "contexthelp": "cookie domain \u0026lt;cookieName\u0026gt;",
+      "name": "cookieDomain",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "domain of cookie in the cookie store.",
+      "parameters": [
+        {
+          "name": "cookieName",
+          "description": "name of cookie.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "cookie path",
+      "usage": "| cookie path | [cookieName] | ",
+      "contexthelp": "cookie path \u0026lt;cookieName\u0026gt;",
+      "name": "cookiePath",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "path of cookie in the cookie store.",
+      "parameters": [
+        {
+          "name": "cookieName",
+          "description": "name of cookie.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "cookie is persistent",
+      "usage": "| cookie is persistent | [cookieName] | ",
+      "contexthelp": "cookie is persistent \u0026lt;cookieName\u0026gt;",
+      "name": "cookieIsPersistent",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "whether cookie in the cookie store is persistent.",
+      "parameters": [
+        {
+          "name": "cookieName",
+          "description": "name of cookie.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Boolean"
+    },
+    {
+      "readableName": "cookie is secure",
+      "usage": "| cookie is secure | [cookieName] | ",
+      "contexthelp": "cookie is secure \u0026lt;cookieName\u0026gt;",
+      "name": "cookieIsSecure",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "whether cookie in the cookie store requires a secure connection.",
+      "parameters": [
+        {
+          "name": "cookieName",
+          "description": "name of cookie.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Boolean"
+    },
+    {
+      "readableName": "cookie is http only",
+      "usage": "| cookie is http only | [cookieName] | ",
+      "contexthelp": "cookie is http only \u0026lt;cookieName\u0026gt;",
+      "name": "cookieIsHttpOnly",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "whether cookie in the cookie store is http-only (not accessible to Javascript).",
+      "parameters": [
+        {
+          "name": "cookieName",
+          "description": "name of cookie.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Boolean"
+    },
+    {
+      "readableName": "cookie attribute",
+      "usage": "| cookie | [cookieName] | attribute | [attributeName] | ",
+      "contexthelp": "cookie \u0026lt;cookieName\u0026gt; attribute \u0026lt;attributeName\u0026gt;",
+      "name": "cookieAttribute",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "value of attribute for cookie.",
+      "parameters": [
+        {
+          "name": "cookieName",
+          "description": "name of cookie.",
+          "type": "String"
+        },
+        {
+          "name": "attributeName",
+          "description": "name of attribute.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "clear cookies",
+      "usage": "| clear cookies |",
+      "contexthelp": "clear cookies",
+      "name": "clearCookies",
+      "docString": "Removes all cookies from the cookie store.",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get content type",
+      "usage": "| get content type |",
+      "contexthelp": "get content type",
+      "name": "getContentType",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "set content type",
+      "usage": "| set content type | [aContentType] | ",
+      "contexthelp": "set content type \u0026lt;aContentType\u0026gt;",
+      "name": "setContentType",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aContentType",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set basic authorization header for user and password",
+      "usage": "| set basic authorization header for user and | [user] | password | [password] | ",
+      "contexthelp": "set basic authorization header for user and \u0026lt;user\u0026gt; password \u0026lt;password\u0026gt;",
+      "name": "setBasicAuthorizationHeaderForUserAndPassword",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "user",
+          "type": "String"
+        },
+        {
+          "name": "password",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "is explicit content type set",
+      "usage": "| is explicit content type set |",
+      "contexthelp": "is explicit content type set",
+      "name": "isExplicitContentTypeSet",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set stop test on exception",
+      "usage": "| set stop test on exception | [stopTestOnException] | ",
+      "contexthelp": "set stop test on exception \u0026lt;stopTestOnException\u0026gt;",
+      "name": "setStopTestOnException",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "stopTestOnException",
+          "type": "boolean"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "stop test on exception",
+      "usage": "| stop test on exception |",
+      "contexthelp": "stop test on exception",
+      "name": "stopTestOnException",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "repeat until response status is",
+      "usage": "| repeat until response status is | [expectedStatus] | ",
+      "contexthelp": "repeat until response status is \u0026lt;expectedStatus\u0026gt;",
+      "name": "repeatUntilResponseStatusIs",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "expectedStatus",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "repeat until response is",
+      "usage": "| repeat until response is | [expectedResponse] | ",
+      "contexthelp": "repeat until response is \u0026lt;expectedResponse\u0026gt;",
+      "name": "repeatUntilResponseIs",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "expectedResponse",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "repeat until header is",
+      "usage": "| repeat until header | [header] | is | [expectedValue] | ",
+      "contexthelp": "repeat until header \u0026lt;header\u0026gt; is \u0026lt;expectedValue\u0026gt;",
+      "name": "repeatUntilHeaderIs",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "header",
+          "type": "String"
+        },
+        {
+          "name": "expectedValue",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set int value for",
+      "usage": "| set int value | [value] | for | [name] | ",
+      "contexthelp": "set int value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setIntValueFor",
+      "docString": "Stores integer value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "int"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set double value for",
+      "usage": "| set double value | [value] | for | [name] | ",
+      "contexthelp": "set double value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setDoubleValueFor",
+      "docString": "Stores double value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "double"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set boolean value for",
+      "usage": "| set boolean value | [value] | for | [name] | ",
+      "contexthelp": "set boolean value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setBooleanValueFor",
+      "docString": "Stores boolean value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "boolean"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set value for",
+      "usage": "| set value | [value] | for | [name] | ",
+      "contexthelp": "set value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setValueFor",
+      "docString": "Stores value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be stored.",
+          "type": "Object"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "add value to",
+      "usage": "| add value | [value] | to | [name] | ",
+      "contexthelp": "add value \u0026lt;value\u0026gt; to \u0026lt;name\u0026gt;",
+      "name": "addValueTo",
+      "docString": "Adds value to (end of) a list.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be stored.",
+          "type": "Object"
+        },
+        {
+          "name": "name",
+          "description": "name of list to extend.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "copy values from",
+      "usage": "| copy values from | [map] | ",
+      "contexthelp": "copy values from \u0026lt;map\u0026gt;",
+      "name": "copyValuesFrom",
+      "docString": "Adds all values in the supplied map to the current values.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "map",
+          "description": "to obtain values from.",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set values for",
+      "usage": "| set values | [values] | for | [name] | ",
+      "contexthelp": "set values \u0026lt;values\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setValuesFor",
+      "docString": "Stores list of values in map.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "values",
+          "description": "comma separated list of values.",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "description": "name to use this list for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set content of as value for",
+      "usage": "| set content of as value | [file] | for | [key] | ",
+      "contexthelp": "set content of as value \u0026lt;file\u0026gt; for \u0026lt;key\u0026gt;",
+      "name": "setContentOfAsValueFor",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "file",
+          "description": "file\u0027s whose content should be set as byte[]",
+          "type": "String"
+        },
+        {
+          "name": "key",
+          "description": "key whose value should be set.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set base 64 encoded content of as value for",
+      "usage": "| set base 64 encoded content of as value | [file] | for | [key] | ",
+      "contexthelp": "set base 64 encoded content of as value \u0026lt;file\u0026gt; for \u0026lt;key\u0026gt;",
+      "name": "setBase64EncodedContentOfAsValueFor",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "file",
+          "description": "file\u0027s whose content should be base64 encoded",
+          "type": "String"
+        },
+        {
+          "name": "key",
+          "description": "key whose value should be set.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "clear value",
+      "usage": "| clear value | [name] | ",
+      "contexthelp": "clear value \u0026lt;name\u0026gt;",
+      "name": "clearValue",
+      "docString": "Clears a values previously set.",
+      "annotations": [],
+      "returnDescription": "true if value was present.",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "value to remove.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "clear values",
+      "usage": "| clear values |",
+      "contexthelp": "clear values",
+      "name": "clearValues",
+      "docString": "Clears all values previously set.",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "value",
+      "usage": "| value | [name] | ",
+      "contexthelp": "value \u0026lt;name\u0026gt;",
+      "name": "value",
+      "docString": "Retrieves value of element at a specified key.",
+      "annotations": [],
+      "returnDescription": "value stored.",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "key to get value of (nested values may be retrieved by separating the keys with \u0027.\u0027).",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "reset",
+      "usage": "| reset |",
+      "contexthelp": "reset",
+      "name": "reset",
+      "docString": "Called before next row is executed. (Clears all current values.)",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set",
+      "usage": "| set | key, value,  |",
+      "contexthelp": "set  key, value,",
+      "name": "set",
+      "docString": "Sets a value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "key",
+          "description": "(possibly nested) key to set value for.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to be stored.",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "expand periods in names to nested maps",
+      "usage": "| expand periods in names to nested maps | [expand] | ",
+      "contexthelp": "expand periods in names to nested maps \u0026lt;expand\u0026gt;",
+      "name": "expandPeriodsInNamesToNestedMaps",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "expand",
+          "type": "boolean"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "expands periods in names to nested maps",
+      "usage": "| expands periods in names to nested maps |",
+      "contexthelp": "expands periods in names to nested maps",
+      "name": "expandsPeriodsInNamesToNestedMaps",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "get map helper",
+      "usage": "| get map helper |",
+      "contexthelp": "get map helper",
+      "name": "getMapHelper",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "helper to assist getting/setting (nested) values in a map.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "MapHelper"
+    },
+    {
+      "readableName": "set map helper",
+      "usage": "| set map helper | [mapHelper] | ",
+      "contexthelp": "set map helper \u0026lt;mapHelper\u0026gt;",
+      "name": "setMapHelper",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "mapHelper",
+          "description": "helper to assist getting/setting (nested) values in a map.",
+          "type": "MapHelper"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set global value to",
+      "usage": "| set global value | [symbolName] | to | [value] | ",
+      "contexthelp": "set global value \u0026lt;symbolName\u0026gt; to \u0026lt;value\u0026gt;",
+      "name": "setGlobalValueTo",
+      "docString": "Stores a (global) value so it can be accessed by other fixtures/pages.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name to store value under.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to store.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "global value",
+      "usage": "| global value | [symbolName] | ",
+      "contexthelp": "global value \u0026lt;symbolName\u0026gt;",
+      "name": "globalValue",
+      "docString": "Retrieves a (global) value, which was previously stored using #setGlobalValueTo().",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name value was stored under.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "wait seconds",
+      "usage": "| wait seconds | [i] | ",
+      "contexthelp": "wait seconds \u0026lt;i\u0026gt;",
+      "name": "waitSeconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait milliseconds",
+      "usage": "| wait milliseconds | [i] | ",
+      "contexthelp": "wait milliseconds \u0026lt;i\u0026gt;",
+      "name": "waitMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set repeat interval to milliseconds",
+      "usage": "| set repeat interval to milliseconds | [milliseconds] | ",
+      "contexthelp": "set repeat interval to milliseconds \u0026lt;milliseconds\u0026gt;",
+      "name": "setRepeatIntervalToMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "milliseconds",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat interval",
+      "usage": "| repeat interval |",
+      "contexthelp": "repeat interval",
+      "name": "repeatInterval",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times | [maxCount] | ",
+      "contexthelp": "repeat at most times \u0026lt;maxCount\u0026gt;",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "maxCount",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times |",
+      "contexthelp": "repeat at most times",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "repeat count",
+      "usage": "| repeat count |",
+      "contexthelp": "repeat count",
+      "name": "repeatCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "time spent repeating",
+      "usage": "| time spent repeating |",
+      "contexthelp": "time spent repeating",
+      "name": "timeSpentRepeating",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    }
+  ],
+  "typeName": "JsonHttpTest",
+  "name": "JsonHttpTest",
+  "annotations": []
+}

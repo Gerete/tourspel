@@ -1,0 +1,22 @@
+{
+  "constructors": [],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.HttpTest.RepeatLastCall",
+  "publicMethods": [
+    {
+      "readableName": "repeat",
+      "usage": "| repeat |",
+      "contexthelp": "repeat",
+      "name": "repeat",
+      "docString": "",
+      "annotations": [
+        "Override"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    }
+  ],
+  "typeName": "HttpTest.RepeatLastCall",
+  "name": "HttpTest.RepeatLastCall",
+  "annotations": []
+}

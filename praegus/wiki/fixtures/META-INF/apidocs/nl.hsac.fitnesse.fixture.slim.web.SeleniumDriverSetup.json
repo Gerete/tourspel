@@ -1,0 +1,522 @@
+{
+  "constructors": [
+    {
+      "readableName": "selenium driver setup",
+      "usage": "| selenium driver setup |",
+      "name": "SeleniumDriverSetup",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.web.SeleniumDriverSetup",
+  "publicMethods": [
+    {
+      "readableName": "set property value",
+      "usage": "| set property | [propName] | value | [value] | ",
+      "contexthelp": "set property \u0026lt;propName\u0026gt; value \u0026lt;value\u0026gt;",
+      "name": "setPropertyValue",
+      "docString": "Sets system property (needed by the WebDriver to be set up).",
+      "annotations": [],
+      "returnDescription": "true.",
+      "parameters": [
+        {
+          "name": "propName",
+          "description": "name of property to set.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to set.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "start driver",
+      "usage": "| start | [driverClassName] | driver | [profile] | ",
+      "contexthelp": "start \u0026lt;driverClassName\u0026gt; driver \u0026lt;profile\u0026gt;",
+      "name": "startDriver",
+      "docString": "Creates an instance of the specified class an injects it into SeleniumHelper, so other fixtures can use it.",
+      "annotations": [],
+      "returnDescription": "true if instance was created and injected into SeleniumHelper.",
+      "parameters": [
+        {
+          "name": "driverClassName",
+          "description": "name of Java class of WebDriver to use.",
+          "type": "String"
+        },
+        {
+          "name": "profile",
+          "description": "profile to use (for firefox, chrome mobile and IE only for now)",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [
+        "Exception"
+      ],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "start driver",
+      "usage": "| start driver | [driverClassName] | ",
+      "contexthelp": "start driver \u0026lt;driverClassName\u0026gt;",
+      "name": "startDriver",
+      "docString": "Creates an instance of the specified class an injects it into SeleniumHelper, so other fixtures can use it.",
+      "annotations": [],
+      "returnDescription": "true if instance was created and injected into SeleniumHelper.",
+      "parameters": [
+        {
+          "name": "driverClassName",
+          "description": "name of Java class of WebDriver to use.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [
+        "Exception"
+      ],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "start driver for with profile",
+      "usage": "| start driver for with | [browser] | profile | [profile] | ",
+      "contexthelp": "start driver for with \u0026lt;browser\u0026gt; profile \u0026lt;profile\u0026gt;",
+      "name": "startDriverForWithProfile",
+      "docString": "Starts a local instance of the selenium driver for the specified browser\n (using defaults to determine the correct class and configuration properties).\n and injects it into SeleniumHelper, so other fixtures can use it.",
+      "annotations": [],
+      "returnDescription": "true if instance was created and injected into SeleniumHelper.",
+      "parameters": [
+        {
+          "name": "browser",
+          "description": "name of browser to connect to.",
+          "type": "String"
+        },
+        {
+          "name": "profile",
+          "description": "setting of the browser (for firefox, chrome mobile and IE only for now)",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [
+        "Exception"
+      ],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "start driver for",
+      "usage": "| start driver for | [browser] | ",
+      "contexthelp": "start driver for \u0026lt;browser\u0026gt;",
+      "name": "startDriverFor",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "browser",
+          "type": "String"
+        }
+      ],
+      "exceptions": [
+        "Exception"
+      ],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "connect to driver for at",
+      "usage": "| connect to driver for | [browser] | at | [url] | ",
+      "contexthelp": "connect to driver for \u0026lt;browser\u0026gt; at \u0026lt;url\u0026gt;",
+      "name": "connectToDriverForAt",
+      "docString": "Connects SeleniumHelper to a remote web driver, without specifying browser version.",
+      "annotations": [],
+      "returnDescription": "true.",
+      "parameters": [
+        {
+          "name": "browser",
+          "description": "name of browser to connect to.",
+          "type": "String"
+        },
+        {
+          "name": "url",
+          "description": "url to connect to browser.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [
+        "MalformedURLException"
+      ],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "connect to driver for on at",
+      "usage": "| connect to driver for | [browser] | on | [platformName] | at | [url] | ",
+      "contexthelp": "connect to driver for \u0026lt;browser\u0026gt; on \u0026lt;platformName\u0026gt; at \u0026lt;url\u0026gt;",
+      "name": "connectToDriverForOnAt",
+      "docString": "Connects SeleniumHelper to a remote web driver, without specifying browser version.",
+      "annotations": [],
+      "returnDescription": "true.",
+      "parameters": [
+        {
+          "name": "browser",
+          "description": "name of browser to connect to.",
+          "type": "String"
+        },
+        {
+          "name": "platformName",
+          "description": "platform browser must run on.",
+          "type": "String"
+        },
+        {
+          "name": "url",
+          "description": "url to connect to browser.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [
+        "MalformedURLException"
+      ],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "connect to driver for version on at",
+      "usage": "| connect to driver for | [browser] | version | [version] | on | [platformName] | at | [url] | ",
+      "contexthelp": "connect to driver for \u0026lt;browser\u0026gt; version \u0026lt;version\u0026gt; on \u0026lt;platformName\u0026gt; at \u0026lt;url\u0026gt;",
+      "name": "connectToDriverForVersionOnAt",
+      "docString": "Connects SeleniumHelper to a remote web driver.",
+      "annotations": [],
+      "returnDescription": "true.",
+      "parameters": [
+        {
+          "name": "browser",
+          "description": "name of browser to connect to.",
+          "type": "String"
+        },
+        {
+          "name": "version",
+          "description": "version of browser.",
+          "type": "String"
+        },
+        {
+          "name": "platformName",
+          "description": "platform browser must run on.",
+          "type": "String"
+        },
+        {
+          "name": "url",
+          "description": "url to connect to browser.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [
+        "MalformedURLException"
+      ],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "connect to driver at with capabilities",
+      "usage": "| connect to driver at with | [url] | capabilities | [capabilities] | ",
+      "contexthelp": "connect to driver at with \u0026lt;url\u0026gt; capabilities \u0026lt;capabilities\u0026gt;",
+      "name": "connectToDriverAtWithCapabilities",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "url",
+          "type": "String"
+        },
+        {
+          "name": "capabilities",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [
+        "MalformedURLException"
+      ],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "connect to firefox driver at with profile",
+      "usage": "| connect to firefox driver at with | [url] | profile | [profile] | ",
+      "contexthelp": "connect to firefox driver at with \u0026lt;url\u0026gt; profile \u0026lt;profile\u0026gt;",
+      "name": "connectToFirefoxDriverAtWithProfile",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "url",
+          "type": "String"
+        },
+        {
+          "name": "profile",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [
+        "MalformedURLException"
+      ],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "connect to driver at with json capabilities",
+      "usage": "| connect to driver at with json | [url] | capabilities | [capabilitiesInJson] | ",
+      "contexthelp": "connect to driver at with json \u0026lt;url\u0026gt; capabilities \u0026lt;capabilitiesInJson\u0026gt;",
+      "name": "connectToDriverAtWithJsonCapabilities",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "url",
+          "type": "String"
+        },
+        {
+          "name": "capabilitiesInJson",
+          "type": "String"
+        }
+      ],
+      "exceptions": [
+        "MalformedURLException"
+      ],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "driver description",
+      "usage": "| driver description |",
+      "contexthelp": "driver description",
+      "name": "driverDescription",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "run summary",
+      "usage": "| run summary |",
+      "contexthelp": "run summary",
+      "name": "runSummary",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "get last run summary",
+      "usage": "| get last run summary |",
+      "contexthelp": "get last run summary",
+      "name": "getLastRunSummary",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "get last remote url",
+      "usage": "| get last remote url |",
+      "contexthelp": "get last remote url",
+      "name": "getLastRemoteUrl",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "URL"
+    },
+    {
+      "readableName": "stop driver",
+      "usage": "| stop driver |",
+      "contexthelp": "stop driver",
+      "name": "stopDriver",
+      "docString": "Stops the current driver registered in the SeleniumHelper.",
+      "annotations": [],
+      "returnDescription": "true.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "get secret capabilities",
+      "usage": "| get secret capabilities |",
+      "contexthelp": "get secret capabilities",
+      "name": "getSecretCapabilities",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "List"
+    },
+    {
+      "readableName": "lock config",
+      "usage": "| lock config |",
+      "contexthelp": "lock config",
+      "name": "lockConfig",
+      "docString": "Prevents instances from creating new Selenium drivers.\n This can be used to control Selenium configuration independent from Wiki content.",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "unlock config",
+      "usage": "| unlock config |",
+      "contexthelp": "unlock config",
+      "name": "unlockConfig",
+      "docString": "Enables normal behavior (i.e. instances can create new Selenium drivers).",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set global value to",
+      "usage": "| set global value | [symbolName] | to | [value] | ",
+      "contexthelp": "set global value \u0026lt;symbolName\u0026gt; to \u0026lt;value\u0026gt;",
+      "name": "setGlobalValueTo",
+      "docString": "Stores a (global) value so it can be accessed by other fixtures/pages.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name to store value under.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to store.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "global value",
+      "usage": "| global value | [symbolName] | ",
+      "contexthelp": "global value \u0026lt;symbolName\u0026gt;",
+      "name": "globalValue",
+      "docString": "Retrieves a (global) value, which was previously stored using #setGlobalValueTo().",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name value was stored under.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "wait seconds",
+      "usage": "| wait seconds | [i] | ",
+      "contexthelp": "wait seconds \u0026lt;i\u0026gt;",
+      "name": "waitSeconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait milliseconds",
+      "usage": "| wait milliseconds | [i] | ",
+      "contexthelp": "wait milliseconds \u0026lt;i\u0026gt;",
+      "name": "waitMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set repeat interval to milliseconds",
+      "usage": "| set repeat interval to milliseconds | [milliseconds] | ",
+      "contexthelp": "set repeat interval to milliseconds \u0026lt;milliseconds\u0026gt;",
+      "name": "setRepeatIntervalToMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "milliseconds",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat interval",
+      "usage": "| repeat interval |",
+      "contexthelp": "repeat interval",
+      "name": "repeatInterval",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times | [maxCount] | ",
+      "contexthelp": "repeat at most times \u0026lt;maxCount\u0026gt;",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "maxCount",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times |",
+      "contexthelp": "repeat at most times",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "repeat count",
+      "usage": "| repeat count |",
+      "contexthelp": "repeat count",
+      "name": "repeatCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "time spent repeating",
+      "usage": "| time spent repeating |",
+      "contexthelp": "time spent repeating",
+      "name": "timeSpentRepeating",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    }
+  ],
+  "typeName": "SeleniumDriverSetup",
+  "name": "SeleniumDriverSetup",
+  "annotations": []
+}

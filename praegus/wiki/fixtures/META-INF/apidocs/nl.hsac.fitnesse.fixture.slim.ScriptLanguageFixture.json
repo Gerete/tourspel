@@ -1,0 +1,743 @@
+{
+  "constructors": [
+    {
+      "readableName": "script language fixture",
+      "usage": "| script language fixture |",
+      "name": "ScriptLanguageFixture",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    },
+    {
+      "readableName": "script language fixture",
+      "usage": "| script language fixture | [shortName] |",
+      "name": "ScriptLanguageFixture",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "shortName",
+          "type": "String"
+        }
+      ],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.ScriptLanguageFixture",
+  "publicMethods": [
+    {
+      "readableName": "evaluate",
+      "usage": "| evaluate | [expression] | ",
+      "contexthelp": "evaluate \u0026lt;expression\u0026gt;",
+      "name": "evaluate",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "expression",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "invoke function",
+      "usage": "| invoke function | [functionName] | ",
+      "contexthelp": "invoke function \u0026lt;functionName\u0026gt;",
+      "name": "invokeFunction",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "functionName",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "invoke function with argument",
+      "usage": "| invoke function with | [functionName] | argument | [argument] | ",
+      "contexthelp": "invoke function with \u0026lt;functionName\u0026gt; argument \u0026lt;argument\u0026gt;",
+      "name": "invokeFunctionWithArgument",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "functionName",
+          "type": "String"
+        },
+        {
+          "name": "argument",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "invoke function with arguments",
+      "usage": "| invoke function with | [functionName] | arguments | [arguments] | ",
+      "contexthelp": "invoke function with \u0026lt;functionName\u0026gt; arguments \u0026lt;arguments\u0026gt;",
+      "name": "invokeFunctionWithArguments",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "functionName",
+          "type": "String"
+        },
+        {
+          "name": "arguments",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "invoke method on",
+      "usage": "| invoke method | [methodName] | on | [obj] | ",
+      "contexthelp": "invoke method \u0026lt;methodName\u0026gt; on \u0026lt;obj\u0026gt;",
+      "name": "invokeMethodOn",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "methodName",
+          "type": "String"
+        },
+        {
+          "name": "obj",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "invoke method on with argument",
+      "usage": "| invoke method on | [methodName] | with | [obj] | argument | [argument] | ",
+      "contexthelp": "invoke method on \u0026lt;methodName\u0026gt; with \u0026lt;obj\u0026gt; argument \u0026lt;argument\u0026gt;",
+      "name": "invokeMethodOnWithArgument",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "methodName",
+          "type": "String"
+        },
+        {
+          "name": "obj",
+          "type": "Object"
+        },
+        {
+          "name": "argument",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "invoke method on with arguments",
+      "usage": "| invoke method on | [methodName] | with | [obj] | arguments | [arguments] | ",
+      "contexthelp": "invoke method on \u0026lt;methodName\u0026gt; with \u0026lt;obj\u0026gt; arguments \u0026lt;arguments\u0026gt;",
+      "name": "invokeMethodOnWithArguments",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "methodName",
+          "type": "String"
+        },
+        {
+          "name": "obj",
+          "type": "Object"
+        },
+        {
+          "name": "arguments",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "value",
+      "usage": "| value | [key] | ",
+      "contexthelp": "value \u0026lt;key\u0026gt;",
+      "name": "value",
+      "docString": "",
+      "annotations": [
+        "Override"
+      ],
+      "parameters": [
+        {
+          "name": "key",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "clear value",
+      "usage": "| clear value | [name] | ",
+      "contexthelp": "clear value \u0026lt;name\u0026gt;",
+      "name": "clearValue",
+      "docString": "",
+      "annotations": [
+        "Override"
+      ],
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "clear values",
+      "usage": "| clear values |",
+      "contexthelp": "clear values",
+      "name": "clearValues",
+      "docString": "",
+      "annotations": [
+        "Override"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get",
+      "usage": "| get | [headerName] | ",
+      "contexthelp": "get \u0026lt;headerName\u0026gt;",
+      "name": "get",
+      "docString": "Retrieves value for output column.",
+      "annotations": [],
+      "returnDescription": "value from engine.",
+      "parameters": [
+        {
+          "name": "headerName",
+          "description": "header of output column (without trailing \u0027?\u0027).",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "set engine",
+      "usage": "| set engine | [shortName] | ",
+      "contexthelp": "set engine \u0026lt;shortName\u0026gt;",
+      "name": "setEngine",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "shortName",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "available engines",
+      "usage": "| available engines |",
+      "contexthelp": "available engines",
+      "name": "availableEngines",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Map"
+    },
+    {
+      "readableName": "set int value for",
+      "usage": "| set int value | [value] | for | [name] | ",
+      "contexthelp": "set int value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setIntValueFor",
+      "docString": "Stores integer value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "int"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set double value for",
+      "usage": "| set double value | [value] | for | [name] | ",
+      "contexthelp": "set double value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setDoubleValueFor",
+      "docString": "Stores double value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "double"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set boolean value for",
+      "usage": "| set boolean value | [value] | for | [name] | ",
+      "contexthelp": "set boolean value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setBooleanValueFor",
+      "docString": "Stores boolean value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "boolean"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set value for",
+      "usage": "| set value | [value] | for | [name] | ",
+      "contexthelp": "set value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setValueFor",
+      "docString": "Stores value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be stored.",
+          "type": "Object"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "add value to",
+      "usage": "| add value | [value] | to | [name] | ",
+      "contexthelp": "add value \u0026lt;value\u0026gt; to \u0026lt;name\u0026gt;",
+      "name": "addValueTo",
+      "docString": "Adds value to (end of) a list.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be stored.",
+          "type": "Object"
+        },
+        {
+          "name": "name",
+          "description": "name of list to extend.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "copy values from",
+      "usage": "| copy values from | [map] | ",
+      "contexthelp": "copy values from \u0026lt;map\u0026gt;",
+      "name": "copyValuesFrom",
+      "docString": "Adds all values in the supplied map to the current values.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "map",
+          "description": "to obtain values from.",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set values for",
+      "usage": "| set values | [values] | for | [name] | ",
+      "contexthelp": "set values \u0026lt;values\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setValuesFor",
+      "docString": "Stores list of values in map.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "values",
+          "description": "comma separated list of values.",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "description": "name to use this list for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set content of as value for",
+      "usage": "| set content of as value | [file] | for | [key] | ",
+      "contexthelp": "set content of as value \u0026lt;file\u0026gt; for \u0026lt;key\u0026gt;",
+      "name": "setContentOfAsValueFor",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "file",
+          "description": "file\u0027s whose content should be set as byte[]",
+          "type": "String"
+        },
+        {
+          "name": "key",
+          "description": "key whose value should be set.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set base 64 encoded content of as value for",
+      "usage": "| set base 64 encoded content of as value | [file] | for | [key] | ",
+      "contexthelp": "set base 64 encoded content of as value \u0026lt;file\u0026gt; for \u0026lt;key\u0026gt;",
+      "name": "setBase64EncodedContentOfAsValueFor",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "file",
+          "description": "file\u0027s whose content should be base64 encoded",
+          "type": "String"
+        },
+        {
+          "name": "key",
+          "description": "key whose value should be set.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "clear value",
+      "usage": "| clear value | [name] | ",
+      "contexthelp": "clear value \u0026lt;name\u0026gt;",
+      "name": "clearValue",
+      "docString": "Clears a values previously set.",
+      "annotations": [],
+      "returnDescription": "true if value was present.",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "value to remove.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "clear values",
+      "usage": "| clear values |",
+      "contexthelp": "clear values",
+      "name": "clearValues",
+      "docString": "Clears all values previously set.",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "value",
+      "usage": "| value | [name] | ",
+      "contexthelp": "value \u0026lt;name\u0026gt;",
+      "name": "value",
+      "docString": "Retrieves value of element at a specified key.",
+      "annotations": [],
+      "returnDescription": "value stored.",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "key to get value of (nested values may be retrieved by separating the keys with \u0027.\u0027).",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "reset",
+      "usage": "| reset |",
+      "contexthelp": "reset",
+      "name": "reset",
+      "docString": "Called before next row is executed. (Clears all current values.)",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set",
+      "usage": "| set | key, value,  |",
+      "contexthelp": "set  key, value,",
+      "name": "set",
+      "docString": "Sets a value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "key",
+          "description": "(possibly nested) key to set value for.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to be stored.",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "expand periods in names to nested maps",
+      "usage": "| expand periods in names to nested maps | [expand] | ",
+      "contexthelp": "expand periods in names to nested maps \u0026lt;expand\u0026gt;",
+      "name": "expandPeriodsInNamesToNestedMaps",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "expand",
+          "type": "boolean"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "expands periods in names to nested maps",
+      "usage": "| expands periods in names to nested maps |",
+      "contexthelp": "expands periods in names to nested maps",
+      "name": "expandsPeriodsInNamesToNestedMaps",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "get map helper",
+      "usage": "| get map helper |",
+      "contexthelp": "get map helper",
+      "name": "getMapHelper",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "helper to assist getting/setting (nested) values in a map.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "MapHelper"
+    },
+    {
+      "readableName": "set map helper",
+      "usage": "| set map helper | [mapHelper] | ",
+      "contexthelp": "set map helper \u0026lt;mapHelper\u0026gt;",
+      "name": "setMapHelper",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "mapHelper",
+          "description": "helper to assist getting/setting (nested) values in a map.",
+          "type": "MapHelper"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set global value to",
+      "usage": "| set global value | [symbolName] | to | [value] | ",
+      "contexthelp": "set global value \u0026lt;symbolName\u0026gt; to \u0026lt;value\u0026gt;",
+      "name": "setGlobalValueTo",
+      "docString": "Stores a (global) value so it can be accessed by other fixtures/pages.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name to store value under.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to store.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "global value",
+      "usage": "| global value | [symbolName] | ",
+      "contexthelp": "global value \u0026lt;symbolName\u0026gt;",
+      "name": "globalValue",
+      "docString": "Retrieves a (global) value, which was previously stored using #setGlobalValueTo().",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name value was stored under.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "wait seconds",
+      "usage": "| wait seconds | [i] | ",
+      "contexthelp": "wait seconds \u0026lt;i\u0026gt;",
+      "name": "waitSeconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait milliseconds",
+      "usage": "| wait milliseconds | [i] | ",
+      "contexthelp": "wait milliseconds \u0026lt;i\u0026gt;",
+      "name": "waitMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set repeat interval to milliseconds",
+      "usage": "| set repeat interval to milliseconds | [milliseconds] | ",
+      "contexthelp": "set repeat interval to milliseconds \u0026lt;milliseconds\u0026gt;",
+      "name": "setRepeatIntervalToMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "milliseconds",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat interval",
+      "usage": "| repeat interval |",
+      "contexthelp": "repeat interval",
+      "name": "repeatInterval",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times | [maxCount] | ",
+      "contexthelp": "repeat at most times \u0026lt;maxCount\u0026gt;",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "maxCount",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times |",
+      "contexthelp": "repeat at most times",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "repeat count",
+      "usage": "| repeat count |",
+      "contexthelp": "repeat count",
+      "name": "repeatCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "time spent repeating",
+      "usage": "| time spent repeating |",
+      "contexthelp": "time spent repeating",
+      "name": "timeSpentRepeating",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    }
+  ],
+  "typeName": "ScriptLanguageFixture",
+  "name": "ScriptLanguageFixture",
+  "annotations": []
+}

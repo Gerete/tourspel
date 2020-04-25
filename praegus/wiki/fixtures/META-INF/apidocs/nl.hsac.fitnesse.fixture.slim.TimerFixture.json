@@ -1,0 +1,389 @@
+{
+  "constructors": [
+    {
+      "readableName": "timer fixture",
+      "usage": "| timer fixture |",
+      "name": "TimerFixture",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.TimerFixture",
+  "publicMethods": [
+    {
+      "readableName": "start timer",
+      "usage": "| start timer |",
+      "contexthelp": "start timer",
+      "name": "startTimer",
+      "docString": "Starts (possibly replacing) default timer.",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "start timer",
+      "usage": "| start timer | [name] | ",
+      "contexthelp": "start timer \u0026lt;name\u0026gt;",
+      "name": "startTimer",
+      "docString": "Starts (possibly replacing) named timer.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "name",
+          "description": "name to timer to create.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "stop timer",
+      "usage": "| stop timer |",
+      "contexthelp": "stop timer",
+      "name": "stopTimer",
+      "docString": "Stops default timer.",
+      "annotations": [],
+      "returnDescription": "time in milliseconds since timer was started.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "stop timer",
+      "usage": "| stop timer | [name] | ",
+      "contexthelp": "stop timer \u0026lt;name\u0026gt;",
+      "name": "stopTimer",
+      "docString": "Stops named timer.",
+      "annotations": [],
+      "returnDescription": "time in milliseconds since timer was started.",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "name of timer to stop.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "time on timer",
+      "usage": "| time on timer |",
+      "contexthelp": "time on timer",
+      "name": "timeOnTimer",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "time in milliseconds since timer was started.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "time on timer",
+      "usage": "| time on timer | [name] | ",
+      "contexthelp": "time on timer \u0026lt;name\u0026gt;",
+      "name": "timeOnTimer",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "time in milliseconds since timer was started.",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "name of timer to get time from.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "pause timer",
+      "usage": "| pause timer |",
+      "contexthelp": "pause timer",
+      "name": "pauseTimer",
+      "docString": "Pauses default timer (stopping measurement), can be resumed later.",
+      "annotations": [],
+      "returnDescription": "time in milliseconds since timer was started.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "pause timer",
+      "usage": "| pause timer | [name] | ",
+      "contexthelp": "pause timer \u0026lt;name\u0026gt;",
+      "name": "pauseTimer",
+      "docString": "Pauses named timer (stopping measurement), can be resumed later.",
+      "annotations": [],
+      "returnDescription": "time in milliseconds since timer was started.",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "name of timer to pause.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "resume timer",
+      "usage": "| resume timer |",
+      "contexthelp": "resume timer",
+      "name": "resumeTimer",
+      "docString": "Resumes default timer (after it was paused).",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "resume timer",
+      "usage": "| resume timer | [name] | ",
+      "contexthelp": "resume timer \u0026lt;name\u0026gt;",
+      "name": "resumeTimer",
+      "docString": "Resumes named timer (after it was paused).",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "name",
+          "description": "name of timer to resume.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "all timer times",
+      "usage": "| all timer times |",
+      "contexthelp": "all timer times",
+      "name": "allTimerTimes",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "all running timers and their current times (in ms).",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Map"
+    },
+    {
+      "readableName": "stop all timers",
+      "usage": "| stop all timers |",
+      "contexthelp": "stop all timers",
+      "name": "stopAllTimers",
+      "docString": "Stops all running timers.",
+      "annotations": [],
+      "returnDescription": "all stopped timers and their current times (in ms).",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Map"
+    },
+    {
+      "readableName": "current system time",
+      "usage": "| current system time |",
+      "contexthelp": "current system time",
+      "name": "currentSystemTime",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "current system time.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "current system time as",
+      "usage": "| current system time as | [format] | ",
+      "contexthelp": "current system time as \u0026lt;format\u0026gt;",
+      "name": "currentSystemTimeAs",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "current system time formatted according to format.",
+      "parameters": [
+        {
+          "name": "format",
+          "description": "to return time (and possibly date) in.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "current system time as in",
+      "usage": "| current system time as | [format] | in | [languageTag] | ",
+      "contexthelp": "current system time as \u0026lt;format\u0026gt; in \u0026lt;languageTag\u0026gt;",
+      "name": "currentSystemTimeAsIn",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "current system time formatted according to format.",
+      "parameters": [
+        {
+          "name": "format",
+          "description": "to return time (and possibly date) in.",
+          "type": "String"
+        },
+        {
+          "name": "languageTag",
+          "description": "language to use when formatting.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "set global value to",
+      "usage": "| set global value | [symbolName] | to | [value] | ",
+      "contexthelp": "set global value \u0026lt;symbolName\u0026gt; to \u0026lt;value\u0026gt;",
+      "name": "setGlobalValueTo",
+      "docString": "Stores a (global) value so it can be accessed by other fixtures/pages.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name to store value under.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to store.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "global value",
+      "usage": "| global value | [symbolName] | ",
+      "contexthelp": "global value \u0026lt;symbolName\u0026gt;",
+      "name": "globalValue",
+      "docString": "Retrieves a (global) value, which was previously stored using #setGlobalValueTo().",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name value was stored under.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "wait seconds",
+      "usage": "| wait seconds | [i] | ",
+      "contexthelp": "wait seconds \u0026lt;i\u0026gt;",
+      "name": "waitSeconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait milliseconds",
+      "usage": "| wait milliseconds | [i] | ",
+      "contexthelp": "wait milliseconds \u0026lt;i\u0026gt;",
+      "name": "waitMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set repeat interval to milliseconds",
+      "usage": "| set repeat interval to milliseconds | [milliseconds] | ",
+      "contexthelp": "set repeat interval to milliseconds \u0026lt;milliseconds\u0026gt;",
+      "name": "setRepeatIntervalToMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "milliseconds",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat interval",
+      "usage": "| repeat interval |",
+      "contexthelp": "repeat interval",
+      "name": "repeatInterval",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times | [maxCount] | ",
+      "contexthelp": "repeat at most times \u0026lt;maxCount\u0026gt;",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "maxCount",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times |",
+      "contexthelp": "repeat at most times",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "repeat count",
+      "usage": "| repeat count |",
+      "contexthelp": "repeat count",
+      "name": "repeatCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "time spent repeating",
+      "usage": "| time spent repeating |",
+      "contexthelp": "time spent repeating",
+      "name": "timeSpentRepeating",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    }
+  ],
+  "typeName": "TimerFixture",
+  "name": "TimerFixture",
+  "annotations": []
+}

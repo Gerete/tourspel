@@ -1,0 +1,92 @@
+{
+  "constructors": [
+    {
+      "readableName": "parameter binding",
+      "usage": "| parameter binding | [headerName] |",
+      "name": "ParameterBinding",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "headerName",
+          "type": "String"
+        }
+      ],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.fit.MapColumnFixture.ParameterBinding",
+  "publicMethods": [
+    {
+      "readableName": "do cell",
+      "usage": "| do | [fixture] | cell | [cell] | ",
+      "contexthelp": "do \u0026lt;fixture\u0026gt; cell \u0026lt;cell\u0026gt;",
+      "name": "doCell",
+      "docString": "",
+      "annotations": [
+        "Override"
+      ],
+      "parameters": [
+        {
+          "name": "fixture",
+          "type": "Fixture"
+        },
+        {
+          "name": "cell",
+          "type": "Parse"
+        }
+      ],
+      "exceptions": [
+        "Throwable"
+      ],
+      "returnType": "void"
+    },
+    {
+      "readableName": "create",
+      "usage": "| create | arg0, arg1,  |",
+      "contexthelp": "create  arg0, arg1,",
+      "name": "create",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Fixture"
+        },
+        {
+          "name": "arg1",
+          "type": "String"
+        }
+      ],
+      "exceptions": [
+        "Throwable"
+      ],
+      "returnType": "Binding"
+    },
+    {
+      "readableName": "do cell",
+      "usage": "| do | [arg0] | cell | [arg1] | ",
+      "contexthelp": "do \u0026lt;arg0\u0026gt; cell \u0026lt;arg1\u0026gt;",
+      "name": "doCell",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Fixture"
+        },
+        {
+          "name": "arg1",
+          "type": "Parse"
+        }
+      ],
+      "exceptions": [
+        "Throwable"
+      ],
+      "returnType": "void"
+    }
+  ],
+  "typeName": "MapColumnFixture.ParameterBinding",
+  "name": "MapColumnFixture.ParameterBinding",
+  "annotations": []
+}

@@ -1,0 +1,51 @@
+{
+  "constructors": [
+    {
+      "readableName": "negate",
+      "usage": "| negate | [nested] |",
+      "name": "Negate",
+      "docString": "Creates new with same action, but the exact opposite completion condition.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "nested",
+          "description": "completion whose #isFinished() will be negated.",
+          "type": "SlimFixture.RepeatCompletion"
+        }
+      ],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.SlimFixture.Negate",
+  "publicMethods": [
+    {
+      "readableName": "is finished",
+      "usage": "| is finished |",
+      "contexthelp": "is finished",
+      "name": "isFinished",
+      "docString": "",
+      "annotations": [
+        "Override"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "repeat",
+      "usage": "| repeat |",
+      "contexthelp": "repeat",
+      "name": "repeat",
+      "docString": "",
+      "annotations": [
+        "Override"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    }
+  ],
+  "typeName": "SlimFixture.Negate",
+  "name": "SlimFixture.Negate",
+  "annotations": []
+}

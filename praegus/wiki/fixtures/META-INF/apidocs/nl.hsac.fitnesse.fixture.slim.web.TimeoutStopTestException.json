@@ -1,0 +1,227 @@
+{
+  "constructors": [
+    {
+      "readableName": "timeout stop test exception",
+      "usage": "| timeout stop test exception | [message] | [cause] |",
+      "name": "TimeoutStopTestException",
+      "docString": "Creates new.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "message",
+          "description": "message for exception.",
+          "type": "String"
+        },
+        {
+          "name": "cause",
+          "description": "timeout exception thrown by Selenium.",
+          "type": "TimeoutException"
+        }
+      ],
+      "exceptions": []
+    },
+    {
+      "readableName": "timeout stop test exception",
+      "usage": "| timeout stop test exception | [stackTraceInWiki] | [message] | [cause] |",
+      "name": "TimeoutStopTestException",
+      "docString": "Creates new.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "stackTraceInWiki",
+          "description": "whether wiki should include the stack trace of this exception, or just the message",
+          "type": "boolean"
+        },
+        {
+          "name": "message",
+          "description": "message for exception.",
+          "type": "String"
+        },
+        {
+          "name": "cause",
+          "description": "timeout exception thrown by Selenium.",
+          "type": "TimeoutException"
+        }
+      ],
+      "exceptions": []
+    },
+    {
+      "readableName": "timeout stop test exception",
+      "usage": "| timeout stop test exception | [cause] |",
+      "name": "TimeoutStopTestException",
+      "docString": "Creates new.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "cause",
+          "description": "timeout exception thrown by Selenium.",
+          "type": "TimeoutException"
+        }
+      ],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.web.TimeoutStopTestException",
+  "publicMethods": [
+    {
+      "readableName": "get message",
+      "usage": "| get message |",
+      "contexthelp": "get message",
+      "name": "getMessage",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "get localized message",
+      "usage": "| get localized message |",
+      "contexthelp": "get localized message",
+      "name": "getLocalizedMessage",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "get cause",
+      "usage": "| get cause |",
+      "contexthelp": "get cause",
+      "name": "getCause",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Throwable"
+    },
+    {
+      "readableName": "init cause",
+      "usage": "| init cause | [arg0] | ",
+      "contexthelp": "init cause \u0026lt;arg0\u0026gt;",
+      "name": "initCause",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Throwable"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Throwable"
+    },
+    {
+      "readableName": "print stack trace",
+      "usage": "| print stack trace |",
+      "contexthelp": "print stack trace",
+      "name": "printStackTrace",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "print stack trace",
+      "usage": "| print stack trace | [arg0] | ",
+      "contexthelp": "print stack trace \u0026lt;arg0\u0026gt;",
+      "name": "printStackTrace",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "PrintStream"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "print stack trace",
+      "usage": "| print stack trace | [arg0] | ",
+      "contexthelp": "print stack trace \u0026lt;arg0\u0026gt;",
+      "name": "printStackTrace",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "PrintWriter"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "fill in stack trace",
+      "usage": "| fill in stack trace |",
+      "contexthelp": "fill in stack trace",
+      "name": "fillInStackTrace",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Throwable"
+    },
+    {
+      "readableName": "get stack trace",
+      "usage": "| get stack trace |",
+      "contexthelp": "get stack trace",
+      "name": "getStackTrace",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "StackTraceElement"
+    },
+    {
+      "readableName": "set stack trace",
+      "usage": "| set stack trace | [arg0] | ",
+      "contexthelp": "set stack trace \u0026lt;arg0\u0026gt;",
+      "name": "setStackTrace",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "StackTraceElement"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "add suppressed",
+      "usage": "| add suppressed | [arg0] | ",
+      "contexthelp": "add suppressed \u0026lt;arg0\u0026gt;",
+      "name": "addSuppressed",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Throwable"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get suppressed",
+      "usage": "| get suppressed |",
+      "contexthelp": "get suppressed",
+      "name": "getSuppressed",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Throwable"
+    }
+  ],
+  "typeName": "TimeoutStopTestException",
+  "name": "TimeoutStopTestException",
+  "annotations": []
+}

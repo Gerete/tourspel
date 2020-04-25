@@ -1,0 +1,3593 @@
+{
+  "constructors": [
+    {
+      "readableName": "rich faces test",
+      "usage": "| rich faces test |",
+      "name": "RichFacesTest",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    },
+    {
+      "readableName": "rich faces test",
+      "usage": "| rich faces test | [secondsBeforeTimeout] |",
+      "name": "RichFacesTest",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "secondsBeforeTimeout",
+          "type": "int"
+        }
+      ],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.web.RichFacesTest",
+  "publicMethods": [
+    {
+      "readableName": "only wait if event handler starts with ajax call",
+      "usage": "| only wait if event handler starts with ajax call |",
+      "contexthelp": "only wait if event handler starts with ajax call",
+      "name": "onlyWaitIfEventHandlerStartsWithAjaxCall",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set only wait if event handler starts with ajax call",
+      "usage": "| set only wait if event handler starts with ajax call | [newValue] | ",
+      "contexthelp": "set only wait if event handler starts with ajax call \u0026lt;newValue\u0026gt;",
+      "name": "setOnlyWaitIfEventHandlerStartsWithAjaxCall",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "newValue",
+          "type": "boolean"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "wait for jsf ajax",
+      "usage": "| wait for jsf ajax |",
+      "contexthelp": "wait for jsf ajax",
+      "name": "waitForJsfAjax",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get events that may require waiting",
+      "usage": "| get events that may require waiting |",
+      "contexthelp": "get events that may require waiting",
+      "name": "getEventsThatMayRequireWaiting",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "List"
+    },
+    {
+      "readableName": "set ignore implicit ajax wait timeouts",
+      "usage": "| set ignore implicit ajax wait timeouts | [ignoreAjaxWaitTimeouts] | ",
+      "contexthelp": "set ignore implicit ajax wait timeouts \u0026lt;ignoreAjaxWaitTimeouts\u0026gt;",
+      "name": "setIgnoreImplicitAjaxWaitTimeouts",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "ignoreAjaxWaitTimeouts",
+          "type": "boolean"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "will ignore implicit ajax wait timeouts",
+      "usage": "| will ignore implicit ajax wait timeouts |",
+      "contexthelp": "will ignore implicit ajax wait timeouts",
+      "name": "willIgnoreImplicitAjaxWaitTimeouts",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "open",
+      "usage": "| open | [address] | ",
+      "contexthelp": "open \u0026lt;address\u0026gt;",
+      "name": "open",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "address",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "location",
+      "usage": "| location |",
+      "contexthelp": "location",
+      "name": "location",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "back",
+      "usage": "| back |",
+      "contexthelp": "back",
+      "name": "back",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "forward",
+      "usage": "| forward |",
+      "contexthelp": "forward",
+      "name": "forward",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "refresh",
+      "usage": "| refresh |",
+      "contexthelp": "refresh",
+      "name": "refresh",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "alert text",
+      "usage": "| alert text |",
+      "contexthelp": "alert text",
+      "name": "alertText",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "confirm alert",
+      "usage": "| confirm alert |",
+      "contexthelp": "confirm alert",
+      "name": "confirmAlert",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "confirm alert if available",
+      "usage": "| confirm alert if available |",
+      "contexthelp": "confirm alert if available",
+      "name": "confirmAlertIfAvailable",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "dismiss alert",
+      "usage": "| dismiss alert |",
+      "contexthelp": "dismiss alert",
+      "name": "dismissAlert",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "dismiss alert if available",
+      "usage": "| dismiss alert if available |",
+      "contexthelp": "dismiss alert if available",
+      "name": "dismissAlertIfAvailable",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "open in new tab",
+      "usage": "| open in new tab | [url] | ",
+      "contexthelp": "open in new tab \u0026lt;url\u0026gt;",
+      "name": "openInNewTab",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "url",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "switch to next tab",
+      "usage": "| switch to next tab |",
+      "contexthelp": "switch to next tab",
+      "name": "switchToNextTab",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "switch to previous tab",
+      "usage": "| switch to previous tab |",
+      "contexthelp": "switch to previous tab",
+      "name": "switchToPreviousTab",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "close tab",
+      "usage": "| close tab |",
+      "contexthelp": "close tab",
+      "name": "closeTab",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "ensure only one tab",
+      "usage": "| ensure only one tab |",
+      "contexthelp": "ensure only one tab",
+      "name": "ensureOnlyOneTab",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "ensure active tab is not closed",
+      "usage": "| ensure active tab is not closed |",
+      "contexthelp": "ensure active tab is not closed",
+      "name": "ensureActiveTabIsNotClosed",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "tab count",
+      "usage": "| tab count |",
+      "contexthelp": "tab count",
+      "name": "tabCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "current tab index",
+      "usage": "| current tab index |",
+      "contexthelp": "current tab index",
+      "name": "currentTabIndex",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "switch to default content",
+      "usage": "| switch to default content |",
+      "contexthelp": "switch to default content",
+      "name": "switchToDefaultContent",
+      "docString": "Activates main/top-level iframe (i.e. makes it the current frame).",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "switch to frame",
+      "usage": "| switch to frame | [technicalSelector] | ",
+      "contexthelp": "switch to frame \u0026lt;technicalSelector\u0026gt;",
+      "name": "switchToFrame",
+      "docString": "Activates specified child frame of current iframe.",
+      "annotations": [],
+      "returnDescription": "true if iframe was found.",
+      "parameters": [
+        {
+          "name": "technicalSelector",
+          "description": "selector to find iframe.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "switch to parent frame",
+      "usage": "| switch to parent frame |",
+      "contexthelp": "switch to parent frame",
+      "name": "switchToParentFrame",
+      "docString": "Activates parent frame of current iframe.\n Does nothing if when current frame is the main/top-level one.",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "page title",
+      "usage": "| page title |",
+      "contexthelp": "page title",
+      "name": "pageTitle",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "page content type",
+      "usage": "| page content type |",
+      "contexthelp": "page content type",
+      "name": "pageContentType",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "current page\u0027s content type.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "enter as",
+      "usage": "| enter | [value] | as | [place] | ",
+      "contexthelp": "enter \u0026lt;value\u0026gt; as \u0026lt;place\u0026gt;",
+      "name": "enterAs",
+      "docString": "Replaces content at place by value.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true, if element was found.",
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to set.",
+          "type": "String"
+        },
+        {
+          "name": "place",
+          "description": "element to set value on.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "enter as in",
+      "usage": "| enter | [value] | as | [place] | in | [container] | ",
+      "contexthelp": "enter \u0026lt;value\u0026gt; as \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "enterAsIn",
+      "docString": "Replaces content at place by value.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true, if element was found.",
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to set.",
+          "type": "String"
+        },
+        {
+          "name": "place",
+          "description": "element to set value on.",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "description": "element containing place.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "enter for",
+      "usage": "| enter | [value] | for | [place] | ",
+      "contexthelp": "enter \u0026lt;value\u0026gt; for \u0026lt;place\u0026gt;",
+      "name": "enterFor",
+      "docString": "Adds content to place.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true, if element was found.",
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to add.",
+          "type": "String"
+        },
+        {
+          "name": "place",
+          "description": "element to add value to.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "enter for in",
+      "usage": "| enter | [value] | for | [place] | in | [container] | ",
+      "contexthelp": "enter \u0026lt;value\u0026gt; for \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "enterForIn",
+      "docString": "Adds content to place.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true, if element was found.",
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to add.",
+          "type": "String"
+        },
+        {
+          "name": "place",
+          "description": "element to add value to.",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "description": "element containing place.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "enter date as",
+      "usage": "| enter date | [date] | as | [place] | ",
+      "contexthelp": "enter date \u0026lt;date\u0026gt; as \u0026lt;place\u0026gt;",
+      "name": "enterDateAs",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "date",
+          "type": "String"
+        },
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "press tab",
+      "usage": "| press tab |",
+      "contexthelp": "press tab",
+      "name": "pressTab",
+      "docString": "Simulates pressing the \u0027Tab\u0027 key.",
+      "annotations": [],
+      "returnDescription": "true, if an element was active the key could be sent to.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "press enter",
+      "usage": "| press enter |",
+      "contexthelp": "press enter",
+      "name": "pressEnter",
+      "docString": "Simulates pressing the \u0027Enter\u0027 key.",
+      "annotations": [],
+      "returnDescription": "true, if an element was active the key could be sent to.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "press esc",
+      "usage": "| press esc |",
+      "contexthelp": "press esc",
+      "name": "pressEsc",
+      "docString": "Simulates pressing the \u0027Esc\u0027 key.",
+      "annotations": [],
+      "returnDescription": "true, if an element was active the key could be sent to.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "type",
+      "usage": "| type | [text] | ",
+      "contexthelp": "type \u0026lt;text\u0026gt;",
+      "name": "type",
+      "docString": "Simulates typing a text to the current active element.",
+      "annotations": [],
+      "returnDescription": "true, if an element was active the text could be sent to.",
+      "parameters": [
+        {
+          "name": "text",
+          "description": "text to type.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "press",
+      "usage": "| press | [key] | ",
+      "contexthelp": "press \u0026lt;key\u0026gt;",
+      "name": "press",
+      "docString": "Simulates pressing a key (or a combination of keys).\n (Unfortunately not all combinations seem to be accepted by all drivers, e.g.\n Chrome on OSX seems to ignore Command+A or Command+T; https://code.google.com/p/selenium/issues/detail?id\u003d5919).",
+      "annotations": [],
+      "returnDescription": "true, if an element was active the key could be sent to.",
+      "parameters": [
+        {
+          "name": "key",
+          "description": "key to press, can be a normal letter (e.g. \u0027M\u0027) or a special key (e.g. \u0027down\u0027).\n            Combinations can be passed by separating the keys to send with \u0027+\u0027 (e.g. Command + T).",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "select as",
+      "usage": "| select | [value] | as | [place] | ",
+      "contexthelp": "select \u0026lt;value\u0026gt; as \u0026lt;place\u0026gt;",
+      "name": "selectAs",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "select as in",
+      "usage": "| select | [value] | as | [place] | in | [container] | ",
+      "contexthelp": "select \u0026lt;value\u0026gt; as \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "selectAsIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "select for",
+      "usage": "| select | [value] | for | [place] | ",
+      "contexthelp": "select \u0026lt;value\u0026gt; for \u0026lt;place\u0026gt;",
+      "name": "selectFor",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "select for in",
+      "usage": "| select | [value] | for | [place] | in | [container] | ",
+      "contexthelp": "select \u0026lt;value\u0026gt; for \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "selectForIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "enter for hidden",
+      "usage": "| enter for | [value] | hidden | [idOrName] | ",
+      "contexthelp": "enter for \u0026lt;value\u0026gt; hidden \u0026lt;idOrName\u0026gt;",
+      "name": "enterForHidden",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "idOrName",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "click",
+      "usage": "| click | [place] | ",
+      "contexthelp": "click \u0026lt;place\u0026gt;",
+      "name": "click",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "click at offset xy",
+      "usage": "| click at | [place] | offset | [xOffset] | xy | [yOffset] | ",
+      "contexthelp": "click at \u0026lt;place\u0026gt; offset \u0026lt;xOffset\u0026gt; xy \u0026lt;yOffset\u0026gt;",
+      "name": "clickAtOffsetXY",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "xOffset",
+          "type": "Integer"
+        },
+        {
+          "name": "yOffset",
+          "type": "Integer"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "double click at offset xy",
+      "usage": "| double click at | [place] | offset | [xOffset] | xy | [yOffset] | ",
+      "contexthelp": "double click at \u0026lt;place\u0026gt; offset \u0026lt;xOffset\u0026gt; xy \u0026lt;yOffset\u0026gt;",
+      "name": "doubleClickAtOffsetXY",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "xOffset",
+          "type": "Integer"
+        },
+        {
+          "name": "yOffset",
+          "type": "Integer"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "right click at offset xy",
+      "usage": "| right click at | [place] | offset | [xOffset] | xy | [yOffset] | ",
+      "contexthelp": "right click at \u0026lt;place\u0026gt; offset \u0026lt;xOffset\u0026gt; xy \u0026lt;yOffset\u0026gt;",
+      "name": "rightClickAtOffsetXY",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "xOffset",
+          "type": "Integer"
+        },
+        {
+          "name": "yOffset",
+          "type": "Integer"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "drag and drop to offset xy",
+      "usage": "| drag and drop to | [place] | offset | [xOffset] | xy | [yOffset] | ",
+      "contexthelp": "drag and drop to \u0026lt;place\u0026gt; offset \u0026lt;xOffset\u0026gt; xy \u0026lt;yOffset\u0026gt;",
+      "name": "dragAndDropToOffsetXY",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "xOffset",
+          "type": "Integer"
+        },
+        {
+          "name": "yOffset",
+          "type": "Integer"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "click if available",
+      "usage": "| click if available | [place] | ",
+      "contexthelp": "click if available \u0026lt;place\u0026gt;",
+      "name": "clickIfAvailable",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "click if available in",
+      "usage": "| click if available | [place] | in | [container] | ",
+      "contexthelp": "click if available \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "clickIfAvailableIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "click in",
+      "usage": "| click | [place] | in | [container] | ",
+      "contexthelp": "click \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "clickIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "double click",
+      "usage": "| double click | [place] | ",
+      "contexthelp": "double click \u0026lt;place\u0026gt;",
+      "name": "doubleClick",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "double click in",
+      "usage": "| double click | [place] | in | [container] | ",
+      "contexthelp": "double click \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "doubleClickIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "right click",
+      "usage": "| right click | [place] | ",
+      "contexthelp": "right click \u0026lt;place\u0026gt;",
+      "name": "rightClick",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "right click in",
+      "usage": "| right click | [place] | in | [container] | ",
+      "contexthelp": "right click \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "rightClickIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "shift click",
+      "usage": "| shift click | [place] | ",
+      "contexthelp": "shift click \u0026lt;place\u0026gt;",
+      "name": "shiftClick",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "shift click in",
+      "usage": "| shift click | [place] | in | [container] | ",
+      "contexthelp": "shift click \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "shiftClickIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "control click",
+      "usage": "| control click | [place] | ",
+      "contexthelp": "control click \u0026lt;place\u0026gt;",
+      "name": "controlClick",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "control click in",
+      "usage": "| control click | [place] | in | [container] | ",
+      "contexthelp": "control click \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "controlClickIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set send command for control on mac to",
+      "usage": "| set send command for control on mac to | [sendCommand] | ",
+      "contexthelp": "set send command for control on mac to \u0026lt;sendCommand\u0026gt;",
+      "name": "setSendCommandForControlOnMacTo",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "sendCommand",
+          "type": "boolean"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "send command for control on mac",
+      "usage": "| send command for control on mac |",
+      "contexthelp": "send command for control on mac",
+      "name": "sendCommandForControlOnMac",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "drag and drop to",
+      "usage": "| drag and drop | [source] | to | [destination] | ",
+      "contexthelp": "drag and drop \u0026lt;source\u0026gt; to \u0026lt;destination\u0026gt;",
+      "name": "dragAndDropTo",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "source",
+          "type": "String"
+        },
+        {
+          "name": "destination",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "html 5 drag and drop to",
+      "usage": "| html 5 drag and drop | [source] | to | [destination] | ",
+      "contexthelp": "html 5 drag and drop \u0026lt;source\u0026gt; to \u0026lt;destination\u0026gt;",
+      "name": "html5DragAndDropTo",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "source",
+          "type": "String"
+        },
+        {
+          "name": "destination",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set search context to",
+      "usage": "| set search context to | [container] | ",
+      "contexthelp": "set search context to \u0026lt;container\u0026gt;",
+      "name": "setSearchContextTo",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "clear search context",
+      "usage": "| clear search context |",
+      "contexthelp": "clear search context",
+      "name": "clearSearchContext",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "wait for page",
+      "usage": "| wait for page | [pageName] | ",
+      "contexthelp": "wait for page \u0026lt;pageName\u0026gt;",
+      "name": "waitForPage",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "pageName",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait for tag with text",
+      "usage": "| wait for tag with | [tagName] | text | [expectedText] | ",
+      "contexthelp": "wait for tag with \u0026lt;tagName\u0026gt; text \u0026lt;expectedText\u0026gt;",
+      "name": "waitForTagWithText",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "tagName",
+          "type": "String"
+        },
+        {
+          "name": "expectedText",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait for class with text",
+      "usage": "| wait for class with | [cssClassName] | text | [expectedText] | ",
+      "contexthelp": "wait for class with \u0026lt;cssClassName\u0026gt; text \u0026lt;expectedText\u0026gt;",
+      "name": "waitForClassWithText",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "cssClassName",
+          "type": "String"
+        },
+        {
+          "name": "expectedText",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait for class",
+      "usage": "| wait for class | [cssClassName] | ",
+      "contexthelp": "wait for class \u0026lt;cssClassName\u0026gt;",
+      "name": "waitForClass",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "cssClassName",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait for visible",
+      "usage": "| wait for visible | [place] | ",
+      "contexthelp": "wait for visible \u0026lt;place\u0026gt;",
+      "name": "waitForVisible",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait for visible in",
+      "usage": "| wait for visible | [place] | in | [container] | ",
+      "contexthelp": "wait for visible \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "waitForVisibleIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait for x path visible",
+      "usage": "| wait for x path visible | [xPath] | ",
+      "contexthelp": "wait for x path visible \u0026lt;xPath\u0026gt;",
+      "name": "waitForXPathVisible",
+      "docString": "\u003cb\u003eDeprecated:\u003c/b\u003e use #waitForVisible(xpath\u003d) instead",
+      "annotations": [
+        "Deprecated"
+      ],
+      "parameters": [
+        {
+          "name": "xPath",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "value of",
+      "usage": "| value of | [place] | ",
+      "contexthelp": "value of \u0026lt;place\u0026gt;",
+      "name": "valueOf",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "value for",
+      "usage": "| value for | [place] | ",
+      "contexthelp": "value for \u0026lt;place\u0026gt;",
+      "name": "valueFor",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "value of in",
+      "usage": "| value of | [place] | in | [container] | ",
+      "contexthelp": "value of \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "valueOfIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "value for in",
+      "usage": "| value for | [place] | in | [container] | ",
+      "contexthelp": "value for \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "valueForIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "normalized value of",
+      "usage": "| normalized value of | [place] | ",
+      "contexthelp": "normalized value of \u0026lt;place\u0026gt;",
+      "name": "normalizedValueOf",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "normalized value for",
+      "usage": "| normalized value for | [place] | ",
+      "contexthelp": "normalized value for \u0026lt;place\u0026gt;",
+      "name": "normalizedValueFor",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "normalized value of in",
+      "usage": "| normalized value of | [place] | in | [container] | ",
+      "contexthelp": "normalized value of \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "normalizedValueOfIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "normalized value for in",
+      "usage": "| normalized value for | [place] | in | [container] | ",
+      "contexthelp": "normalized value for \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "normalizedValueForIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "tooltip for",
+      "usage": "| tooltip for | [place] | ",
+      "contexthelp": "tooltip for \u0026lt;place\u0026gt;",
+      "name": "tooltipFor",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "tooltip for in",
+      "usage": "| tooltip for | [place] | in | [container] | ",
+      "contexthelp": "tooltip for \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "tooltipForIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "target of link",
+      "usage": "| target of link | [place] | ",
+      "contexthelp": "target of link \u0026lt;place\u0026gt;",
+      "name": "targetOfLink",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "value of attribute on",
+      "usage": "| value of attribute | [attribute] | on | [place] | ",
+      "contexthelp": "value of attribute \u0026lt;attribute\u0026gt; on \u0026lt;place\u0026gt;",
+      "name": "valueOfAttributeOn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "attribute",
+          "type": "String"
+        },
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "value of attribute on in",
+      "usage": "| value of attribute | [attribute] | on | [place] | in | [container] | ",
+      "contexthelp": "value of attribute \u0026lt;attribute\u0026gt; on \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "valueOfAttributeOnIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "attribute",
+          "type": "String"
+        },
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "values of",
+      "usage": "| values of | [place] | ",
+      "contexthelp": "values of \u0026lt;place\u0026gt;",
+      "name": "valuesOf",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "values of in",
+      "usage": "| values of | [place] | in | [container] | ",
+      "contexthelp": "values of \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "valuesOfIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "values for",
+      "usage": "| values for | [place] | ",
+      "contexthelp": "values for \u0026lt;place\u0026gt;",
+      "name": "valuesFor",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "values for in",
+      "usage": "| values for | [place] | in | [container] | ",
+      "contexthelp": "values for \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "valuesForIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "normalized values of",
+      "usage": "| normalized values of | [place] | ",
+      "contexthelp": "normalized values of \u0026lt;place\u0026gt;",
+      "name": "normalizedValuesOf",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "normalized values of in",
+      "usage": "| normalized values of | [place] | in | [container] | ",
+      "contexthelp": "normalized values of \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "normalizedValuesOfIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "normalized values for",
+      "usage": "| normalized values for | [place] | ",
+      "contexthelp": "normalized values for \u0026lt;place\u0026gt;",
+      "name": "normalizedValuesFor",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "normalized values for in",
+      "usage": "| normalized values for | [place] | in | [container] | ",
+      "contexthelp": "normalized values for \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "normalizedValuesForIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "number for",
+      "usage": "| number for | [place] | ",
+      "contexthelp": "number for \u0026lt;place\u0026gt;",
+      "name": "numberFor",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Integer"
+    },
+    {
+      "readableName": "number for in",
+      "usage": "| number for | [place] | in | [container] | ",
+      "contexthelp": "number for \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "numberForIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Integer"
+    },
+    {
+      "readableName": "available options for",
+      "usage": "| available options for | [place] | ",
+      "contexthelp": "available options for \u0026lt;place\u0026gt;",
+      "name": "availableOptionsFor",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "normalized available options for",
+      "usage": "| normalized available options for | [place] | ",
+      "contexthelp": "normalized available options for \u0026lt;place\u0026gt;",
+      "name": "normalizedAvailableOptionsFor",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "clear",
+      "usage": "| clear | [place] | ",
+      "contexthelp": "clear \u0026lt;place\u0026gt;",
+      "name": "clear",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "clear in",
+      "usage": "| clear | [place] | in | [container] | ",
+      "contexthelp": "clear \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "clearIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "enter as in row where is",
+      "usage": "| enter as in | [value] | row | [requestedColumnName] | where | [selectOnColumn] | is | [selectOnValue] | ",
+      "contexthelp": "enter as in \u0026lt;value\u0026gt; row \u0026lt;requestedColumnName\u0026gt; where \u0026lt;selectOnColumn\u0026gt; is \u0026lt;selectOnValue\u0026gt;",
+      "name": "enterAsInRowWhereIs",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        },
+        {
+          "name": "requestedColumnName",
+          "type": "String"
+        },
+        {
+          "name": "selectOnColumn",
+          "type": "String"
+        },
+        {
+          "name": "selectOnValue",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "value of column number in row number",
+      "usage": "| value of column number in row | [columnIndex] | number | [rowIndex] | ",
+      "contexthelp": "value of column number in row \u0026lt;columnIndex\u0026gt; number \u0026lt;rowIndex\u0026gt;",
+      "name": "valueOfColumnNumberInRowNumber",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "columnIndex",
+          "type": "int"
+        },
+        {
+          "name": "rowIndex",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "value of in row number",
+      "usage": "| value of in row | [requestedColumnName] | number | [rowIndex] | ",
+      "contexthelp": "value of in row \u0026lt;requestedColumnName\u0026gt; number \u0026lt;rowIndex\u0026gt;",
+      "name": "valueOfInRowNumber",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "requestedColumnName",
+          "type": "String"
+        },
+        {
+          "name": "rowIndex",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "value of in row where is",
+      "usage": "| value of in row | [requestedColumnName] | where | [selectOnColumn] | is | [selectOnValue] | ",
+      "contexthelp": "value of in row \u0026lt;requestedColumnName\u0026gt; where \u0026lt;selectOnColumn\u0026gt; is \u0026lt;selectOnValue\u0026gt;",
+      "name": "valueOfInRowWhereIs",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "requestedColumnName",
+          "type": "String"
+        },
+        {
+          "name": "selectOnColumn",
+          "type": "String"
+        },
+        {
+          "name": "selectOnValue",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "normalized value of column number in row number",
+      "usage": "| normalized value of column number in row | [columnIndex] | number | [rowIndex] | ",
+      "contexthelp": "normalized value of column number in row \u0026lt;columnIndex\u0026gt; number \u0026lt;rowIndex\u0026gt;",
+      "name": "normalizedValueOfColumnNumberInRowNumber",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "columnIndex",
+          "type": "int"
+        },
+        {
+          "name": "rowIndex",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "normalized value of in row number",
+      "usage": "| normalized value of in row | [requestedColumnName] | number | [rowIndex] | ",
+      "contexthelp": "normalized value of in row \u0026lt;requestedColumnName\u0026gt; number \u0026lt;rowIndex\u0026gt;",
+      "name": "normalizedValueOfInRowNumber",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "requestedColumnName",
+          "type": "String"
+        },
+        {
+          "name": "rowIndex",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "normalized value of in row where is",
+      "usage": "| normalized value of in row | [requestedColumnName] | where | [selectOnColumn] | is | [selectOnValue] | ",
+      "contexthelp": "normalized value of in row \u0026lt;requestedColumnName\u0026gt; where \u0026lt;selectOnColumn\u0026gt; is \u0026lt;selectOnValue\u0026gt;",
+      "name": "normalizedValueOfInRowWhereIs",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "requestedColumnName",
+          "type": "String"
+        },
+        {
+          "name": "selectOnColumn",
+          "type": "String"
+        },
+        {
+          "name": "selectOnValue",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "row exists where is",
+      "usage": "| row exists where | [selectOnColumn] | is | [selectOnValue] | ",
+      "contexthelp": "row exists where \u0026lt;selectOnColumn\u0026gt; is \u0026lt;selectOnValue\u0026gt;",
+      "name": "rowExistsWhereIs",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "selectOnColumn",
+          "type": "String"
+        },
+        {
+          "name": "selectOnValue",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "click in row number",
+      "usage": "| click in row | [place] | number | [rowIndex] | ",
+      "contexthelp": "click in row \u0026lt;place\u0026gt; number \u0026lt;rowIndex\u0026gt;",
+      "name": "clickInRowNumber",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "rowIndex",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "click in row where is",
+      "usage": "| click in row | [place] | where | [selectOnColumn] | is | [selectOnValue] | ",
+      "contexthelp": "click in row \u0026lt;place\u0026gt; where \u0026lt;selectOnColumn\u0026gt; is \u0026lt;selectOnValue\u0026gt;",
+      "name": "clickInRowWhereIs",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "selectOnColumn",
+          "type": "String"
+        },
+        {
+          "name": "selectOnValue",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "download from row number",
+      "usage": "| download from row | [place] | number | [rowNumber] | ",
+      "contexthelp": "download from row \u0026lt;place\u0026gt; number \u0026lt;rowNumber\u0026gt;",
+      "name": "downloadFromRowNumber",
+      "docString": "Downloads the target of a link in a grid\u0027s row.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "downloaded file if any, null otherwise.",
+      "parameters": [
+        {
+          "name": "place",
+          "description": "which link to download.",
+          "type": "String"
+        },
+        {
+          "name": "rowNumber",
+          "description": "(1-based) row number to retrieve link from.",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "download from row where is",
+      "usage": "| download from row | [place] | where | [selectOnColumn] | is | [selectOnValue] | ",
+      "contexthelp": "download from row \u0026lt;place\u0026gt; where \u0026lt;selectOnColumn\u0026gt; is \u0026lt;selectOnValue\u0026gt;",
+      "name": "downloadFromRowWhereIs",
+      "docString": "Downloads the target of a link in a grid, finding the row based on one of the other columns\u0027 value.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "downloaded file if any, null otherwise.",
+      "parameters": [
+        {
+          "name": "place",
+          "description": "which link to download.",
+          "type": "String"
+        },
+        {
+          "name": "selectOnColumn",
+          "description": "column header of cell whose value must be selectOnValue.",
+          "type": "String"
+        },
+        {
+          "name": "selectOnValue",
+          "description": "value to be present in selectOnColumn to find correct row.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "click by x path",
+      "usage": "| click by x path | [xPath] | ",
+      "contexthelp": "click by x path \u0026lt;xPath\u0026gt;",
+      "name": "clickByXPath",
+      "docString": "\u003cb\u003eDeprecated:\u003c/b\u003e use #click(xpath\u003d) instead.",
+      "annotations": [
+        "WaitUntil",
+        "Deprecated"
+      ],
+      "parameters": [
+        {
+          "name": "xPath",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "text by x path",
+      "usage": "| text by x path | [xPath] | ",
+      "contexthelp": "text by x path \u0026lt;xPath\u0026gt;",
+      "name": "textByXPath",
+      "docString": "\u003cb\u003eDeprecated:\u003c/b\u003e use #valueOf(xpath\u003d) instead.",
+      "annotations": [
+        "WaitUntil",
+        "Deprecated"
+      ],
+      "parameters": [
+        {
+          "name": "xPath",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "text by class name",
+      "usage": "| text by class name | [className] | ",
+      "contexthelp": "text by class name \u0026lt;className\u0026gt;",
+      "name": "textByClassName",
+      "docString": "\u003cb\u003eDeprecated:\u003c/b\u003e use #valueOf(css\u003d.) instead.",
+      "annotations": [
+        "WaitUntil",
+        "Deprecated"
+      ],
+      "parameters": [
+        {
+          "name": "className",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "wait milli second after scroll",
+      "usage": "| wait milli second after scroll | [msToWait] | ",
+      "contexthelp": "wait milli second after scroll \u0026lt;msToWait\u0026gt;",
+      "name": "waitMilliSecondAfterScroll",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "msToWait",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "scroll to",
+      "usage": "| scroll to | [place] | ",
+      "contexthelp": "scroll to \u0026lt;place\u0026gt;",
+      "name": "scrollTo",
+      "docString": "Scrolls browser window so top of place becomes visible.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "description": "element to scroll to.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "scroll to in",
+      "usage": "| scroll to | [place] | in | [container] | ",
+      "contexthelp": "scroll to \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "scrollToIn",
+      "docString": "Scrolls browser window so top of place becomes visible.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "description": "element to scroll to.",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "description": "parent of place.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "is enabled",
+      "usage": "| is enabled | [place] | ",
+      "contexthelp": "is enabled \u0026lt;place\u0026gt;",
+      "name": "isEnabled",
+      "docString": "Determines whether element is enabled (i.e. can be clicked).",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true if element is enabled.",
+      "parameters": [
+        {
+          "name": "place",
+          "description": "element to check.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "is enabled in",
+      "usage": "| is enabled | [place] | in | [container] | ",
+      "contexthelp": "is enabled \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "isEnabledIn",
+      "docString": "Determines whether element is enabled (i.e. can be clicked).",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true if element is enabled.",
+      "parameters": [
+        {
+          "name": "place",
+          "description": "element to check.",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "description": "parent of place.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "is disabled",
+      "usage": "| is disabled | [place] | ",
+      "contexthelp": "is disabled \u0026lt;place\u0026gt;",
+      "name": "isDisabled",
+      "docString": "Determines whether element is NOT enabled (i.e. can not be clicked).",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true if element is disabled.",
+      "parameters": [
+        {
+          "name": "place",
+          "description": "element to check.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "is disabled in",
+      "usage": "| is disabled | [place] | in | [container] | ",
+      "contexthelp": "is disabled \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "isDisabledIn",
+      "docString": "Determines whether element is NOT enabled (i.e. can not be clicked).",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true if element is disabled.",
+      "parameters": [
+        {
+          "name": "place",
+          "description": "element to check.",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "description": "parent of place.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "is visible",
+      "usage": "| is visible | [place] | ",
+      "contexthelp": "is visible \u0026lt;place\u0026gt;",
+      "name": "isVisible",
+      "docString": "Determines whether element can be see in browser\u0027s window.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true if element is displayed and in viewport.",
+      "parameters": [
+        {
+          "name": "place",
+          "description": "element to check.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "is visible in",
+      "usage": "| is visible | [place] | in | [container] | ",
+      "contexthelp": "is visible \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "isVisibleIn",
+      "docString": "Determines whether element can be see in browser\u0027s window.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true if element is displayed and in viewport.",
+      "parameters": [
+        {
+          "name": "place",
+          "description": "element to check.",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "description": "parent of place.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "is visible on page",
+      "usage": "| is visible on page | [place] | ",
+      "contexthelp": "is visible on page \u0026lt;place\u0026gt;",
+      "name": "isVisibleOnPage",
+      "docString": "Determines whether element is somewhere in browser\u0027s window.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true if element is displayed.",
+      "parameters": [
+        {
+          "name": "place",
+          "description": "element to check.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "is visible on page in",
+      "usage": "| is visible on page | [place] | in | [container] | ",
+      "contexthelp": "is visible on page \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "isVisibleOnPageIn",
+      "docString": "Determines whether element is somewhere in browser\u0027s window.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true if element is displayed.",
+      "parameters": [
+        {
+          "name": "place",
+          "description": "element to check.",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "description": "parent of place.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "is not visible",
+      "usage": "| is not visible | [place] | ",
+      "contexthelp": "is not visible \u0026lt;place\u0026gt;",
+      "name": "isNotVisible",
+      "docString": "Determines whether element is not visible (or disappears within the specified timeout)",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true if the element is not displayed (anymore)",
+      "parameters": [
+        {
+          "name": "place",
+          "description": "element to check",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "is not visible in",
+      "usage": "| is not visible | [place] | in | [container] | ",
+      "contexthelp": "is not visible \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "isNotVisibleIn",
+      "docString": "Determines whether element is not visible (or disappears within the specified timeout)",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true if the element is not displayed (anymore)",
+      "parameters": [
+        {
+          "name": "place",
+          "description": "element to check.",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "description": "parent of place.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "is not visible on page",
+      "usage": "| is not visible on page | [place] | ",
+      "contexthelp": "is not visible on page \u0026lt;place\u0026gt;",
+      "name": "isNotVisibleOnPage",
+      "docString": "Determines whether element is not on the page (or disappears within the specified timeout)",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true if element is not on the page (anymore).",
+      "parameters": [
+        {
+          "name": "place",
+          "description": "element to check.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "is not visible on page in",
+      "usage": "| is not visible on page | [place] | in | [container] | ",
+      "contexthelp": "is not visible on page \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "isNotVisibleOnPageIn",
+      "docString": "Determines whether element is not on the page (or disappears within the specified timeout)",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true if the element is not on the page (anymore)",
+      "parameters": [
+        {
+          "name": "place",
+          "description": "element to check.",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "description": "parent of place.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "number of times is visible",
+      "usage": "| number of times is visible | [text] | ",
+      "contexthelp": "number of times is visible \u0026lt;text\u0026gt;",
+      "name": "numberOfTimesIsVisible",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "text",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "number of times is visible on page",
+      "usage": "| number of times is visible on page | [text] | ",
+      "contexthelp": "number of times is visible on page \u0026lt;text\u0026gt;",
+      "name": "numberOfTimesIsVisibleOnPage",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "text",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "number of times is visible in",
+      "usage": "| number of times is visible | [text] | in | [container] | ",
+      "contexthelp": "number of times is visible \u0026lt;text\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "numberOfTimesIsVisibleIn",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "text",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "number of times is visible on page in",
+      "usage": "| number of times is visible on page | [text] | in | [container] | ",
+      "contexthelp": "number of times is visible on page \u0026lt;text\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "numberOfTimesIsVisibleOnPageIn",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "text",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "hover over",
+      "usage": "| hover over | [place] | ",
+      "contexthelp": "hover over \u0026lt;place\u0026gt;",
+      "name": "hoverOver",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "hover over in",
+      "usage": "| hover over | [place] | in | [container] | ",
+      "contexthelp": "hover over \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "hoverOverIn",
+      "docString": "",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "seconds before timeout",
+      "usage": "| seconds before timeout | [timeout] | ",
+      "contexthelp": "seconds before timeout \u0026lt;timeout\u0026gt;",
+      "name": "secondsBeforeTimeout",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "timeout",
+          "description": "number of seconds before waitUntil() and waitForJavascriptCallback() throw TimeOutException.",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "seconds before timeout",
+      "usage": "| seconds before timeout |",
+      "contexthelp": "seconds before timeout",
+      "name": "secondsBeforeTimeout",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "number of seconds waitUntil() will wait at most.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "seconds before page load timeout",
+      "usage": "| seconds before page load timeout | [timeout] | ",
+      "contexthelp": "seconds before page load timeout \u0026lt;timeout\u0026gt;",
+      "name": "secondsBeforePageLoadTimeout",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "timeout",
+          "description": "number of seconds before waiting for a new page to load will throw a TimeOutException.",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "seconds before page load timeout",
+      "usage": "| seconds before page load timeout |",
+      "contexthelp": "seconds before page load timeout",
+      "name": "secondsBeforePageLoadTimeout",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "number of seconds Selenium will wait at most for a request to load a page.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "clear session storage",
+      "usage": "| clear session storage |",
+      "contexthelp": "clear session storage",
+      "name": "clearSessionStorage",
+      "docString": "Clears HTML5\u0027s sessionStorage (for the domain of the current open page in the browser).",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "clear local storage",
+      "usage": "| clear local storage |",
+      "contexthelp": "clear local storage",
+      "name": "clearLocalStorage",
+      "docString": "Clears HTML5\u0027s localStorage (for the domain of the current open page in the browser).",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "delete all cookies",
+      "usage": "| delete all cookies |",
+      "contexthelp": "delete all cookies",
+      "name": "deleteAllCookies",
+      "docString": "Deletes all cookies(for the domain of the current open page in the browser).",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "screenshot base directory",
+      "usage": "| screenshot base directory | [directory] | ",
+      "contexthelp": "screenshot base directory \u0026lt;directory\u0026gt;",
+      "name": "screenshotBaseDirectory",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "directory",
+          "description": "sets base directory where screenshots will be stored.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "screenshot show height",
+      "usage": "| screenshot show height | [height] | ",
+      "contexthelp": "screenshot show height \u0026lt;height\u0026gt;",
+      "name": "screenshotShowHeight",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "height",
+          "description": "height to use to display screenshot images",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "page source",
+      "usage": "| page source |",
+      "contexthelp": "page source",
+      "name": "pageSource",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "(escaped) HTML content of current page.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "save page source",
+      "usage": "| save page source |",
+      "contexthelp": "save page source",
+      "name": "savePageSource",
+      "docString": "Saves current page\u0027s source to the wiki\u0027f files section and returns a link to the\n created file.",
+      "annotations": [],
+      "returnDescription": "hyperlink to the file containing the page source.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "take screenshot",
+      "usage": "| take screenshot | [basename] | ",
+      "contexthelp": "take screenshot \u0026lt;basename\u0026gt;",
+      "name": "takeScreenshot",
+      "docString": "Takes screenshot from current page",
+      "annotations": [],
+      "returnDescription": "location of screenshot.",
+      "parameters": [
+        {
+          "name": "basename",
+          "description": "filename (below screenshot base directory).",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "refresh search context",
+      "usage": "| refresh search context |",
+      "contexthelp": "refresh search context",
+      "name": "refreshSearchContext",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "current browser width",
+      "usage": "| current browser width |",
+      "contexthelp": "current browser width",
+      "name": "currentBrowserWidth",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "current browser height",
+      "usage": "| current browser height |",
+      "contexthelp": "current browser height",
+      "name": "currentBrowserHeight",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "set browser width",
+      "usage": "| set browser width | [newWidth] | ",
+      "contexthelp": "set browser width \u0026lt;newWidth\u0026gt;",
+      "name": "setBrowserWidth",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "newWidth",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set browser height",
+      "usage": "| set browser height | [newHeight] | ",
+      "contexthelp": "set browser height \u0026lt;newHeight\u0026gt;",
+      "name": "setBrowserHeight",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "newHeight",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set browser size to by",
+      "usage": "| set browser size to | [newWidth] | by | [newHeight] | ",
+      "contexthelp": "set browser size to \u0026lt;newWidth\u0026gt; by \u0026lt;newHeight\u0026gt;",
+      "name": "setBrowserSizeToBy",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "newWidth",
+          "type": "int"
+        },
+        {
+          "name": "newHeight",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set browser size to maximum",
+      "usage": "| set browser size to maximum |",
+      "contexthelp": "set browser size to maximum",
+      "name": "setBrowserSizeToMaximum",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "download",
+      "usage": "| download | [place] | ",
+      "contexthelp": "download \u0026lt;place\u0026gt;",
+      "name": "download",
+      "docString": "Downloads the target of the supplied link.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "downloaded file if any, null otherwise.",
+      "parameters": [
+        {
+          "name": "place",
+          "description": "link to follow.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "download in",
+      "usage": "| download | [place] | in | [container] | ",
+      "contexthelp": "download \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "downloadIn",
+      "docString": "Downloads the target of the supplied link.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "downloaded file if any, null otherwise.",
+      "parameters": [
+        {
+          "name": "place",
+          "description": "link to follow.",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "description": "part of screen containing link.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "find by technical selector or",
+      "usage": "| find by technical selector | [place] | or | [supplierF] | ",
+      "contexthelp": "find by technical selector \u0026lt;place\u0026gt; or \u0026lt;supplierF\u0026gt;",
+      "name": "findByTechnicalSelectorOr",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "supplierF",
+          "type": "Function"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "WebElement"
+    },
+    {
+      "readableName": "download content from",
+      "usage": "| download content from | [urlOrLink] | ",
+      "contexthelp": "download content from \u0026lt;urlOrLink\u0026gt;",
+      "name": "downloadContentFrom",
+      "docString": "Downloads binary content from specified url (using the browser\u0027s cookies).",
+      "annotations": [],
+      "returnDescription": "link to downloaded file",
+      "parameters": [
+        {
+          "name": "urlOrLink",
+          "description": "url to download from",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "select file",
+      "usage": "| select file | [fileName] | ",
+      "contexthelp": "select file \u0026lt;fileName\u0026gt;",
+      "name": "selectFile",
+      "docString": "Selects a file using the first file upload control.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true, if a file input was found and file existed.",
+      "parameters": [
+        {
+          "name": "fileName",
+          "description": "file to upload",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "select file for",
+      "usage": "| select file | [fileName] | for | [place] | ",
+      "contexthelp": "select file \u0026lt;fileName\u0026gt; for \u0026lt;place\u0026gt;",
+      "name": "selectFileFor",
+      "docString": "Selects a file using a file upload control.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true, if place was a file input and file existed.",
+      "parameters": [
+        {
+          "name": "fileName",
+          "description": "file to upload",
+          "type": "String"
+        },
+        {
+          "name": "place",
+          "description": "file input to select the file for",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "select file for in",
+      "usage": "| select file | [fileName] | for | [place] | in | [container] | ",
+      "contexthelp": "select file \u0026lt;fileName\u0026gt; for \u0026lt;place\u0026gt; in \u0026lt;container\u0026gt;",
+      "name": "selectFileForIn",
+      "docString": "Selects a file using a file upload control.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "true, if place was a file input and file existed.",
+      "parameters": [
+        {
+          "name": "fileName",
+          "description": "file to upload",
+          "type": "String"
+        },
+        {
+          "name": "place",
+          "description": "file input to select the file for",
+          "type": "String"
+        },
+        {
+          "name": "container",
+          "description": "part of screen containing place",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "cookie value",
+      "usage": "| cookie value | [cookieName] | ",
+      "contexthelp": "cookie value \u0026lt;cookieName\u0026gt;",
+      "name": "cookieValue",
+      "docString": "Gets the value of the cookie with the supplied name.",
+      "annotations": [],
+      "returnDescription": "cookie\u0027s value if any.",
+      "parameters": [
+        {
+          "name": "cookieName",
+          "description": "name of cookie to get value from.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "refresh until value of is",
+      "usage": "| refresh until value of | [place] | is | [expectedValue] | ",
+      "contexthelp": "refresh until value of \u0026lt;place\u0026gt; is \u0026lt;expectedValue\u0026gt;",
+      "name": "refreshUntilValueOfIs",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "expectedValue",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "refresh until value of is not",
+      "usage": "| refresh until value of is | [place] | not | [expectedValue] | ",
+      "contexthelp": "refresh until value of is \u0026lt;place\u0026gt; not \u0026lt;expectedValue\u0026gt;",
+      "name": "refreshUntilValueOfIsNot",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "expectedValue",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "refresh until is visible on page",
+      "usage": "| refresh until | [place] | is visible on page |",
+      "contexthelp": "refresh until \u0026lt;place\u0026gt; is visible on page",
+      "name": "refreshUntilIsVisibleOnPage",
+      "docString": "Refreshes current page until \u0027place\u0027 is found somewhere on the page. Do not forget to set \u0027repeat at most times\u0027, or else the loop may run endlessly.\n Usage: | refresh until | [place] | is visible on page |",
+      "annotations": [],
+      "returnDescription": "true if place is found while repeating",
+      "parameters": [
+        {
+          "name": "place",
+          "description": "The place to find.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "refresh until is not visible on page",
+      "usage": "| refresh until | [place] | is not visible on page |",
+      "contexthelp": "refresh until \u0026lt;place\u0026gt; is not visible on page",
+      "name": "refreshUntilIsNotVisibleOnPage",
+      "docString": "Refreshes current page until \u0027place\u0027 is not found somewhere on the page. Do not forget to set \u0027repeat at most times\u0027, or else the loop may run endlessly.\n Usage: | refresh until | [place] | is not visible on page |",
+      "annotations": [],
+      "returnDescription": "true if place is not found while repeating",
+      "parameters": [
+        {
+          "name": "place",
+          "description": "The place you would not like to find anymore.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "click until value of is",
+      "usage": "| click until value | [clickPlace] | of | [checkPlace] | is | [expectedValue] | ",
+      "contexthelp": "click until value \u0026lt;clickPlace\u0026gt; of \u0026lt;checkPlace\u0026gt; is \u0026lt;expectedValue\u0026gt;",
+      "name": "clickUntilValueOfIs",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "clickPlace",
+          "type": "String"
+        },
+        {
+          "name": "checkPlace",
+          "type": "String"
+        },
+        {
+          "name": "expectedValue",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "click until value of is not",
+      "usage": "| click until value of | [clickPlace] | is | [checkPlace] | not | [expectedValue] | ",
+      "contexthelp": "click until value of \u0026lt;clickPlace\u0026gt; is \u0026lt;checkPlace\u0026gt; not \u0026lt;expectedValue\u0026gt;",
+      "name": "clickUntilValueOfIsNot",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "clickPlace",
+          "type": "String"
+        },
+        {
+          "name": "checkPlace",
+          "type": "String"
+        },
+        {
+          "name": "expectedValue",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "execute javascript until is",
+      "usage": "| execute javascript | [script] | until | [place] | is | [value] | ",
+      "contexthelp": "execute javascript \u0026lt;script\u0026gt; until \u0026lt;place\u0026gt; is \u0026lt;value\u0026gt;",
+      "name": "executeJavascriptUntilIs",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "script",
+          "type": "String"
+        },
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "execute javascript until is not",
+      "usage": "| execute javascript until | [script] | is | [place] | not | [value] | ",
+      "contexthelp": "execute javascript until \u0026lt;script\u0026gt; is \u0026lt;place\u0026gt; not \u0026lt;value\u0026gt;",
+      "name": "executeJavascriptUntilIsNot",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "script",
+          "type": "String"
+        },
+        {
+          "name": "place",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "get ng browser test",
+      "usage": "| get ng browser test |",
+      "contexthelp": "get ng browser test",
+      "name": "getNgBrowserTest",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "NgBrowserTest"
+    },
+    {
+      "readableName": "set ng browser test",
+      "usage": "| set ng browser test | [ngBrowserTest] | ",
+      "contexthelp": "set ng browser test \u0026lt;ngBrowserTest\u0026gt;",
+      "name": "setNgBrowserTest",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "ngBrowserTest",
+          "type": "NgBrowserTest"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "is implicit wait for angular enabled",
+      "usage": "| is implicit wait for angular enabled |",
+      "contexthelp": "is implicit wait for angular enabled",
+      "name": "isImplicitWaitForAngularEnabled",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set implicit wait for angular to",
+      "usage": "| set implicit wait for angular to | [implicitWaitForAngular] | ",
+      "contexthelp": "set implicit wait for angular to \u0026lt;implicitWaitForAngular\u0026gt;",
+      "name": "setImplicitWaitForAngularTo",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "implicitWaitForAngular",
+          "type": "boolean"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set implicit find in frames to",
+      "usage": "| set implicit find in frames to | [implicitFindInFrames] | ",
+      "contexthelp": "set implicit find in frames to \u0026lt;implicitFindInFrames\u0026gt;",
+      "name": "setImplicitFindInFramesTo",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "implicitFindInFrames",
+          "type": "boolean"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "execute script",
+      "usage": "| execute script | [script] | ",
+      "contexthelp": "execute script \u0026lt;script\u0026gt;",
+      "name": "executeScript",
+      "docString": "Executes javascript in the browser.",
+      "annotations": [],
+      "returnDescription": "result from script",
+      "parameters": [
+        {
+          "name": "script",
+          "description": "you want to execute",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "select all",
+      "usage": "| select all |",
+      "contexthelp": "select all",
+      "name": "selectAll",
+      "docString": "Simulates \u0027select all\u0027 (e.g. Ctrl+A on Windows) on the active element.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "whether an active element was found.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "copy",
+      "usage": "| copy |",
+      "contexthelp": "copy",
+      "name": "copy",
+      "docString": "Simulates \u0027copy\u0027 (e.g. Ctrl+C on Windows) on the active element, copying the current selection to the clipboard.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "whether an active element was found.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "cut",
+      "usage": "| cut |",
+      "contexthelp": "cut",
+      "name": "cut",
+      "docString": "Simulates \u0027cut\u0027 (e.g. Ctrl+X on Windows) on the active element, copying the current selection to the clipboard\n and removing that selection.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "whether an active element was found.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "paste",
+      "usage": "| paste |",
+      "contexthelp": "paste",
+      "name": "paste",
+      "docString": "Simulates \u0027paste\u0027 (e.g. Ctrl+V on Windows) on the active element, copying the current clipboard\n content to the currently active element.",
+      "annotations": [
+        "WaitUntil"
+      ],
+      "returnDescription": "whether an active element was found.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "get selection text",
+      "usage": "| get selection text |",
+      "contexthelp": "get selection text",
+      "name": "getSelectionText",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "text currently selected in browser, or empty string if no text is selected.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "trim on normalize",
+      "usage": "| trim on normalize |",
+      "contexthelp": "trim on normalize",
+      "name": "trimOnNormalize",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "should \u0027normalized\u0027 functions remove starting and trailing whitespace?",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set trim on normalize",
+      "usage": "| set trim on normalize | [trimOnNormalize] | ",
+      "contexthelp": "set trim on normalize \u0026lt;trimOnNormalize\u0026gt;",
+      "name": "setTrimOnNormalize",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "trimOnNormalize",
+          "description": "should \u0027normalized\u0027 functions remove starting and trailing whitespace?",
+          "type": "boolean"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "scroll elements to center of viewport",
+      "usage": "| scroll elements to center of viewport | [scrollElementsToCenterOfViewport] | ",
+      "contexthelp": "scroll elements to center of viewport \u0026lt;scrollElementsToCenterOfViewport\u0026gt;",
+      "name": "scrollElementsToCenterOfViewport",
+      "docString": "Set the scroll into view behaviour to \u0027?enter of viewport\u0027 (true) or \u0027auto\u0027 (false)",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "scrollElementsToCenterOfViewport",
+          "description": "True to scroll to center, False to use automatic scroll behaviour",
+          "type": "boolean"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "scroll elements to center of viewport",
+      "usage": "| scroll elements to center of viewport |",
+      "contexthelp": "scroll elements to center of viewport",
+      "name": "scrollElementsToCenterOfViewport",
+      "docString": "Get the current scroll behaviour. True means \u0027center of viewport\u0027, False means \u0027auto\u0027",
+      "annotations": [],
+      "returnDescription": "the current boolean value of scrollElementToCenter",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set global value to",
+      "usage": "| set global value | [symbolName] | to | [value] | ",
+      "contexthelp": "set global value \u0026lt;symbolName\u0026gt; to \u0026lt;value\u0026gt;",
+      "name": "setGlobalValueTo",
+      "docString": "Stores a (global) value so it can be accessed by other fixtures/pages.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name to store value under.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to store.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "global value",
+      "usage": "| global value | [symbolName] | ",
+      "contexthelp": "global value \u0026lt;symbolName\u0026gt;",
+      "name": "globalValue",
+      "docString": "Retrieves a (global) value, which was previously stored using #setGlobalValueTo().",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name value was stored under.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "wait seconds",
+      "usage": "| wait seconds | [i] | ",
+      "contexthelp": "wait seconds \u0026lt;i\u0026gt;",
+      "name": "waitSeconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait milliseconds",
+      "usage": "| wait milliseconds | [i] | ",
+      "contexthelp": "wait milliseconds \u0026lt;i\u0026gt;",
+      "name": "waitMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set repeat interval to milliseconds",
+      "usage": "| set repeat interval to milliseconds | [milliseconds] | ",
+      "contexthelp": "set repeat interval to milliseconds \u0026lt;milliseconds\u0026gt;",
+      "name": "setRepeatIntervalToMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "milliseconds",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat interval",
+      "usage": "| repeat interval |",
+      "contexthelp": "repeat interval",
+      "name": "repeatInterval",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times | [maxCount] | ",
+      "contexthelp": "repeat at most times \u0026lt;maxCount\u0026gt;",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "maxCount",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times |",
+      "contexthelp": "repeat at most times",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "repeat count",
+      "usage": "| repeat count |",
+      "contexthelp": "repeat count",
+      "name": "repeatCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "time spent repeating",
+      "usage": "| time spent repeating |",
+      "contexthelp": "time spent repeating",
+      "name": "timeSpentRepeating",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    }
+  ],
+  "typeName": "RichFacesTest",
+  "name": "RichFacesTest",
+  "annotations": []
+}

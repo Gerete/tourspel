@@ -1,0 +1,1078 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20191110</FitNesseVersion>
+  <rootPath>Tourspel.ScenarioTest</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>17</exceptions>
+    </counts>
+    <date>2020-04-25T21:08:39+02:00</date>
+    <runTimeInMillis>36</runTimeInMillis>
+    <content></content>
+    <relativePageName>SuiteSetUp</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='nl.hsac.fitnesse.fixture.slim.web'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim.web)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim.web</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_0', instruction='make', instanceName='scriptTableActor', className='MapFixture', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for MapFixture[0]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_1', instruction='call', instanceName='scriptTableActor', methodName='setValueFor', args=[Mozilla/5.0 (Linux; Android 4.2.1; en-us; Nexus 5 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19, userAgent]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.setValueFor. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_2', instruction='call', instanceName='scriptTableActor', methodName='setIntValueFor', args=[360, deviceMetrics.width]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_2</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.setIntValueFor. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_3', instruction='call', instanceName='scriptTableActor', methodName='setIntValueFor', args=[640, deviceMetrics.height]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_3</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.setIntValueFor. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_4', instruction='call', instanceName='scriptTableActor', methodName='setDoubleValueFor', args=[3.0, deviceMetrics.pixelRatio]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_4</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.setDoubleValueFor. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_5', instruction='callAndAssign', symbolName='mobileEmulation', instanceName='scriptTableActor', methodName='copyMap', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_5</instructionId>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.copyMap. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_2_0', instruction='make', instanceName='scriptTableActor', className='MapFixture', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_2_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for MapFixture[0]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_2_1', instruction='call', instanceName='scriptTableActor', methodName='setValueFor', args=[headless, args[0]]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_2_1</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.setValueFor. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_2_2', instruction='call', instanceName='scriptTableActor', methodName='setValueFor', args=[disable-gpu, args[1]]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_2_2</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.setValueFor. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_2_3', instruction='callAndAssign', symbolName='chromeHeadlessProfile', instanceName='scriptTableActor', methodName='copyMap', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_2_3</instructionId>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.copyMap. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_3_0', instruction='make', instanceName='scriptTableActor', className='MapFixture', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_3_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for MapFixture[0]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_3_1', instruction='call', instanceName='scriptTableActor', methodName='expandPeriodsInNamesToNestedMaps', args=[false]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_3_1</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.expandPeriodsInNamesToNestedMaps. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_3_2', instruction='call', instanceName='scriptTableActor', methodName='setBooleanValueFor', args=[true, ie.ensureCleanSession]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_3_2</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.setBooleanValueFor. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_3_3', instruction='callAndAssign', symbolName='ieCleanSession', instanceName='scriptTableActor', methodName='copyMap', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_3_3</instructionId>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.copyMap. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_4_0', instruction='make', instanceName='scriptTableActor', className='SeleniumDriverSetup', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_4_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for SeleniumDriverSetup[0]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_4_1', instruction='call', instanceName='scriptTableActor', methodName='startDriverFor', args=[chrome]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_4_1</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.startDriverFor. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_4_2', instruction='call', instanceName='scriptTableActor', methodName='driverDescription', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_4_2</instructionId>
+          <type>ShowActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.driverDescription. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>29</exceptions>
+    </counts>
+    <date>2020-04-25T21:08:39+02:00</date>
+    <runTimeInMillis>24</runTimeInMillis>
+    <content></content>
+    <relativePageName>ScenarioTest</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_0', instruction='make', instanceName='scriptTableActor', className='BrowserTest', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for BrowserTest[0]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_1', instruction='call', instanceName='scriptTableActor', methodName='secondsBeforeTimeout', args=[60]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_1</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.secondsBeforeTimeout. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_2', instruction='call', instanceName='scriptTableActor', methodName='open', args=[&lt;a href="https://www.allmusic.com"&gt;https://www.allmusic.com&lt;/a&gt;]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_2</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.open. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_3', instruction='call', instanceName='scriptTableActor', methodName='clickIfAvailable', args=[I accept]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_3</instructionId>
+          <type>ShowActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.clickIfAvailable. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_4', instruction='call', instanceName='scriptTableActor', methodName='enterAs', args=[Van Morrison, Search]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_4</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.enterAs. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_5', instruction='call', instanceName='scriptTableActor', methodName='press', args=[enter]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_5</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.press. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_6', instruction='call', instanceName='scriptTableActor', methodName='click', args=[Van Morrison]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_6</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.click. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_7', instruction='call', instanceName='scriptTableActor', methodName='takeScreenshot', args=[overview]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_7</instructionId>
+          <type>ShowActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.takeScreenshot. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_8', instruction='call', instanceName='scriptTableActor', methodName='click', args=[Discography]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_8</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.click. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_9', instruction='call', instanceName='scriptTableActor', methodName='pageTitle', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_9</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.pageTitle. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_10', instruction='call', instanceName='scriptTableActor', methodName='takeScreenshot', args=[discography]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_10</instructionId>
+          <type>ShowActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.takeScreenshot. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_11', instruction='call', instanceName='scriptTableActor', methodName='valueOfInRowWhereIs', args=[Year, Album, Astral Weeks]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_11</instructionId>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.valueOfInRowWhereIs. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_12', instruction='call', instanceName='scriptTableActor', methodName='click', args=[Astral Weeks]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_12</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.click. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_13', instruction='call', instanceName='scriptTableActor', methodName='takeScreenshot', args=[album]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_13</instructionId>
+          <type>ShowActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.takeScreenshot. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_14', instruction='call', instanceName='scriptTableActor', methodName='click', args=[click to embiggen]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_14</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.click. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_15', instruction='call', instanceName='scriptTableActor', methodName='waitSeconds', args=[1]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_15</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.waitSeconds. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_16', instruction='call', instanceName='scriptTableActor', methodName='takeScreenshot', args=[cover]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_16</instructionId>
+          <type>ShowActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.takeScreenshot. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_0', instruction='make', instanceName='scriptTableActor', className='BrowserTest', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for BrowserTest[0]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_1', instruction='call', instanceName='scriptTableActor', methodName='secondsBeforeTimeout', args=[60]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_1</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.secondsBeforeTimeout. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_2', instruction='call', instanceName='scriptTableActor', methodName='open', args=[&lt;a href="http://localhost:8080/tourspel"&gt;http://localhost:8080/tourspel&lt;/a&gt;]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_2</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.open. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_3', instruction='call', instanceName='scriptTableActor', methodName='clickIfAvailable', args=[Log in]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_3</instructionId>
+          <type>ShowActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.clickIfAvailable. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_4', instruction='call', instanceName='scriptTableActor', methodName='enterAs', args=[Mol, Achternaam]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_4</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.enterAs. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_1_5', instruction='call', instanceName='scriptTableActor', methodName='press', args=[Zoeken]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_1_5</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.press. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_3_0/scriptTable_2_0', instruction='call', instanceName='scriptTableActor', methodName='scrollTo', args=[Astral Weeks]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_3_0/scriptTable_2_0</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.scrollTo. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_3_0/scriptTable_2_1', instruction='callAndAssign', symbolName='year', instanceName='scriptTableActor', methodName='valueOfInRowWhereIs', args=[Year, Album, Astral Weeks]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_3_0/scriptTable_2_1</instructionId>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.valueOfInRowWhereIs. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_3_0/scriptTable_2_2', instruction='callAndAssign', symbolName='label', instanceName='scriptTableActor', methodName='valueOfInRowWhereIs', args=[Label, Album, Astral Weeks]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_3_0/scriptTable_2_2</instructionId>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.valueOfInRowWhereIs. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>Instruction{id='NOOP'}</instruction>
+        <slimResult>ignore(Test not run)</slimResult>
+        <expectation>
+          <status>ignore</status>
+          <instructionId>NOOP</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ReturnedSymbolExpectation</type>
+          <evaluationMessage>Test not run</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>Instruction{id='NOOP'}</instruction>
+        <slimResult>ignore(Test not run)</slimResult>
+        <expectation>
+          <status>ignore</status>
+          <instructionId>NOOP</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedSymbolExpectation</type>
+          <evaluationMessage>Test not run</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_3_1/scriptTable_2_0', instruction='call', instanceName='scriptTableActor', methodName='scrollTo', args=[Moondance]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_3_1/scriptTable_2_0</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.scrollTo. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_3_1/scriptTable_2_1', instruction='callAndAssign', symbolName='year', instanceName='scriptTableActor', methodName='valueOfInRowWhereIs', args=[Year, Album, Moondance]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_3_1/scriptTable_2_1</instructionId>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.valueOfInRowWhereIs. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_3_1/scriptTable_2_2', instruction='callAndAssign', symbolName='label', instanceName='scriptTableActor', methodName='valueOfInRowWhereIs', args=[Label, Album, Moondance]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_3_1/scriptTable_2_2</instructionId>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.valueOfInRowWhereIs. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>Instruction{id='NOOP'}</instruction>
+        <slimResult>ignore(Test not run)</slimResult>
+        <expectation>
+          <status>ignore</status>
+          <instructionId>NOOP</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>ReturnedSymbolExpectation</type>
+          <evaluationMessage>Test not run</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>Instruction{id='NOOP'}</instruction>
+        <slimResult>ignore(Test not run)</slimResult>
+        <expectation>
+          <status>ignore</status>
+          <instructionId>NOOP</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ReturnedSymbolExpectation</type>
+          <evaluationMessage>Test not run</evaluationMessage>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>3</exceptions>
+    </counts>
+    <date>2020-04-25T21:08:39+02:00</date>
+    <runTimeInMillis>3</runTimeInMillis>
+    <content>&lt;br/&gt;This set up page is executed once, before any tests in this suite.&lt;br/&gt;In it we configure which Java packages contain the logic for our fixtures, which browser we want to use for Selenium tests and we start this browser.&lt;br/&gt;This means we do not have to do this in every test, which means easier maintenance and better performance.&lt;br/&gt;&lt;br/&gt;Stopping the browser is done in &lt;a href="Tourspel.SuiteTearDown"&gt;SuiteTearDown&lt;/a&gt;, which is done after all tests in this suite are completed.&lt;br/&gt;&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Fixture code locations&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim.web&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;The Selenium configuration below uses lines starting with &lt;i&gt;|note&lt;/i&gt; to have configuration values present that are not currently used.&lt;br/&gt;This allows us to switch to another browser by just adding &lt;i&gt;|note&lt;/i&gt; to one line and removing it from another, instead of typing the entire line.&lt;br/&gt;&lt;br/&gt;Furthermore this configuration is prepared for both running the browser on the same (development) machine running Fitnesse (with &lt;i&gt;start driver for&lt;/i&gt;), as remotely on a node in a Selenium Grid (with &lt;i&gt;connect to driver for&lt;/i&gt;).&lt;br/&gt;The latter allows tests to be executed on different operating systems. This is also very useful to run tests as part of a continuous integration server (i.e. build server), when no browsers are installed on the server running the tests.&lt;br/&gt;This configuration can be overridden by using system properties. This allows different configurations on the build server to test with different browsers, without requiring different wiki content, but only requiring a different build configuration. More details can be found in OverridingSeleniumSetup&lt;a title="create page" href="Tourspel.OverridingSeleniumSetup?edit&amp;amp;nonExistent=true"&gt;[?]&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;variable defined: GRID_HUB=http://remote-selenium.local:4444/wd/hub&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Define $mobileEmulation device attributes&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;map fixture &lt;span class="error"&gt;Could not invoke constructor for MapFixture[0]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;set value &lt;span class="error"&gt;The instance scriptTableActor.setValueFor. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;Mozilla/5.0 (Linux; Android 4.2.1; en-us; Nexus 5 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19&lt;/td&gt;
+		&lt;td&gt;for&lt;/td&gt;
+		&lt;td&gt;userAgent&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;set int value &lt;span class="error"&gt;The instance scriptTableActor.setIntValueFor. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;360&lt;/td&gt;
+		&lt;td&gt;for&lt;/td&gt;
+		&lt;td&gt;deviceMetrics.width&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;set int value &lt;span class="error"&gt;The instance scriptTableActor.setIntValueFor. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;640&lt;/td&gt;
+		&lt;td&gt;for&lt;/td&gt;
+		&lt;td&gt;deviceMetrics.height&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;set double value &lt;span class="error"&gt;The instance scriptTableActor.setDoubleValueFor. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;3.0&lt;/td&gt;
+		&lt;td&gt;for&lt;/td&gt;
+		&lt;td&gt;deviceMetrics.pixelRatio&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$mobileEmulation= &lt;span class="error"&gt;The instance scriptTableActor.copyMap. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="3"&gt;copy map&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Define $chromeHeadlessProfile chrome profile&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;map fixture &lt;span class="error"&gt;Could not invoke constructor for MapFixture[0]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;set value &lt;span class="error"&gt;The instance scriptTableActor.setValueFor. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;headless&lt;/td&gt;
+		&lt;td&gt;for&lt;/td&gt;
+		&lt;td&gt;args[0]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;set value &lt;span class="error"&gt;The instance scriptTableActor.setValueFor. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;disable-gpu&lt;/td&gt;
+		&lt;td&gt;for&lt;/td&gt;
+		&lt;td&gt;args[1]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$chromeHeadlessProfile= &lt;span class="error"&gt;The instance scriptTableActor.copyMap. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="3"&gt;copy map&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Define $ieCleanSession internet explorer profile&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;map fixture &lt;span class="error"&gt;Could not invoke constructor for MapFixture[0]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;expand periods in names to nested maps &lt;span class="error"&gt;The instance scriptTableActor.expandPeriodsInNamesToNestedMaps. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="3"&gt;false&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;set boolean value &lt;span class="error"&gt;The instance scriptTableActor.setBooleanValueFor. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;for&lt;/td&gt;
+		&lt;td&gt;ie.ensureCleanSession&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$ieCleanSession= &lt;span class="error"&gt;The instance scriptTableActor.copyMap. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="3"&gt;copy map&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="4"&gt;selenium driver setup &lt;span class="error"&gt;Could not invoke constructor for SeleniumDriverSetup[0]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;start driver for &lt;span class="error"&gt;The instance scriptTableActor.startDriverFor. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="4"&gt;chrome&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;start driver for&lt;/td&gt;
+		&lt;td colspan="3"&gt;MicrosoftEdge&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;start driver for&lt;/td&gt;
+		&lt;td colspan="3"&gt;internet explorer&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;start driver for&lt;/td&gt;
+		&lt;td colspan="3"&gt;firefox&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;start driver for&lt;/td&gt;
+		&lt;td colspan="3"&gt;safari&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;start driver for&lt;/td&gt;
+		&lt;td&gt;chrome mobile emulation&lt;/td&gt;
+		&lt;td&gt;with profile&lt;/td&gt;
+		&lt;td&gt;&lt;table class="hash_table"&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;deviceName&lt;/td&gt;
+		&lt;td class="hash_value"&gt;Apple iPhone 6&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;start driver for&lt;/td&gt;
+		&lt;td&gt;chrome mobile emulation&lt;/td&gt;
+		&lt;td&gt;with profile&lt;/td&gt;
+		&lt;td&gt;$mobileEmulation&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;start driver for&lt;/td&gt;
+		&lt;td&gt;chrome&lt;/td&gt;
+		&lt;td&gt;with profile&lt;/td&gt;
+		&lt;td&gt;$chromeHeadlessProfile&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td colspan="4"&gt;Starting internet explorer with a clean session is destructive, i.e. clears cookies, cache, history and saved form data &lt;i&gt;globally&lt;/i&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;start driver for&lt;/td&gt;
+		&lt;td&gt;internet explorer&lt;/td&gt;
+		&lt;td&gt;with profile&lt;/td&gt;
+		&lt;td&gt;$ieCleanSession&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;connect to driver for&lt;/td&gt;
+		&lt;td&gt;chrome&lt;/td&gt;
+		&lt;td&gt;at&lt;/td&gt;
+		&lt;td&gt;&lt;a href="http://remote-selenium.local:4444/wd/hub"&gt;http://remote-selenium.local:4444/wd/hub&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;connect to driver for&lt;/td&gt;
+		&lt;td&gt;MicrosoftEdge&lt;/td&gt;
+		&lt;td&gt;at&lt;/td&gt;
+		&lt;td&gt;&lt;a href="http://remote-selenium.local:4444/wd/hub"&gt;http://remote-selenium.local:4444/wd/hub&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;connect to driver for&lt;/td&gt;
+		&lt;td&gt;internet explorer&lt;/td&gt;
+		&lt;td&gt;at&lt;/td&gt;
+		&lt;td&gt;&lt;a href="http://remote-selenium.local:4444/wd/hub"&gt;http://remote-selenium.local:4444/wd/hub&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;connect to driver for&lt;/td&gt;
+		&lt;td&gt;firefox&lt;/td&gt;
+		&lt;td&gt;at&lt;/td&gt;
+		&lt;td&gt;&lt;a href="http://remote-selenium.local:4444/wd/hub"&gt;http://remote-selenium.local:4444/wd/hub&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;connect to driver at&lt;/td&gt;
+		&lt;td&gt;&lt;a href="http://remote-selenium.local:4444/wd/hub"&gt;http://remote-selenium.local:4444/wd/hub&lt;/a&gt;&lt;/td&gt;
+		&lt;td&gt;with capabilities&lt;/td&gt;
+		&lt;td&gt;&lt;table class="hash_table"&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;browserName&lt;/td&gt;
+		&lt;td class="hash_value"&gt;internet explorer&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;platform&lt;/td&gt;
+		&lt;td class="hash_value"&gt;Windows 8.1&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;version&lt;/td&gt;
+		&lt;td class="hash_value"&gt;11&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;connect to driver at&lt;/td&gt;
+		&lt;td&gt;&lt;a href="http://remote-selenium.local:4444/wd/hub"&gt;http://remote-selenium.local:4444/wd/hub&lt;/a&gt;&lt;/td&gt;
+		&lt;td&gt;with json capabilities&lt;/td&gt;
+		&lt;td&gt;{aut:"io.selendroid.testapp", emulator: true}&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;show &lt;span class="error"&gt;The instance scriptTableActor.driverDescription. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="4"&gt;driver description&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h1 id="WebsitetestingusingscenarioandBrowserTest"&gt;Website testing using &lt;i&gt;scenario&lt;/i&gt; and BrowserTest&lt;/h1&gt;
+&lt;br/&gt;&lt;br/&gt;On this page we test retrieving record details using &lt;a href="https://www.allmusic.com"&gt;AllMusic&lt;/a&gt;.&lt;br/&gt;It uses a &lt;a href="FitNesse.UserGuide.WritingAcceptanceTests.SliM.ScenarioTable"&gt;Slim scenario&lt;/a&gt; to define a parameterized script.&lt;br/&gt;This is then invoked multiple times from a &lt;a href="FitNesse.UserGuide.WritingAcceptanceTests.SliM.DecisionTable"&gt;Decision table&lt;/a&gt;, once for each row.&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;The configuration of Selenium (i.e. which browser to use) and starting the browser session is done in the SuiteSetup&lt;a title="create page" href="Tourspel.SuiteSetup?edit&amp;amp;nonExistent=true"&gt;[?]&lt;/a&gt;. Which allows this configuration to be shared between tests. Closing the browser is done in &lt;a href="Tourspel.SuiteTearDown"&gt;SuiteTearDown&lt;/a&gt;, which happens after all tests are completed.&lt;br/&gt;&lt;br/&gt;First we go to the Discography page for Van Morrison.&lt;br/&gt;&lt;br/&gt;&lt;h1 id="WebsitetestingusingBrowserTest"&gt;Website testing using BrowserTest&lt;/h1&gt;
+&lt;br/&gt;&lt;br/&gt;On this page we test retrieving some information from &lt;a href="https://www.allmusic.com"&gt;AllMusic&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;To do this we use a &lt;a href="FitNesse.UserGuide.WritingAcceptanceTests.SliM.ScriptTable"&gt;Slim script table&lt;/a&gt; driving the Java class BrowserTest (which uses Selenium).&lt;br/&gt;This class allows us to specify what we want to do using a web browser, by the (end user visible) texts on screen. We don't need to specify any HTML code or write any custom Java logic. By only using the texts visible on screen we only need to change the script if the site's interaction design changes, but not for changes in HTML structure, element naming or styling.&lt;br/&gt;&lt;br/&gt;The configuration of Selenium (i.e. which browser to use) and starting the browser session is done in the SuiteSetup&lt;a title="create page" href="HsacExamples.SlimTests.BrowserTests.SuiteSetup?edit&amp;amp;nonExistent=true"&gt;[?]&lt;/a&gt;. Which allows this configuration to be shared between tests. Closing the browser is done in &lt;a href="HsacExamples.SlimTests.BrowserTests.SuiteTearDown"&gt;SuiteTearDown&lt;/a&gt;, which happens after all tests are completed.&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="7"&gt;browser test &lt;span class="error"&gt;Could not invoke constructor for BrowserTest[0]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;seconds before timeout &lt;span class="error"&gt;The instance scriptTableActor.secondsBeforeTimeout. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="7"&gt;60&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;open &lt;span class="error"&gt;The instance scriptTableActor.open. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="7"&gt;&lt;a href="https://www.allmusic.com"&gt;https://www.allmusic.com&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show &lt;span class="error"&gt;The instance scriptTableActor.clickIfAvailable. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;click if available&lt;/td&gt;
+		&lt;td colspan="6"&gt;I accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;enter &lt;span class="error"&gt;The instance scriptTableActor.enterAs. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;Van Morrison&lt;/td&gt;
+		&lt;td&gt;as&lt;/td&gt;
+		&lt;td colspan="5"&gt;Search&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;press &lt;span class="error"&gt;The instance scriptTableActor.press. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="7"&gt;enter&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;click &lt;span class="error"&gt;The instance scriptTableActor.click. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="7"&gt;Van Morrison&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show &lt;span class="error"&gt;The instance scriptTableActor.takeScreenshot. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;take screenshot&lt;/td&gt;
+		&lt;td colspan="6"&gt;overview&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;click &lt;span class="error"&gt;The instance scriptTableActor.click. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="7"&gt;Discography&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;page title&lt;/td&gt;
+		&lt;td colspan="6"&gt;Van Morrison | Album Discography | AllMusic &lt;span class="error"&gt;The instance scriptTableActor.pageTitle. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show &lt;span class="error"&gt;The instance scriptTableActor.takeScreenshot. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;take screenshot&lt;/td&gt;
+		&lt;td colspan="6"&gt;discography&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;value of&lt;/td&gt;
+		&lt;td&gt;Year&lt;/td&gt;
+		&lt;td&gt;in row where&lt;/td&gt;
+		&lt;td&gt;Album&lt;/td&gt;
+		&lt;td&gt;is&lt;/td&gt;
+		&lt;td&gt;Astral Weeks&lt;/td&gt;
+		&lt;td&gt;1968 &lt;span class="error"&gt;The instance scriptTableActor.valueOfInRowWhereIs. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;click &lt;span class="error"&gt;The instance scriptTableActor.click. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="7"&gt;Astral Weeks&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show &lt;span class="error"&gt;The instance scriptTableActor.takeScreenshot. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;take screenshot&lt;/td&gt;
+		&lt;td colspan="6"&gt;album&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;click &lt;span class="error"&gt;The instance scriptTableActor.click. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="7"&gt;click to embiggen&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td colspan="7"&gt;wait for cover to appear&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;wait &lt;span class="error"&gt;The instance scriptTableActor.waitSeconds. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td colspan="6"&gt;seconds&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show &lt;span class="error"&gt;The instance scriptTableActor.takeScreenshot. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;take screenshot&lt;/td&gt;
+		&lt;td colspan="6"&gt;cover&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;When multiple similar sequences of steps are needed a script can be generalized using a scenario, which is show in &lt;a href="HsacExamples.SlimTests.BrowserTests.ScenarioTest"&gt;ScenarioTest&lt;/a&gt;.&lt;br/&gt;To make test more readable, maintainable and powerful we can also create custom subclasses of BrowserTest. This is shown in &lt;a href="HsacExamples.SlimTests.BrowserTests.CustomFixtureTest"&gt;CustomFixtureTest&lt;/a&gt;.&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=slim&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;browser test &lt;span class="error"&gt;Could not invoke constructor for BrowserTest[0]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;seconds before timeout &lt;span class="error"&gt;The instance scriptTableActor.secondsBeforeTimeout. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="3"&gt;60&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;open &lt;span class="error"&gt;The instance scriptTableActor.open. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;a href="http://localhost:8080/tourspel"&gt;http://localhost:8080/tourspel&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show &lt;span class="error"&gt;The instance scriptTableActor.clickIfAvailable. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;click if available&lt;/td&gt;
+		&lt;td colspan="2"&gt;Log in&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;enter &lt;span class="error"&gt;The instance scriptTableActor.enterAs. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;Mol&lt;/td&gt;
+		&lt;td&gt;as&lt;/td&gt;
+		&lt;td&gt;Achternaam&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;press &lt;span class="error"&gt;The instance scriptTableActor.press. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="3"&gt;Zoeken&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;Then we check some entries.&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;album details _&lt;/td&gt;
+		&lt;td colspan="5"&gt;album, year?, label?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;scroll to&lt;/td&gt;
+		&lt;td colspan="6"&gt;@{album}&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;$year=&lt;/td&gt;
+		&lt;td&gt;value of&lt;/td&gt;
+		&lt;td&gt;Year&lt;/td&gt;
+		&lt;td&gt;in row where&lt;/td&gt;
+		&lt;td&gt;Album&lt;/td&gt;
+		&lt;td&gt;is&lt;/td&gt;
+		&lt;td&gt;@{album}&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;$label=&lt;/td&gt;
+		&lt;td&gt;value of&lt;/td&gt;
+		&lt;td&gt;Label&lt;/td&gt;
+		&lt;td&gt;in row where&lt;/td&gt;
+		&lt;td&gt;Album&lt;/td&gt;
+		&lt;td&gt;is&lt;/td&gt;
+		&lt;td&gt;@{album}&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3"&gt;album details&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;album&lt;/td&gt;
+		&lt;td&gt;year?&lt;/td&gt;
+		&lt;td&gt;label?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="scenario closed"&gt;
+		&lt;td class="error"&gt;Astral Weeks&lt;/td&gt;
+		&lt;td class="error"&gt;1968 &lt;span class="ignore"&gt;Test not run&lt;/span&gt;&lt;/td&gt;
+		&lt;td class="error"&gt;Warner Bros. &lt;span class="ignore"&gt;Test not run&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;&lt;tr class="scenario-detail closed-detail"&gt;&lt;td colspan="3"&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;album details _&lt;/td&gt;
+		&lt;td colspan="5"&gt;album, year?, label?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;scroll to &lt;span class="error"&gt;The instance scriptTableActor.scrollTo. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="6"&gt;Astral Weeks&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;$year= &lt;span class="error"&gt;The instance scriptTableActor.valueOfInRowWhereIs. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;value of&lt;/td&gt;
+		&lt;td&gt;Year&lt;/td&gt;
+		&lt;td&gt;in row where&lt;/td&gt;
+		&lt;td&gt;Album&lt;/td&gt;
+		&lt;td&gt;is&lt;/td&gt;
+		&lt;td&gt;Astral Weeks&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;$label= &lt;span class="error"&gt;The instance scriptTableActor.valueOfInRowWhereIs. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;value of&lt;/td&gt;
+		&lt;td&gt;Label&lt;/td&gt;
+		&lt;td&gt;in row where&lt;/td&gt;
+		&lt;td&gt;Album&lt;/td&gt;
+		&lt;td&gt;is&lt;/td&gt;
+		&lt;td&gt;Astral Weeks&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="scenario closed"&gt;
+		&lt;td class="error"&gt;Moondance&lt;/td&gt;
+		&lt;td class="error"&gt;1970 &lt;span class="ignore"&gt;Test not run&lt;/span&gt;&lt;/td&gt;
+		&lt;td class="error"&gt;Rhino / Warner Bros. &lt;span class="ignore"&gt;Test not run&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;&lt;tr class="scenario-detail closed-detail"&gt;&lt;td colspan="3"&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;album details _&lt;/td&gt;
+		&lt;td colspan="5"&gt;album, year?, label?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;scroll to &lt;span class="error"&gt;The instance scriptTableActor.scrollTo. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="6"&gt;Moondance&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;$year= &lt;span class="error"&gt;The instance scriptTableActor.valueOfInRowWhereIs. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;value of&lt;/td&gt;
+		&lt;td&gt;Year&lt;/td&gt;
+		&lt;td&gt;in row where&lt;/td&gt;
+		&lt;td&gt;Album&lt;/td&gt;
+		&lt;td&gt;is&lt;/td&gt;
+		&lt;td&gt;Moondance&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;$label= &lt;span class="error"&gt;The instance scriptTableActor.valueOfInRowWhereIs. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;value of&lt;/td&gt;
+		&lt;td&gt;Label&lt;/td&gt;
+		&lt;td&gt;in row where&lt;/td&gt;
+		&lt;td&gt;Album&lt;/td&gt;
+		&lt;td&gt;is&lt;/td&gt;
+		&lt;td&gt;Moondance&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;Writing the scenario like this can become a bit cumbersome when many parameters are needed. They are repeated in: the scenario's first row, the scenario rows where they are used and the table headers where the scenario is invoked.&lt;br/&gt;Repeating the parameters in the first row of the scenario definition can be omitted using a custom extension to Slim. This is shown in TableTemplateTest&lt;a title="create page" href="Tourspel.TableTemplateTest?edit&amp;amp;nonExistent=true"&gt;[?]&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td&gt;selenium driver setup &lt;span class="error"&gt;Could not invoke constructor for SeleniumDriverSetup[0]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;show &lt;span class="error"&gt;The instance scriptTableActor.runSummary. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;run summary&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;stop driver &lt;span class="error"&gt;The instance scriptTableActor.stopDriver. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>SuiteTearDown</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_0', instruction='make', instanceName='scriptTableActor', className='SeleniumDriverSetup', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for SeleniumDriverSetup[0]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_1', instruction='call', instanceName='scriptTableActor', methodName='runSummary', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_1</instructionId>
+          <type>ShowActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.runSummary. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_2', instruction='call', instanceName='scriptTableActor', methodName='stopDriver', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_0_2</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.stopDriver. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>/usr/lib/jvm/java-8-oracle/bin/java -cp /home/marc/git/tourspel2/praegus/wiki/fitnesse-standalone.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>3</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>244</totalRunTimeInMillis>
+</testResults>
+

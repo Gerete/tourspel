@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20191110</FitNesseVersion>
+  <rootPath>Tourspel.ScenarioTest</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+    <date>2020-04-25T21:25:54+02:00</date>
+    <runTimeInMillis>2</runTimeInMillis>
+    <content></content>
+    <relativePageName>SuiteSetUp</relativePageName>
+  </result>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>3</exceptions>
+    </counts>
+    <date>2020-04-25T21:25:54+02:00</date>
+    <runTimeInMillis>46</runTimeInMillis>
+    <content></content>
+    <relativePageName>ScenarioTest</relativePageName>
+  </result>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+    <date>2020-04-25T21:25:54+02:00</date>
+    <runTimeInMillis>1</runTimeInMillis>
+    <content>&lt;br/&gt;This set up page is executed once, before any tests in this suite.&lt;br/&gt;In it we configure which Java packages contain the logic for our fixtures, which browser we want to use for Selenium tests and we start this browser.&lt;br/&gt;This means we do not have to do this in every test, which means easier maintenance and better performance.&lt;br/&gt;&lt;br/&gt;Stopping the browser is done in &lt;a href="Tourspel.SuiteTearDown"&gt;SuiteTearDown&lt;/a&gt;, which is done after all tests in this suite are completed.&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;nl.hsac.fitnesse.fixture.slim.web&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;script&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: script.&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;selenium driver setup&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;start driver for&lt;/td&gt;
+		&lt;td&gt;chrome&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td&gt;driver description&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h1 id="WebsitetestingusingscenarioandBrowserTest"&gt;Website testing using &lt;i&gt;scenario&lt;/i&gt; and BrowserTest&lt;/h1&gt;
+&lt;br/&gt;&lt;br/&gt;On this page we test retrieving record details using &lt;a href="https://www.allmusic.com"&gt;AllMusic&lt;/a&gt;.&lt;br/&gt;It uses a &lt;a href="FitNesse.UserGuide.WritingAcceptanceTests.SliM.ScenarioTable"&gt;Slim scenario&lt;/a&gt; to define a parameterized script.&lt;br/&gt;This is then invoked multiple times from a &lt;a href="FitNesse.UserGuide.WritingAcceptanceTests.SliM.DecisionTable"&gt;Decision table&lt;/a&gt;, once for each row.&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;The configuration of Selenium (i.e. which browser to use) and starting the browser session is done in the SuiteSetup&lt;a title="create page" href="Tourspel.SuiteSetup?edit&amp;amp;nonExistent=true"&gt;[?]&lt;/a&gt;. Which allows this configuration to be shared between tests. Closing the browser is done in &lt;a href="Tourspel.SuiteTearDown"&gt;SuiteTearDown&lt;/a&gt;, which happens after all tests are completed.&lt;br/&gt;&lt;br/&gt;First we go to the Discography page for Van Morrison.&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;script&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: script.&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="3"&gt;browser test&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;seconds before timeout&lt;/td&gt;
+		&lt;td colspan="3"&gt;60&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;open&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;a href="http://localhost:8080/tourspel"&gt;http://localhost:8080/tourspel&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td&gt;click if available&lt;/td&gt;
+		&lt;td colspan="2"&gt;Log in&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;enter&lt;/td&gt;
+		&lt;td&gt;Mol&lt;/td&gt;
+		&lt;td&gt;as&lt;/td&gt;
+		&lt;td&gt;Achternaam&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;press&lt;/td&gt;
+		&lt;td colspan="3"&gt;Zoeken&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;Then we check some entries.&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;scenario&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: scenario.&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;album details _&lt;/td&gt;
+		&lt;td colspan="5"&gt;album, year?, label?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;scroll to&lt;/td&gt;
+		&lt;td colspan="6"&gt;@{album}&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$year=&lt;/td&gt;
+		&lt;td&gt;value of&lt;/td&gt;
+		&lt;td&gt;Year&lt;/td&gt;
+		&lt;td&gt;in row where&lt;/td&gt;
+		&lt;td&gt;Album&lt;/td&gt;
+		&lt;td&gt;is&lt;/td&gt;
+		&lt;td&gt;@{album}&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$label=&lt;/td&gt;
+		&lt;td&gt;value of&lt;/td&gt;
+		&lt;td&gt;Label&lt;/td&gt;
+		&lt;td&gt;in row where&lt;/td&gt;
+		&lt;td&gt;Album&lt;/td&gt;
+		&lt;td&gt;is&lt;/td&gt;
+		&lt;td&gt;@{album}&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3" class="error"&gt;album details&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: AlbumDetails.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;album&lt;/td&gt;
+		&lt;td&gt;year?&lt;/td&gt;
+		&lt;td&gt;label?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Astral Weeks&lt;/td&gt;
+		&lt;td&gt;1968&lt;/td&gt;
+		&lt;td&gt;Warner Bros.&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Moondance&lt;/td&gt;
+		&lt;td&gt;1970&lt;/td&gt;
+		&lt;td&gt;Rhino / Warner Bros.&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;Writing the scenario like this can become a bit cumbersome when many parameters are needed. They are repeated in: the scenario's first row, the scenario rows where they are used and the table headers where the scenario is invoked.&lt;br/&gt;Repeating the parameters in the first row of the scenario definition can be omitted using a custom extension to Slim. This is shown in TableTemplateTest&lt;a title="create page" href="Tourspel.TableTemplateTest?edit&amp;amp;nonExistent=true"&gt;[?]&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;This set up page is executed once, after all tests in this suite.&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;script&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: script.&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;selenium driver setup&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td&gt;run summary&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;stop driver&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>SuiteTearDown</relativePageName>
+  </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>/usr/lib/jvm/java-8-oracle/bin/java -cp /home/marc/git/tourspel2/praegus/wiki/fitnesse-standalone.jar fit.FitServer pc-thuis 43005 3863</command>
+    <exitCode>5</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>3</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>328</totalRunTimeInMillis>
+</testResults>
+

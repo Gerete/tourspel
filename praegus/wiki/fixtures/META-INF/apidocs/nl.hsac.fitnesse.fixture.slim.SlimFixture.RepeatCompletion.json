@@ -1,0 +1,32 @@
+{
+  "constructors": [],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.SlimFixture.RepeatCompletion",
+  "publicMethods": [
+    {
+      "readableName": "is finished",
+      "usage": "| is finished |",
+      "contexthelp": "is finished",
+      "name": "isFinished",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "true if no more repeats are needed.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "repeat",
+      "usage": "| repeat |",
+      "contexthelp": "repeat",
+      "name": "repeat",
+      "docString": "Performs the action again.",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    }
+  ],
+  "typeName": "SlimFixture.RepeatCompletion",
+  "name": "SlimFixture.RepeatCompletion",
+  "annotations": []
+}

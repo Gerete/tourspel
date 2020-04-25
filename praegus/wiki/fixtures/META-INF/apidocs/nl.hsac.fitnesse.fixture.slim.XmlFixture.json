@@ -1,0 +1,331 @@
+{
+  "constructors": [
+    {
+      "readableName": "xml fixture",
+      "usage": "| xml fixture |",
+      "name": "XmlFixture",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.XmlFixture",
+  "publicMethods": [
+    {
+      "readableName": "load file",
+      "usage": "| load file | [filename] | ",
+      "contexthelp": "load file \u0026lt;filename\u0026gt;",
+      "name": "loadFile",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "true",
+      "parameters": [
+        {
+          "name": "filename",
+          "description": "XML file to be loaded.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "load",
+      "usage": "| load | [xml] | ",
+      "contexthelp": "load \u0026lt;xml\u0026gt;",
+      "name": "load",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "true",
+      "parameters": [
+        {
+          "name": "xml",
+          "description": "XML content to be loaded.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "document",
+      "usage": "| document |",
+      "contexthelp": "document",
+      "name": "document",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "formatted loaded XML content.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "register prefix for namespace",
+      "usage": "| register prefix for | [prefix] | namespace | [namespace] | ",
+      "contexthelp": "register prefix for \u0026lt;prefix\u0026gt; namespace \u0026lt;namespace\u0026gt;",
+      "name": "registerPrefixForNamespace",
+      "docString": "Register a prefix to use in XPath expressions.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "prefix",
+          "description": "prefix to be used in xPath expressions.",
+          "type": "String"
+        },
+        {
+          "name": "namespace",
+          "description": "XML namespace the prefix should point to.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "x path",
+      "usage": "| x path | [xPathExpr] | ",
+      "contexthelp": "x path \u0026lt;xPathExpr\u0026gt;",
+      "name": "xPath",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "result of expression evaluation against loaded content.",
+      "parameters": [
+        {
+          "name": "xPathExpr",
+          "description": "expression to evaluate.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "list x path matches",
+      "usage": "| list x path matches | [xPathExpr] | ",
+      "contexthelp": "list x path matches \u0026lt;xPathExpr\u0026gt;",
+      "name": "listXPathMatches",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "results of expression evaluation against loaded content.",
+      "parameters": [
+        {
+          "name": "xPathExpr",
+          "description": "expression to evaluate.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "ArrayList"
+    },
+    {
+      "readableName": "create file from base 64 content of",
+      "usage": "| create file from base 64 content | [baseName] | of | [xPath] | ",
+      "contexthelp": "create file from base 64 content \u0026lt;baseName\u0026gt; of \u0026lt;xPath\u0026gt;",
+      "name": "createFileFromBase64ContentOf",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "link to created file.",
+      "parameters": [
+        {
+          "name": "baseName",
+          "description": "base of filename to generate (a number might be added to the name to make it unique).",
+          "type": "String"
+        },
+        {
+          "name": "xPath",
+          "description": "expression to evaluate.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "validate against xsd file",
+      "usage": "| validate against xsd file | [xsdFileName] | ",
+      "contexthelp": "validate against xsd file \u0026lt;xsdFileName\u0026gt;",
+      "name": "validateAgainstXsdFile",
+      "docString": "Validate the loaded xml against a schema in file xsdFileName",
+      "annotations": [],
+      "returnDescription": "true if the xml validates against the schema. Throws a descriptive exception otherwise",
+      "parameters": [
+        {
+          "name": "xsdFileName",
+          "description": "filename of the xsd to use",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "validate against xsd",
+      "usage": "| validate against xsd | [xsdSchema] | ",
+      "contexthelp": "validate against xsd \u0026lt;xsdSchema\u0026gt;",
+      "name": "validateAgainstXsd",
+      "docString": "Validate the loaded xml against a schema provided from the wiki",
+      "annotations": [],
+      "returnDescription": "true if the xml validates against the schema. Throws a descriptive exception otherwise",
+      "parameters": [
+        {
+          "name": "xsdSchema",
+          "description": "xsd schema to use",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set global value to",
+      "usage": "| set global value | [symbolName] | to | [value] | ",
+      "contexthelp": "set global value \u0026lt;symbolName\u0026gt; to \u0026lt;value\u0026gt;",
+      "name": "setGlobalValueTo",
+      "docString": "Stores a (global) value so it can be accessed by other fixtures/pages.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name to store value under.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to store.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "global value",
+      "usage": "| global value | [symbolName] | ",
+      "contexthelp": "global value \u0026lt;symbolName\u0026gt;",
+      "name": "globalValue",
+      "docString": "Retrieves a (global) value, which was previously stored using #setGlobalValueTo().",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name value was stored under.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "wait seconds",
+      "usage": "| wait seconds | [i] | ",
+      "contexthelp": "wait seconds \u0026lt;i\u0026gt;",
+      "name": "waitSeconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait milliseconds",
+      "usage": "| wait milliseconds | [i] | ",
+      "contexthelp": "wait milliseconds \u0026lt;i\u0026gt;",
+      "name": "waitMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set repeat interval to milliseconds",
+      "usage": "| set repeat interval to milliseconds | [milliseconds] | ",
+      "contexthelp": "set repeat interval to milliseconds \u0026lt;milliseconds\u0026gt;",
+      "name": "setRepeatIntervalToMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "milliseconds",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat interval",
+      "usage": "| repeat interval |",
+      "contexthelp": "repeat interval",
+      "name": "repeatInterval",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times | [maxCount] | ",
+      "contexthelp": "repeat at most times \u0026lt;maxCount\u0026gt;",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "maxCount",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times |",
+      "contexthelp": "repeat at most times",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "repeat count",
+      "usage": "| repeat count |",
+      "contexthelp": "repeat count",
+      "name": "repeatCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "time spent repeating",
+      "usage": "| time spent repeating |",
+      "contexthelp": "time spent repeating",
+      "name": "timeSpentRepeating",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    }
+  ],
+  "typeName": "XmlFixture",
+  "name": "XmlFixture",
+  "annotations": []
+}

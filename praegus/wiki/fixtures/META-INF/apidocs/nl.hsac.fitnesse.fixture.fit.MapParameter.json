@@ -1,0 +1,620 @@
+{
+  "constructors": [
+    {
+      "readableName": "map parameter",
+      "usage": "| map parameter | [aHeaderName] | [aNr] |",
+      "name": "MapParameter",
+      "docString": "Creates new.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aHeaderName",
+          "description": "display type name",
+          "type": "String"
+        },
+        {
+          "name": "aNr",
+          "description": "instance number",
+          "type": "String"
+        }
+      ],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.fit.MapParameter",
+  "publicMethods": [
+    {
+      "readableName": "parse",
+      "usage": "| parse | [value] | ",
+      "contexthelp": "parse \u0026lt;value\u0026gt;",
+      "name": "parse",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "MapParameter"
+    },
+    {
+      "readableName": "clear instances",
+      "usage": "| clear instances |",
+      "contexthelp": "clear instances",
+      "name": "clearInstances",
+      "docString": "Clears set of known map parameters (that can be returned by parse()).",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "size",
+      "usage": "| size |",
+      "contexthelp": "size",
+      "name": "size",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "is empty",
+      "usage": "| is empty |",
+      "contexthelp": "is empty",
+      "name": "isEmpty",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "get",
+      "usage": "| get | [arg0] | ",
+      "contexthelp": "get \u0026lt;arg0\u0026gt;",
+      "name": "get",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "contains key",
+      "usage": "| contains key | [arg0] | ",
+      "contexthelp": "contains key \u0026lt;arg0\u0026gt;",
+      "name": "containsKey",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "put",
+      "usage": "| put | arg0, arg1,  |",
+      "contexthelp": "put  arg0, arg1,",
+      "name": "put",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        },
+        {
+          "name": "arg1",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "put all",
+      "usage": "| put all | [arg0] | ",
+      "contexthelp": "put all \u0026lt;arg0\u0026gt;",
+      "name": "putAll",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "remove",
+      "usage": "| remove | [arg0] | ",
+      "contexthelp": "remove \u0026lt;arg0\u0026gt;",
+      "name": "remove",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "clear",
+      "usage": "| clear |",
+      "contexthelp": "clear",
+      "name": "clear",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "contains value",
+      "usage": "| contains value | [arg0] | ",
+      "contexthelp": "contains value \u0026lt;arg0\u0026gt;",
+      "name": "containsValue",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "key set",
+      "usage": "| key set |",
+      "contexthelp": "key set",
+      "name": "keySet",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Set"
+    },
+    {
+      "readableName": "values",
+      "usage": "| values |",
+      "contexthelp": "values",
+      "name": "values",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Collection"
+    },
+    {
+      "readableName": "entry set",
+      "usage": "| entry set |",
+      "contexthelp": "entry set",
+      "name": "entrySet",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Set"
+    },
+    {
+      "readableName": "get or default",
+      "usage": "| get or | [arg0] | default | [arg1] | ",
+      "contexthelp": "get or \u0026lt;arg0\u0026gt; default \u0026lt;arg1\u0026gt;",
+      "name": "getOrDefault",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        },
+        {
+          "name": "arg1",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "put if absent",
+      "usage": "| put if | [arg0] | absent | [arg1] | ",
+      "contexthelp": "put if \u0026lt;arg0\u0026gt; absent \u0026lt;arg1\u0026gt;",
+      "name": "putIfAbsent",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        },
+        {
+          "name": "arg1",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "remove",
+      "usage": "| remove | arg0, arg1,  |",
+      "contexthelp": "remove  arg0, arg1,",
+      "name": "remove",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        },
+        {
+          "name": "arg1",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "replace",
+      "usage": "| replace | arg0, arg1, arg2,  |",
+      "contexthelp": "replace  arg0, arg1, arg2,",
+      "name": "replace",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        },
+        {
+          "name": "arg1",
+          "type": "Object"
+        },
+        {
+          "name": "arg2",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "replace",
+      "usage": "| replace | arg0, arg1,  |",
+      "contexthelp": "replace  arg0, arg1,",
+      "name": "replace",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        },
+        {
+          "name": "arg1",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "compute if absent",
+      "usage": "| compute if | [arg0] | absent | [arg1] | ",
+      "contexthelp": "compute if \u0026lt;arg0\u0026gt; absent \u0026lt;arg1\u0026gt;",
+      "name": "computeIfAbsent",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        },
+        {
+          "name": "arg1",
+          "type": "Function"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "compute if present",
+      "usage": "| compute if | [arg0] | present | [arg1] | ",
+      "contexthelp": "compute if \u0026lt;arg0\u0026gt; present \u0026lt;arg1\u0026gt;",
+      "name": "computeIfPresent",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        },
+        {
+          "name": "arg1",
+          "type": "BiFunction"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "compute",
+      "usage": "| compute | arg0, arg1,  |",
+      "contexthelp": "compute  arg0, arg1,",
+      "name": "compute",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        },
+        {
+          "name": "arg1",
+          "type": "BiFunction"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "merge",
+      "usage": "| merge | arg0, arg1, arg2,  |",
+      "contexthelp": "merge  arg0, arg1, arg2,",
+      "name": "merge",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        },
+        {
+          "name": "arg1",
+          "type": "Object"
+        },
+        {
+          "name": "arg2",
+          "type": "BiFunction"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "for each",
+      "usage": "| for each | [arg0] | ",
+      "contexthelp": "for each \u0026lt;arg0\u0026gt;",
+      "name": "forEach",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "BiConsumer"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "replace all",
+      "usage": "| replace all | [arg0] | ",
+      "contexthelp": "replace all \u0026lt;arg0\u0026gt;",
+      "name": "replaceAll",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "BiFunction"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "clone",
+      "usage": "| clone |",
+      "contexthelp": "clone",
+      "name": "clone",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "size",
+      "usage": "| size |",
+      "contexthelp": "size",
+      "name": "size",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "is empty",
+      "usage": "| is empty |",
+      "contexthelp": "is empty",
+      "name": "isEmpty",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "contains value",
+      "usage": "| contains value | [arg0] | ",
+      "contexthelp": "contains value \u0026lt;arg0\u0026gt;",
+      "name": "containsValue",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "contains key",
+      "usage": "| contains key | [arg0] | ",
+      "contexthelp": "contains key \u0026lt;arg0\u0026gt;",
+      "name": "containsKey",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "get",
+      "usage": "| get | [arg0] | ",
+      "contexthelp": "get \u0026lt;arg0\u0026gt;",
+      "name": "get",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "put",
+      "usage": "| put | arg0, arg1,  |",
+      "contexthelp": "put  arg0, arg1,",
+      "name": "put",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        },
+        {
+          "name": "arg1",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "remove",
+      "usage": "| remove | [arg0] | ",
+      "contexthelp": "remove \u0026lt;arg0\u0026gt;",
+      "name": "remove",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "put all",
+      "usage": "| put all | [arg0] | ",
+      "contexthelp": "put all \u0026lt;arg0\u0026gt;",
+      "name": "putAll",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "arg0",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "clear",
+      "usage": "| clear |",
+      "contexthelp": "clear",
+      "name": "clear",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "key set",
+      "usage": "| key set |",
+      "contexthelp": "key set",
+      "name": "keySet",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Set"
+    },
+    {
+      "readableName": "values",
+      "usage": "| values |",
+      "contexthelp": "values",
+      "name": "values",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Collection"
+    },
+    {
+      "readableName": "entry set",
+      "usage": "| entry set |",
+      "contexthelp": "entry set",
+      "name": "entrySet",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "Set"
+    }
+  ],
+  "typeName": "MapParameter",
+  "name": "MapParameter",
+  "annotations": []
+}

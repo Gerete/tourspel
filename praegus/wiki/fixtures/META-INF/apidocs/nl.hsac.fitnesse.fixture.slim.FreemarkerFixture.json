@@ -1,0 +1,577 @@
+{
+  "constructors": [
+    {
+      "readableName": "freemarker fixture",
+      "usage": "| freemarker fixture |",
+      "name": "FreemarkerFixture",
+      "docString": "Creates new without default template.",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    },
+    {
+      "readableName": "freemarker fixture",
+      "usage": "| freemarker fixture | [defaultTemplate] |",
+      "name": "FreemarkerFixture",
+      "docString": "Creates new with a default template, this is used in dynamic decision tables to prevent having to specify\n the template in the header row (any output column just gets the result of applying this templates).",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "defaultTemplate",
+          "description": "location (below /templates/) of Freemarker template.",
+          "type": "String"
+        }
+      ],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.FreemarkerFixture",
+  "publicMethods": [
+    {
+      "readableName": "apply template",
+      "usage": "| apply template | [aTemplate] | ",
+      "contexthelp": "apply template \u0026lt;aTemplate\u0026gt;",
+      "name": "applyTemplate",
+      "docString": "Applies template to current values.",
+      "annotations": [],
+      "returnDescription": "template result.",
+      "parameters": [
+        {
+          "name": "aTemplate",
+          "description": "name of template file (relative to \u0027testdata\u0027 directory on classpath)",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "get",
+      "usage": "| get | [requestedValue] | ",
+      "contexthelp": "get \u0026lt;requestedValue\u0026gt;",
+      "name": "get",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "requestedValue",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "convert template line endings to windows",
+      "usage": "| convert template line endings to windows |",
+      "contexthelp": "convert template line endings to windows",
+      "name": "convertTemplateLineEndingsToWindows",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "convert template line endings to unix",
+      "usage": "| convert template line endings to unix |",
+      "contexthelp": "convert template line endings to unix",
+      "name": "convertTemplateLineEndingsToUnix",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "do notconvert template line endings",
+      "usage": "| do notconvert template line endings |",
+      "contexthelp": "do notconvert template line endings",
+      "name": "doNotconvertTemplateLineEndings",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set int value for",
+      "usage": "| set int value | [value] | for | [name] | ",
+      "contexthelp": "set int value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setIntValueFor",
+      "docString": "Stores integer value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "int"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set double value for",
+      "usage": "| set double value | [value] | for | [name] | ",
+      "contexthelp": "set double value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setDoubleValueFor",
+      "docString": "Stores double value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "double"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set boolean value for",
+      "usage": "| set boolean value | [value] | for | [name] | ",
+      "contexthelp": "set boolean value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setBooleanValueFor",
+      "docString": "Stores boolean value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be passed.",
+          "type": "boolean"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set value for",
+      "usage": "| set value | [value] | for | [name] | ",
+      "contexthelp": "set value \u0026lt;value\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setValueFor",
+      "docString": "Stores value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be stored.",
+          "type": "Object"
+        },
+        {
+          "name": "name",
+          "description": "name to use this value for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "add value to",
+      "usage": "| add value | [value] | to | [name] | ",
+      "contexthelp": "add value \u0026lt;value\u0026gt; to \u0026lt;name\u0026gt;",
+      "name": "addValueTo",
+      "docString": "Adds value to (end of) a list.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to be stored.",
+          "type": "Object"
+        },
+        {
+          "name": "name",
+          "description": "name of list to extend.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "copy values from",
+      "usage": "| copy values from | [map] | ",
+      "contexthelp": "copy values from \u0026lt;map\u0026gt;",
+      "name": "copyValuesFrom",
+      "docString": "Adds all values in the supplied map to the current values.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "map",
+          "description": "to obtain values from.",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set values for",
+      "usage": "| set values | [values] | for | [name] | ",
+      "contexthelp": "set values \u0026lt;values\u0026gt; for \u0026lt;name\u0026gt;",
+      "name": "setValuesFor",
+      "docString": "Stores list of values in map.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "values",
+          "description": "comma separated list of values.",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "description": "name to use this list for.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set content of as value for",
+      "usage": "| set content of as value | [file] | for | [key] | ",
+      "contexthelp": "set content of as value \u0026lt;file\u0026gt; for \u0026lt;key\u0026gt;",
+      "name": "setContentOfAsValueFor",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "file",
+          "description": "file\u0027s whose content should be set as byte[]",
+          "type": "String"
+        },
+        {
+          "name": "key",
+          "description": "key whose value should be set.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set base 64 encoded content of as value for",
+      "usage": "| set base 64 encoded content of as value | [file] | for | [key] | ",
+      "contexthelp": "set base 64 encoded content of as value \u0026lt;file\u0026gt; for \u0026lt;key\u0026gt;",
+      "name": "setBase64EncodedContentOfAsValueFor",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "file",
+          "description": "file\u0027s whose content should be base64 encoded",
+          "type": "String"
+        },
+        {
+          "name": "key",
+          "description": "key whose value should be set.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "clear value",
+      "usage": "| clear value | [name] | ",
+      "contexthelp": "clear value \u0026lt;name\u0026gt;",
+      "name": "clearValue",
+      "docString": "Clears a values previously set.",
+      "annotations": [],
+      "returnDescription": "true if value was present.",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "value to remove.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "clear values",
+      "usage": "| clear values |",
+      "contexthelp": "clear values",
+      "name": "clearValues",
+      "docString": "Clears all values previously set.",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "value",
+      "usage": "| value | [name] | ",
+      "contexthelp": "value \u0026lt;name\u0026gt;",
+      "name": "value",
+      "docString": "Retrieves value of element at a specified key.",
+      "annotations": [],
+      "returnDescription": "value stored.",
+      "parameters": [
+        {
+          "name": "name",
+          "description": "key to get value of (nested values may be retrieved by separating the keys with \u0027.\u0027).",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "Object"
+    },
+    {
+      "readableName": "reset",
+      "usage": "| reset |",
+      "contexthelp": "reset",
+      "name": "reset",
+      "docString": "Called before next row is executed. (Clears all current values.)",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set",
+      "usage": "| set | key, value,  |",
+      "contexthelp": "set  key, value,",
+      "name": "set",
+      "docString": "Sets a value.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "key",
+          "description": "(possibly nested) key to set value for.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to be stored.",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "expand periods in names to nested maps",
+      "usage": "| expand periods in names to nested maps | [expand] | ",
+      "contexthelp": "expand periods in names to nested maps \u0026lt;expand\u0026gt;",
+      "name": "expandPeriodsInNamesToNestedMaps",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "expand",
+          "type": "boolean"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "expands periods in names to nested maps",
+      "usage": "| expands periods in names to nested maps |",
+      "contexthelp": "expands periods in names to nested maps",
+      "name": "expandsPeriodsInNamesToNestedMaps",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "get map helper",
+      "usage": "| get map helper |",
+      "contexthelp": "get map helper",
+      "name": "getMapHelper",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "helper to assist getting/setting (nested) values in a map.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "MapHelper"
+    },
+    {
+      "readableName": "set map helper",
+      "usage": "| set map helper | [mapHelper] | ",
+      "contexthelp": "set map helper \u0026lt;mapHelper\u0026gt;",
+      "name": "setMapHelper",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "mapHelper",
+          "description": "helper to assist getting/setting (nested) values in a map.",
+          "type": "MapHelper"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set global value to",
+      "usage": "| set global value | [symbolName] | to | [value] | ",
+      "contexthelp": "set global value \u0026lt;symbolName\u0026gt; to \u0026lt;value\u0026gt;",
+      "name": "setGlobalValueTo",
+      "docString": "Stores a (global) value so it can be accessed by other fixtures/pages.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name to store value under.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to store.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "global value",
+      "usage": "| global value | [symbolName] | ",
+      "contexthelp": "global value \u0026lt;symbolName\u0026gt;",
+      "name": "globalValue",
+      "docString": "Retrieves a (global) value, which was previously stored using #setGlobalValueTo().",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name value was stored under.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "wait seconds",
+      "usage": "| wait seconds | [i] | ",
+      "contexthelp": "wait seconds \u0026lt;i\u0026gt;",
+      "name": "waitSeconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait milliseconds",
+      "usage": "| wait milliseconds | [i] | ",
+      "contexthelp": "wait milliseconds \u0026lt;i\u0026gt;",
+      "name": "waitMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set repeat interval to milliseconds",
+      "usage": "| set repeat interval to milliseconds | [milliseconds] | ",
+      "contexthelp": "set repeat interval to milliseconds \u0026lt;milliseconds\u0026gt;",
+      "name": "setRepeatIntervalToMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "milliseconds",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat interval",
+      "usage": "| repeat interval |",
+      "contexthelp": "repeat interval",
+      "name": "repeatInterval",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times | [maxCount] | ",
+      "contexthelp": "repeat at most times \u0026lt;maxCount\u0026gt;",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "maxCount",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times |",
+      "contexthelp": "repeat at most times",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "repeat count",
+      "usage": "| repeat count |",
+      "contexthelp": "repeat count",
+      "name": "repeatCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "time spent repeating",
+      "usage": "| time spent repeating |",
+      "contexthelp": "time spent repeating",
+      "name": "timeSpentRepeating",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    }
+  ],
+  "typeName": "FreemarkerFixture",
+  "name": "FreemarkerFixture",
+  "annotations": []
+}

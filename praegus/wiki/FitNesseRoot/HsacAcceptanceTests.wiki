@@ -1,0 +1,11 @@
+---
+Suite
+---
+!contents -R2 -g -p -f -h
+
+This suite contains wiki tests that will validate whether hsac-fitnesse-fixtures is ready to be released. They should not depend on external services (as .HsacExamples might).
+
+!*> Class path for these tests
+!path fixtures
+!path fixtures/*.jar
+*!

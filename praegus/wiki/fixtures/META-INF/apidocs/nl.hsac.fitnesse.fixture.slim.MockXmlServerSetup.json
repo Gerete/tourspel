@@ -1,0 +1,521 @@
+{
+  "constructors": [
+    {
+      "readableName": "mock xml server setup",
+      "usage": "| mock xml server setup |",
+      "name": "MockXmlServerSetup",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    },
+    {
+      "readableName": "mock xml server setup",
+      "usage": "| mock xml server setup | [aPath] |",
+      "name": "MockXmlServerSetup",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aPath",
+          "type": "String"
+        }
+      ],
+      "exceptions": []
+    },
+    {
+      "readableName": "mock xml server setup",
+      "usage": "| mock xml server setup | [host] | [ports] | [aPath] |",
+      "name": "MockXmlServerSetup",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "host",
+          "type": "String"
+        },
+        {
+          "name": "ports",
+          "type": "String"
+        },
+        {
+          "name": "aPath",
+          "type": "String"
+        }
+      ],
+      "exceptions": []
+    },
+    {
+      "readableName": "mock xml server setup",
+      "usage": "| mock xml server setup | [aPath] | [creator] |",
+      "name": "MockXmlServerSetup",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aPath",
+          "type": "String"
+        },
+        {
+          "name": "creator",
+          "type": "Supplier"
+        }
+      ],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.MockXmlServerSetup",
+  "publicMethods": [
+    {
+      "readableName": "get mock server",
+      "usage": "| get mock server | [aPath] | ",
+      "contexthelp": "get mock server \u0026lt;aPath\u0026gt;",
+      "name": "getMockServer",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aPath",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "HttpServer"
+    },
+    {
+      "readableName": "remove mock server",
+      "usage": "| remove mock server | [aPath] | ",
+      "contexthelp": "remove mock server \u0026lt;aPath\u0026gt;",
+      "name": "removeMockServer",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aPath",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get responses",
+      "usage": "| get responses | [aPath] | ",
+      "contexthelp": "get responses \u0026lt;aPath\u0026gt;",
+      "name": "getResponses",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aPath",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "List"
+    },
+    {
+      "readableName": "create mock server",
+      "usage": "| create | [host] | mock | [ports] | server | [aPath] | ",
+      "contexthelp": "create \u0026lt;host\u0026gt; mock \u0026lt;ports\u0026gt; server \u0026lt;aPath\u0026gt;",
+      "name": "createMockServer",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "host",
+          "type": "String"
+        },
+        {
+          "name": "ports",
+          "type": "String"
+        },
+        {
+          "name": "aPath",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "HttpServer"
+    },
+    {
+      "readableName": "get port range",
+      "usage": "| get port range | [ports] | ",
+      "contexthelp": "get port range \u0026lt;ports\u0026gt;",
+      "name": "getPortRange",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "ports",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "get inet address",
+      "usage": "| get inet address | [host] | ",
+      "contexthelp": "get inet address \u0026lt;host\u0026gt;",
+      "name": "getInetAddress",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "host",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "InetAddress"
+    },
+    {
+      "readableName": "create mock server",
+      "usage": "| create mock server | [aPath] | ",
+      "contexthelp": "create mock server \u0026lt;aPath\u0026gt;",
+      "name": "createMockServer",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aPath",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "HttpServer"
+    },
+    {
+      "readableName": "add response for",
+      "usage": "| add response | [aResponse] | for | [aRequest] | ",
+      "contexthelp": "add response \u0026lt;aResponse\u0026gt; for \u0026lt;aRequest\u0026gt;",
+      "name": "addResponseFor",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aResponse",
+          "type": "String"
+        },
+        {
+          "name": "aRequest",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "add response",
+      "usage": "| add response | [aResponse] | ",
+      "contexthelp": "add response \u0026lt;aResponse\u0026gt;",
+      "name": "addResponse",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aResponse",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "add response with status",
+      "usage": "| add response with | [aResponse] | status | [aStatusCode] | ",
+      "contexthelp": "add response with \u0026lt;aResponse\u0026gt; status \u0026lt;aStatusCode\u0026gt;",
+      "name": "addResponseWithStatus",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aResponse",
+          "type": "String"
+        },
+        {
+          "name": "aStatusCode",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "add response with headers",
+      "usage": "| add response with | [aResponse] | headers | [headers] | ",
+      "contexthelp": "add response with \u0026lt;aResponse\u0026gt; headers \u0026lt;headers\u0026gt;",
+      "name": "addResponseWithHeaders",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aResponse",
+          "type": "String"
+        },
+        {
+          "name": "headers",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "add response with status and headers",
+      "usage": "| add response with status | [aResponse] | and | [aStatusCode] | headers | [headers] | ",
+      "contexthelp": "add response with status \u0026lt;aResponse\u0026gt; and \u0026lt;aStatusCode\u0026gt; headers \u0026lt;headers\u0026gt;",
+      "name": "addResponseWithStatusAndHeaders",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aResponse",
+          "type": "String"
+        },
+        {
+          "name": "aStatusCode",
+          "type": "int"
+        },
+        {
+          "name": "headers",
+          "type": "Map"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "add response file",
+      "usage": "| add response file | [aResponseFile] | ",
+      "contexthelp": "add response file \u0026lt;aResponseFile\u0026gt;",
+      "name": "addResponseFile",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aResponseFile",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "add response file with status",
+      "usage": "| add response file with | [aResponseFile] | status | [aStatusCode] | ",
+      "contexthelp": "add response file with \u0026lt;aResponseFile\u0026gt; status \u0026lt;aStatusCode\u0026gt;",
+      "name": "addResponseFileWithStatus",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "aResponseFile",
+          "type": "String"
+        },
+        {
+          "name": "aStatusCode",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get mock server url",
+      "usage": "| get mock server url |",
+      "contexthelp": "get mock server url",
+      "name": "getMockServerUrl",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "url this server is listening on.",
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "verify all responses served",
+      "usage": "| verify all responses served |",
+      "contexthelp": "verify all responses served",
+      "name": "verifyAllResponsesServed",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "verify no extra requests",
+      "usage": "| verify no extra requests |",
+      "contexthelp": "verify no extra requests",
+      "name": "verifyNoExtraRequests",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "stop",
+      "usage": "| stop |",
+      "contexthelp": "stop",
+      "name": "stop",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set global value to",
+      "usage": "| set global value | [symbolName] | to | [value] | ",
+      "contexthelp": "set global value \u0026lt;symbolName\u0026gt; to \u0026lt;value\u0026gt;",
+      "name": "setGlobalValueTo",
+      "docString": "Stores a (global) value so it can be accessed by other fixtures/pages.",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name to store value under.",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "value to store.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "global value",
+      "usage": "| global value | [symbolName] | ",
+      "contexthelp": "global value \u0026lt;symbolName\u0026gt;",
+      "name": "globalValue",
+      "docString": "Retrieves a (global) value, which was previously stored using #setGlobalValueTo().",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "symbolName",
+          "description": "name value was stored under.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "wait seconds",
+      "usage": "| wait seconds | [i] | ",
+      "contexthelp": "wait seconds \u0026lt;i\u0026gt;",
+      "name": "waitSeconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "wait milliseconds",
+      "usage": "| wait milliseconds | [i] | ",
+      "contexthelp": "wait milliseconds \u0026lt;i\u0026gt;",
+      "name": "waitMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "i",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "set repeat interval to milliseconds",
+      "usage": "| set repeat interval to milliseconds | [milliseconds] | ",
+      "contexthelp": "set repeat interval to milliseconds \u0026lt;milliseconds\u0026gt;",
+      "name": "setRepeatIntervalToMilliseconds",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "milliseconds",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat interval",
+      "usage": "| repeat interval |",
+      "contexthelp": "repeat interval",
+      "name": "repeatInterval",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times | [maxCount] | ",
+      "contexthelp": "repeat at most times \u0026lt;maxCount\u0026gt;",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "maxCount",
+          "type": "int"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "repeat at most times",
+      "usage": "| repeat at most times |",
+      "contexthelp": "repeat at most times",
+      "name": "repeatAtMostTimes",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "repeat count",
+      "usage": "| repeat count |",
+      "contexthelp": "repeat count",
+      "name": "repeatCount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "int"
+    },
+    {
+      "readableName": "time spent repeating",
+      "usage": "| time spent repeating |",
+      "contexthelp": "time spent repeating",
+      "name": "timeSpentRepeating",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "long"
+    }
+  ],
+  "typeName": "MockXmlServerSetup",
+  "name": "MockXmlServerSetup",
+  "annotations": []
+}

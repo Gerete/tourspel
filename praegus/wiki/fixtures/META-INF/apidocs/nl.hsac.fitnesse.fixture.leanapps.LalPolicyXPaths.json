@@ -1,0 +1,516 @@
+{
+  "constructors": [
+    {
+      "readableName": "lal policy x paths",
+      "usage": "| lal policy x paths |",
+      "name": "LalPolicyXPaths",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.leanapps.LalPolicyXPaths",
+  "publicMethods": [
+    {
+      "readableName": "register namespace",
+      "usage": "| register namespace |",
+      "contexthelp": "register namespace",
+      "name": "registerNamespace",
+      "docString": "Registers businesslayer namespace with Environment.",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "get xsi type value",
+      "usage": "| get xsi type value | [type] | ",
+      "contexthelp": "get xsi type value \u0026lt;type\u0026gt;",
+      "name": "getXsiTypeValue",
+      "docString": "Gets the value xsi:type attribute will have for provided type.",
+      "annotations": [],
+      "returnDescription": "type name including namespace prefix as present in response.",
+      "parameters": [
+        {
+          "name": "type",
+          "description": "sub type wanted.",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party initials",
+      "usage": "| party initials | [partyNr] | ",
+      "contexthelp": "party initials \u0026lt;partyNr\u0026gt;",
+      "name": "partyInitials",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party first name",
+      "usage": "| party first name | [partyNr] | ",
+      "contexthelp": "party first name \u0026lt;partyNr\u0026gt;",
+      "name": "partyFirstName",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party middle name",
+      "usage": "| party middle name | [partyNr] | ",
+      "contexthelp": "party middle name \u0026lt;partyNr\u0026gt;",
+      "name": "partyMiddleName",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party last name",
+      "usage": "| party last name | [partyNr] | ",
+      "contexthelp": "party last name \u0026lt;partyNr\u0026gt;",
+      "name": "partyLastName",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party date of birth",
+      "usage": "| party date of birth | [partyNr] | ",
+      "contexthelp": "party date of birth \u0026lt;partyNr\u0026gt;",
+      "name": "partyDateOfBirth",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party gender",
+      "usage": "| party gender | [partyNr] | ",
+      "contexthelp": "party gender \u0026lt;partyNr\u0026gt;",
+      "name": "partyGender",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party bsn",
+      "usage": "| party bsn | [partyNr] | ",
+      "contexthelp": "party bsn \u0026lt;partyNr\u0026gt;",
+      "name": "partyBSN",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party street",
+      "usage": "| party street | [partyNr] | ",
+      "contexthelp": "party street \u0026lt;partyNr\u0026gt;",
+      "name": "partyStreet",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party street nr",
+      "usage": "| party street nr | [partyNr] | ",
+      "contexthelp": "party street nr \u0026lt;partyNr\u0026gt;",
+      "name": "partyStreetNr",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party zip code",
+      "usage": "| party zip code | [partyNr] | ",
+      "contexthelp": "party zip code \u0026lt;partyNr\u0026gt;",
+      "name": "partyZipCode",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party city",
+      "usage": "| party city | [partyNr] | ",
+      "contexthelp": "party city \u0026lt;partyNr\u0026gt;",
+      "name": "partyCity",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party country code",
+      "usage": "| party country code | [partyNr] | ",
+      "contexthelp": "party country code \u0026lt;partyNr\u0026gt;",
+      "name": "partyCountryCode",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party phone",
+      "usage": "| party phone | [partyNr] | ",
+      "contexthelp": "party phone \u0026lt;partyNr\u0026gt;",
+      "name": "partyPhone",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party email",
+      "usage": "| party email | [partyNr] | ",
+      "contexthelp": "party email \u0026lt;partyNr\u0026gt;",
+      "name": "partyEmail",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party account type",
+      "usage": "| party account | [partyNr] | type | [accountId] | ",
+      "contexthelp": "party account \u0026lt;partyNr\u0026gt; type \u0026lt;accountId\u0026gt;",
+      "name": "partyAccountType",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        },
+        {
+          "name": "accountId",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party account number",
+      "usage": "| party account | [partyNr] | number | [accountId] | ",
+      "contexthelp": "party account \u0026lt;partyNr\u0026gt; number \u0026lt;accountId\u0026gt;",
+      "name": "partyAccountNumber",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        },
+        {
+          "name": "accountId",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party account city",
+      "usage": "| party account | [partyNr] | city | [accountId] | ",
+      "contexthelp": "party account \u0026lt;partyNr\u0026gt; city \u0026lt;accountId\u0026gt;",
+      "name": "partyAccountCity",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        },
+        {
+          "name": "accountId",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party block correspondence",
+      "usage": "| party block correspondence | [partyNr] | ",
+      "contexthelp": "party block correspondence \u0026lt;partyNr\u0026gt;",
+      "name": "partyBlockCorrespondence",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "partyNr",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "premium",
+      "usage": "| premium |",
+      "contexthelp": "premium",
+      "name": "premium",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "insurance account",
+      "usage": "| insurance account |",
+      "contexthelp": "insurance account",
+      "name": "insuranceAccount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "equal premium",
+      "usage": "| equal premium |",
+      "contexthelp": "equal premium",
+      "name": "equalPremium",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "single premium",
+      "usage": "| single premium |",
+      "contexthelp": "single premium",
+      "name": "singlePremium",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "ysl kind",
+      "usage": "| ysl kind |",
+      "contexthelp": "ysl kind",
+      "name": "yslKind",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "insured amount",
+      "usage": "| insured amount |",
+      "contexthelp": "insured amount",
+      "name": "insuredAmount",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "get death coverage subselect",
+      "usage": "| get death coverage subselect |",
+      "contexthelp": "get death coverage subselect",
+      "name": "getDeathCoverageSubselect",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "death coverage select",
+      "usage": "| death coverage select |",
+      "contexthelp": "death coverage select",
+      "name": "deathCoverageSelect",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "sum financial booking for single payment",
+      "usage": "| sum financial booking for single payment |",
+      "contexthelp": "sum financial booking for single payment",
+      "name": "sumFinancialBookingForSinglePayment",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "single payment",
+      "usage": "| single payment |",
+      "contexthelp": "single payment",
+      "name": "singlePayment",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "intermediary",
+      "usage": "| intermediary | [lalResponse] | ",
+      "contexthelp": "intermediary \u0026lt;lalResponse\u0026gt;",
+      "name": "intermediary",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "lalResponse",
+          "type": "LalResponse"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "party in role",
+      "usage": "| party in | [lalResponse] | role | [role] | ",
+      "contexthelp": "party in \u0026lt;lalResponse\u0026gt; role \u0026lt;role\u0026gt;",
+      "name": "partyInRole",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "lalResponse",
+          "type": "LalResponse"
+        },
+        {
+          "name": "role",
+          "type": "String"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "production company",
+      "usage": "| production company |",
+      "contexthelp": "production company",
+      "name": "productionCompany",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    },
+    {
+      "readableName": "get financial booking",
+      "usage": "| get financial booking |",
+      "contexthelp": "get financial booking",
+      "name": "getFinancialBooking",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "String"
+    }
+  ],
+  "typeName": "LalPolicyXPaths",
+  "name": "LalPolicyXPaths",
+  "annotations": []
+}

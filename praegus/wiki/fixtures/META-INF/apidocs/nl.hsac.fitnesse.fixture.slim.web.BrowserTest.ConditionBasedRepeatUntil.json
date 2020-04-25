@@ -1,0 +1,116 @@
+{
+  "constructors": [
+    {
+      "readableName": "condition based repeat until",
+      "usage": "| condition based repeat until | [wrapIfNeeded] | [repeatCondition] | [finishedCondition] |",
+      "name": "ConditionBasedRepeatUntil",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "wrapIfNeeded",
+          "type": "boolean"
+        },
+        {
+          "name": "repeatCondition",
+          "type": "ExpectedCondition"
+        },
+        {
+          "name": "finishedCondition",
+          "type": "ExpectedCondition"
+        }
+      ],
+      "exceptions": []
+    },
+    {
+      "readableName": "condition based repeat until",
+      "usage": "| condition based repeat until | [wrapRepeatIfNeeded] | [repeatCondition] | [wrapFinishedIfNeeded] | [finishedCondition] |",
+      "name": "ConditionBasedRepeatUntil",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "wrapRepeatIfNeeded",
+          "type": "boolean"
+        },
+        {
+          "name": "repeatCondition",
+          "type": "ExpectedCondition"
+        },
+        {
+          "name": "wrapFinishedIfNeeded",
+          "type": "boolean"
+        },
+        {
+          "name": "finishedCondition",
+          "type": "ExpectedCondition"
+        }
+      ],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.web.BrowserTest.ConditionBasedRepeatUntil",
+  "publicMethods": [
+    {
+      "readableName": "is finished",
+      "usage": "| is finished |",
+      "contexthelp": "is finished",
+      "name": "isFinished",
+      "docString": "",
+      "annotations": [
+        "Override"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "repeat",
+      "usage": "| repeat |",
+      "contexthelp": "repeat",
+      "name": "repeat",
+      "docString": "",
+      "annotations": [
+        "Override"
+      ],
+      "parameters": [],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set is finished supplier",
+      "usage": "| set is finished supplier | [isFinishedSupplier] | ",
+      "contexthelp": "set is finished supplier \u0026lt;isFinishedSupplier\u0026gt;",
+      "name": "setIsFinishedSupplier",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "isFinishedSupplier",
+          "type": "Supplier"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    },
+    {
+      "readableName": "set repeater",
+      "usage": "| set repeater | [repeater] | ",
+      "contexthelp": "set repeater \u0026lt;repeater\u0026gt;",
+      "name": "setRepeater",
+      "docString": "",
+      "annotations": [],
+      "parameters": [
+        {
+          "name": "repeater",
+          "type": "Runnable"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "void"
+    }
+  ],
+  "typeName": "BrowserTest.ConditionBasedRepeatUntil",
+  "name": "BrowserTest.ConditionBasedRepeatUntil",
+  "annotations": []
+}

@@ -1,0 +1,65 @@
+{
+  "constructors": [
+    {
+      "readableName": "stop test fixture",
+      "usage": "| stop test fixture |",
+      "name": "StopTestFixture",
+      "docString": "",
+      "annotations": [],
+      "parameters": [],
+      "exceptions": []
+    }
+  ],
+  "qualifiedName": "nl.hsac.fitnesse.fixture.slim.StopTestFixture",
+  "publicMethods": [
+    {
+      "readableName": "stop test if is",
+      "usage": "| stop test if | [actual] | is | [expected] | ",
+      "contexthelp": "stop test if \u0026lt;actual\u0026gt; is \u0026lt;expected\u0026gt;",
+      "name": "stopTestIfIs",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "true if actual value equals expected value.",
+      "parameters": [
+        {
+          "name": "actual",
+          "description": "actual value.",
+          "type": "Object"
+        },
+        {
+          "name": "expected",
+          "description": "expected value.",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    },
+    {
+      "readableName": "stop test if is not",
+      "usage": "| stop test if is | [actual] | not | [notExpected] | ",
+      "contexthelp": "stop test if is \u0026lt;actual\u0026gt; not \u0026lt;notExpected\u0026gt;",
+      "name": "stopTestIfIsNot",
+      "docString": "",
+      "annotations": [],
+      "returnDescription": "true if actual value does not equal expected value.",
+      "parameters": [
+        {
+          "name": "actual",
+          "description": "actual value.",
+          "type": "Object"
+        },
+        {
+          "name": "notExpected",
+          "description": "value which is not allowed.",
+          "type": "Object"
+        }
+      ],
+      "exceptions": [],
+      "returnType": "boolean"
+    }
+  ],
+  "typeName": "StopTestFixture",
+  "name": "StopTestFixture",
+  "annotations": []
+}
