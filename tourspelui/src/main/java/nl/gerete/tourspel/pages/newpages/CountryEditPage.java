@@ -12,9 +12,10 @@ import to.etc.domui.state.UIGoto;
  * Created on 12-6-18.
  */
 @NonNullByDefault
-public class CountryEditPage extends BasicEditPage<Country>{
+public class CountryEditPage extends BasicEditPage<Country> {
 
-	public CountryEditPage() {}
+	public CountryEditPage() {
+	}
 
 	@Override
 	public void createContent() throws Exception {

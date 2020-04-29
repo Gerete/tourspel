@@ -1,0 +1,799 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20191110</FitNesseVersion>
+  <rootPath>Tourspel.ScenarioTest</rootPath>
+  <result>
+    <counts>
+      <right>1</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2020-04-30T00:18:08+02:00</date>
+    <runTimeInMillis>2511</runTimeInMillis>
+    <content></content>
+    <relativePageName>SuiteSetUp</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='fitnesse.slim.test'}</instruction>
+        <slimResult>pass(fitnesse.slim.test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>fitnesse.slim.test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_1', instruction='import', path='fitnesse.fixtures'}</instruction>
+        <slimResult>pass(fitnesse.fixtures)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>fitnesse.fixtures</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_1_0', instruction='import', path='nl.hsac.fitnesse.fixture.slim'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_1_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_2_0', instruction='import', path='nl.hsac.fitnesse.fixture.slim.web'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim.web)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_2_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim.web</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_3_0', instruction='make', instanceName='scriptTableActor', className='MapFixture', args=[]}</instruction>
+        <slimResult>pass(map fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_3_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>map fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_3_1', instruction='call', instanceName='scriptTableActor', methodName='setValueFor', args=[Mozilla/5.0 (Linux; Android 4.2.1; en-us; Nexus 5 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19, userAgent]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_3_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_3_2', instruction='call', instanceName='scriptTableActor', methodName='setIntValueFor', args=[360, deviceMetrics.width]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_3_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_3_3', instruction='call', instanceName='scriptTableActor', methodName='setIntValueFor', args=[640, deviceMetrics.height]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_3_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_3_4', instruction='call', instanceName='scriptTableActor', methodName='setDoubleValueFor', args=[3.0, deviceMetrics.pixelRatio]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_3_4</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_3_5', instruction='callAndAssign', symbolName='mobileEmulation', instanceName='scriptTableActor', methodName='copyMap', args=[]}</instruction>
+        <slimResult>$mobileEmulation&lt;-[&lt;table class="hash_table"&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;userAgent&lt;/td&gt;
+		&lt;td class="hash_value"&gt;Mozilla/5.0 (Linux; Android 4.2.1; en-us; Nexus 5 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;deviceMetrics&lt;/td&gt;
+		&lt;td class="hash_value"&gt;&lt;table class="hash_table"&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;width&lt;/td&gt;
+		&lt;td class="hash_value"&gt;360&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;height&lt;/td&gt;
+		&lt;td class="hash_value"&gt;640&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;pixelRatio&lt;/td&gt;
+		&lt;td class="hash_value"&gt;3.0&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_3_5</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$mobileEmulation&lt;-[&lt;table class="hash_table"&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;userAgent&lt;/td&gt;
+		&lt;td class="hash_value"&gt;Mozilla/5.0 (Linux; Android 4.2.1; en-us; Nexus 5 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;deviceMetrics&lt;/td&gt;
+		&lt;td class="hash_value"&gt;&lt;table class="hash_table"&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;width&lt;/td&gt;
+		&lt;td class="hash_value"&gt;360&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;height&lt;/td&gt;
+		&lt;td class="hash_value"&gt;640&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;pixelRatio&lt;/td&gt;
+		&lt;td class="hash_value"&gt;3.0&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_4_0', instruction='make', instanceName='scriptTableActor', className='MapFixture', args=[]}</instruction>
+        <slimResult>pass(map fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_4_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>map fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_4_1', instruction='call', instanceName='scriptTableActor', methodName='setValueFor', args=[headless, args[0]]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_4_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_4_2', instruction='call', instanceName='scriptTableActor', methodName='setValueFor', args=[disable-gpu, args[1]]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_4_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_4_3', instruction='callAndAssign', symbolName='chromeHeadlessProfile', instanceName='scriptTableActor', methodName='copyMap', args=[]}</instruction>
+        <slimResult>$chromeHeadlessProfile&lt;-[&lt;table class="hash_table"&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;args&lt;/td&gt;
+		&lt;td class="hash_value"&gt;[headless, disable-gpu]&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_4_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$chromeHeadlessProfile&lt;-[&lt;table class="hash_table"&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;args&lt;/td&gt;
+		&lt;td class="hash_value"&gt;[headless, disable-gpu]&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_5_0', instruction='make', instanceName='scriptTableActor', className='MapFixture', args=[]}</instruction>
+        <slimResult>pass(map fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_5_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>map fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_5_1', instruction='call', instanceName='scriptTableActor', methodName='expandPeriodsInNamesToNestedMaps', args=[false]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_5_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_5_2', instruction='call', instanceName='scriptTableActor', methodName='setBooleanValueFor', args=[true, ie.ensureCleanSession]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_5_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_5_3', instruction='callAndAssign', symbolName='ieCleanSession', instanceName='scriptTableActor', methodName='copyMap', args=[]}</instruction>
+        <slimResult>$ieCleanSession&lt;-[&lt;table class="hash_table"&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;ie.ensureCleanSession&lt;/td&gt;
+		&lt;td class="hash_value"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_5_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$ieCleanSession&lt;-[&lt;table class="hash_table"&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;ie.ensureCleanSession&lt;/td&gt;
+		&lt;td class="hash_value"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_6_0', instruction='make', instanceName='scriptTableActor', className='SeleniumDriverSetup', args=[]}</instruction>
+        <slimResult>pass(selenium driver setup)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_6_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>selenium driver setup</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_6_1', instruction='call', instanceName='scriptTableActor', methodName='startDriverFor', args=[chrome]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_6_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_6_2', instruction='call', instanceName='scriptTableActor', methodName='driverDescription', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_6_2</instructionId>
+          <col>0</col>
+          <row>17</row>
+          <type>ShowActionExpectation</type>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <result>
+    <counts>
+      <right>3</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2020-04-30T00:18:11+02:00</date>
+    <runTimeInMillis>2634</runTimeInMillis>
+    <content></content>
+    <relativePageName>ScenarioTest</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_0', instruction='make', instanceName='scriptTableActor', className='BrowserTest', args=[]}</instruction>
+        <slimResult>pass(browser test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_0_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>browser test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_1', instruction='call', instanceName='scriptTableActor', methodName='secondsBeforeTimeout', args=[60]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_0_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_2', instruction='call', instanceName='scriptTableActor', methodName='open', args=[&lt;a href="http://localhost:8080/tourspel"&gt;http://localhost:8080/tourspel&lt;/a&gt;]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_0_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_3', instruction='call', instanceName='scriptTableActor', methodName='clickIfAvailable', args=[Log in]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_0_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ShowActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_4', instruction='call', instanceName='scriptTableActor', methodName='enterAs', args=[Mol, Achternaam]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_0_4</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_5', instruction='call', instanceName='scriptTableActor', methodName='click', args=[Search]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_0_5</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <result>
+    <counts>
+      <right>1</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2020-04-30T00:18:13+02:00</date>
+    <runTimeInMillis>90</runTimeInMillis>
+    <content>&lt;br/&gt;This set up page is executed once, before any tests in this suite.&lt;br/&gt;In it we configure which Java packages contain the logic for our fixtures, which browser we want to use for Selenium tests and we start this browser.&lt;br/&gt;This means we do not have to do this in every test, which means easier maintenance and better performance.&lt;br/&gt;&lt;br/&gt;Stopping the browser is done in &lt;a href="Tourspel.SuiteTearDown"&gt;SuiteTearDown&lt;/a&gt;, which is done after all tests in this suite are completed.&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.slim.test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.fixtures&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;span class="meta"&gt;classpath: fixtures&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: fixtures/*.jar&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Fixture code locations&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim.web&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;span class="meta"&gt;variable defined: slim.port=0&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=slim&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;The Selenium configuration below uses lines starting with &lt;i&gt;|note&lt;/i&gt; to have configuration values present that are not currently used.&lt;br/&gt;This allows us to switch to another browser by just adding &lt;i&gt;|note&lt;/i&gt; to one line and removing it from another, instead of typing the entire line.&lt;br/&gt;&lt;br/&gt;Furthermore this configuration is prepared for both running the browser on the same (development) machine running Fitnesse (with &lt;i&gt;start driver for&lt;/i&gt;), as remotely on a node in a Selenium Grid (with &lt;i&gt;connect to driver for&lt;/i&gt;).&lt;br/&gt;The latter allows tests to be executed on different operating systems. This is also very useful to run tests as part of a continuous integration server (i.e. build server), when no browsers are installed on the server running the tests.&lt;br/&gt;This configuration can be overridden by using system properties. This allows different configurations on the build server to test with different browsers, without requiring different wiki content, but only requiring a different build configuration. More details can be found in OverridingSeleniumSetup&lt;a title="create page" href="Tourspel.OverridingSeleniumSetup?edit&amp;amp;nonExistent=true"&gt;[?]&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;variable defined: GRID_HUB=http://remote-selenium.local:4444/wd/hub&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Define $mobileEmulation device attributes&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;map fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;Mozilla/5.0 (Linux; Android 4.2.1; en-us; Nexus 5 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19&lt;/td&gt;
+		&lt;td&gt;for&lt;/td&gt;
+		&lt;td&gt;userAgent&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;set int value&lt;/td&gt;
+		&lt;td&gt;360&lt;/td&gt;
+		&lt;td&gt;for&lt;/td&gt;
+		&lt;td&gt;deviceMetrics.width&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;set int value&lt;/td&gt;
+		&lt;td&gt;640&lt;/td&gt;
+		&lt;td&gt;for&lt;/td&gt;
+		&lt;td&gt;deviceMetrics.height&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;set double value&lt;/td&gt;
+		&lt;td&gt;3.0&lt;/td&gt;
+		&lt;td&gt;for&lt;/td&gt;
+		&lt;td&gt;deviceMetrics.pixelRatio&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;$mobileEmulation&amp;lt;-[&lt;table class="hash_table"&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;userAgent&lt;/td&gt;
+		&lt;td class="hash_value"&gt;Mozilla/5.0 (Linux; Android 4.2.1; en-us; Nexus 5 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;deviceMetrics&lt;/td&gt;
+		&lt;td class="hash_value"&gt;&lt;table class="hash_table"&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;width&lt;/td&gt;
+		&lt;td class="hash_value"&gt;360&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;height&lt;/td&gt;
+		&lt;td class="hash_value"&gt;640&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;pixelRatio&lt;/td&gt;
+		&lt;td class="hash_value"&gt;3.0&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;]&lt;/td&gt;
+		&lt;td colspan="3"&gt;copy map&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Define $chromeHeadlessProfile chrome profile&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;map fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;headless&lt;/td&gt;
+		&lt;td&gt;for&lt;/td&gt;
+		&lt;td&gt;args[0]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;disable-gpu&lt;/td&gt;
+		&lt;td&gt;for&lt;/td&gt;
+		&lt;td&gt;args[1]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;$chromeHeadlessProfile&amp;lt;-[&lt;table class="hash_table"&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;args&lt;/td&gt;
+		&lt;td class="hash_value"&gt;[headless, disable-gpu]&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;]&lt;/td&gt;
+		&lt;td colspan="3"&gt;copy map&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Define $ieCleanSession internet explorer profile&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;map fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;expand periods in names to nested maps&lt;/td&gt;
+		&lt;td colspan="3"&gt;false&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;set boolean value&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;for&lt;/td&gt;
+		&lt;td&gt;ie.ensureCleanSession&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor6"&gt;
+		&lt;td&gt;$ieCleanSession&amp;lt;-[&lt;table class="hash_table"&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;ie.ensureCleanSession&lt;/td&gt;
+		&lt;td class="hash_value"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;]&lt;/td&gt;
+		&lt;td colspan="3"&gt;copy map&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="4"&gt;&lt;span class="pass"&gt;selenium driver setup&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;start driver for&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="4"&gt;chrome&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;start driver for&lt;/td&gt;
+		&lt;td colspan="3"&gt;MicrosoftEdge&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;start driver for&lt;/td&gt;
+		&lt;td colspan="3"&gt;internet explorer&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;start driver for&lt;/td&gt;
+		&lt;td colspan="3"&gt;firefox&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;start driver for&lt;/td&gt;
+		&lt;td colspan="3"&gt;safari&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;start driver for&lt;/td&gt;
+		&lt;td&gt;chrome mobile emulation&lt;/td&gt;
+		&lt;td&gt;with profile&lt;/td&gt;
+		&lt;td&gt;&lt;table class="hash_table"&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;deviceName&lt;/td&gt;
+		&lt;td class="hash_value"&gt;Apple iPhone 6&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;start driver for&lt;/td&gt;
+		&lt;td&gt;chrome mobile emulation&lt;/td&gt;
+		&lt;td&gt;with profile&lt;/td&gt;
+		&lt;td&gt;$mobileEmulation&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;start driver for&lt;/td&gt;
+		&lt;td&gt;chrome&lt;/td&gt;
+		&lt;td&gt;with profile&lt;/td&gt;
+		&lt;td&gt;$chromeHeadlessProfile&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td colspan="4"&gt;Starting internet explorer with a clean session is destructive, i.e. clears cookies, cache, history and saved form data &lt;i&gt;globally&lt;/i&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;start driver for&lt;/td&gt;
+		&lt;td&gt;internet explorer&lt;/td&gt;
+		&lt;td&gt;with profile&lt;/td&gt;
+		&lt;td&gt;$ieCleanSession&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;connect to driver for&lt;/td&gt;
+		&lt;td&gt;chrome&lt;/td&gt;
+		&lt;td&gt;at&lt;/td&gt;
+		&lt;td&gt;&lt;a href="http://remote-selenium.local:4444/wd/hub"&gt;http://remote-selenium.local:4444/wd/hub&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;connect to driver for&lt;/td&gt;
+		&lt;td&gt;MicrosoftEdge&lt;/td&gt;
+		&lt;td&gt;at&lt;/td&gt;
+		&lt;td&gt;&lt;a href="http://remote-selenium.local:4444/wd/hub"&gt;http://remote-selenium.local:4444/wd/hub&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;connect to driver for&lt;/td&gt;
+		&lt;td&gt;internet explorer&lt;/td&gt;
+		&lt;td&gt;at&lt;/td&gt;
+		&lt;td&gt;&lt;a href="http://remote-selenium.local:4444/wd/hub"&gt;http://remote-selenium.local:4444/wd/hub&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;connect to driver for&lt;/td&gt;
+		&lt;td&gt;firefox&lt;/td&gt;
+		&lt;td&gt;at&lt;/td&gt;
+		&lt;td&gt;&lt;a href="http://remote-selenium.local:4444/wd/hub"&gt;http://remote-selenium.local:4444/wd/hub&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;connect to driver at&lt;/td&gt;
+		&lt;td&gt;&lt;a href="http://remote-selenium.local:4444/wd/hub"&gt;http://remote-selenium.local:4444/wd/hub&lt;/a&gt;&lt;/td&gt;
+		&lt;td&gt;with capabilities&lt;/td&gt;
+		&lt;td&gt;&lt;table class="hash_table"&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;browserName&lt;/td&gt;
+		&lt;td class="hash_value"&gt;internet explorer&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;platform&lt;/td&gt;
+		&lt;td class="hash_value"&gt;Windows 8.1&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="hash_row"&gt;
+		&lt;td class="hash_key"&gt;version&lt;/td&gt;
+		&lt;td class="hash_value"&gt;11&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;note&lt;/td&gt;
+		&lt;td&gt;connect to driver at&lt;/td&gt;
+		&lt;td&gt;&lt;a href="http://remote-selenium.local:4444/wd/hub"&gt;http://remote-selenium.local:4444/wd/hub&lt;/a&gt;&lt;/td&gt;
+		&lt;td&gt;with json capabilities&lt;/td&gt;
+		&lt;td&gt;{aut:"io.selendroid.testapp", emulator: true}&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="4"&gt;driver description&lt;/td&gt;
+	&lt;td&gt;&lt;div&gt;&lt;pre&gt;org.openqa.selenium.chrome.ChromeDriver&lt;/pre&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th&gt;acceptInsecureCerts&lt;/th&gt;&lt;td&gt;false&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;browserName&lt;/th&gt;&lt;td&gt;chrome&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;browserVersion&lt;/th&gt;&lt;td&gt;81.0.4044.92&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;chrome&lt;/th&gt;&lt;td&gt;{chromedriverVersion=81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}), userDataDir=/tmp/.com.google.Chrome.HOiuSO}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;goog:chromeOptions&lt;/th&gt;&lt;td&gt;{debuggerAddress=localhost:37981}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;javascriptEnabled&lt;/th&gt;&lt;td&gt;true&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;networkConnectionEnabled&lt;/th&gt;&lt;td&gt;false&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;pageLoadStrategy&lt;/th&gt;&lt;td&gt;normal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;platform&lt;/th&gt;&lt;td&gt;LINUX&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;platformName&lt;/th&gt;&lt;td&gt;LINUX&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;proxy&lt;/th&gt;&lt;td&gt;Proxy()&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;setWindowRect&lt;/th&gt;&lt;td&gt;true&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;strictFileInteractability&lt;/th&gt;&lt;td&gt;false&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;timeouts&lt;/th&gt;&lt;td&gt;{implicit=0, pageLoad=300000, script=30000}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;unhandledPromptBehavior&lt;/th&gt;&lt;td&gt;ignore&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th&gt;webauthn:virtualAuthenticators&lt;/th&gt;&lt;td&gt;true&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h1 id="WebsitetestingusingscenarioandBrowserTest"&gt;Website testing using &lt;i&gt;scenario&lt;/i&gt; and BrowserTest&lt;/h1&gt;
+&lt;br/&gt;&lt;br/&gt;On this page we test retrieving record details using &lt;a href="https://www.allmusic.com"&gt;AllMusic&lt;/a&gt;.&lt;br/&gt;It uses a &lt;a href="FitNesse.UserGuide.WritingAcceptanceTests.SliM.ScenarioTable"&gt;Slim scenario&lt;/a&gt; to define a parameterized script.&lt;br/&gt;This is then invoked multiple times from a &lt;a href="FitNesse.UserGuide.WritingAcceptanceTests.SliM.DecisionTable"&gt;Decision table&lt;/a&gt;, once for each row.&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;The configuration of Selenium (i.e. which browser to use) and starting the browser session is done in the SuiteSetup&lt;a title="create page" href="Tourspel.SuiteSetup?edit&amp;amp;nonExistent=true"&gt;[?]&lt;/a&gt;. Which allows this configuration to be shared between tests. Closing the browser is done in &lt;a href="Tourspel.SuiteTearDown"&gt;SuiteTearDown&lt;/a&gt;, which happens after all tests are completed.&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;div class="contents"&gt;
+	&lt;b&gt;Contents:&lt;/b&gt;
+	&lt;ul class="toc1"/&gt;&lt;ul class="toc1"/&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;span class="meta"&gt;variable defined: TEST_SYSTEM=slim&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;First we go to the Discography page for Van Morrison.&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;browser test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;seconds before timeout&lt;/td&gt;
+		&lt;td colspan="3"&gt;60&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;open&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;a href="http://localhost:8080/tourspel"&gt;http://localhost:8080/tourspel&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td&gt;click if available&lt;/td&gt;
+		&lt;td colspan="2"&gt;Log in&lt;/td&gt;
+	&lt;td&gt;true&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;enter&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;Mol&lt;/td&gt;
+		&lt;td&gt;as&lt;/td&gt;
+		&lt;td&gt;Achternaam&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;click&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="3"&gt;Search&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;Writing the scenario like this can become a bit cumbersome when many parameters are needed. They are repeated in: the scenario's first row, the scenario rows where they are used and the table headers where the scenario is invoked.&lt;br/&gt;Repeating the parameters in the first row of the scenario definition can be omitted using a custom extension to Slim. This is shown in TableTemplateTest&lt;a title="create page" href="Tourspel.TableTemplateTest?edit&amp;amp;nonExistent=true"&gt;[?]&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;This set up page is executed once, after all tests in this suite.&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;selenium driver setup&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td&gt;run summary&lt;/td&gt;
+	&lt;td&gt;null&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;&lt;span class="pass"&gt;stop driver&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>SuiteTearDown</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_0', instruction='make', instanceName='scriptTableActor', className='SeleniumDriverSetup', args=[]}</instruction>
+        <slimResult>pass(selenium driver setup)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_0_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>selenium driver setup</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_1', instruction='call', instanceName='scriptTableActor', methodName='runSummary', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_0_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ShowActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_0_2', instruction='call', instanceName='scriptTableActor', methodName='stopDriver', args=[]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_0_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>/usr/lib/jvm/java-8-oracle/bin/java -cp /home/marc/git/tourspel2/praegus/wiki/fitnesse-standalone.jar:fixtures:/home/marc/git/tourspel2/praegus/wiki/fixtures/checker-compat-qual-2.0.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/commons-logging-1.2.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/jetty-6.1.26.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/selenium-api-3.141.59.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/dnsjava-2.1.8.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/servlet-api-2.5-20081211.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/commons-compress-1.18.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/selenium-firefox-driver-3.141.59.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/velocity-1.7.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/jetty-util-6.1.26.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/cglib-nodep-3.3.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/hsqldb-2.3.2.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/animal-sniffer-annotations-1.14.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/httpmime-4.5.10.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/commons-cli-1.4.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/commons-math3-3.6.1.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/commons-exec-1.3.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/fitlibrary-20091020.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/selenium-safari-driver-3.141.59.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/mysql-connector-java-5.1.36.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/htmlparser-2.1.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/commons-io-2.6.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/commons-net-3.6.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/googleauth-1.2.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/browsermob-core-2.1.5.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/guava-27.1-jre.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/checker-qual-2.5.2.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/google-oauth-client-jetty-1.28.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/opencensus-contrib-http-util-0.18.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/httpcore-4.4.12.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/commons-collections4-4.3.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/javassist-3.18.2-GA.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/jsr305-3.0.2.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/failureaccess-1.0.1.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/selenium-opera-driver-3.141.59.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/poi-ooxml-schemas-4.1.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/h2-1.4.195.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/htmllexer-2.1.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/selenium-remote-driver-3.141.59.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/google-oauth-client-java6-1.28.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/guava-25.0-jre.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/dbfit-3.2.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/commons-io-2.4.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/selenium-edge-driver-3.141.59.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/j2objc-annotations-1.1.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/annotations-2.0.1.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/jcl-over-slf4j-1.7.25.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/mitm-2.1.5.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/poi-ooxml-4.1.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/google-http-client-jackson2-1.28.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/error_prone_annotations-2.2.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/google-http-client-apache-2.0.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/google-api-services-gmail-v1-rev20190422-1.28.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/netty-all-4.0.51.Final.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/json-path-2.4.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/accessors-smart-1.2.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/logback-classic-1.2.3.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/commons-lang3-3.8.1.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/galen-core-2.4.4.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/opencensus-api-0.18.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/commons-lang-2.6.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/xmlbeans-3.1.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/logback-core-1.2.3.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/hamcrest-core-1.3.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/selenium-java-3.141.59.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/commons-collections-3.2.2.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/commons-codec-1.11.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/gson-2.8.5.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/jackson-core-2.9.7.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/postgresql-9.3-1101-jdbc41.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/bcpkix-jdk15on-1.58.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/mail-1.5.0-b01.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/okhttp-3.11.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/reflections-0.9.9.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/galen-rainbow4j-2.4.4.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/selenium-support-3.141.59.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/jzlib-1.1.3.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/curvesapi-1.06.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/selenium-chrome-driver-3.141.59.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/toolchain-fixtures-1.16.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/diff-1.1.11.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/byte-buddy-1.8.15.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/google-oauth-client-1.28.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/fontbox-2.0.15.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/ant-launcher-1.9.6.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/jsch-0.1.55.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/rhino-1.7.7.2.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/google-api-client-1.28.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/animal-sniffer-annotations-1.17.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/selenium-ie-driver-3.141.59.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/hsac-fitnesse-fixtures-4.9.1.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/asm-5.0.4.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/littleproxy-1.1.0-beta-bmp-17.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/httpclient-4.5.10.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/diffutils-1.3.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/commons-codec-1.10.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/okio-1.14.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/poi-4.1.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/jsr305-1.3.9.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/jackson-databind-2.9.7.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/activation-1.1.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/phantomjsdriver-1.4.4.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/pdfbox-2.0.15.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/jackson-annotations-2.9.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/error_prone_annotations-2.1.3.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/freemarker-2.3.29.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/jdbcslim-1.2.3.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/commons-text-1.8.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/ant-1.9.6.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/bcprov-jdk15on-1.58.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/slf4j-api-1.7.25.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/json-20180813.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/google-http-client-1.28.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/grpc-context-1.14.0.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/json-smart-2.3.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/config-1.3.3.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/pdfcompare-1.1.40.jar:/home/marc/git/tourspel2/praegus/wiki/fixtures/snakeyaml-1.25.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr>SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/marc/git/tourspel2/praegus/wiki/fitnesse-standalone.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/marc/git/tourspel2/praegus/wiki/fixtures/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.JDK14LoggerFactory]
+Apr 30, 2020 12:18:09 AM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+
+Starting ChromeDriver 81.0.4044.69 (6813546031a4bc83f717a2ef7cd4ac6ec1199132-refs/branch-heads/4044@{#776}) on port 27845
+
+Only local connections are allowed.
+
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+
+Apr 30, 2020 12:18:11 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+
+</stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>3</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>5680</totalRunTimeInMillis>
+</testResults>
+
