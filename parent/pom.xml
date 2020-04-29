@@ -32,7 +32,7 @@
         <!-- JDK properties -->
         <source.jdk.version>11</source.jdk.version>
         <target.jdk.version>11</target.jdk.version>
-        <ecj.version>3.17.0</ecj.version>
+        <ecj.version>3.18.0</ecj.version>
         <kotlin.version>1.1.1</kotlin.version>
 
         <!-- Plugin versions -->
