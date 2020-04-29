@@ -23,7 +23,7 @@ public class LoginPage extends UrlPage {
 
 	private final TextStr m_loginid = new TextStr();
 
-	private final HiddenText<String> m_password = new HiddenText<String>(String.class);
+	private final Text2<String> m_password = new Text2<>(String.class);
 
 	private final Checkbox m_keeplogin = new Checkbox();
 
@@ -49,28 +49,22 @@ public class LoginPage extends UrlPage {
 		add(new VerticalSpacer(40));
 		getPage().addHeaderContributor(HeaderContributor.loadStylesheet("css/login.css"), 1000);
 		getPage().addHeaderContributor(HeaderContributor.loadJavaScriptlet(FORCE_TOP), 1000);
-		Div d = new Div();
-		add(d);
-		d.setCssClass("l-root");
+		Div d1 = new Div();
+		add(d1);
+		d1.setCssClass("l-logo");
 
-		d.setReturnPressed((IReturnPressed<? extends NodeBase>) node -> doLogin());
-
-		Table t = new Table();
-		d.add(t);
-		TBody b = t.addBody();
-
-		//-- Image box to the left
-		TD td = b.addRowAndCell();
+		// Zorgt er voor dat als er binnen deze DIV een component is die de focus kan krijgen en je op enter drukt.
+		// Vervolgens de betreffende actie wordt uitgevoerd
+		d1.setReturnPressed((IReturnPressed<? extends NodeBase>) node -> doLogin());
 		m_logo.setSrc(LOGO);
 		m_logo.setAlign(ImgAlign.CENTER);
-		td.add(m_logo);
-		td.setCssClass("l-logo");
+		d1.add(m_logo);
 
-		//-- Login box to the right
-		td = b.addCell();
-		t = new Table();
-		td.add(t);
-		b = t.addBody();
+		Div d2 = new Div();
+		add(d2);
+		Table t = new Table();
+		d2.add(t);
+		TBody b = t.addBody();
 
 		//-- New table containing the login box.
 		m_blurb = b.addRowAndCell();
@@ -78,11 +72,10 @@ public class LoginPage extends UrlPage {
 
 		m_error = b.addRowAndCell();
 
-		td = b.addRowAndCell();
+		TD td = b.addRowAndCell();
 		td.add("Email");
 
 		td = b.addRowAndCell();
-		//		m_loginid = new TextStr();
 		m_loginid.setMaxLength(32);
 		m_loginid.setMandatory(true);
 		m_loginid.setTestID("login");
@@ -92,10 +85,10 @@ public class LoginPage extends UrlPage {
 		td.add("Password");
 
 		td = b.addRowAndCell();
-		//		m_password = new TextStr();
 		m_password.setMaxLength(32);
 		m_password.setMandatory(true);
 		m_password.setTestID("password");
+		m_password.password();
 		td.add(m_password);
 
 		if(DeveloperOptions.isDeveloperWorkstation()) {

@@ -71,7 +71,7 @@ public class InitDatabase {
 	private void fillTestData() throws Exception {
 		dc().startTransaction();
 
-		int year = Calendar.getInstance().get(Calendar.YEAR);
+		int year = Calendar.getInstance().get(Calendar.YEAR) + 1;
 		if(year < 2018 || year > 2300)
 			throw new IllegalStateException("Make a new one");
 		m_ed = EditionBP.getCurrentEdition(dc());
@@ -381,33 +381,33 @@ public class InitDatabase {
 		dc().commit();
 
 		//-- Etappes
-		Etappe eprologue = createEtappe("1", EtappeType.Prologue, DateUtil.dateFor(2018, Calendar.JULY, 5), "Leeds", "Harrogate", 191, "http://www.letour.com/le-tour/2014/us/stage-1.html",
+		Etappe eprologue = createEtappe("1", EtappeType.Prologue, DateUtil.dateFor(2021, Calendar.JULY, 5), "Leeds", "Harrogate", 191, "http://www.letour.com/le-tour/2014/us/stage-1.html",
 			m_ed);
-		Etappe firstEtappe = createEtappe("2", EtappeType.MediumMountains, DateUtil.dateFor(2018, Calendar.JULY, 6), "York", "Sheffield", 198, "http://www.letour.com/le-tour/2014/us/stage-2.html",
+		Etappe firstEtappe = createEtappe("2", EtappeType.MediumMountains, DateUtil.dateFor(2021, Calendar.JULY, 6), "York", "Sheffield", 198, "http://www.letour.com/le-tour/2014/us/stage-2.html",
 			m_ed);
-		createEtappe("3", EtappeType.Plain, DateUtil.dateFor(2018, Calendar.JULY, 7), "Cambridge", "Londen", 159, "http://www.letour.com/le-tour/2014/us/stage-3.html", m_ed);
+		createEtappe("3", EtappeType.Plain, DateUtil.dateFor(2021, Calendar.JULY, 7), "Cambridge", "Londen", 159, "http://www.letour.com/le-tour/2014/us/stage-3.html", m_ed);
 
-		createEtappe("4", EtappeType.Plain, DateUtil.dateFor(2018, Calendar.JULY, 8), "Le Touquet", "Lille", 164, "http://www.letour.com/le-tour/2014/us/stage-4.html", m_ed);
-		createEtappe("5", EtappeType.Plain, DateUtil.dateFor(2018, Calendar.JULY, 9), "Ieper (B)", "Arenberg", 156, "http://www.letour.com/le-tour/2014/us/stage-5.html", m_ed);
-		createEtappe("6", EtappeType.Plain, DateUtil.dateFor(2018, Calendar.JULY, 10), "Arras", "Reims", 194, "http://www.letour.com/le-tour/2014/us/stage-6.html", m_ed);
-		createEtappe("7", EtappeType.Plain, DateUtil.dateFor(2018, Calendar.JULY, 11), "Épernay", "Nancy", 233, "http://www.letour.com/le-tour/2014/us/stage-7.html", m_ed);
-		createEtappe("8", EtappeType.MediumMountains, DateUtil.dateFor(2018, Calendar.JULY, 12), "Tomblaine", "Gérardmer", 161, "http://www.letour.com/le-tour/2014/us/stage-8.html", m_ed);
-		createEtappe("9", EtappeType.Plain, DateUtil.dateFor(2018, Calendar.JULY, 13), "Gérardmer", "Mulhouse", 166, "http://www.letour.com/le-tour/2014/us/stage-9.html", m_ed);
-		createEtappe("10", EtappeType.MediumMountains, DateUtil.dateFor(2018, Calendar.JULY, 14), "Mulhouse", "La Planche des Belles Filles", 161,
+		createEtappe("4", EtappeType.Plain, DateUtil.dateFor(2021, Calendar.JULY, 8), "Le Touquet", "Lille", 164, "http://www.letour.com/le-tour/2014/us/stage-4.html", m_ed);
+		createEtappe("5", EtappeType.Plain, DateUtil.dateFor(2021, Calendar.JULY, 9), "Ieper (B)", "Arenberg", 156, "http://www.letour.com/le-tour/2014/us/stage-5.html", m_ed);
+		createEtappe("6", EtappeType.Plain, DateUtil.dateFor(2021, Calendar.JULY, 10), "Arras", "Reims", 194, "http://www.letour.com/le-tour/2014/us/stage-6.html", m_ed);
+		createEtappe("7", EtappeType.Plain, DateUtil.dateFor(2021, Calendar.JULY, 11), "Épernay", "Nancy", 233, "http://www.letour.com/le-tour/2014/us/stage-7.html", m_ed);
+		createEtappe("8", EtappeType.MediumMountains, DateUtil.dateFor(2021, Calendar.JULY, 12), "Tomblaine", "Gérardmer", 161, "http://www.letour.com/le-tour/2014/us/stage-8.html", m_ed);
+		createEtappe("9", EtappeType.Plain, DateUtil.dateFor(2021, Calendar.JULY, 13), "Gérardmer", "Mulhouse", 166, "http://www.letour.com/le-tour/2014/us/stage-9.html", m_ed);
+		createEtappe("10", EtappeType.MediumMountains, DateUtil.dateFor(2021, Calendar.JULY, 14), "Mulhouse", "La Planche des Belles Filles", 161,
 			"http://www.letour.com/le-tour/2014/us/stage-10.html",
 			m_ed);
-		createEtappe("11", EtappeType.Plain, DateUtil.dateFor(2018, Calendar.JULY, 16), "Besançon", "Oyonnax", 186, "http://www.letour.com/le-tour/2014/us/stage-11.html", m_ed);
-		createEtappe("12", EtappeType.Plain, DateUtil.dateFor(2018, Calendar.JULY, 17), "Bourg-en-Bresse", "Saint-Etienne", 183, "http://www.letour.com/le-tour/2014/us/stage-12.html", m_ed);
-		createEtappe("13", EtappeType.HighMountains, DateUtil.dateFor(2018, Calendar.JULY, 18), "Saint-Etienne", "Chamrousse", 200, "http://www.letour.com/le-tour/2014/us/stage-13.html", m_ed);
-		createEtappe("14", EtappeType.HighMountains, DateUtil.dateFor(2018, Calendar.JULY, 19), "Grenoble", "Risoul", 177, "http://www.letour.com/le-tour/2014/us/stage-14.html", m_ed);
-		createEtappe("15", EtappeType.Plain, DateUtil.dateFor(2018, Calendar.JULY, 20), "Tallard", "Nîmes", 222, "http://www.letour.com/le-tour/2014/us/stage-15.html", m_ed);
-		createEtappe("16", EtappeType.HighMountains, DateUtil.dateFor(2018, Calendar.JULY, 22), "Carcassonne", "Bagnères-de-Luchon", 237, "http://www.letour.com/le-tour/2014/us/stage-16.html", m_ed);
-		createEtappe("17", EtappeType.HighMountains, DateUtil.dateFor(2018, Calendar.JULY, 23), "Saint-Gaudens", "Soulan Pla d’Adet", 125, "http://www.letour.com/le-tour/2014/us/stage-17.html",
+		createEtappe("11", EtappeType.Plain, DateUtil.dateFor(2021, Calendar.JULY, 16), "Besançon", "Oyonnax", 186, "http://www.letour.com/le-tour/2014/us/stage-11.html", m_ed);
+		createEtappe("12", EtappeType.Plain, DateUtil.dateFor(2021, Calendar.JULY, 17), "Bourg-en-Bresse", "Saint-Etienne", 183, "http://www.letour.com/le-tour/2014/us/stage-12.html", m_ed);
+		createEtappe("13", EtappeType.HighMountains, DateUtil.dateFor(2021, Calendar.JULY, 18), "Saint-Etienne", "Chamrousse", 200, "http://www.letour.com/le-tour/2014/us/stage-13.html", m_ed);
+		createEtappe("14", EtappeType.HighMountains, DateUtil.dateFor(2021, Calendar.JULY, 19), "Grenoble", "Risoul", 177, "http://www.letour.com/le-tour/2014/us/stage-14.html", m_ed);
+		createEtappe("15", EtappeType.Plain, DateUtil.dateFor(2021, Calendar.JULY, 20), "Tallard", "Nîmes", 222, "http://www.letour.com/le-tour/2014/us/stage-15.html", m_ed);
+		createEtappe("16", EtappeType.HighMountains, DateUtil.dateFor(2021, Calendar.JULY, 22), "Carcassonne", "Bagnères-de-Luchon", 237, "http://www.letour.com/le-tour/2014/us/stage-16.html", m_ed);
+		createEtappe("17", EtappeType.HighMountains, DateUtil.dateFor(2021, Calendar.JULY, 23), "Saint-Gaudens", "Soulan Pla d’Adet", 125, "http://www.letour.com/le-tour/2014/us/stage-17.html",
 			m_ed);
-		createEtappe("18", EtappeType.HighMountains, DateUtil.dateFor(2018, Calendar.JULY, 24), "Pau", "Hautacam", 145, "http://www.letour.com/le-tour/2014/us/stage-18.html", m_ed);
-		createEtappe("19", EtappeType.Plain, DateUtil.dateFor(2018, Calendar.JULY, 25), "Maubourguet", "Bergerac", 208, "http://www.letour.com/le-tour/2014/us/stage-19.html", m_ed);
-		createEtappe("20", EtappeType.IndividualTime, DateUtil.dateFor(2018, Calendar.JULY, 26), "Bergerac", "Périgueux", 54, "http://www.letour.com/le-tour/2014/us/stage-20.html", m_ed);
-		createEtappe("21", EtappeType.Plain, DateUtil.dateFor(2018, Calendar.JULY, 27), "Évry", "Paris Champs-Élysées", 136, "http://www.letour.com/le-tour/2014/us/stage-21.html", m_ed);
+		createEtappe("18", EtappeType.HighMountains, DateUtil.dateFor(2021, Calendar.JULY, 24), "Pau", "Hautacam", 145, "http://www.letour.com/le-tour/2014/us/stage-18.html", m_ed);
+		createEtappe("19", EtappeType.Plain, DateUtil.dateFor(2021, Calendar.JULY, 25), "Maubourguet", "Bergerac", 208, "http://www.letour.com/le-tour/2014/us/stage-19.html", m_ed);
+		createEtappe("20", EtappeType.IndividualTime, DateUtil.dateFor(2021, Calendar.JULY, 26), "Bergerac", "Périgueux", 54, "http://www.letour.com/le-tour/2014/us/stage-20.html", m_ed);
+		createEtappe("21", EtappeType.Plain, DateUtil.dateFor(2021, Calendar.JULY, 27), "Évry", "Paris Champs-Élysées", 136, "http://www.letour.com/le-tour/2014/us/stage-21.html", m_ed);
 		dc().commit();
 
 		Person p = createPerson("Rob", "Gersteling", "degerst@gmail.com", "Degerst");
@@ -454,7 +454,7 @@ public class InitDatabase {
 		if(itype == DbInitType.ONE_ETAPPE && m_empty) {
 			//-- Finish the prologue.
 			m_ed.setPhase(EditionPhase.RUNNING);
-			m_ed.setStartDate(DateUtil.dateFor(2018, Calendar.JULY, 5));
+			m_ed.setStartDate(DateUtil.dateFor(2021, Calendar.JULY, 5));
 			eprologue.setPhase(EtappePhase.CALCULATING);
 
 			List<Rider>	rlist = dc().query(QCriteria.create(Rider.class).eq(Rider_.edition(), m_ed).ascending(Rider_.lastName()));

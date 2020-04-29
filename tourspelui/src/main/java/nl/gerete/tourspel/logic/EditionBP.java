@@ -1,14 +1,12 @@
 package nl.gerete.tourspel.logic;
 
-import java.util.*;
-
+import nl.gerete.tourspel.*;
+import nl.gerete.tourspel.db.*;
 import org.eclipse.jdt.annotation.*;
-
 import to.etc.util.*;
 import to.etc.webapp.query.*;
 
-import nl.gerete.tourspel.*;
-import nl.gerete.tourspel.db.*;
+import java.util.*;
 
 /**
  * Edition-related logic.
@@ -45,7 +43,7 @@ public class EditionBP {
 	 */
 	@NonNull
 	static public Edition getCurrentEdition(@NonNull QDataContext dc) throws Exception {
-		int year = Calendar.getInstance().get(Calendar.YEAR);
+		int year = Calendar.getInstance().get(Calendar.YEAR) + 1;
 		Edition edition = dc.queryOne(QCriteria.create(Edition.class).ne("phase", EditionPhase.HISTORIC).eq(Edition.pYEAR, Integer.valueOf(year)));
 		if(null == edition) {
 			edition = dc.queryOne(QCriteria.create(Edition.class).eq(Edition.pYEAR, Integer.valueOf(year)));

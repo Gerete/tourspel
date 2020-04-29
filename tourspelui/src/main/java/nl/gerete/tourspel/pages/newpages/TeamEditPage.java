@@ -1,19 +1,12 @@
 package nl.gerete.tourspel.pages.newpages;
 
-import nl.gerete.tourspel.componenten.FlagRenderer;
-import nl.gerete.tourspel.db.Rider;
-import nl.gerete.tourspel.db.Rider_;
-import nl.gerete.tourspel.db.Team;
-import nl.gerete.tourspel.db.Team_;
+import nl.gerete.tourspel.componenten.*;
+import nl.gerete.tourspel.db.*;
 import org.eclipse.jdt.annotation.*;
-import to.etc.domui.annotations.*;
-import to.etc.domui.component.tbl.DataPager;
-import to.etc.domui.component.tbl.DataTable;
-import to.etc.domui.component.tbl.RowRenderer;
-import to.etc.domui.component.tbl.SimpleSearchModel;
-import to.etc.domui.component2.form4.FormBuilder;
-import to.etc.domui.state.UIGoto;
-import to.etc.webapp.query.QCriteria;
+import to.etc.domui.component.tbl.*;
+import to.etc.domui.component2.form4.*;
+import to.etc.domui.state.*;
+import to.etc.webapp.query.*;
 
 /**
  * Edit page for manipulating a team
@@ -25,18 +18,6 @@ import to.etc.webapp.query.QCriteria;
 public class TeamEditPage extends BasicEditPage<Team> {
 
 	public TeamEditPage() {}
-
-	@UIUrlParameter(name = ID_PARAM)
-	public Team getEntity() {
-		Team entity = m_entity;
-		if(null == entity)
-			throw new IllegalStateException("Missing entity");
-		return entity;
-	}
-
-	public void setEntity(@Nullable Team entity) {
-		m_entity = entity;
-	}
 
 	@Override
 	public void createContent() throws Exception {

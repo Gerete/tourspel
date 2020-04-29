@@ -1,14 +1,12 @@
 package nl.gerete.tourspel.components;
 
-import org.eclipse.jdt.annotation.*;
-
-import to.etc.domui.component.form.*;
-import to.etc.domui.component.misc.*;
-import to.etc.domui.dom.html.*;
-
 import nl.gerete.tourspel.*;
 import nl.gerete.tourspel.db.*;
 import nl.gerete.tourspel.logic.*;
+import org.eclipse.jdt.annotation.*;
+import to.etc.domui.component.misc.*;
+import to.etc.domui.component2.form4.*;
+import to.etc.domui.dom.html.*;
 
 public class EditionInfoFragment extends Div {
 	@NonNull
@@ -26,21 +24,17 @@ public class EditionInfoFragment extends Div {
 	@Override
 	public void createContent() throws Exception {
 		//-- Show the current edition.
-		HorizontalFormBuilder fb = new HorizontalFormBuilder(getEdition());
-		fb.addDisplayProp("year", "Editie jaar");
-		fb.addDisplayProp("startDate", "Start");
-		fb.addDisplayProp("phase", "Huidige fase");
+		FormBuilder fb = new FormBuilder(this);
+		fb.property(m_edition, Edition_.year()).control();
+		fb.property(m_edition, Edition_.startDate()).control();
+		fb.property(m_edition, Edition_.phase()).control();
 
 		Etappe et = EditionBP.getNextEtappe(getEdition(), Application.getNow());
 		if(et == null) {
-			fb.addLabelAndControl("Huidige/Volgende etappe", new DisplayValue<String>("Onbekend"), false);
+			fb.label("Huidige/Volgende etappe").control(new DisplayValue<String>("Onbekend"));
 		} else {
-			fb.addLabelAndControl("Huidige/Volgende etappe", new DisplayValue<String>(et.getStage() + ": " + et.getStart() + " > " + et.getEnd()), false);
-			fb.setInstance(et);
-			fb.addDisplayProp("date", "Etappe datum");
+			fb.label("Huidige/Volgende etappe").control(new DisplayValue<String>(et.getStage() + ": " + et.getStart() + " > " + et.getEnd()));
+			fb.property(m_edition, Edition_.startDate()).control();
 		}
-
-		add(fb.finish());
-		fb.getBindings().moveModelToControl();
 	}
 }

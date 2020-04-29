@@ -16,18 +16,6 @@ public class CountryEditPage extends BasicEditPage<Country>{
 
 	public CountryEditPage() {}
 
-	@UIUrlParameter(name = ID_PARAM)
-	public Country getEntity() {
-		Country entity = m_entity;
-		if(null == entity)
-			throw new IllegalStateException("Missing entity");
-		return entity;
-	}
-
-	public void setEntity(@Nullable Country entity) {
-		m_entity = entity;
-	}
-
 	@Override
 	public void createContent() throws Exception {
 		super.createContent();
