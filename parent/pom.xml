@@ -84,7 +84,7 @@
         <com.google.code.findbugs.version>3.0.1</com.google.code.findbugs.version>
 
         <!-- Test dependencies -->
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
 
         <!-- Versions needed for dependency convergence-->
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
