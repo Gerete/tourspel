@@ -75,7 +75,7 @@
         <hibernate.core.version>5.2.10.Final</hibernate.core.version>
         <javassist.version>3.20.0-GA</javassist.version>
         <gnu.regexp.version>1.1.4</gnu.regexp.version>
-        <jetty.version>9.3.8.v20160314</jetty.version>
+        <jetty.version>9.4.41.v20210516</jetty.version>
         <selenium.version>3.3.1</selenium.version>
         <derby.version>10.13.1.1</derby.version>
 
