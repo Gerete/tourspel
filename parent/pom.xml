@@ -70,7 +70,7 @@
 
         <rhino.version>1.7.7</rhino.version>
         <jcharts.version>0.7.5</jcharts.version>
-        <batik.version>1.7</batik.version>
+        <batik.version>1.14</batik.version>
         <jericho.version>3.4</jericho.version>
         <hibernate.core.version>5.2.10.Final</hibernate.core.version>
         <javassist.version>3.20.0-GA</javassist.version>
